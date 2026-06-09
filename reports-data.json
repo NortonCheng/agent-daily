@@ -4,9 +4,9 @@
     "weekday": "周一",
     "type": "weekly",
     "stats": {
-      "total": 28,
-      "new": 18,
-      "ecommerce": 5
+      "hot": 0,
+      "new": 28,
+      "note": 0
     },
     "sections": [
       {
@@ -90,7 +90,9 @@
             "typeTag": "🏢大型平台",
             "usage": ""
           }
-        ]
+        ],
+        "title": "🖥️ 内容生产",
+        "type": "new"
       },
       {
         "name": "📤 发行与分发",
@@ -162,7 +164,9 @@
             "typeTag": "🔧小而美",
             "usage": ""
           }
-        ]
+        ],
+        "title": "📤 发行与分发",
+        "type": "new"
       },
       {
         "name": "📡 信息与工作流提效",
@@ -278,7 +282,9 @@
             "typeTag": "🔧小而美",
             "usage": ""
           }
-        ]
+        ],
+        "title": "📡 信息与工作流提效",
+        "type": "new"
       },
       {
         "name": "🛒 跨境电商",
@@ -339,7 +345,9 @@
             "typeTag": "🔧小而美",
             "usage": ""
           }
-        ]
+        ],
+        "title": "🛒 跨境电商",
+        "type": "new"
       }
     ],
     "trends": [
