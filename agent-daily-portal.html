@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent 日报</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f8f9fb;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --border-light: #f0f1f3;
+  --text: #1f2937;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --accent: #3b82f6;
+  --accent-light: #eff6ff;
+  --accent-dark: #2563eb;
+  --star: #f59e0b;
+  --star-empty: #d1d5db;
+  --tag-hot-bg: #fef2f2; --tag-hot-text: #dc2626; --tag-hot-border: #fecaca;
+  --tag-new-bg: #eff6ff; --tag-new-text: #2563eb; --tag-new-border: #bfdbfe;
+  --tag-note-bg: #f0fdf4; --tag-note-text: #16a34a; --tag-note-border: #bbf7d0;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+html { font-size: 15px; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== NAV ===== */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+.nav-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px;
+}
+.nav-title {
+  font-size: 1.2rem; font-weight: 700; color: var(--text);
+  display: flex; align-items: center; gap: 8px;
+}
+.nav-title span { font-size: 1.4rem; }
+.nav-tabs { display: flex; gap: 4px; }
+.nav-tab {
+  padding: 6px 16px; border-radius: 20px; border: none;
+  background: transparent; color: var(--text-secondary);
+  font-size: 0.87rem; font-weight: 500; cursor: pointer;
+  transition: all 0.15s;
+}
+.nav-tab:hover { background: var(--border-light); }
+.nav-tab.active { background: var(--text); color: #fff; }
+.nav-actions { display: flex; gap: 8px; }
+.nav-btn {
+  width: 36px; height: 36px; border-radius: 50%; border: none;
+  background: transparent; cursor: pointer; font-size: 1.1rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s; color: var(--text-secondary);
+}
+.nav-btn:hover { background: var(--border-light); }
+
+/* ===== MAIN ===== */
+.main { max-width: 1100px; margin: 0 auto; padding: 24px; }
+
+/* ===== STATS ===== */
+.stats-bar {
+  display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+}
+.stat-chip {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 20px; font-size: 0.82rem; font-weight: 500;
+  background: var(--card); border: 1px solid var(--border);
+}
+.stat-chip .dot { width: 8px; height: 8px; border-radius: 50%; }
+.stat-chip .dot.hot { background: #ef4444; }
+.stat-chip .dot.new { background: #3b82f6; }
+.stat-chip .dot.note { background: #22c55e; }
+
+/* ===== ACCORDION ===== */
+.report-section { margin-bottom: 16px; }
+.report-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 18px; background: var(--card);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  cursor: pointer; user-select: none;
+  transition: all 0.15s;
+}
+.report-header:hover { box-shadow: var(--shadow-sm); }
+.report-header.open { border-radius: var(--radius) var(--radius) 0 0; border-bottom-color: transparent; }
+.report-date { font-weight: 600; font-size: 1rem; }
+.report-stats { display: flex; gap: 8px; font-size: 0.8rem; color: var(--text-secondary); }
+.report-arrow { transition: transform 0.2s; font-size: 0.9rem; color: var(--text-muted); }
+.report-header.open .report-arrow { transform: rotate(180deg); }
+.report-body {
+  max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+  background: var(--card); border: 1px solid var(--border); border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.report-body.open { max-height: none; overflow: visible; }
+.report-body-inner { padding: 8px 18px 18px; }
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  margin: 16px 0 10px; padding-left: 2px;
+}
+.section-title:first-child { margin-top: 4px; }
+
+/* ===== CARD ===== */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+  position: relative;
+}
+.card:hover { box-shadow: var(--shadow-md); border-color: #d1d5db; transform: translateY(-1px); }
+.card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.card-info { flex: 1; min-width: 0; }
+.card-name-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.card-name {
+  font-size: 1.05rem; font-weight: 600; color: var(--text);
+  text-decoration: none; white-space: nowrap;
+}
+.card-name:hover { color: var(--accent); }
+.card-stars {
+  font-size: 0.75rem; font-weight: 600;
+  padding: 2px 8px; border-radius: 10px;
+  background: var(--accent-light); color: var(--accent-dark);
+  white-space: nowrap; flex-shrink: 0;
+}
+.card-tagline {
+  font-size: 0.9rem; color: var(--text-secondary);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; margin-bottom: 8px; line-height: 1.5;
+}
+.card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag {
+  font-size: 0.75rem; padding: 2px 10px; border-radius: 12px; font-weight: 500;
+  border: 1px solid;
+}
+.tag.hot { background: var(--tag-hot-bg); color: var(--tag-hot-text); border-color: var(--tag-hot-border); }
+.tag.new { background: var(--tag-new-bg); color: var(--tag-new-text); border-color: var(--tag-new-border); }
+.tag.note { background: var(--tag-note-bg); color: var(--tag-note-text); border-color: var(--tag-note-border); }
+.tag.scene { background: #fefce8; color: #a16207; border-color: #fde68a; }
+.tag.type { background: #f5f3ff; color: #7c3aed; border-color: #ddd6fe; }
+
+/* ===== STAR BUTTON ===== */
+.star-btn {
+  flex-shrink: 0; width: 36px; height: 36px;
+  border: none; background: transparent; cursor: pointer;
+  font-size: 1.2rem; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; transition: all 0.15s;
+  color: var(--star-empty);
+}
+.star-btn:hover { background: #fef3c7; }
+.star-btn.starred { color: var(--star); }
+
+/* ===== MODAL ===== */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.4);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s;
+}
+.modal-overlay.open { opacity: 1; pointer-events: auto; }
+.modal-container {
+  width: 92vw; max-width: 1100px; height: 85vh;
+  background: #fff; border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+  display: flex; overflow: hidden;
+  transform: scale(0.96); transition: transform 0.2s ease-out;
+}
+.modal-overlay.open .modal-container { transform: scale(1); }
+.modal-close {
+  position: absolute; top: 14px; right: 14px; z-index: 10;
+  width: 32px; height: 32px; border-radius: 50%;
+  border: none; background: #f3f4f6; cursor: pointer;
+  font-size: 1.1rem; display: flex; align-items: center; justify-content: center;
+  color: #6b7280; transition: all 0.15s;
+}
+.modal-close:hover { background: #e5e7eb; color: #374151; }
+
+.modal-left {
+  width: 55%; padding: 28px 32px; overflow-y: auto;
+  border-right: 1px solid var(--border);
+}
+.modal-right {
+  width: 45%; display: flex; flex-direction: column;
+  background: #fafbfc;
+}
+.modal-project-name {
+  font-size: 1.5rem; font-weight: 700; color: var(--text);
+  margin-bottom: 6px;
+}
+.modal-stars-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.modal-link {
+  font-size: 0.85rem; color: var(--accent); text-decoration: none;
+  word-break: break-all;
+}
+.modal-link:hover { text-decoration: underline; }
+.modal-tagline { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 14px; line-height: 1.6; }
+.modal-tags { display: flex; gap: 6px; margin-bottom: 18px; flex-wrap: wrap; }
+.modal-usage { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; }
+.modal-usage h4 { font-size: 0.85rem; color: var(--text); margin: 12px 0 4px; font-weight: 600; }
+.modal-usage h4:first-child { margin-top: 0; }
+
+/* ===== CHAT ===== */
+.chat-header {
+  padding: 16px 20px; border-bottom: 1px solid var(--border);
+  font-weight: 600; font-size: 0.95rem; color: var(--text);
+  display: flex; align-items: center; gap: 8px;
+  background: #fff;
+}
+.chat-messages {
+  flex: 1; overflow-y: auto; padding: 16px 20px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.chat-msg { max-width: 88%; padding: 10px 14px; border-radius: 12px; font-size: 0.88rem; line-height: 1.6; word-break: break-word; }
+.chat-msg.user { background: var(--accent); color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
+.chat-msg.assistant { background: #fff; border: 1px solid var(--border); color: var(--text); align-self: flex-start; border-bottom-left-radius: 4px; }
+.chat-msg pre { background: #1f2937; color: #e5e7eb; padding: 10px 14px; border-radius: 8px; overflow-x: auto; margin: 6px 0; font-size: 0.82rem; }
+.chat-msg code { font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace; }
+.chat-msg p { margin: 4px 0; }
+.chat-msg ul, .chat-msg ol { padding-left: 20px; margin: 4px 0; }
+.chat-input-area {
+  padding: 12px 16px; border-top: 1px solid var(--border);
+  display: flex; gap: 8px; background: #fff;
+}
+.chat-input {
+  flex: 1; padding: 10px 14px; border: 1px solid var(--border);
+  border-radius: 10px; font-size: 0.88rem; outline: none;
+  font-family: inherit; resize: none; min-height: 42px; max-height: 100px;
+}
+.chat-input:focus { border-color: var(--accent); }
+.chat-send {
+  padding: 0 18px; border: none; border-radius: 10px;
+  background: var(--accent); color: #fff; font-weight: 600;
+  cursor: pointer; font-size: 0.88rem; transition: background 0.15s;
+}
+.chat-send:hover { background: var(--accent-dark); }
+.chat-send:disabled { background: #9ca3af; cursor: not-allowed; }
+
+/* ===== SETTINGS MODAL ===== */
+.settings-overlay {
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(0,0,0,0.3);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.15s;
+}
+.settings-overlay.open { opacity: 1; pointer-events: auto; }
+.settings-box {
+  background: #fff; border-radius: var(--radius); padding: 28px;
+  width: 90vw; max-width: 480px; box-shadow: var(--shadow-lg);
+}
+.settings-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 18px; }
+.settings-field { margin-bottom: 14px; }
+.settings-label { font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 4px; }
+.settings-input {
+  width: 100%; padding: 9px 12px; border: 1px solid var(--border);
+  border-radius: var(--radius-sm); font-size: 0.9rem; outline: none;
+  font-family: inherit;
+}
+.settings-input:focus { border-color: var(--accent); }
+.settings-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 20px; }
+.settings-btn {
+  padding: 8px 20px; border-radius: var(--radius-sm); font-size: 0.88rem;
+  font-weight: 500; cursor: pointer; border: none; transition: all 0.15s;
+}
+.settings-btn.cancel { background: #f3f4f6; color: var(--text-secondary); }
+.settings-btn.cancel:hover { background: #e5e7eb; }
+.settings-btn.save { background: var(--accent); color: #fff; }
+.settings-btn.save:hover { background: var(--accent-dark); }
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  text-align: center; padding: 60px 20px; color: var(--text-muted);
+}
+.empty-state .icon { font-size: 3rem; margin-bottom: 12px; }
+.empty-state p { font-size: 0.95rem; }
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .nav-inner { padding: 0; }
+  .main { padding: 16px; }
+  .modal-container { width: 98vw; height: 92vh; flex-direction: column; }
+  .modal-left { width: 100%; height: 45%; border-right: none; border-bottom: 1px solid var(--border); padding: 20px; }
+  .modal-right { width: 100%; height: 55%; }
+  .stats-bar { gap: 8px; }
+  .stat-chip { font-size: 0.75rem; padding: 4px 10px; }
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+/* ===== FADE IN ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.card { animation: fadeInUp 0.3s ease-out both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-title"><span>🤖</span> AI Agent 日报</div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" data-tab="all" onclick="switchTab('all')">全部</button>
+      <button class="nav-tab" data-tab="starred" onclick="switchTab('starred')">⭐ 收藏</button>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="openSettings()" title="LLM 配置">⚙️</button>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="main" id="app"></div>
+
+<!-- PROJECT MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal-container" id="modalContainer" style="position:relative;">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-left" id="modalLeft"></div>
+    <div class="modal-right">
+      <div class="chat-header">💬 深入了解 <span id="chatProjectName"></span></div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-input-area">
+        <input class="chat-input" id="chatInput" placeholder="问关于这个项目的任何问题…" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChat();}">
+        <button class="chat-send" id="chatSendBtn" onclick="sendChat()">发送</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SETTINGS MODAL -->
+<div class="settings-overlay" id="settingsOverlay" onclick="closeSettingsOutside(event)">
+  <div class="settings-box">
+    <div class="settings-title">⚙️ LLM 对话配置</div>
+    <div class="settings-field">
+      <div class="settings-label">API URL</div>
+      <input class="settings-input" id="cfgUrl" placeholder="https://api.openai.com/v1/chat/completions">
+    </div>
+    <div class="settings-field">
+      <div class="settings-label">API Key</div>
+      <input class="settings-input" id="cfgKey" type="password" placeholder="sk-…">
+    </div>
+    <div class="settings-field">
+      <div class="settings-label">Model</div>
+      <input class="settings-input" id="cfgModel" placeholder="gpt-4o-mini">
+    </div>
+    <div class="settings-actions">
+      <button class="settings-btn cancel" onclick="closeSettings()">取消</button>
+      <button class="settings-btn save" onclick="saveSettings()">保存</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== DATA =====
+let REPORTS = [];
+async function loadData() {
+  try {
+    const resp = await fetch('./reports-data.json');
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    REPORTS = await resp.json();
+  } catch (e) {
+    console.error('Failed to load report data:', e);
+    document.getElementById('app').innerHTML = '<div style="padding:40px;text-align:center;color:#6b7280;">数据加载失败，请刷新页面重试</div>';
+  }
+}
+
+// ===== STATE =====
+let currentTab = 'all';
+let currentProject = null;
+let chatHistory = [];
+let isStreaming = false;
+
+// ===== LOCALSTORAGE =====
+function getStars() {
+  try { return JSON.parse(localStorage.getItem('agent_daily_stars') || '{}'); } catch { return {}; }
+}
+function setStar(id, starred) {
+  const stars = getStars();
+  if (starred) stars[id] = Date.now(); else delete stars[id];
+  localStorage.setItem('agent_daily_stars', JSON.stringify(stars));
+}
+function isStarred(id) { return !!getStars()[id]; }
+
+function getSettings() {
+  try { return JSON.parse(localStorage.getItem('agent_daily_llm') || '{}'); } catch { return {}; }
+}
+function saveSettingLS(key, val) {
+  const s = getSettings(); s[key] = val;
+  localStorage.setItem('agent_daily_llm', JSON.stringify(s));
+}
+
+// ===== ALL ITEMS =====
+function getAllItems() {
+  const items = [];
+  REPORTS.forEach(r => r.sections.forEach(s => s.items.forEach(i => items.push({...i, _date: r.date, _weekday: r.weekday, _sectionType: s.type}))));
+  return items;
+}
+function getItemById(id) { return getAllItems().find(i => i.id === id); }
+
+// ===== RENDER =====
+function render() {
+  const app = document.getElementById('app');
+  if (currentTab === 'all') {
+    renderAllTab(app);
+  } else {
+    renderStarredTab(app);
+  }
+}
+
+function renderAllTab(app) {
+  let html = '';
+  REPORTS.forEach(report => {
+    const totalItems = report.sections.reduce((a, s) => a + s.items.length, 0);
+    html += `
+    <div class="report-section">
+      <div class="report-header open" onclick="toggleReport(this)">
+        <div class="report-date">${report.date} ${report.weekday}</div>
+        <div class="report-stats">
+          <span style="color:#ef4444">🔥${report.stats.hot}</span>
+          <span style="color:#3b82f6">✨${report.stats.new}</span>
+          <span style="color:#22c55e">👀${report.stats.note}</span>
+          <span>共${totalItems}项</span>
+        </div>
+        <div class="report-arrow">▼</div>
+      </div>
+      <div class="report-body open"><div class="report-body-inner">`;
+
+    report.sections.forEach(section => {
+      html += `<div class="section-title">${section.title}</div>`;
+      section.items.forEach((item, idx) => {
+        html += renderCard(item, idx);
+      });
+    });
+
+    html += `</div></div></div>`;
+  });
+  app.innerHTML = html;
+}
+
+function renderStarredTab(app) {
+  const stars = getStars();
+  const starredItems = getAllItems().filter(i => stars[i.id]);
+  if (starredItems.length === 0) {
+    app.innerHTML = `<div class="empty-state"><div class="icon">⭐</div><p>还没有收藏的项目<br>点击卡片上的星标即可收藏</p></div>`;
+    return;
+  }
+  let html = '<div style="margin-bottom:12px;font-size:0.9rem;color:var(--text-secondary);">已收藏 ' + starredItems.length + ' 个项目</div>';
+  starredItems.sort((a, b) => (stars[b.id] || 0) - (stars[a.id] || 0));
+  starredItems.forEach((item, idx) => {
+    html += renderCard(item, idx);
+  });
+  app.innerHTML = html;
+}
+
+function renderCard(item, idx) {
+  const starred = isStarred(item.id);
+  const sectionTypeClass = item._sectionType || 'new';
+  return `
+  <div class="card" style="animation-delay:${idx * 0.03}s" onclick="openModal('${item.id}')">
+    <div class="card-top">
+      <div class="card-info">
+        <div class="card-name-row">
+          <a class="card-name" href="${item.url}" target="_blank" onclick="event.stopPropagation()">${item.name}</a>
+          <span class="card-stars">⭐ ${item.stars}</span>
+        </div>
+        <div class="card-tagline">${item.tagline}</div>
+        <div class="card-tags">
+          <span class="tag ${sectionTypeClass}">${item._sectionType === 'hot' ? '🔥 热门' : item._sectionType === 'new' ? '✨ 新发现' : '👀 值得留意'}</span>
+          <span class="tag scene">${item.sceneTag}</span>
+          <span class="tag type">${item.typeTag}</span>
+        </div>
+      </div>
+      <button class="star-btn ${starred ? 'starred' : ''}" onclick="toggleStar(event,'${item.id}')">
+        ${starred ? '★' : '☆'}
+      </button>
+    </div>
+  </div>`;
+}
+
+// ===== TAB =====
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
+  render();
+}
+
+// ===== ACCORDION =====
+function toggleReport(el) {
+  el.classList.toggle('open');
+  const body = el.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+// ===== STAR =====
+function toggleStar(event, id) {
+  event.stopPropagation();
+  setStar(id, !isStarred(id));
+  render();
+  if (currentProject && currentProject.id === id) {
+    // update modal star if open
+  }
+}
+
+// ===== MODAL =====
+function openModal(id) {
+  const item = getItemById(id);
+  if (!item) return;
+  currentProject = item;
+  chatHistory = [];
+
+  // render left
+  const left = document.getElementById('modalLeft');
+  const usageHtml = item.usage ? item.usage.split('\n').map(p => {
+    if (p.startsWith('解决什么问题') || p.startsWith('怎么用') || p.startsWith('适合谁') || p.startsWith('怎么提效')) {
+      return `<h4>${p}</h4>`;
+    }
+    return p ? `<p>${p}</p>` : '';
+  }).join('') : '';
+
+  left.innerHTML = `
+    <div class="modal-project-name">${item.name}</div>
+    <div class="modal-stars-row">
+      <span class="card-stars">⭐ ${item.stars}</span>
+      <a class="modal-link" href="${item.url}" target="_blank">${item.url}</a>
+    </div>
+    <div class="modal-tagline">${item.tagline}</div>
+    <div class="modal-tags">
+      <span class="tag ${item._sectionType}">${item._sectionType === 'hot' ? '🔥 热门' : item._sectionType === 'new' ? '✨ 新发现' : '👀 值得留意'}</span>
+      <span class="tag scene">${item.sceneTag}</span>
+      <span class="tag type">${item.typeTag}</span>
+    </div>
+    <div class="modal-usage">${usageHtml}</div>
+    <div style="margin-top:16px;font-size:0.8rem;color:var(--text-muted)">📅 ${item._date}</div>
+  `;
+
+  // render right
+  document.getElementById('chatProjectName').textContent = item.name;
+  document.getElementById('chatMessages').innerHTML = '';
+  document.getElementById('chatInput').value = '';
+
+  // show modal
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  // auto-send intro
+  setTimeout(() => {
+    const autoMsg = `请详细介绍这个项目「${item.name}」，包括核心优势、使用场景和注意事项。以下是项目简介：${item.tagline}`;
+    chatHistory.push({role: 'user', content: autoMsg});
+    renderChatMsg('user', autoMsg);
+    callLLM();
+  }, 300);
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+  currentProject = null;
+  chatHistory = [];
+  isStreaming = false;
+}
+
+function closeModalOutside(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+// ===== CHAT =====
+function renderChatMsg(role, content) {
+  const container = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = `chat-msg ${role}`;
+  div.innerHTML = formatMsg(content);
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+  return div;
+}
+
+function formatMsg(text) {
+  // Simple markdown-ish
+  let html = text
+    .replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br>');
+  return html;
+}
+
+async function sendChat() {
+  const input = document.getElementById('chatInput');
+  const msg = input.value.trim();
+  if (!msg || isStreaming) return;
+  input.value = '';
+  chatHistory.push({role: 'user', content: msg});
+  renderChatMsg('user', msg);
+  await callLLM();
+}
+
+async function callLLM() {
+  const cfg = getSettings();
+  if (!cfg.url || !cfg.key || !cfg.model) {
+    renderChatMsg('assistant', '⚠️ 请先点击右上角 ⚙️ 配置 LLM API（URL / Key / Model）。');
+    return;
+  }
+
+  isStreaming = true;
+  document.getElementById('chatSendBtn').disabled = true;
+
+  const systemMsg = {role: 'system', content: `你是AI工具分析助手。用户正在了解项目「${currentProject.name}」，以下是项目信息：\n名称：${currentProject.name}\nStars：${currentProject.stars}\n简介：${currentProject.tagline}\n分类：${currentProject.sceneTag} / ${currentProject.typeTag}\n详细用法：${currentProject.usage || '无'}\n\n请基于以上信息，用中文回答用户的问题。回答要准确、具体、有实用价值。`};
+
+  const messages = [systemMsg, ...chatHistory];
+
+  const assistantDiv = renderChatMsg('assistant', '');
+  let fullContent = '';
+
+  try {
+    const resp = await fetch(cfg.url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${cfg.key}`
+      },
+      body: JSON.stringify({
+        model: cfg.model,
+        messages: messages,
+        stream: true
+      })
+    });
+
+    if (!resp.ok) {
+      const errText = await resp.text();
+      fullContent = `❌ API 错误 (${resp.status}): ${errText.substring(0, 200)}`;
+      assistantDiv.innerHTML = formatMsg(fullContent);
+      chatHistory.push({role: 'assistant', content: fullContent});
+      isStreaming = false;
+      document.getElementById('chatSendBtn').disabled = false;
+      return;
+    }
+
+    const reader = resp.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+
+    while (true) {
+      const {done, value} = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, {stream: true});
+      const lines = buffer.split('\n');
+      buffer = lines.pop() || '';
+
+      for (const line of lines) {
+        if (line.startsWith('data: ')) {
+          const data = line.slice(6).trim();
+          if (data === '[DONE]') break;
+          try {
+            const json = JSON.parse(data);
+            const delta = json.choices?.[0]?.delta?.content || '';
+            if (delta) {
+              fullContent += delta;
+              assistantDiv.innerHTML = formatMsg(fullContent);
+              document.getElementById('chatMessages').scrollTop = document.getElementById('chatMessages').scrollHeight;
+            }
+          } catch {}
+        }
+      }
+    }
+  } catch (err) {
+    fullContent = `❌ 请求失败: ${err.message}`;
+    assistantDiv.innerHTML = formatMsg(fullContent);
+  }
+
+  chatHistory.push({role: 'assistant', content: fullContent});
+  isStreaming = false;
+  document.getElementById('chatSendBtn').disabled = false;
+}
+
+// ===== SETTINGS =====
+function openSettings() {
+  const cfg = getSettings();
+  document.getElementById('cfgUrl').value = cfg.url || '';
+  document.getElementById('cfgKey').value = cfg.key || '';
+  document.getElementById('cfgModel').value = cfg.model || '';
+  document.getElementById('settingsOverlay').classList.add('open');
+}
+function closeSettings() {
+  document.getElementById('settingsOverlay').classList.remove('open');
+}
+function closeSettingsOutside(e) {
+  if (e.target === document.getElementById('settingsOverlay')) closeSettings();
+}
+function saveSettings() {
+  const url = document.getElementById('cfgUrl').value.trim();
+  const key = document.getElementById('cfgKey').value.trim();
+  const model = document.getElementById('cfgModel').value.trim();
+  saveSettingLS('url', url);
+  saveSettingLS('key', key);
+  saveSettingLS('model', model);
+  closeSettings();
+}
+
+// ===== KEYBOARD =====
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (document.getElementById('settingsOverlay').classList.contains('open')) closeSettings();
+    else if (document.getElementById('modalOverlay').classList.contains('open')) closeModal();
+  }
+});
+
+// ===== INIT =====
+loadData().then(() => render());
+</script>
+</body>
+</html>
