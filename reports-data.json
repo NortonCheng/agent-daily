@@ -1,0 +1,270 @@
+[
+  {
+    "date": "2026-06-03",
+    "weekday": "星期三",
+    "stats": {
+      "hot": 1,
+      "new": 7,
+      "note": 2
+    },
+    "sections": [
+      {
+        "type": "hot",
+        "title": "热门 · 重大更新",
+        "items": [
+          {
+            "id": "2026-06-03-mineru",
+            "name": "MinerU",
+            "url": "https://github.com/opendatalab/MinerU",
+            "stars": "80k+",
+            "tagline": "高精度文档解析引擎，VLM+OCR双引擎，109语言。v3.2重大更新：许可证从AGPLv3升级至Apache 2.0，VLM模型升级至MinerU2.5-Pro，新增PPTX/XLSX原生解析。",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢 大型平台",
+            "usage": "解决什么问题：企业RAG/知识库场景下，PDF/文档→Markdown的解析质量直接决定下游检索和回答质量。\n\n怎么用：部署MCP Server即可与Claude Desktop/Cursor/Windsurf无缝集成，也可用Python SDK/CLI/REST API嵌入工作流。\n\n适合谁：搭建企业知识库的团队、需要文档理解能力的AI应用开发者。Apache 2.0后商用无顾虑，私有化部署零数据外传。"
+          }
+        ]
+      },
+      {
+        "type": "new",
+        "title": "新发现",
+        "items": [
+          {
+            "id": "2026-06-03-moneyprinter",
+            "name": "MoneyPrinterTurbo",
+            "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+            "stars": "68k+",
+            "tagline": "输入关键词→全自动生成短视频。脚本→配音→字幕→画面→背景音乐→成片，一条龙本地化生产。支持9:16竖屏和16:9横屏，批量生成多版本对比挑选。",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢 大型平台",
+            "usage": "解决什么问题：短视频创作全流程耗时，单人日产出有限。\n\n怎么用：填入LLM API Key + Pexels素材API Key，打开Web界面输入主题即可。支持批量生成不同版本。\n\n适合谁：日更短视频账号运营者、自媒体矩阵管理团队。"
+          },
+          {
+            "id": "2026-06-03-capcut-cli",
+            "name": "capcut-cli",
+            "url": "https://www.npmjs.com/package/capcut-cli",
+            "stars": "新发布",
+            "tagline": "LLM Agent驱动的CapCut/剪映CLI工具。零依赖、无服务器、JSON in, JSON out。支持Whisper自动字幕、模板套用、多语言翻译、长视频切Shorts。",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧 小而美",
+            "usage": "解决什么问题：视频剪辑自动化缺乏确定性边界，LLM Agent需要一个可预测的CLI接口来驱动剪辑。\n\n怎么用：npm install -g capcut-cli，然后capcut caption 项目路径即可用Whisper生成字幕。也支持capcut serve启动JSONL队列，接入n8n/Coze/Make等。\n\n适合谁：搭建短视频自动流水线的开发者、想把视频剪辑嵌入Agent工作流的极客。"
+          },
+          {
+            "id": "2026-06-03-open-slide",
+            "name": "open-slide",
+            "url": "https://github.com/1weiho/open-slide",
+            "stars": "新发布",
+            "tagline": "AI Agent驱动的PPT生成工具。核心理念：PPT就是代码，让AI写PPT。每张幻灯片=独立HTML/CSS文件，35种设计风格，浏览器可视化编辑器。",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧 小而美",
+            "usage": "解决什么问题：AI生成PPT要么用商业工具受限于模板，要么直接生成PPTX文件难以迭代。\n\n怎么用：Plan→Design→Edit→Export四步流程。先用Agent生成幻灯片HTML，再在浏览器编辑器中框选不满意区域让Agent重写，最后导出PDF。\n\n适合谁：技术从业者、用Claude Code/Codex作为主力工具的开发者。"
+          },
+          {
+            "id": "2026-06-03-pdf-oxide",
+            "name": "pdf-oxide",
+            "url": "https://pypi.org/project/pdf-oxide/",
+            "stars": "新发布",
+            "tagline": "最快的PDF解析库：0.8ms/文档，PyMuPDF的5倍速，3830份PDF 100%通过率。Rust核心+八语言绑定。内置MCP Server。",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧 小而美",
+            "usage": "解决什么问题：PDF解析是RAG/文档处理流水线的第一道关卡。\n\n怎么用：pip install pdf-oxide，三行代码完成文本提取/Markdown转换。MCP模式配置后Claude/Cursor直接读PDF。\n\n适合谁：RAG管线开发者、需要批量PDF转Markdown的团队。"
+          },
+          {
+            "id": "2026-06-03-all2md",
+            "name": "all2md",
+            "url": "https://pypi.org/project/all2md/",
+            "stars": "新发布",
+            "tagline": "Python原生文档→Markdown转换器，支持双向转换。内置MCP Server，CLI/库/API三种使用方式。插件架构可扩展新格式。",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧 小而美",
+            "usage": "解决什么问题：各种格式文档→Markdown是刚需但工具碎片化。all2md一个库覆盖PDF/Word/Excel/PPT/图片/邮件，且支持反向转换。\n\n怎么用：MCP模式配置all2md-mcp即可让Claude Desktop自动转换文档。CLI批量处理。\n\n适合谁：搭建LLM文档处理管线的开发者、需要MCP Server让AI直接读文档的用户。"
+          },
+          {
+            "id": "2026-06-03-amx-cli",
+            "name": "amx-cli",
+            "url": "https://github.com/omeryasirkucuk/amx",
+            "stars": "新发布",
+            "tagline": "Agentic Metadata Extractor——AI驱动的数据库元数据自动生成工具。三个子Agent并行收集证据，编排器合并排名，人工审核后写回数据库COMMENT。",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧 小而美",
+            "usage": "解决什么问题：数据团队的永恒痛点——表和字段没有注释/注释过期。\n\n怎么用：pip install amx-cli，amx启动交互式REPL，/setup配置数据库和LLM，/run对指定表生成注释建议。\n\n适合谁：数据工程师/分析师、需要给数据仓库补注释的团队。三Agent架构同时参考schema+文档+代码。"
+          },
+          {
+            "id": "2026-06-03-agentics",
+            "name": "Agentics Beyond Code",
+            "url": "https://github.com/githubnext/agentics-beyond-code",
+            "stars": "GitHub Next",
+            "tagline": "GitHub Next出品——16个即用的Agentic工作流，让非工程角色（PM/合规/运营）也能受益于Agent自动化。核心模式：确定性脚本采集→Agent分析→安全输出。",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧 小而美",
+            "usage": "解决什么问题：GitHub Agentic Workflows大多面向开发者，PM/运营等角色缺乏现成模板。\n\n怎么用：直接fork仓库，按需挑选工作流。每个工作流都有Safe Outputs安全输出模型。\n\n适合谁：用GitHub管理项目的团队、想给非技术同事引入Agent自动化的Tech Lead。"
+          }
+        ]
+      },
+      {
+        "type": "note",
+        "title": "值得留意",
+        "items": [
+          {
+            "id": "2026-06-03-capcut-mate",
+            "name": "CapCut Mate",
+            "url": "https://github.com/Hommy-master/capcut-mate",
+            "stars": "1.1k",
+            "tagline": "基于FastAPI的剪映草稿自动化API。与capcut-cli互补，走RESTful API路线，原生集成Coze/n8n等AI工作流平台。Docker一键部署。",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧 小而美",
+            "usage": "与capcut-cli的区别：capcut-cli是CLI/库模式，适合开发者嵌入pipeline；CapCut Mate是HTTP API模式，适合Coze/n8n等低代码平台直接调用。\n\n适合谁：用Coze搭建视频工作流的用户、n8n自动化爱好者。"
+          },
+          {
+            "id": "2026-06-03-trendpublish",
+            "name": "TrendPublish",
+            "url": "https://github.com/OpenAISpace/ai-trend-publish",
+            "stars": "新发布",
+            "tagline": "全自动AI内容生成与发布系统。多源数据采集→AI内容生成→模板化排版→自动发布微信公众号。基于Deno+TypeScript，CRON定时调度。",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧 小而美",
+            "usage": "解决什么问题：公众号运营的采写排发全链路手动操作。\n\n怎么用：配置数据源关键词和AI模型API Key，设定CRON定时任务，系统自动采集→生成→排版→发布。国内模型优先。\n\n适合谁：微信公众号日更运营者、需要自动化内容生产的团队。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2026-06-02",
+    "weekday": "星期一",
+    "stats": {
+      "hot": 3,
+      "new": 5,
+      "note": 3
+    },
+    "sections": [
+      {
+        "type": "hot",
+        "title": "热门",
+        "items": [
+          {
+            "id": "2026-06-02-ecc",
+            "name": "ECC",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": "199k+",
+            "tagline": "Agent harness 性能优化系统——Skills、Instincts、Memory、Security 一站式装配",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏢 大型平台",
+            "usage": "专为 Claude Code / Codex / Cursor 等 coding agent 提供操作系统级增强。内置 63+ 个 Agent、249+ 个 Skills、Hooks、Rules 和 MCP 配置。\n\n适合谁：重度使用 AI 编码助手的开发者和团队。\n怎么提效：ECC 统一管理 skills 和记忆，agent 之间共享经验，token 优化功能直接省钱。"
+          },
+          {
+            "id": "2026-06-02-rtk",
+            "name": "rtk",
+            "url": "https://github.com/rtk-ai/rtk",
+            "stars": "56k+",
+            "tagline": "CLI 代理，将 LLM token 消耗降低 60-90%——你的 AI 编码助手省钱包",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️ 中型框架",
+            "usage": "Rust 编写的 CLI 代理，拦截你和 LLM 之间的请求，通过智能压缩和缓存机制，将 token 消耗降低 60-90%。\n\n适合谁：每天花大量 token 在 AI 编码上的个人开发者和团队。\n怎么提效：装上就能省钱，零侵入。"
+          },
+          {
+            "id": "2026-06-02-scrapling",
+            "name": "Scrapling",
+            "url": "https://github.com/d4vinci/Scrapling",
+            "stars": "55.8k",
+            "tagline": "自适应 Python 爬虫框架——反爬绕过 + 智能元素定位 + AI 集成",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️ 中型框架",
+            "usage": "类 Scrapy API 的现代爬虫框架，内置反机器人绕过、智能元素重定位（网站改版后选择器自动修复）、代理轮换和 AI 集成。\n\n适合谁：需要定期采集竞品数据、行业资讯、价格监控的运营和数据团队。\n怎么提效：智能元素追踪能自动适应 DOM 变化，维护成本大幅降低。"
+          }
+        ]
+      },
+      {
+        "type": "new",
+        "title": "新发现",
+        "items": [
+          {
+            "id": "2026-06-02-liteparse",
+            "name": "LiteParse",
+            "url": "https://github.com/run-llama/liteparse",
+            "stars": "新发布",
+            "tagline": "LlamaIndex 出品的开源本地 PDF 解析器——带 bounding box，零云依赖",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧 小而美",
+            "usage": "LlamaIndex 的开源本地版，用 Rust 编写。提供字符级文本提取 + 精确 bounding box。内置 Tesseract OCR，支持多栏布局重建。\n\n适合谁：搭建 RAG 知识库的团队。\n怎么提效：一个包解决，RAG pipeline 搭建时间从天级降到小时级。"
+          },
+          {
+            "id": "2026-06-02-undoc",
+            "name": "undoc",
+            "url": "https://github.com/iyulab/undoc",
+            "stars": "v0.5.0",
+            "tagline": "高性能 Rust 库——将 DOCX/XLSX/PPTX 转为 Markdown，支持 WASM 浏览器端运行",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧 小而美",
+            "usage": "专注做一件事：将 Office 文档高质量转为 Markdown/JSON/纯文本。还有 WASM 版本可在浏览器内直接运行。\n\n适合谁：需要批量处理 Office 文档的开发者。\n怎么提效：WASM 版本特别适合做前端工具——用户拖拽文件，浏览器本地解析，隐私零风险。"
+          },
+          {
+            "id": "2026-06-02-pullfrog",
+            "name": "Pullfrog AI",
+            "url": "https://github.com/colinhacks/pullfrog",
+            "stars": "~400",
+            "tagline": "开源 CodeRabbit 替代品——BYOK、模型无关、运行在 GitHub Actions 内",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧 小而美",
+            "usage": "Zod 作者创建的开源 AI PR 审查 + Issue 分流 + CI 自动修复工具。核心差异：BYOK（自带 API Key），支持任意模型。\n\n适合谁：想要 AI 辅助代码审查但不想把代码发给第三方 SaaS 的团队。"
+          },
+          {
+            "id": "2026-06-02-agents-cli",
+            "name": "agents-cli",
+            "url": "https://github.com/phnx-labs/agents-cli",
+            "stars": "新发布",
+            "tagline": "CLI agent 的 meta-harness——统一管理 Claude Code / Codex / Cursor 的技能、密钥和编排",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧 小而美",
+            "usage": "解决一个实际问题：当你同时使用多个 coding agent 时，技能、插件、密钥的管理极其混乱。agents-cli 将所有资源统一放在 ~/.agents 目录下。\n\n适合谁：同时使用多个 AI coding agent 的开发者和小团队。"
+          },
+          {
+            "id": "2026-06-02-gh-aw",
+            "name": "GitHub Agentic Workflows",
+            "url": "https://github.github.com/gh-aw/",
+            "stars": "官方",
+            "tagline": "GitHub 官方推出的仓库自动化智能体——用 Markdown 写指令，Actions 里跑 agent",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏢 大型平台",
+            "usage": "用纯 Markdown 描述期望结果，作为 workflow 添加到仓库，通过 GitHub Actions 中的编码 agent 执行。\n\n适合谁：维护开源项目或企业仓库的团队。\n怎么提效：相当于给仓库配了一个 7x24 的值班工程师。"
+          }
+        ]
+      },
+      {
+        "type": "note",
+        "title": "值得留意",
+        "items": [
+          {
+            "id": "2026-06-02-haiku",
+            "name": "haiku.rag",
+            "url": "https://github.com/ggozad/haiku.rag",
+            "stars": "新发布",
+            "tagline": "开箱即用的 agentic RAG——LanceDB + Pydantic AI + Docling，本地优先",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧 小而美",
+            "usage": "有主见的 RAG 方案：LanceDB 嵌入式向量库、混合搜索、多模态搜索、带引用的 QA、MCP Server。\n\n适合谁：想要快速搭建本地知识库的个人和小团队。\n怎么提效：一行命令索引 PDF，一行命令搜索。MCP Server 让 Claude 直接调用 RAG 能力。"
+          },
+          {
+            "id": "2026-06-02-cloak",
+            "name": "CloakBrowser",
+            "url": "https://github.com/CloakHQ/CloakBrowser",
+            "stars": "13k (+8.6k/周)",
+            "tagline": "隐身 Chromium 浏览器——C++ 源码层修改指纹，通过所有机器人检测",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️ 中型框架",
+            "usage": "在 Chromium 的 C++ 源码层面修改浏览器指纹，通过 Cloudflare Turnstile 等所有主流检测。\n\n适合谁：需要自动化采集受保护网站数据的团队。\n怎么提效：从根本上解决了指纹检测问题，配合 Scrapling 使用，爬虫维护成本趋近于零。"
+          },
+          {
+            "id": "2026-06-02-genai-commit",
+            "name": "genai-commit",
+            "url": "https://www.npmjs.com/package/genai-commit",
+            "stars": "新发布",
+            "tagline": "AI commit 消息生成器——支持 Claude Code / Cursor / Codex，带 Jira 集成",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧 小而美",
+            "usage": "在 git commit 前自动生成结构化的 commit 消息。支持三大编码 agent 的模型切换，还能自动关联 Jira ticket。\n\n适合谁：每天写大量 commit 但懒得写规范消息的开发者。"
+          }
+        ]
+      }
+    ]
+  }
+]
