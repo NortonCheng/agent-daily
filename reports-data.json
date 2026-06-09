@@ -1,5 +1,363 @@
 [
   {
+    "date": "2026-06-08",
+    "weekday": "周一",
+    "type": "weekly",
+    "stats": {
+      "total": 28,
+      "new": 18,
+      "ecommerce": 5
+    },
+    "sections": [
+      {
+        "name": "🖥️ 内容生产",
+        "count": 7,
+        "items": [
+          {
+            "name": "Impeccable",
+            "tagline": "给AI编码Agent一套设计词汇表，23条指令+27条反模式规则",
+            "stars": "35.2k",
+            "level": "🏗️中型框架",
+            "url": "https://github.com/pbakaus/impeccable",
+            "id": "2026-06-08-impeccable",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏗️中型框架",
+            "usage": ""
+          },
+          {
+            "name": "VoxCPM2",
+            "tagline": "清华OpenBMB的Tokenizer-Free多语言TTS，48kHz 30语言+声音克隆",
+            "stars": "新发布",
+            "level": "🔧小而美",
+            "url": "https://github.com/OpenBMB/VoxCPM",
+            "id": "2026-06-08-voxcpm2",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "Taste-Skill",
+            "tagline": "让AI拥有好品味，阻止生成无聊平庸内容",
+            "stars": "35.7k",
+            "level": "🏗️中型框架",
+            "url": "https://github.com/Leonxlnx/taste-skill",
+            "id": "2026-06-08-taste-skill",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏗️中型框架",
+            "usage": ""
+          },
+          {
+            "name": "@layoutdesign/context",
+            "tagline": "MCP Server让AI Agent获得完整设计系统上下文",
+            "stars": "新发布",
+            "level": "🔧小而美",
+            "url": "https://www.npmjs.com/package/@layoutdesign/context",
+            "id": "2026-06-08-@layoutdesign-context",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "Odysseus",
+            "tagline": "PewDiePie的开源自托管AI工作空间，一周涨44k星",
+            "stars": "60k+",
+            "level": "🏢大型平台",
+            "url": "https://github.com/pewdiepie-archdaemon/odysseus",
+            "id": "2026-06-08-odysseus",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": ""
+          },
+          {
+            "name": "Daisy",
+            "tagline": "本地优先开源会议录音+Whisper转录+MCP Server",
+            "stars": "PH新品",
+            "level": "🔧小而美",
+            "url": "https://www.producthunt.com/products/daisy",
+            "id": "2026-06-08-daisy",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "OpenAI Codex Sites",
+            "tagline": "AI生成可交互Web App而非静态文件",
+            "stars": "OpenAI官方",
+            "level": "🏢大型平台",
+            "url": "https://www.producthunt.com/products/openai",
+            "id": "2026-06-08-openai-codex-sites",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": ""
+          }
+        ]
+      },
+      {
+        "name": "📤 发行与分发",
+        "count": 6,
+        "items": [
+          {
+            "name": "1688-shopkeeper",
+            "tagline": "1688选品到多平台一键铺货的AI Skill",
+            "stars": "2.6k",
+            "level": "🔧小而美",
+            "url": "https://github.com/next-1688/1688-shopkeeper",
+            "id": "2026-06-08-1688-shopkeeper",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "SellerClaw",
+            "tagline": "AI Agent团队自动运营多渠道店铺",
+            "stars": "PH #2",
+            "level": "🏗️中型框架",
+            "url": "https://www.producthunt.com/products/sellerclaw",
+            "id": "2026-06-08-sellerclaw",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏗️中型框架",
+            "usage": ""
+          },
+          {
+            "name": "Vokal",
+            "tagline": "人+AI Agent的实时协作空间",
+            "stars": "PH 480票",
+            "level": "🔧小而美",
+            "url": "https://www.producthunt.com/products/vokal",
+            "id": "2026-06-08-vokal",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "Botate",
+            "tagline": "把Prompt变成AI辩论，输出决策协议",
+            "stars": "PH新品",
+            "level": "🔧小而美",
+            "url": "https://www.producthunt.com/products/botate",
+            "id": "2026-06-08-botate",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "PM Skills Marketplace",
+            "tagline": "100+产品管理Agent技能包",
+            "stars": "12.2k",
+            "level": "🏗️中型框架",
+            "url": "https://github.com/phuryn/pm-skills",
+            "id": "2026-06-08-pm-skills-marketplace",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏗️中型框架",
+            "usage": ""
+          },
+          {
+            "name": "Minimi",
+            "tagline": "Claude的环境记忆，自动提供Mac上下文",
+            "stars": "PH 496票",
+            "level": "🔧小而美",
+            "url": "https://www.producthunt.com/products/minimi",
+            "id": "2026-06-08-minimi",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          }
+        ]
+      },
+      {
+        "name": "📡 信息与工作流提效",
+        "count": 10,
+        "items": [
+          {
+            "name": "Graphify",
+            "tagline": "把代码库变成可查询的知识图谱，支持20+编码Agent",
+            "stars": "本周热门",
+            "level": "🔧小而美",
+            "url": "https://github.com/safishamsi/graphify",
+            "id": "2026-06-08-graphify",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "Headroom",
+            "tagline": "LLM上下文压缩，节省60%+上下文窗口",
+            "stars": "本周热门",
+            "level": "🔧小而美",
+            "url": "https://github.com/chopratejas/headroom",
+            "id": "2026-06-08-headroom",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "last30days-skill",
+            "tagline": "30天趋势研究Skill，跨Reddit/X/YouTube/HN搜索",
+            "stars": "29.4k",
+            "level": "🏗️中型框架",
+            "url": "https://github.com/mvanhorn/last30days-skill",
+            "id": "2026-06-08-last30days-skill",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": ""
+          },
+          {
+            "name": "Anthropic漏洞发现框架",
+            "tagline": "自主漏洞发现与修复五段闭环参考实现",
+            "stars": "Anthropic官方",
+            "level": "🏗️中型框架",
+            "url": "https://github.com/anthropics/defending-code-reference-harness",
+            "id": "2026-06-08-anthropic漏洞发现框架",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": ""
+          },
+          {
+            "name": "Cost.dev",
+            "tagline": "让AI Agent变省钱，减少Token 79%+成本67%",
+            "stars": "YC W21",
+            "level": "🔧小而美",
+            "url": "https://cost.dev",
+            "id": "2026-06-08-cost.dev",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "Lazarus",
+            "tagline": "长周期任务编码Agent，单Python运行时自建工作流",
+            "stars": "Show HN",
+            "level": "🔧小而美",
+            "url": "https://github.com/ExpressGradient/lazarus",
+            "id": "2026-06-08-lazarus",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "Hyper (YC P26)",
+            "tagline": "公司共享大脑，知识图谱注入Agent上下文",
+            "stars": "Launch HN",
+            "level": "🏗️中型框架",
+            "url": "https://heyhyper.ai",
+            "id": "2026-06-08-hyper-(yc-p26)",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": ""
+          },
+          {
+            "name": "TEKIR",
+            "tagline": "API响应扩展agent_guidance字段，引导Agent行为",
+            "stars": "Show HN",
+            "level": "🔧小而美",
+            "url": "https://github.com/tangelo-ltd/tekir",
+            "id": "2026-06-08-tekir",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "Agent-Reach",
+            "tagline": "给AI Agent全网搜索能力，跨Twitter/Reddit/YouTube",
+            "stars": "AI Trending",
+            "level": "🔧小而美",
+            "url": "https://github.com/Panniantong/Agent-Reach",
+            "id": "2026-06-08-agent-reach",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "Astrid",
+            "tagline": "AI Agent的操作系统，Rust构建调度/隔离/观测",
+            "stars": "AI Trending",
+            "level": "🔧小而美",
+            "url": "https://github.com/unicity-astrid/astrid",
+            "id": "2026-06-08-astrid",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          }
+        ]
+      },
+      {
+        "name": "🛒 跨境电商",
+        "count": 5,
+        "items": [
+          {
+            "name": "Navos AI选品助手",
+            "tagline": "TEC-DO的TikTok Shop AI选品，5分钟完成选品流程",
+            "stars": "5月上线",
+            "level": "🏗️中型框架",
+            "url": "https://www.tec-do.com",
+            "id": "2026-06-08-navos-ai选品助手",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": ""
+          },
+          {
+            "name": "Shopify Smart Pricing",
+            "tagline": "Shopify免费AI定价+A/B测试",
+            "stars": "官方免费",
+            "level": "🔧小而美",
+            "url": "https://designmusketeer.com/shopify-automation/shopify-smart-pricing-2026/",
+            "id": "2026-06-08-shopify-smart-pricing",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "Accio Work",
+            "tagline": "阿里国际电商智能体，39技能包覆盖全链路",
+            "stars": "阿里国际",
+            "level": "🏢大型平台",
+            "url": "https://www.alibaba.com",
+            "id": "2026-06-08-accio-work",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": ""
+          },
+          {
+            "name": "Ringly.io",
+            "tagline": "Shopify AI语音客服，73%解决率，$0.38/通",
+            "stars": "新发布",
+            "level": "🔧小而美",
+            "url": "https://ringly.io",
+            "id": "2026-06-08-ringly.io",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          },
+          {
+            "name": "电商AI Agent部署指南",
+            "tagline": "5阶段路线图避免66%部署失败率",
+            "stars": "方法论",
+            "level": "🔧小而美",
+            "url": "https://axeetech.com/deploy-autonomous-ai-agents-for-e-commerce-workflows/",
+            "id": "2026-06-08-电商ai-agent部署指南",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": ""
+          }
+        ]
+      }
+    ],
+    "trends": [
+      {
+        "title": "Agent Skills大爆发",
+        "description": "从框架到技能，生态工具链补全。GitHub Trending Top 20中7个是Agent Skills项目。"
+      },
+      {
+        "title": "本地/自托管AI迎来破圈时刻",
+        "description": "PewDiePie的Odysseus一周涨44k星、OpenClaw突破280k星，对AI订阅制的集体反弹。"
+      },
+      {
+        "title": "Agent基础设施进入省钱+安全深水区",
+        "description": "Headroom压缩60%、Cost.dev削减79%、forkd微VM、Anthropic安全框架——从能用转向用得起+用得安全。"
+      }
+    ]
+  },
+  {
     "date": "2026-06-03",
     "weekday": "星期三",
     "stats": {
