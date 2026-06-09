@@ -364,18 +364,7 @@ body {
 <div class="settings-overlay" id="settingsOverlay" onclick="closeSettingsOutside(event)">
   <div class="settings-box">
     <div class="settings-title">⚙️ LLM 对话配置</div>
-    <div class="settings-field">
-      <div class="settings-label">API URL</div>
-      <input class="settings-input" id="cfgUrl" placeholder="https://api.openai.com/v1/chat/completions">
-    </div>
-    <div class="settings-field">
-      <div class="settings-label">API Key</div>
-      <input class="settings-input" id="cfgKey" type="password" placeholder="sk-…">
-    </div>
-    <div class="settings-field">
-      <div class="settings-label">Model</div>
-      <input class="settings-input" id="cfgModel" placeholder="gpt-4o-mini">
-    </div>
+    
     <div class="settings-actions">
       <button class="settings-btn cancel" onclick="closeSettings()">取消</button>
       <button class="settings-btn save" onclick="saveSettings()">保存</button>
@@ -628,33 +617,46 @@ async function sendChat() {
 }
 
 async function callLLM() {
+  const DEFAULT_BOT_ID = '7649319747347300404';
+  const DEFAULT_PAT = 'pat_iE4yCGxIQ8yamty5u6CsdFs8lExvY0AzpmdyojXQuAPCpwfL0811Sa0Lcr7ltrI0';
   const cfg = getSettings();
-  if (!cfg.url || !cfg.key || !cfg.model) {
-    renderChatMsg('assistant', '⚠️ 请先点击右上角 ⚙️ 配置 LLM API（URL / Key / Model）。');
+  const pat = cfg.pat || DEFAULT_PAT;
+  const botId = cfg.bot_id || DEFAULT_BOT_ID;
+
+  if (!pat) {
+    renderChatMsg('assistant', '⚠️ 请先点击右上角 ⚙️ 配置 Coze PAT（个人访问令牌）。');
     return;
   }
 
   isStreaming = true;
   document.getElementById('chatSendBtn').disabled = true;
 
-  const systemMsg = {role: 'system', content: `你是AI工具分析助手。用户正在了解项目「${currentProject.name}」，以下是项目信息：\n名称：${currentProject.name}\nStars：${currentProject.stars}\n简介：${currentProject.tagline}\n分类：${currentProject.sceneTag} / ${currentProject.typeTag}\n详细用法：${currentProject.usage || '无'}\n\n请基于以上信息，用中文回答用户的问题。回答要准确、具体、有实用价值。`};
+  const projectContext = `项目「${currentProject.name}」信息：\n名称：${currentProject.name}\nStars：${currentProject.stars}\n简介：${currentProject.tagline}\n分类：${currentProject.sceneTag} / ${currentProject.typeTag}\n详细用法：${currentProject.usage || '无'}`;
 
-  const messages = [systemMsg, ...chatHistory];
+  // Build the user message with context for the first message or standalone
+  const lastUserMsg = chatHistory.length > 0 ? chatHistory[chatHistory.length - 1].content : '';
+  const contextPrefix = chatHistory.length <= 1 ? projectContext + '\n\n' : '';
 
   const assistantDiv = renderChatMsg('assistant', '');
   let fullContent = '';
 
   try {
-    const resp = await fetch(cfg.url, {
+    const resp = await fetch('https://api.coze.cn/v3/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${cfg.key}`
+        'Authorization': `Bearer ${pat}`
       },
       body: JSON.stringify({
-        model: cfg.model,
-        messages: messages,
-        stream: true
+        bot_id: botId,
+        user_id: 'portal_user_' + (pat.substring(0, 8) || 'default'),
+        stream: true,
+        auto_save_history: false,
+        additional_messages: [{
+          role: 'user',
+          content: contextPrefix + lastUserMsg,
+          content_type: 'text'
+        }]
       })
     });
 
@@ -680,14 +682,14 @@ async function callLLM() {
       buffer = lines.pop() || '';
 
       for (const line of lines) {
-        if (line.startsWith('data: ')) {
-          const data = line.slice(6).trim();
-          if (data === '[DONE]') break;
+        if (line.startsWith('data:')) {
+          const data = line.slice(5).trim();
+          if (!data) continue;
           try {
             const json = JSON.parse(data);
-            const delta = json.choices?.[0]?.delta?.content || '';
-            if (delta) {
-              fullContent += delta;
+            // Coze SSE: conversation.message.delta with type=answer has content
+            if (json.type === 'answer' && json.content) {
+              fullContent += json.content;
               assistantDiv.innerHTML = formatMsg(fullContent);
               document.getElementById('chatMessages').scrollTop = document.getElementById('chatMessages').scrollHeight;
             }
@@ -708,9 +710,10 @@ async function callLLM() {
 // ===== SETTINGS =====
 function openSettings() {
   const cfg = getSettings();
-  document.getElementById('cfgUrl').value = cfg.url || '';
-  document.getElementById('cfgKey').value = cfg.key || '';
-  document.getElementById('cfgModel').value = cfg.model || '';
+  const DEFAULT_BOT_ID = '7649319747347300404';
+  const DEFAULT_PAT = 'pat_iE4yCGxIQ8yamty5u6CsdFs8lExvY0AzpmdyojXQuAPCpwfL0811Sa0Lcr7ltrI0';
+  document.getElementById('cfgPat').value = cfg.pat || DEFAULT_PAT;
+  document.getElementById('cfgBotId').value = cfg.bot_id || DEFAULT_BOT_ID;
   document.getElementById('settingsOverlay').classList.add('open');
 }
 function closeSettings() {
@@ -720,12 +723,10 @@ function closeSettingsOutside(e) {
   if (e.target === document.getElementById('settingsOverlay')) closeSettings();
 }
 function saveSettings() {
-  const url = document.getElementById('cfgUrl').value.trim();
-  const key = document.getElementById('cfgKey').value.trim();
-  const model = document.getElementById('cfgModel').value.trim();
-  saveSettingLS('url', url);
-  saveSettingLS('key', key);
-  saveSettingLS('model', model);
+  const pat = document.getElementById('cfgPat').value.trim();
+  const botId = document.getElementById('cfgBotId').value.trim();
+  saveSettingLS('pat', pat);
+  saveSettingLS('bot_id', botId);
   closeSettings();
 }
 
