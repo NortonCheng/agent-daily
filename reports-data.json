@@ -1,11 +1,343 @@
 [
   {
+    "date": "2026-06-15",
+    "weekday": "周一",
+    "type": "weekly",
+    "stats": {
+      "hot": 8,
+      "new": 14,
+      "note": 6
+    },
+    "sections": [
+      {
+        "name": "🔥 热门",
+        "count": 8,
+        "type": "hot",
+        "title": "🔥 热门",
+        "items": [
+          {
+            "id": "2026-06-15-kimi-k27-code",
+            "name": "Kimi K2.7 Code",
+            "tagline": "月之暗面开源编程专项模型，1T MoE推理Token减少30%，MCP工具调用超Opus 4.8",
+            "stars": "开源首发",
+            "url": "https://www.kimi.com/resources/kimi-k2-7-code",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：国产编程模型在长周期代码任务中推理效率低、工具调用能力弱的问题\n怎么用：通过Kimi Code CLI或API接入，支持256K上下文、多步工具调用、多模态输入；Cloudflare Workers AI已集成\n适合谁：需要低成本Agent编码能力的开发者、构建工具调用密集型工作流的团队"
+          },
+          {
+            "id": "2026-06-15-claude-fable5",
+            "name": "Claude Fable 5 / Mythos 5",
+            "tagline": "Anthropic双模型发布，安全护栏成为商业溢价点，Fable公众版+Mythos网安版",
+            "stars": "Anthropic官方",
+            "url": "https://www.anthropic.com/news/fable-mythos-access",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：AI安全能力与商业定价脱节，高风险场景缺少专业模型的问题\n怎么用：Fable 5通过Claude API直接调用（Pro/Max/Team/Enterprise免费含）；Mythos 5需Glasswing合作伙伴资质\n适合谁：需要最强通用AI的企业（Fable）、网络安全团队和关键基础设施运营方（Mythos）"
+          },
+          {
+            "id": "2026-06-15-pixelle-video",
+            "name": "Pixelle-Video",
+            "tagline": "阿里开源AI全自动短视频引擎，零门槛一键生成成片",
+            "stars": "22.4k",
+            "url": "https://github.com/AIDC-AI/Pixelle-Video",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：短视频制作流程复杂、需要多工具协作的问题\n怎么用：开源项目，可本地部署，输入主题/脚本即可全自动生成短视频，含画面生成、配音、字幕、剪辑\n适合谁：内容创作者、自媒体运营团队、需要批量生产短视频的电商卖家"
+          },
+          {
+            "id": "2026-06-15-understand-anything",
+            "name": "Understand-Anything",
+            "tagline": "把任何代码变成可交互的知识图谱，让你真正理解而非只是看看",
+            "stars": "58.9k",
+            "url": "https://github.com/Egonex-AI/Understand-Anything",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：大型代码库难以快速理解架构和依赖关系的问题\n怎么用：指向代码仓库，自动生成交互式知识图谱，支持点击节点深入查看代码细节和依赖链\n适合谁：入职新团队的开发者、开源项目维护者、需要快速理解陌生代码库的技术团队"
+          },
+          {
+            "id": "2026-06-15-storeclaw-update",
+            "name": "StoreClaw（重大更新）",
+            "tagline": "PH周榜第一+36kr专题，跨平台AI电商运营系统，listing转化率从10%升至14%",
+            "stars": "PH周榜#1",
+            "url": "https://www.storeclaw.com",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：跨境卖家多平台运营需3.5+个工具、数据不互通、AI生成内容质量不稳定的问题\n怎么用：连接Amazon/Shopify/TikTok Shop后台，AI Skill自动执行选品、listing优化、广告分析、库存监控；二次确认保障安全\n适合谁：中大型跨境卖家、从单平台走向多渠道的运营团队"
+          },
+          {
+            "id": "2026-06-15-supertonic",
+            "name": "Supertonic",
+            "tagline": "设备端多语言TTS，M1 Mac 1000+字符/秒，50+语言，完全离线零隐私风险",
+            "stars": "12.0k",
+            "url": "https://github.com/supertone-inc/supertonic",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：云端TTS有延迟和隐私问题，传统设备端TTS质量差速度慢的问题\n怎么用：ONNX Runtime推理，支持Swift/C++/JS/Go/Rust等多语言SDK，内置智能文本规范化，流式输出\n适合谁：需要设备端语音合成的移动应用开发者、对隐私有要求的语音交互产品"
+          },
+          {
+            "id": "2026-06-15-ruflo",
+            "name": "Ruflo",
+            "tagline": "Claude生态领先的Agent编排平台，多智能体协作部署",
+            "stars": "59.6k",
+            "url": "https://github.com/ruvnet/ruflo",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：单一Agent难以处理复杂多步骤任务、多Agent协作缺乏统一编排层的问题\n怎么用：TypeScript框架，定义Agent角色和工作流，支持条件分支和并行执行，深度集成Claude生态\n适合谁：需要构建多Agent协作系统的开发团队、企业级Agent应用架构师"
+          },
+          {
+            "id": "2026-06-15-open-code-review",
+            "name": "Open Code Review",
+            "tagline": "阿里开源代码审查工具，经过阿里大规模验证的混合架构Code Review",
+            "stars": "6.8k",
+            "url": "https://github.com/alibaba/open-code-review",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：人工Code Review耗时长、覆盖不全面，现有AI审查工具误报率高的问题\n怎么用：Go编写，可自托管部署，混合架构结合规则引擎和AI模型，支持主流Git平台集成\n适合谁：追求代码质量的中大型研发团队、希望用AI辅助但保留人工审核的团队"
+          }
+        ]
+      },
+      {
+        "name": "✨ 新发现",
+        "count": 14,
+        "type": "new",
+        "title": "✨ 新发现",
+        "items": [
+          {
+            "id": "2026-06-15-kage",
+            "name": "Kage（影）",
+            "tagline": "把任何网站影子克隆为离线可浏览的单文件二进制，2天1.5k星",
+            "stars": "1.5k",
+            "url": "https://github.com/tamnd/kage",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：浏览器保存网页6个月后JS全崩变白屏，传统爬虫无法处理SPA的问题\n怎么用：一行命令克隆整站（kage clone example.com），可打包成ZIM或自包含二进制文件双击即看\n适合谁：需要离线归档文档的开发者、网络不稳定环境的知识工作者、数字保存从业者"
+          },
+          {
+            "id": "2026-06-15-paca",
+            "name": "Paca",
+            "tagline": "开源Jira替代品，让AI Agent和人在同一个Scrum板上干活",
+            "stars": "Show HN 161票",
+            "url": "https://github.com/Paca-AI/paca",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：传统项目管理工具没有AI Agent席位，人机协作靠手动搬运信息的问题\n怎么用：Docker自托管，内置MCP Server让Claude Code/Cursor直接读写项目数据，Agent可认领任务和更新状态\n适合谁：使用AI编码Agent的开发团队、想让AI参与Sprint Planning的敏捷团队"
+          },
+          {
+            "id": "2026-06-15-browse-sh",
+            "name": "Browse.sh",
+            "tagline": "浏览器自动化技能开放目录，给AI Agent网页操作肌肉记忆",
+            "stars": "PH 482票",
+            "url": "https://browse.sh",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：AI Agent操作网页每次都要从零学习，缺少可复用的网页操作模板的问题\n怎么用：开放SKILL.md食谱目录，通过browse CLI一键安装，Agent即可自动完成特定网站的常规操作\n适合谁：构建网页自动化Agent的开发者、需要Agent重复操作特定网站的运营团队"
+          },
+          {
+            "id": "2026-06-15-honen",
+            "name": "Honen",
+            "tagline": "AI驱动的自动化培训+学习基础设施，文档变更课程自动更新",
+            "stars": "PH 538票",
+            "url": "https://honen.com",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：企业培训内容制作耗时，文档更新后培训材料滞后的的问题\n怎么用：上传文档即可生成互动课程、模拟场景和学习洞察；当源文档变更时课程自动更新\n适合谁：企业培训负责人、需要快速构建入职培训体系的人力资源团队"
+          },
+          {
+            "id": "2026-06-15-asmi-ai",
+            "name": "Asmi AI",
+            "tagline": "替你打电话处理生活琐事的AI，能导航IVRS和复杂对话",
+            "stars": "PH 476票",
+            "url": "https://www.asmi.ai",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：预约、投诉、查询等电话琐事占用大量时间，IVRS语音菜单难操作的问题\n怎么用：每天早上AI打电话处理你当天的任务（牙医预约、银行咨询等），完成后通过iMessage/WhatsApp同步结果\n适合谁：忙碌的职场人士、不擅长电话沟通的人、需要管理大量服务预约的人"
+          },
+          {
+            "id": "2026-06-15-taste-lab",
+            "name": "Taste Lab",
+            "tagline": "提取任何网站的设计DNA，禁止干净现代等废话描述，只保留真正有决策价值的原则",
+            "stars": "PH #3",
+            "url": "https://taste.dev",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：告诉AI仿某网站风格但出来的设计总是差那么一点的问题\n怎么用：输入网站URL，自动提取配色、字体、间距及每个设计决策背后的原因，可直接喂给Claude Code等Agent使用\n适合谁：前端开发者、UI设计师、需要快速还原特定设计风格的Vibe Coding用户"
+          },
+          {
+            "id": "2026-06-15-pixpix",
+            "name": "PixPix",
+            "tagline": "跨境电商内容全流程AI Agent，一张产品图到多平台发布就绪",
+            "stars": "新发布",
+            "url": "https://www.pixpix.com",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：电商视觉内容需要4+工具切换，制作周期长、品牌一致性难保证的问题\n怎么用：上传产品原图，AI Agent自动完成修图/换背景/详情页/短视频，支持Amazon/Shopify/TikTok Shop规格自动适配\n适合谁：跨境卖家、品牌电商团队、没有专职设计师的独立站运营者"
+          },
+          {
+            "id": "2026-06-15-agentsview",
+            "name": "AgentsView",
+            "tagline": "本地优先的编码Agent会话分析器，支持27种Agent自动发现",
+            "stars": "2.7k",
+            "url": "https://github.com/kenn-io/agentsview",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：AI编码Agent的会话历史散落在各处，难以回顾、搜索和统计Token成本的问题\n怎么用：本地桌面应用，自动发现Claude Code/Codex/Cursor等27种Agent的会话目录，提供全文搜索和Token用量报告\n适合谁：重度使用AI编码Agent的开发者、需要追踪Agent成本和效率的团队管理者"
+          },
+          {
+            "id": "2026-06-15-qursor",
+            "name": "Qursor",
+            "tagline": "指向任何UI元素即可复制结构化上下文给AI，告别模糊截图浪费Token",
+            "stars": "PH 321票",
+            "url": "https://www.qursor.dev",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：用截图描述UI变更时AI经常编辑错元素，浪费Token且效果差的问题\n怎么用：Chrome扩展，点击任意UI元素即可复制selector/class/style/font/color等结构化信息，粘贴给AI编码助手\n适合谁：前端开发者、使用Claude Code/Cursor进行UI修改的开发者"
+          },
+          {
+            "id": "2026-06-15-respan-gateway",
+            "name": "Respan Gateway",
+            "tagline": "AI网关内置可观测性+评估，一个平台替代五个工具",
+            "stars": "PH 446票",
+            "url": "https://respan.ai",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：LLM生产环境需要网关+监控+评估+Prompt管理+成本控制五套工具拼凑的问题\n怎么用：单一端点接入1000+模型，内置fallback/缓存/限流/告警，全链路追踪和Prompt版本管理\n适合谁：AI应用运维团队、需要生产级LLM路由和监控的企业"
+          },
+          {
+            "id": "2026-06-15-folio",
+            "name": "Folio",
+            "tagline": "PPT的Claude加强版，咨询和金融团队专用，直接在PowerPoint里工作",
+            "stars": "PH #5",
+            "url": "https://www.folio.ai",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：AI生成PPT质量不稳定、与现有PPT工作流割裂的问题\n怎么用：PowerPoint插件，自研slides引擎保证输出质量，AI直接在PPT中编辑和优化每一页\n适合谁：咨询师、金融分析师、需要高质量演示文稿的商业团队"
+          },
+          {
+            "id": "2026-06-15-local-voicemode",
+            "name": "Local-VoiceMode-LLM",
+            "tagline": "100%本地CPU语音环路，Silero VAD+Parakeet STT+Supertonic TTS，零云端",
+            "stars": "新发布",
+            "url": "https://github.com/groxaxo/Local-VoiceMode-LLM",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：现有语音AI界面要么需要GPU、要么依赖云端API、要么锁定单一操作系统的问题\n怎么用：一行命令安装，自动配置VAD+STT+TTS流水线，支持Ollama/LM Studio等本地LLM，兼容Claude Code和OpenClaw\n适合谁：需要在本地构建完全离线语音交互的开发者、隐私敏感的AI应用场景"
+          },
+          {
+            "id": "2026-06-15-codegraph",
+            "name": "CodeGraph",
+            "tagline": "预索引代码知识图谱，代码变更自动同步，为Claude Code/Cursor提供代码库理解",
+            "stars": "本周热门",
+            "url": "https://github.com/colbymchenry/codegraph",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：AI编码Agent对大型代码库理解不完整，每次都需要重新索引的问题\n怎么用：构建代码库知识图谱，代码变更时自动同步更新，Agent可直接查询获取架构和依赖关系\n适合谁：大型代码库的维护团队、需要让AI Agent深度理解项目的开发者"
+          },
+          {
+            "id": "2026-06-15-netease-tuoke",
+            "name": "网易拓客Agent",
+            "tagline": "B2B外贸7x24小时AI获客，输入行业+产品资料即自动匹配客户",
+            "stars": "5月上线",
+            "url": "https://www.163.com",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：B2B外贸获客依赖人工搜索和跟进，效率低且覆盖面窄的问题\n怎么用：输入行业和产品资料，AI基于全球贸易数据库自动匹配潜在客户，完成首轮需求验证后推给人工销售\n适合谁：B2B外贸企业、需要扩大海外客户触达范围的出口商"
+          }
+        ]
+      },
+      {
+        "name": "📝 值得留意",
+        "count": 6,
+        "type": "note",
+        "title": "📝 值得留意",
+        "items": [
+          {
+            "id": "2026-06-15-langgraph-rce",
+            "name": "LangGraph RCE漏洞链",
+            "tagline": "SQL注入+反序列化漏洞链可导致远程代码执行，影响自托管Agent应用",
+            "stars": "CVE高危",
+            "url": "https://thehackernews.com/2026/06/langgraph-flaw-chain-exposes-self.html",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：自托管LangGraph Agent应用存在未被发现的SQL注入和反序列化安全漏洞\n怎么用：这不是工具而是安全通告。已发布补丁（langgraph-checkpoint-sqlite 3.0.1+），立即升级即可修复\n适合谁：使用LangGraph自托管部署的团队、构建多Agent应用的企业安全团队"
+          },
+          {
+            "id": "2026-06-15-openclaw-security",
+            "name": "OpenClaw安全攻击",
+            "tagline": "Imperva发现联系人注入代码执行，Varonis发现邮件钓鱼数据泄露",
+            "stars": "安全通告",
+            "url": "https://thehackernews.com/2026/06/new-attacks-trick-openclaw-ai-agent.html",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：OpenClaw Agent对输入内容过度信任导致可被注入恶意指令的安全风险\n怎么用：Imperva发现的漏洞已在2026.4.23版本修复，请立即升级；Varonis发现的钓鱼弱点需通过限制Agent自主权限来防护\n适合谁：使用OpenClaw的所有用户、部署自托管AI Agent的安全团队"
+          },
+          {
+            "id": "2026-06-15-agentjacking",
+            "name": "Agentjacking攻击",
+            "tagline": "通过伪造Sentry错误报告注入恶意指令，Claude Code和Cursor均受影响",
+            "stars": "新型攻击",
+            "url": "https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：AI编码Agent信任Sentry MCP返回的诊断信息，攻击者可伪造错误报告注入恶意代码\n怎么用：这不是工具而是安全通告。核心风险在于Agent信任外部数据源作为系统输出；建议审查MCP Server数据源可信度\n适合谁：使用Claude Code/Cursor+Sentry MCP的开发团队、企业安全团队"
+          },
+          {
+            "id": "2026-06-15-ai-agent-bankrupted",
+            "name": "AI Agent刷出$6,531 AWS账单",
+            "tagline": "Agent扫描DN42网络失控，24小时花掉$6,531，HN热帖引发Agent安全讨论",
+            "stars": "HN热帖",
+            "url": "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：暴露Agent缺乏预算上限、权限范围和硬性约束的根本性安全问题\n怎么用：这不是工具而是案例教训。核心启示：基础设施访问使Agent行为变成生产行为，预算上限、限范围凭证、审批检查点和杀开关必须存在于模型之外\n适合谁：所有部署AI Agent的团队、需要建立Agent安全护栏的架构师"
+          },
+          {
+            "id": "2026-06-15-horizon",
+            "name": "Horizon",
+            "tagline": "你的AI新闻雷达，自动生成每日中英文简报",
+            "stars": "6.4k",
+            "url": "https://github.com/Thysrael/Horizon",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：信息过载时代，每天花大量时间浏览多个信息源却难以获取结构化摘要的问题\n怎么用：自托管部署，配置关注的信息源和关键词，AI自动聚合生成每日中英文双语简报\n适合谁：需要每日信息追踪的研究者、投资人和产品经理"
+          },
+          {
+            "id": "2026-06-15-amplitude-ai",
+            "name": "Amplitude AI SDK",
+            "tagline": "Agent分析SDK，追踪每次LLM调用和工具调用为Amplitude事件",
+            "stars": "新发布",
+            "url": "https://pypi.org/project/amplitude-ai/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：Agent运行数据与产品行为数据割裂，难以构建漏斗和留存分析的问题\n怎么用：pip install后替换LLM import即可，自动追踪每次LLM调用/工具调用/用户消息为Amplitude事件，支持Claude Code自动集成\n适合谁：已在用Amplitude的产品团队、需要Agent行为与用户行为关联分析的数据团队"
+          }
+        ]
+      }
+    ],
+    "trends": [
+      {
+        "title": "Agent安全从理论讨论进入实战验证期",
+        "description": "一周内4起重大安全事件：LangGraph RCE、OpenClaw代码注入、Agentjacking、Agent跑飞$6,531账单。安全不再是假设场景，而是正在发生的事故。预算上限、限范围凭证和杀开关必须存在于模型之外。"
+      },
+      {
+        "title": "国产AI在特定场景开始超越海外竞品",
+        "description": "Kimi K2.7 Code在MCP工具调用基准超Claude Opus 4.8（81.1% vs 76.4%），阿里开源Pixelle-Video和Open Code Review，阿里Accio Work赋能义乌10万+商家。特定场景的专项优化正在缩小与前沿的差距。"
+      },
+      {
+        "title": "电商Agent从单点工具走向全流程系统",
+        "description": "StoreClaw获PH周榜第一并登上36kr专题、PixPix从产品图到多平台内容一键生成、网易拓客Agent 7x24小时自动获客。跨境电商正从用AI写描述的时代进入AI接管运营的时代。"
+      }
+    ]
+  },
+  {
     "date": "2026-06-08",
     "weekday": "周一",
     "type": "weekly",
     "stats": {
+      "total": 28,
+      "new": 18,
+      "ecommerce": 5,
       "hot": 0,
-      "new": 28,
       "note": 0
     },
     "sections": [
@@ -22,7 +354,7 @@
             "id": "2026-06-08-impeccable",
             "sceneTag": "🖥️ 内容生产",
             "typeTag": "🏗️中型框架",
-            "usage": "解决什么问题：Chrome浏览器标签页混乱、书签难以管理的问题\n怎么用：安装Chrome扩展后，AI自动整理和分类你的标签页与书签，支持自然语言搜索\n适合谁：重度浏览器用户、研究人员、知识工作者"
+            "usage": "解决什么问题：给AI编码Agent一套设计词汇表，23条指令+27条反模式规则\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "VoxCPM2",
@@ -33,7 +365,7 @@
             "id": "2026-06-08-voxcpm2",
             "sceneTag": "🖥️ 内容生产",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：高质量中文语音合成（TTS）资源匮乏的问题\n怎么用：开源模型，可本地部署或API调用，支持长文本朗读、有声书生成\n适合谁：内容创作者、播客制作者、需要中文语音的App开发者"
+            "usage": "解决什么问题：清华OpenBMB的Tokenizer-Free多语言TTS，48kHz 30语言+声音克隆\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Taste-Skill",
@@ -44,7 +376,7 @@
             "id": "2026-06-08-taste-skill",
             "sceneTag": "🖥️ 内容生产",
             "typeTag": "🏗️中型框架",
-            "usage": "解决什么问题：AI生成内容缺乏个性化风格的问题\n怎么用：上传你喜欢的写作样本，AI学习你的风格后生成同风格新内容\n适合谁：自媒体运营者、品牌文案、需要保持统一调性的内容团队"
+            "usage": "解决什么问题：让AI拥有好品味，阻止生成无聊平庸内容\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "@layoutdesign/context",
@@ -55,7 +387,7 @@
             "id": "2026-06-08-@layoutdesign-context",
             "sceneTag": "🖥️ 内容生产",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：前端布局代码编写效率低的问题\n怎么用：VS Code扩展，描述布局需求即可生成Tailwind CSS代码\n适合谁：前端开发者、全栈工程师、需要快速原型设计的团队"
+            "usage": "解决什么问题：MCP Server让AI Agent获得完整设计系统上下文\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Odysseus",
@@ -66,7 +398,7 @@
             "id": "2026-06-08-odysseus",
             "sceneTag": "🖥️ 内容生产",
             "typeTag": "🏢大型平台",
-            "usage": "解决什么问题：复杂网页自动化流程难以编排的问题\n怎么用：可视化工作流编辑器，拖拽组合浏览器操作步骤，支持条件分支和循环\n适合谁：QA工程师、数据采集人员、运营自动化需求者"
+            "usage": "解决什么问题：PewDiePie的开源自托管AI工作空间，一周涨44k星\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Daisy",
@@ -77,7 +409,7 @@
             "id": "2026-06-08-daisy",
             "sceneTag": "🖥️ 内容生产",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：AI Agent开发中工具调用格式不统一的问题\n怎么用：统一工具调用协议库，让Agent能无缝对接不同API和服务\n适合谁：AI Agent开发者、MCP工具开发者、多工具集成项目"
+            "usage": "解决什么问题：本地优先开源会议录音+Whisper转录+MCP Server\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "OpenAI Codex Sites",
@@ -88,11 +420,11 @@
             "id": "2026-06-08-openai-codex-sites",
             "sceneTag": "🖥️ 内容生产",
             "typeTag": "🏢大型平台",
-            "usage": "解决什么问题：非技术人员建站门槛高的问题\n怎么用：用自然语言描述需求，Codex自动生成并部署静态网站\n适合谁：个人品牌建设者、小企业主、需要快速落地页的营销人员"
+            "usage": "解决什么问题：AI生成可交互Web App而非静态文件\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           }
         ],
-        "title": "🖥️ 内容生产",
-        "type": "new"
+        "type": "new",
+        "title": "🖥️ 内容生产"
       },
       {
         "name": "📤 发行与分发",
@@ -107,7 +439,7 @@
             "id": "2026-06-08-1688-shopkeeper",
             "sceneTag": "📤 发行",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：1688平台选品效率低、手动搬运商品信息繁琐\n怎么用：Chrome扩展，一键采集1688商品信息，支持批量导出和比价\n适合谁：跨境电商卖家、拼多多/淘宝店主、1688采购商"
+            "usage": "解决什么问题：1688选品到多平台一键铺货的AI Skill\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "SellerClaw",
@@ -118,7 +450,7 @@
             "id": "2026-06-08-sellerclaw",
             "sceneTag": "📤 发行",
             "typeTag": "🏗️中型框架",
-            "usage": "解决什么问题：亚马逊竞品分析数据获取困难的问题\n怎么用：输入竞品ASIN，自动抓取价格、评论、排名等关键数据\n适合谁：亚马逊卖家、跨境电商运营、选品分析师"
+            "usage": "解决什么问题：AI Agent团队自动运营多渠道店铺\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Vokal",
@@ -129,7 +461,7 @@
             "id": "2026-06-08-vokal",
             "sceneTag": "📤 发行",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：语音交互开发门槛高、SDK集成复杂的问题\n怎么用：提供跨平台语音SDK，几行代码即可集成语音对话能力\n适合谁：App开发者、智能硬件团队、需要语音交互的SaaS产品"
+            "usage": "解决什么问题：人+AI Agent的实时协作空间\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Botate",
@@ -140,7 +472,7 @@
             "id": "2026-06-08-botate",
             "sceneTag": "📤 发行",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：多平台客服机器人开发维护成本高的问题\n怎么用：统一框架开发一次，一键部署到微信/飞书/Telegram等平台\n适合谁：客服团队、社群运营、需要多渠道触达的品牌"
+            "usage": "解决什么问题：把Prompt变成AI辩论，输出决策协议\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "PM Skills Marketplace",
@@ -151,7 +483,7 @@
             "id": "2026-06-08-pm-skills-marketplace",
             "sceneTag": "📤 发行",
             "typeTag": "🏗️中型框架",
-            "usage": "解决什么问题：产品经理缺少可复用的分析框架和模板的问题\n怎么用：浏览并下载PM技能卡片，涵盖竞品分析、需求评审、OKR制定等场景\n适合谁：产品经理、创业者、需要结构化思维框架的团队"
+            "usage": "解决什么问题：100+产品管理Agent技能包\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Minimi",
@@ -162,11 +494,11 @@
             "id": "2026-06-08-minimi",
             "sceneTag": "📤 发行",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：App体积臃肿影响用户体验的问题\n怎么用：分析App包大小，自动识别可优化资源，生成瘦身报告\n适合谁：移动端开发者、App性能优化团队、独立开发者"
+            "usage": "解决什么问题：Claude的环境记忆，自动提供Mac上下文\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           }
         ],
-        "title": "📤 发行与分发",
-        "type": "new"
+        "type": "new",
+        "title": "📤 发行与分发"
       },
       {
         "name": "📡 信息与工作流提效",
@@ -181,7 +513,7 @@
             "id": "2026-06-08-graphify",
             "sceneTag": "📡 信息与工作流提效",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：数据可视化图表开发耗时的问题\n怎么用：传入JSON数据，自动生成可交互的图表，支持导出为图片或嵌入代码\n适合谁：数据分析师、前端开发者、需要快速出报表的运营"
+            "usage": "解决什么问题：把代码库变成可查询的知识图谱，支持20+编码Agent\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Headroom",
@@ -192,7 +524,7 @@
             "id": "2026-06-08-headroom",
             "sceneTag": "📡 信息与工作流提效",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：AI推理成本不可控的问题\n怎么用：监控API调用token用量和费用，设置预算阈值自动告警\n适合谁：AI应用开发者、使用LLM API的团队、需要控制云成本的企业"
+            "usage": "解决什么问题：LLM上下文压缩，节省60%+上下文窗口\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "last30days-skill",
@@ -203,7 +535,7 @@
             "id": "2026-06-08-last30days-skill",
             "sceneTag": "📡 信息与工作流提效",
             "typeTag": "🏗️中型框架",
-            "usage": "解决什么问题：GitHub项目30天活跃度难以快速评估的问题\n怎么用：输入仓库名，自动统计近30天的commit、PR、issue等活跃指标\n适合谁：开源项目评估者、技术选型团队、投资尽调分析师"
+            "usage": "解决什么问题：30天趋势研究Skill，跨Reddit/X/YouTube/HN搜索\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Anthropic漏洞发现框架",
@@ -214,7 +546,7 @@
             "id": "2026-06-08-anthropic漏洞发现框架",
             "sceneTag": "📡 信息与工作流提效",
             "typeTag": "🏗️中型框架",
-            "usage": "解决什么问题：AI系统安全漏洞难以系统化发现的问题\n怎么用：用Claude自动对目标系统进行红队测试，生成漏洞报告\n适合谁：安全工程师、AI安全研究员、合规审计团队"
+            "usage": "解决什么问题：自主漏洞发现与修复五段闭环参考实现\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Cost.dev",
@@ -225,7 +557,7 @@
             "id": "2026-06-08-cost.dev",
             "sceneTag": "📡 信息与工作流提效",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：云服务费用难以对比和优化的问题\n怎么用：输入使用场景，自动对比各大云厂商价格，给出最优方案\n适合谁：云架构师、DevOps工程师、需要控制基础设施成本的CTO"
+            "usage": "解决什么问题：让AI Agent变省钱，减少Token 79%+成本67%\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Lazarus",
@@ -236,7 +568,7 @@
             "id": "2026-06-08-lazarus",
             "sceneTag": "📡 信息与工作流提效",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：遗留代码理解和重构困难的问题\n怎么用：AI分析老旧代码库，生成架构文档和重构建议，支持增量迁移\n适合谁：接手老项目的开发者、技术债清理团队、代码审计人员"
+            "usage": "解决什么问题：长周期任务编码Agent，单Python运行时自建工作流\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Hyper (YC P26)",
@@ -247,7 +579,7 @@
             "id": "2026-06-08-hyper-(yc-p26)",
             "sceneTag": "📡 信息与工作流提效",
             "typeTag": "🏗️中型框架",
-            "usage": "解决什么问题：AI应用前端开发效率低的问题\n怎么用：AI驱动的UI组件生成器，描述需求即可生成可用的React/Vue组件\n适合谁：前端开发者、AI产品团队、需要快速原型的创业者"
+            "usage": "解决什么问题：公司共享大脑，知识图谱注入Agent上下文\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "TEKIR",
@@ -258,7 +590,7 @@
             "id": "2026-06-08-tekir",
             "sceneTag": "📡 信息与工作流提效",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：技术文档编写和维护成本高的问题\n怎么用：从代码仓库自动生成API文档和使用指南，代码变更时自动更新\n适合谁：开源项目维护者、技术写作团队、API平台开发者"
+            "usage": "解决什么问题：API响应扩展agent_guidance字段，引导Agent行为\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Agent-Reach",
@@ -269,7 +601,7 @@
             "id": "2026-06-08-agent-reach",
             "sceneTag": "📡 信息与工作流提效",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：AI Agent市场推广渠道有限的问题\n怎么用：Agent分发平台，提交Agent后自动推送到多个渠道，追踪使用数据\n适合谁：Agent开发者、AI产品团队、需要获客的Agent创业公司"
+            "usage": "解决什么问题：给AI Agent全网搜索能力，跨Twitter/Reddit/YouTube\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Astrid",
@@ -280,11 +612,11 @@
             "id": "2026-06-08-astrid",
             "sceneTag": "📡 信息与工作流提效",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：团队任务分配和进度追踪不透明的问题\n怎么用：AI助手自动分配任务、追踪进度、识别阻塞项并主动提醒\n适合谁：项目经理、远程团队、需要轻量项目管理的创业团队"
+            "usage": "解决什么问题：AI Agent的操作系统，Rust构建调度/隔离/观测\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           }
         ],
-        "title": "📡 信息与工作流提效",
-        "type": "new"
+        "type": "new",
+        "title": "📡 信息与工作流提效"
       },
       {
         "name": "🛒 跨境电商",
@@ -299,7 +631,7 @@
             "id": "2026-06-08-navos-ai选品助手",
             "sceneTag": "🛒 跨境电商",
             "typeTag": "🏗️中型框架",
-            "usage": "解决什么问题：跨境电商选品缺少数据驱动决策的问题\n怎么用：输入品类关键词，AI分析市场趋势、竞品数据和利润空间\n适合谁：跨境电商卖家、选品团队、需要数据支撑的采购决策者"
+            "usage": "解决什么问题：TEC-DO的TikTok Shop AI选品，5分钟完成选品流程\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Shopify Smart Pricing",
@@ -310,7 +642,7 @@
             "id": "2026-06-08-shopify-smart-pricing",
             "sceneTag": "🛒 跨境电商",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：Shopify商品定价缺少科学依据的问题\n怎么用：分析竞品价格、市场需求和成本，AI推荐最优定价策略\n适合谁：Shopify店主、跨境电商卖家、需要动态定价的品牌"
+            "usage": "解决什么问题：Shopify免费AI定价+A/B测试\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Accio Work",
@@ -321,7 +653,7 @@
             "id": "2026-06-08-accio-work",
             "sceneTag": "🛒 跨境电商",
             "typeTag": "🏢大型平台",
-            "usage": "解决什么问题：远程团队协作工具碎片化的问题\n怎么用：整合文档、任务、会议、IM于一体，AI自动整理会议纪要和行动项\n适合谁：远程团队、分布式企业、需要统一协作平台的组织"
+            "usage": "解决什么问题：阿里国际电商智能体，39技能包覆盖全链路\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "Ringly.io",
@@ -332,7 +664,7 @@
             "id": "2026-06-08-ringly.io",
             "sceneTag": "🛒 跨境电商",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：网站实时客服人力成本高的问题\n怎么用：一键部署AI客服Widget，自动回答常见问题，复杂问题转人工\n适合谁：电商网站、SaaS产品、需要7x24客服的中小企业"
+            "usage": "解决什么问题：Shopify AI语音客服，73%解决率，$0.38/通\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           },
           {
             "name": "电商AI Agent部署指南",
@@ -343,11 +675,11 @@
             "id": "2026-06-08-电商ai-agent部署指南",
             "sceneTag": "🛒 跨境电商",
             "typeTag": "🔧小而美",
-            "usage": "解决什么问题：电商AI Agent从选型到上线的全流程缺少系统指导的问题\n怎么用：按步骤指南完成AI Agent选型、开发、测试和部署\n适合谁：跨境电商从业者、电商技术团队、AI应用落地初学者"
+            "usage": "解决什么问题：5阶段路线图避免66%部署失败率\n怎么用：详见项目官网\n适合谁：对该场景有需求的用户"
           }
         ],
-        "title": "🛒 跨境电商",
-        "type": "new"
+        "type": "new",
+        "title": "🛒 跨境电商"
       }
     ],
     "trends": [
@@ -362,274 +694,6 @@
       {
         "title": "Agent基础设施进入省钱+安全深水区",
         "description": "Headroom压缩60%、Cost.dev削减79%、forkd微VM、Anthropic安全框架——从能用转向用得起+用得安全。"
-      }
-    ]
-  },
-  {
-    "date": "2026-06-03",
-    "weekday": "星期三",
-    "stats": {
-      "hot": 1,
-      "new": 7,
-      "note": 2
-    },
-    "sections": [
-      {
-        "type": "hot",
-        "title": "热门 · 重大更新",
-        "items": [
-          {
-            "id": "2026-06-03-mineru",
-            "name": "MinerU",
-            "url": "https://github.com/opendatalab/MinerU",
-            "stars": "80k+",
-            "tagline": "高精度文档解析引擎，VLM+OCR双引擎，109语言。v3.2重大更新：许可证从AGPLv3升级至Apache 2.0，VLM模型升级至MinerU2.5-Pro，新增PPTX/XLSX原生解析。",
-            "sceneTag": "📡 信息与工作流提效",
-            "typeTag": "🏢 大型平台",
-            "usage": "解决什么问题：企业RAG/知识库场景下，PDF/文档→Markdown的解析质量直接决定下游检索和回答质量。\n\n怎么用：部署MCP Server即可与Claude Desktop/Cursor/Windsurf无缝集成，也可用Python SDK/CLI/REST API嵌入工作流。\n\n适合谁：搭建企业知识库的团队、需要文档理解能力的AI应用开发者。Apache 2.0后商用无顾虑，私有化部署零数据外传。"
-          }
-        ]
-      },
-      {
-        "type": "new",
-        "title": "新发现",
-        "items": [
-          {
-            "id": "2026-06-03-moneyprinter",
-            "name": "MoneyPrinterTurbo",
-            "url": "https://github.com/harry0703/MoneyPrinterTurbo",
-            "stars": "68k+",
-            "tagline": "输入关键词→全自动生成短视频。脚本→配音→字幕→画面→背景音乐→成片，一条龙本地化生产。支持9:16竖屏和16:9横屏，批量生成多版本对比挑选。",
-            "sceneTag": "🖥️ 内容生产",
-            "typeTag": "🏢 大型平台",
-            "usage": "解决什么问题：短视频创作全流程耗时，单人日产出有限。\n\n怎么用：填入LLM API Key + Pexels素材API Key，打开Web界面输入主题即可。支持批量生成不同版本。\n\n适合谁：日更短视频账号运营者、自媒体矩阵管理团队。"
-          },
-          {
-            "id": "2026-06-03-capcut-cli",
-            "name": "capcut-cli",
-            "url": "https://www.npmjs.com/package/capcut-cli",
-            "stars": "新发布",
-            "tagline": "LLM Agent驱动的CapCut/剪映CLI工具。零依赖、无服务器、JSON in, JSON out。支持Whisper自动字幕、模板套用、多语言翻译、长视频切Shorts。",
-            "sceneTag": "🖥️ 内容生产",
-            "typeTag": "🔧 小而美",
-            "usage": "解决什么问题：视频剪辑自动化缺乏确定性边界，LLM Agent需要一个可预测的CLI接口来驱动剪辑。\n\n怎么用：npm install -g capcut-cli，然后capcut caption 项目路径即可用Whisper生成字幕。也支持capcut serve启动JSONL队列，接入n8n/Coze/Make等。\n\n适合谁：搭建短视频自动流水线的开发者、想把视频剪辑嵌入Agent工作流的极客。"
-          },
-          {
-            "id": "2026-06-03-open-slide",
-            "name": "open-slide",
-            "url": "https://github.com/1weiho/open-slide",
-            "stars": "新发布",
-            "tagline": "AI Agent驱动的PPT生成工具。核心理念：PPT就是代码，让AI写PPT。每张幻灯片=独立HTML/CSS文件，35种设计风格，浏览器可视化编辑器。",
-            "sceneTag": "🖥️ 内容生产",
-            "typeTag": "🔧 小而美",
-            "usage": "解决什么问题：AI生成PPT要么用商业工具受限于模板，要么直接生成PPTX文件难以迭代。\n\n怎么用：Plan→Design→Edit→Export四步流程。先用Agent生成幻灯片HTML，再在浏览器编辑器中框选不满意区域让Agent重写，最后导出PDF。\n\n适合谁：技术从业者、用Claude Code/Codex作为主力工具的开发者。"
-          },
-          {
-            "id": "2026-06-03-pdf-oxide",
-            "name": "pdf-oxide",
-            "url": "https://pypi.org/project/pdf-oxide/",
-            "stars": "新发布",
-            "tagline": "最快的PDF解析库：0.8ms/文档，PyMuPDF的5倍速，3830份PDF 100%通过率。Rust核心+八语言绑定。内置MCP Server。",
-            "sceneTag": "📡 信息与工作流提效",
-            "typeTag": "🔧 小而美",
-            "usage": "解决什么问题：PDF解析是RAG/文档处理流水线的第一道关卡。\n\n怎么用：pip install pdf-oxide，三行代码完成文本提取/Markdown转换。MCP模式配置后Claude/Cursor直接读PDF。\n\n适合谁：RAG管线开发者、需要批量PDF转Markdown的团队。"
-          },
-          {
-            "id": "2026-06-03-all2md",
-            "name": "all2md",
-            "url": "https://pypi.org/project/all2md/",
-            "stars": "新发布",
-            "tagline": "Python原生文档→Markdown转换器，支持双向转换。内置MCP Server，CLI/库/API三种使用方式。插件架构可扩展新格式。",
-            "sceneTag": "📡 信息与工作流提效",
-            "typeTag": "🔧 小而美",
-            "usage": "解决什么问题：各种格式文档→Markdown是刚需但工具碎片化。all2md一个库覆盖PDF/Word/Excel/PPT/图片/邮件，且支持反向转换。\n\n怎么用：MCP模式配置all2md-mcp即可让Claude Desktop自动转换文档。CLI批量处理。\n\n适合谁：搭建LLM文档处理管线的开发者、需要MCP Server让AI直接读文档的用户。"
-          },
-          {
-            "id": "2026-06-03-amx-cli",
-            "name": "amx-cli",
-            "url": "https://github.com/omeryasirkucuk/amx",
-            "stars": "新发布",
-            "tagline": "Agentic Metadata Extractor——AI驱动的数据库元数据自动生成工具。三个子Agent并行收集证据，编排器合并排名，人工审核后写回数据库COMMENT。",
-            "sceneTag": "📡 信息与工作流提效",
-            "typeTag": "🔧 小而美",
-            "usage": "解决什么问题：数据团队的永恒痛点——表和字段没有注释/注释过期。\n\n怎么用：pip install amx-cli，amx启动交互式REPL，/setup配置数据库和LLM，/run对指定表生成注释建议。\n\n适合谁：数据工程师/分析师、需要给数据仓库补注释的团队。三Agent架构同时参考schema+文档+代码。"
-          },
-          {
-            "id": "2026-06-03-agentics",
-            "name": "Agentics Beyond Code",
-            "url": "https://github.com/githubnext/agentics-beyond-code",
-            "stars": "GitHub Next",
-            "tagline": "GitHub Next出品——16个即用的Agentic工作流，让非工程角色（PM/合规/运营）也能受益于Agent自动化。核心模式：确定性脚本采集→Agent分析→安全输出。",
-            "sceneTag": "📤 发行",
-            "typeTag": "🔧 小而美",
-            "usage": "解决什么问题：GitHub Agentic Workflows大多面向开发者，PM/运营等角色缺乏现成模板。\n\n怎么用：直接fork仓库，按需挑选工作流。每个工作流都有Safe Outputs安全输出模型。\n\n适合谁：用GitHub管理项目的团队、想给非技术同事引入Agent自动化的Tech Lead。"
-          }
-        ]
-      },
-      {
-        "type": "note",
-        "title": "值得留意",
-        "items": [
-          {
-            "id": "2026-06-03-capcut-mate",
-            "name": "CapCut Mate",
-            "url": "https://github.com/Hommy-master/capcut-mate",
-            "stars": "1.1k",
-            "tagline": "基于FastAPI的剪映草稿自动化API。与capcut-cli互补，走RESTful API路线，原生集成Coze/n8n等AI工作流平台。Docker一键部署。",
-            "sceneTag": "🖥️ 内容生产",
-            "typeTag": "🔧 小而美",
-            "usage": "与capcut-cli的区别：capcut-cli是CLI/库模式，适合开发者嵌入pipeline；CapCut Mate是HTTP API模式，适合Coze/n8n等低代码平台直接调用。\n\n适合谁：用Coze搭建视频工作流的用户、n8n自动化爱好者。"
-          },
-          {
-            "id": "2026-06-03-trendpublish",
-            "name": "TrendPublish",
-            "url": "https://github.com/OpenAISpace/ai-trend-publish",
-            "stars": "新发布",
-            "tagline": "全自动AI内容生成与发布系统。多源数据采集→AI内容生成→模板化排版→自动发布微信公众号。基于Deno+TypeScript，CRON定时调度。",
-            "sceneTag": "📤 发行",
-            "typeTag": "🔧 小而美",
-            "usage": "解决什么问题：公众号运营的采写排发全链路手动操作。\n\n怎么用：配置数据源关键词和AI模型API Key，设定CRON定时任务，系统自动采集→生成→排版→发布。国内模型优先。\n\n适合谁：微信公众号日更运营者、需要自动化内容生产的团队。"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "date": "2026-06-02",
-    "weekday": "星期一",
-    "stats": {
-      "hot": 3,
-      "new": 5,
-      "note": 3
-    },
-    "sections": [
-      {
-        "type": "hot",
-        "title": "热门",
-        "items": [
-          {
-            "id": "2026-06-02-ecc",
-            "name": "ECC",
-            "url": "https://github.com/affaan-m/ECC",
-            "stars": "199k+",
-            "tagline": "Agent harness 性能优化系统——Skills、Instincts、Memory、Security 一站式装配",
-            "sceneTag": "📤 发行",
-            "typeTag": "🏢 大型平台",
-            "usage": "专为 Claude Code / Codex / Cursor 等 coding agent 提供操作系统级增强。内置 63+ 个 Agent、249+ 个 Skills、Hooks、Rules 和 MCP 配置。\n\n适合谁：重度使用 AI 编码助手的开发者和团队。\n怎么提效：ECC 统一管理 skills 和记忆，agent 之间共享经验，token 优化功能直接省钱。"
-          },
-          {
-            "id": "2026-06-02-rtk",
-            "name": "rtk",
-            "url": "https://github.com/rtk-ai/rtk",
-            "stars": "56k+",
-            "tagline": "CLI 代理，将 LLM token 消耗降低 60-90%——你的 AI 编码助手省钱包",
-            "sceneTag": "📡 信息与工作流提效",
-            "typeTag": "🏗️ 中型框架",
-            "usage": "Rust 编写的 CLI 代理，拦截你和 LLM 之间的请求，通过智能压缩和缓存机制，将 token 消耗降低 60-90%。\n\n适合谁：每天花大量 token 在 AI 编码上的个人开发者和团队。\n怎么提效：装上就能省钱，零侵入。"
-          },
-          {
-            "id": "2026-06-02-scrapling",
-            "name": "Scrapling",
-            "url": "https://github.com/d4vinci/Scrapling",
-            "stars": "55.8k",
-            "tagline": "自适应 Python 爬虫框架——反爬绕过 + 智能元素定位 + AI 集成",
-            "sceneTag": "📡 信息与工作流提效",
-            "typeTag": "🏗️ 中型框架",
-            "usage": "类 Scrapy API 的现代爬虫框架，内置反机器人绕过、智能元素重定位（网站改版后选择器自动修复）、代理轮换和 AI 集成。\n\n适合谁：需要定期采集竞品数据、行业资讯、价格监控的运营和数据团队。\n怎么提效：智能元素追踪能自动适应 DOM 变化，维护成本大幅降低。"
-          }
-        ]
-      },
-      {
-        "type": "new",
-        "title": "新发现",
-        "items": [
-          {
-            "id": "2026-06-02-liteparse",
-            "name": "LiteParse",
-            "url": "https://github.com/run-llama/liteparse",
-            "stars": "新发布",
-            "tagline": "LlamaIndex 出品的开源本地 PDF 解析器——带 bounding box，零云依赖",
-            "sceneTag": "📡 信息与工作流提效",
-            "typeTag": "🔧 小而美",
-            "usage": "LlamaIndex 的开源本地版，用 Rust 编写。提供字符级文本提取 + 精确 bounding box。内置 Tesseract OCR，支持多栏布局重建。\n\n适合谁：搭建 RAG 知识库的团队。\n怎么提效：一个包解决，RAG pipeline 搭建时间从天级降到小时级。"
-          },
-          {
-            "id": "2026-06-02-undoc",
-            "name": "undoc",
-            "url": "https://github.com/iyulab/undoc",
-            "stars": "v0.5.0",
-            "tagline": "高性能 Rust 库——将 DOCX/XLSX/PPTX 转为 Markdown，支持 WASM 浏览器端运行",
-            "sceneTag": "📡 信息与工作流提效",
-            "typeTag": "🔧 小而美",
-            "usage": "专注做一件事：将 Office 文档高质量转为 Markdown/JSON/纯文本。还有 WASM 版本可在浏览器内直接运行。\n\n适合谁：需要批量处理 Office 文档的开发者。\n怎么提效：WASM 版本特别适合做前端工具——用户拖拽文件，浏览器本地解析，隐私零风险。"
-          },
-          {
-            "id": "2026-06-02-pullfrog",
-            "name": "Pullfrog AI",
-            "url": "https://github.com/colinhacks/pullfrog",
-            "stars": "~400",
-            "tagline": "开源 CodeRabbit 替代品——BYOK、模型无关、运行在 GitHub Actions 内",
-            "sceneTag": "📤 发行",
-            "typeTag": "🔧 小而美",
-            "usage": "Zod 作者创建的开源 AI PR 审查 + Issue 分流 + CI 自动修复工具。核心差异：BYOK（自带 API Key），支持任意模型。\n\n适合谁：想要 AI 辅助代码审查但不想把代码发给第三方 SaaS 的团队。"
-          },
-          {
-            "id": "2026-06-02-agents-cli",
-            "name": "agents-cli",
-            "url": "https://github.com/phnx-labs/agents-cli",
-            "stars": "新发布",
-            "tagline": "CLI agent 的 meta-harness——统一管理 Claude Code / Codex / Cursor 的技能、密钥和编排",
-            "sceneTag": "📡 信息与工作流提效",
-            "typeTag": "🔧 小而美",
-            "usage": "解决一个实际问题：当你同时使用多个 coding agent 时，技能、插件、密钥的管理极其混乱。agents-cli 将所有资源统一放在 ~/.agents 目录下。\n\n适合谁：同时使用多个 AI coding agent 的开发者和小团队。"
-          },
-          {
-            "id": "2026-06-02-gh-aw",
-            "name": "GitHub Agentic Workflows",
-            "url": "https://github.github.com/gh-aw/",
-            "stars": "官方",
-            "tagline": "GitHub 官方推出的仓库自动化智能体——用 Markdown 写指令，Actions 里跑 agent",
-            "sceneTag": "📤 发行",
-            "typeTag": "🏢 大型平台",
-            "usage": "用纯 Markdown 描述期望结果，作为 workflow 添加到仓库，通过 GitHub Actions 中的编码 agent 执行。\n\n适合谁：维护开源项目或企业仓库的团队。\n怎么提效：相当于给仓库配了一个 7x24 的值班工程师。"
-          }
-        ]
-      },
-      {
-        "type": "note",
-        "title": "值得留意",
-        "items": [
-          {
-            "id": "2026-06-02-haiku",
-            "name": "haiku.rag",
-            "url": "https://github.com/ggozad/haiku.rag",
-            "stars": "新发布",
-            "tagline": "开箱即用的 agentic RAG——LanceDB + Pydantic AI + Docling，本地优先",
-            "sceneTag": "📡 信息与工作流提效",
-            "typeTag": "🔧 小而美",
-            "usage": "有主见的 RAG 方案：LanceDB 嵌入式向量库、混合搜索、多模态搜索、带引用的 QA、MCP Server。\n\n适合谁：想要快速搭建本地知识库的个人和小团队。\n怎么提效：一行命令索引 PDF，一行命令搜索。MCP Server 让 Claude 直接调用 RAG 能力。"
-          },
-          {
-            "id": "2026-06-02-cloak",
-            "name": "CloakBrowser",
-            "url": "https://github.com/CloakHQ/CloakBrowser",
-            "stars": "13k (+8.6k/周)",
-            "tagline": "隐身 Chromium 浏览器——C++ 源码层修改指纹，通过所有机器人检测",
-            "sceneTag": "📡 信息与工作流提效",
-            "typeTag": "🏗️ 中型框架",
-            "usage": "在 Chromium 的 C++ 源码层面修改浏览器指纹，通过 Cloudflare Turnstile 等所有主流检测。\n\n适合谁：需要自动化采集受保护网站数据的团队。\n怎么提效：从根本上解决了指纹检测问题，配合 Scrapling 使用，爬虫维护成本趋近于零。"
-          },
-          {
-            "id": "2026-06-02-genai-commit",
-            "name": "genai-commit",
-            "url": "https://www.npmjs.com/package/genai-commit",
-            "stars": "新发布",
-            "tagline": "AI commit 消息生成器——支持 Claude Code / Cursor / Codex，带 Jira 集成",
-            "sceneTag": "📡 信息与工作流提效",
-            "typeTag": "🔧 小而美",
-            "usage": "在 git commit 前自动生成结构化的 commit 消息。支持三大编码 agent 的模型切换，还能自动关联 Jira ticket。\n\n适合谁：每天写大量 commit 但懒得写规范消息的开发者。"
-          }
-        ]
       }
     ]
   }
