@@ -1,5 +1,315 @@
 [
   {
+    "date": "2026-06-22",
+    "weekday": "周一",
+    "type": "weekly",
+    "stats": {
+      "hot": 8,
+      "new": 12,
+      "note": 6
+    },
+    "sections": [
+      {
+        "name": "🔥 热门",
+        "count": 8,
+        "type": "hot",
+        "title": "🔥 热门",
+        "items": [
+          {
+            "id": "2026-06-22-deerflow",
+            "name": "DeerFlow",
+            "tagline": "字节跳动开源长视野超级Agent框架，支持研究、编码和创作任务，处理数分钟到数小时的复杂工作",
+            "stars": "73.1k",
+            "url": "https://github.com/bytedance/deer-flow",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：现有Agent框架只能处理短对话任务，无法执行耗时数分钟到数小时的长周期复杂工作\n怎么用：开源框架，支持沙箱执行、持久记忆、工具调用、技能系统和子Agent调度；Python编写，可自托管部署\n适合谁：需要构建长周期自动化工作流的开发团队、AI应用架构师"
+          },
+          {
+            "id": "2026-06-22-glm52",
+            "name": "GLM-5.2",
+            "tagline": "智谱AI开源旗舰模型，MIT协议，百万Token无损上下文，Code Arena全球第二开源第一",
+            "stars": "MIT开源",
+            "url": "https://github.com/THUDM/GLM-5.2",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：开源编程模型在长周期代码任务中推理效率低、上下文窗口不够用的问题\n怎么用：MIT协议可直接商用，支持1M上下文、可调思考深度、IndexShare推理优化；Day 0适配华为昇腾等8家国产算力\n适合谁：需要低成本国产Agent编码能力的开发者、构建长上下文工作流的团队"
+          },
+          {
+            "id": "2026-06-22-openmontage",
+            "name": "OpenMontage",
+            "tagline": "全球首个开源Agent驱动视频制作系统，12条流水线52个工具500+技能，零API Key也能出片",
+            "stars": "11.7k",
+            "url": "https://github.com/calesthio/OpenMontage",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：AI视频工具只能生成5秒片段，从创意到完整成片仍需大量人工拼接的问题\n怎么用：在Claude Code/Cursor中输入自然语言需求，Agent自动走7阶段流水线（研究→提案→脚本→分镜→素材→剪辑→合成），零成本可出真实素材纪录片\n适合谁：内容创作者、自媒体运营、需要批量生产视频的电商卖家"
+          },
+          {
+            "id": "2026-06-22-codebase-memory-mcp",
+            "name": "Codebase-Memory-MCP",
+            "tagline": "代码库知识图谱MCP服务器，158种语言毫秒级索引，Token消耗降低99%",
+            "stars": "11.4k",
+            "url": "https://github.com/DeusData/codebase-memory-mcp",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：AI编码Agent理解大型代码库需逐文件暴力翻找，Token消耗巨大且效率低的问题\n怎么用：一行命令安装，自动索引代码库为知识图谱，提供14种MCP查询工具；支持Claude Code/Cursor/Codex等11种Agent自动配置\n适合谁：大型代码库维护团队、需要让AI Agent深度理解项目的开发者"
+          },
+          {
+            "id": "2026-06-22-cybersecurity-skills",
+            "name": "Anthropic-Cybersecurity-Skills",
+            "tagline": "AI Agent的754个结构化网络安全技能，映射MITRE ATT&CK和NIST CSF 2.0框架",
+            "stars": "18.6k",
+            "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：AI Agent在网络安全场景下缺少标准化、可复用的专业操作技能的问题\n怎么用：开源技能包，覆盖26个安全领域5个框架，兼容Claude Code/Copilot/Cursor等20+平台，直接复制到.claude/skills目录即可使用\n适合谁：网络安全团队、企业安全运营中心、需要AI辅助安全评估的技术团队"
+          },
+          {
+            "id": "2026-06-22-minimax-m3",
+            "name": "MiniMax M3",
+            "tagline": "4280亿参数开源多模态旗舰，首个从零多模态混合训练，1M上下文计算开销压缩28倍",
+            "stars": "开源首发",
+            "url": "https://github.com/MiniMax-AI/MiniMax-M3",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：开源多模态模型多为拼接兼容而非原生多模态，长上下文计算成本过高的问题\n怎么用：开源权重可本地部署，MSA稀疏注意力实现1M上下文且资源消耗降40%，TPS从30提升至80；支持多智能体协作\n适合谁：需要国产开源多模态能力的AI应用开发者、构建长上下文RAG系统的团队"
+          },
+          {
+            "id": "2026-06-22-sakana-marlin",
+            "name": "Sakana Marlin",
+            "tagline": "虚拟首席战略官，连续8小时自主推理的研究代理，动态选择不同模型处理子任务",
+            "stars": "Sakana AI出品",
+            "url": "https://sakana.ai/marlin",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：传统AI助手只能秒回简单问题，无法自主完成需要长时间深度推理的战略研究任务\n怎么用：输入战略问题，系统自主制定假设、搜索数据、交叉验证，输出100页研究报告+演示文稿；基于AB-MCTS自适应分支推演\n适合谁：战略决策者、需要深度研究但人力有限的小团队、投资分析师"
+          },
+          {
+            "id": "2026-06-22-daily-stock",
+            "name": "Daily Stock Analysis",
+            "tagline": "LLM驱动多市场股票智能分析系统，多源行情+实时新闻+决策看板，零成本定时运行",
+            "stars": "45.7k",
+            "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：个人投资者缺乏专业级实时股票分析工具，多源数据整合难的问题\n怎么用：开源部署，自动抓取多市场行情数据和实时新闻，AI生成分析决策看板；支持定时运行，GitHub Actions可零成本部署\n适合谁：个人投资者、量化交易初学者、需要自动化投资信息追踪的金融从业者"
+          }
+        ]
+      },
+      {
+        "name": "✨ 新发现",
+        "count": 12,
+        "type": "new",
+        "title": "✨ 新发现",
+        "items": [
+          {
+            "id": "2026-06-22-goldfish",
+            "name": "Goldfish",
+            "tagline": "Mac AI助手自动记住你在做什么，按Option键即可从任何应用中调用上下文写作",
+            "stars": "PH 577票",
+            "url": "https://goldfish.ai",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：AI工具每次使用都需要重新解释上下文背景，跨应用工作流割裂的问题\n怎么用：macOS应用，自动记忆你在各应用中的工作内容，按Option键即可起草回复、总结对话、重写句子，无需复制粘贴\n适合谁：重度Mac用户、需要在多个应用间切换并保持上下文连贯的知识工作者"
+          },
+          {
+            "id": "2026-06-22-stride",
+            "name": "Stride",
+            "tagline": "AI原生工作空间，直接在你的真实项目数据中工作，通过MCP连接Claude Code和Codex执行任务",
+            "stars": "PH新品",
+            "url": "https://stride.dev",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：AI聊天助手只讨论不执行，项目规划工具和代码执行工具割裂的问题\n怎么用：AI直接在真实项目数据中工作，通过MCP协议连接Claude Code和Codex真正执行任务，覆盖规划→设计→验证→发布全流程\n适合谁：需要AI深度参与项目全生命周期的产品团队、Vibe Coding用户"
+          },
+          {
+            "id": "2026-06-22-autoedit",
+            "name": "AutoEdit",
+            "tagline": "Claude AI驱动的Premiere Pro视频编辑器，自动去除静音填充词和重复镜头",
+            "stars": "PH新品",
+            "url": "https://www.autoedit.ai",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：视频粗剪耗时耗力，手动去除静音、填充词和重拍片段效率极低的问题\n怎么用：Premiere Pro插件安装，Claude AI理解视频内容自动处理，同时生成字幕和整理时间线，编辑人员保留创作决策权\n适合谁：视频内容创作者、YouTuber、需要快速出粗剪的视频制作团队"
+          },
+          {
+            "id": "2026-06-22-cloudskill",
+            "name": "Cloudskill",
+            "tagline": "团队AI Agent技能管理平台，版本控制+权限设置+完整审计日志",
+            "stars": "PH新品",
+            "url": "https://cloudskill.dev",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：团队依赖的AI Agent技能文件散落各处，缺乏版本控制和权限管理的问题\n怎么用：将分散的技能文件统一为管理目录，包含版本控制、个人访问权限和完整审计日志；技能创建和更新需经过审查和批准\n适合谁：多人使用AI编码Agent的开发团队、需要管控Agent技能变更的企业"
+          },
+          {
+            "id": "2026-06-22-mimo-code",
+            "name": "MiMo Code",
+            "tagline": "具备明确长期记忆结构的编程Agent，独立检查点子Agent管理大上下文",
+            "stars": "PH新品",
+            "url": "https://github.com/mimo-code/mimo-code",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：编程Agent在长任务中上下文溢出、记忆丢失导致代码质量下降的问题\n怎么用：基于OpenCode开发的开源终端编程助手，使用独立检查点子Agent管理大上下文，执行沙箱工作流，通过定期维护不断进化\n适合谁：需要处理长周期编码任务的开发者、对Agent记忆持久性有要求的团队"
+          },
+          {
+            "id": "2026-06-22-mockpilot",
+            "name": "MockPilot",
+            "tagline": "将任何在线网页转化为桌面可编辑布局，自然语言修改，完全免费开源",
+            "stars": "PH新品",
+            "url": "https://mockpilot.dev",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：参考竞品网站设计时只能截图标注，无法直接编辑和复用的问题\n怎么用：输入网站URL自动捕捉整页或组件，提取字体/颜色/组件/图标到资源库；用自然语言描述修改，AI保持品牌一致性；可导出为独立HTML\n适合谁：前端开发者、UI设计师、需要快速参考和改造现有网站设计的团队"
+          },
+          {
+            "id": "2026-06-22-aevs",
+            "name": "AEVS",
+            "tagline": "AI Agent执行验证SDK，为每次工具调用生成不可篡改的执行凭证",
+            "stars": "PH 128票",
+            "url": "https://aevs.dev",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：AI Agent执行结果难以验证，聊天记录和日志容易被篡改或出错的问题\n怎么用：即插即用SDK，记录每个Agent工具调用的输入、输出、状态和时间，生成不可篡改的执行凭证，团队无需依赖聊天记录即可确认Agent实际执行了什么\n适合谁：部署生产级AI Agent的企业、需要Agent行为可审计的合规团队"
+          },
+          {
+            "id": "2026-06-22-edgee-turbo",
+            "name": "Edgee Turbo Models",
+            "tagline": "在Claude Code中运行GLM 5.1、Kimi K2.7等开源模型，速度最快4倍，月费29美元",
+            "stars": "PH精选",
+            "url": "https://edgee.ai",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：Claude Code只支持Anthropic模型，API成本高且缺少国产模型选择的问题\n怎么用：几分钟配置无需改代码，在Claude Code中以最快200 tokens/s运行开源模型，月费29美元；支持GLM 5.1、Kimi K2.7 Code、MiniMax M2.7等\n适合谁：使用Claude Code但希望降低API成本的开发者、需要国产模型编码能力的团队"
+          },
+          {
+            "id": "2026-06-22-cc-switch",
+            "name": "cc-switch",
+            "tagline": "多Agent切换器，在Claude Code等工具间一键切换，Rust编写极快",
+            "stars": "6.6k",
+            "url": "https://github.com/farion1231/cc-switch",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：开发者同时使用多个AI编码Agent（Claude Code/Codex/Cursor），切换时上下文丢失的问题\n怎么用：Rust编写的轻量CLI工具，一键在不同Agent间切换，保持共享上下文和配置\n适合谁：同时使用多个AI编码工具的开发者、需要在Agent间切换工作流的团队"
+          },
+          {
+            "id": "2026-06-22-shopify-ai-toolkit",
+            "name": "Shopify AI Toolkit",
+            "tagline": "允许Claude Code/Cursor/Codex通过MCP接入Shopify生态，AI Agent接管店铺运营",
+            "stars": "Shopify官方",
+            "url": "https://shopify.dev/docs/api/ai-toolkit",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：跨境卖家运营独立站需人工操作多个后台，AI Agent无法直接接入Shopify的问题\n怎么用：官方AI Toolkit，支持Claude Code、Cursor、Codex等通过插件/Agent Skills/MCP接入Shopify生态，AI可接管商品管理、订单处理、营销等运营工作\n适合谁：Shopify独立站卖家、希望通过AI Agent自动化店铺运营的跨境团队"
+          },
+          {
+            "id": "2026-06-22-makersclaw",
+            "name": "MakersClaw",
+            "tagline": "在Slack/Teams/Telegram中雇佣AI员工，预设支持/销售/研究/搜索优化角色",
+            "stars": "PH新品",
+            "url": "https://makersclaw.com",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：企业想在即时通讯工具中部署AI员工，但每个渠道需单独开发集成的问题\n怎么用：一键接入Slack/Teams/Telegram，AI员工有独立容器和记忆；预设支持、销售、研究等角色可按需定制，按通话计费\n适合谁：想快速在团队沟通工具中部署AI助手的企业、需要7x24小时客服/销售支持的团队"
+          },
+          {
+            "id": "2026-06-22-agentic-storefront",
+            "name": "Shopify Agentic Storefronts",
+            "tagline": "让你的商品在ChatGPT/Perplexity/Copilot等AI对话平台中被发现和购买",
+            "stars": "Shopify官方免费",
+            "url": "https://shopify.com/agentic-storefronts",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：消费者从搜索引擎转向AI对话界面找产品，卖家商品无法被AI发现的问题\n怎么用：一次配置即可让商品出现在ChatGPT、Perplexity、Microsoft Copilot等AI平台搜索结果中，通过Shopify Catalog和UCP协议实现AI可理解的结构化商品数据\n适合谁：所有Shopify卖家、希望抓住AI搜索流量红利的独立站运营者"
+          }
+        ]
+      },
+      {
+        "name": "📝 值得留意",
+        "count": 6,
+        "type": "note",
+        "title": "📝 值得留意",
+        "items": [
+          {
+            "id": "2026-06-22-deepseek-funding",
+            "name": "DeepSeek完成510亿元首轮融资",
+            "tagline": "估值突破500亿美元，创始人梁文锋个人出资200亿领投，腾讯100亿跟投",
+            "stars": "行业重磅",
+            "url": "https://36kr.com/newsflashes/3855440929789184",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：国产大模型公司长期依赖自有资金，算力和研发投入受限的问题\n怎么用：这不是工具而是行业信号。DeepSeek获得腾讯、宁德时代、网易、京东等战略投资，资金主要用于算力采购和模型迭代，将加速国产大模型在Agent场景的落地\n适合谁：所有关注国产AI生态的开发者和企业决策者"
+          },
+          {
+            "id": "2026-06-22-spacex-cursor",
+            "name": "SpaceX 600亿美元收购Cursor母公司",
+            "tagline": "AI编程赛道最大并购案，Cursor将获SpaceX算力和基础设施支持",
+            "stars": "行业重磅",
+            "url": "https://www.reuters.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：AI编程工具算力和基础设施瓶颈限制模型训练规模的问题\n怎么用：这不是工具而是行业信号。Cursor被收购后将获得SpaceX的算力支撑，CEO宣布自研1.5万亿参数模型；交易预计Q3完成\n适合谁：使用Cursor的开发者、关注AI编程赛道格局变化的行业观察者"
+          },
+          {
+            "id": "2026-06-22-intel-agentic-xeon",
+            "name": "Intel Agentic Xeon",
+            "tagline": "首款面向Agent运行优化的CPU架构，多Agent并发调度延迟降低47%",
+            "stars": "硬件发布",
+            "url": "https://www.intel.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Agent运行高度依赖GPU，中小规模Agent部署算力成本过高的问题\n怎么用：这不是软件而是硬件。针对多Agent调度、长时任务规划、记忆读写做底层指令优化，中小Agent部署综合算力成本降40%以上\n适合谁：企业Agent集群部署的架构师、关注Agent基础设施的技术决策者"
+          },
+          {
+            "id": "2026-06-22-apple-core-ai",
+            "name": "Apple Core AI框架",
+            "tagline": "接替Core ML的新AI框架，统一调度全苹果设备，下载量<200万App免费云端推理",
+            "stars": "Apple官方",
+            "url": "https://developer.apple.com",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Apple设备AI能力碎片化，Core ML服役九年已不适应Agent时代需求的问题\n怎么用：新框架统一调度iPhone/Mac/iPad的AI能力，支持跨设备无缝切换；开放开源工具链和第三方接入协议；小体量App可免费使用云端推理\n适合谁：Apple生态开发者、需要在iOS/macOS应用中集成AI能力的团队"
+          },
+          {
+            "id": "2026-06-22-google-genie3",
+            "name": "Google Genie 3",
+            "tagline": "利用谷歌街景图像数据库生成和模拟真实3D环境，AI理解物理世界的新突破",
+            "stars": "Google Research",
+            "url": "https://deepmind.google",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：AI对物理世界3D空间理解不足，游戏开发和自动驾驶模拟需要大量人工建模的问题\n怎么用：不是直接可用工具而是研究突破。利用谷歌街景数据库生成和模拟真实3D环境，可在游戏开发、自动驾驶模拟、城市规划等场景应用\n适合谁：游戏开发者、自动驾驶算法工程师、3D内容创作者"
+          },
+          {
+            "id": "2026-06-22-qclaw-wechat",
+            "name": "微信QClaw龙虾智能体",
+            "tagline": "7月上旬全量开放，400万+微信小程序免代码接入AI Agent能力",
+            "stars": "腾讯官方",
+            "url": "https://weixin.qq.com",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：微信生态缺乏统一AI Agent入口，小程序无法低成本接入AI能力的问题\n怎么用：跨设备A2A互联协议适配全机型，400万+微信小程序支持免代码快速接入Agent能力；社群运营、代办履约、消息分拣、跨APP事务代办\n适合谁：微信生态开发者、小程序运营者、希望在社交场景部署AI Agent的团队"
+          }
+        ]
+      }
+    ],
+    "trends": [
+      {
+        "title": "Agent从单一工具走向全流程操作系统",
+        "description": "OpenMontage把AI编码助手变成视频工作室（12条流水线），DeerFlow处理数小时长周期任务，Stride通过MCP让AI真正执行而非只讨论。Agent不再只回答问题，而是编排和执行完整工作流。"
+      },
+      {
+        "title": "国产大模型在特定场景开始建立技术壁垒",
+        "description": "GLM-5.2在Code Arena全球第二，MiniMax M3首创多模态混合训练，DeepSeek获510亿融资加速算力扩张。国产模型不再只是追赶，而是在长上下文、多模态混合训练等方向形成差异化优势。"
+      },
+      {
+        "title": "AI Agent基础设施进入硬件级优化阶段",
+        "description": "Intel发布Agent专用CPU架构Agentic Xeon，Apple推出Core AI框架统一调度全设备AI能力，Shopify开放MCP协议让Agent接入电商运营。从模型到硬件到平台，Agent的每一层基础设施都在被专门优化。"
+      }
+    ]
+  },
+  {
     "date": "2026-06-15",
     "weekday": "周一",
     "type": "weekly",
