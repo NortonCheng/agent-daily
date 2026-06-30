@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent 周报 | 2026-06-23</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #fafafa; --surface: #ffffff; --surface-hover: #f5f5f7;
+    --border: #e8e8ed; --border-light: #f0f0f2;
+    --text-primary: #1a1a2e; --text-secondary: #6b6b80; --text-tertiary: #9b9bb0;
+    --accent: #6c5ce7; --accent-light: rgba(108,92,231,0.08); --accent-medium: rgba(108,92,231,0.15);
+    --green: #00b894; --green-light: rgba(0,184,148,0.08);
+    --orange: #e17055; --orange-light: rgba(225,112,85,0.08);
+    --blue: #0984e3; --blue-light: rgba(9,132,227,0.08);
+    --red: #d63031; --pink: #fd79a8;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04); --shadow-md: 0 4px 12px rgba(0,0,0,0.06); --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+    --radius: 16px; --radius-sm: 10px; --radius-xs: 6px;
+  }
+  body {
+    font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text-primary); line-height: 1.7; -webkit-font-smoothing: antialiased;
+  }
+  .wrapper { max-width: 680px; margin: 0 auto; padding: 20px 20px 60px; }
+  .header { padding: 48px 0 40px; }
+  .header-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-light); color: var(--accent); font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 0.3px; }
+  .header h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
+  .header .date { font-size: 15px; color: var(--text-secondary); font-weight: 400; }
+  .header-stats { display: flex; gap: 24px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border-light); }
+  .header-stat { display: flex; align-items: baseline; gap: 6px; }
+  .header-stat .num { font-size: 22px; font-weight: 700; }
+  .header-stat .label { font-size: 13px; color: var(--text-secondary); }
+  .section { margin-bottom: 40px; }
+  .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+  .section-icon { width: 32px; height: 32px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .section-icon.hot { background: var(--orange-light); }
+  .section-icon.new { background: var(--blue-light); }
+  .section-icon.note { background: var(--green-light); }
+  .section-title { font-size: 17px; font-weight: 600; }
+  .section-count { font-size: 12px; color: var(--text-tertiary); font-weight: 500; margin-left: auto; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 16px; transition: all 0.2s ease; box-shadow: var(--shadow-sm); }
+  .card:hover { box-shadow: var(--shadow-md); border-color: #dddde5; transform: translateY(-1px); }
+  .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 10px; }
+  .card-name { font-size: 17px; font-weight: 600; color: var(--text-primary); text-decoration: none; transition: color 0.15s; }
+  .card-name:hover { color: var(--accent); }
+  .card-stars { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; color: var(--orange); background: var(--orange-light); padding: 4px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+  .card-tagline { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
+  .card-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .tag { font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.2px; }
+  .tag.scene { background: var(--green-light); color: var(--green); }
+  .tag.type-sm { background: var(--accent-light); color: var(--accent); }
+  .tag.type-md { background: var(--blue-light); color: var(--blue); }
+  .tag.type-lg { background: var(--orange-light); color: var(--orange); }
+  .card-usage { background: linear-gradient(135deg, #f8f7ff 0%, #f0f4ff 100%); border: 1px solid rgba(108,92,231,0.1); border-radius: var(--radius-sm); padding: 20px; }
+  .card-usage-header { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.8px; }
+  .card-usage-body { font-size: 14px; color: var(--text-primary); line-height: 1.8; }
+  .card-usage-body strong { font-weight: 600; }
+  .card-usage-body em { font-style: normal; background: linear-gradient(180deg, transparent 60%, rgba(108,92,231,0.15) 60%); font-weight: 500; }
+  /* 趋势洞察 */
+  .insight-box { background: linear-gradient(135deg, #fff8f0 0%, #fff3e0 100%); border: 1px solid rgba(225,112,85,0.2); border-radius: var(--radius); padding: 28px; margin-bottom: 40px; }
+  .insight-box h3 { font-size: 16px; font-weight: 700; color: var(--orange); margin-bottom: 16px; }
+  .insight-item { font-size: 14px; color: var(--text-primary); line-height: 1.8; margin-bottom: 12px; padding-left: 20px; position: relative; }
+  .insight-item::before { content: "▸"; position: absolute; left: 0; color: var(--orange); font-weight: 700; }
+  .footer { text-align: center; padding: 32px 0 0; border-top: 1px solid var(--border-light); margin-top: 40px; }
+  .footer-text { font-size: 13px; color: var(--text-tertiary); }
+  .footer a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  .footer a:hover { text-decoration: underline; }
+  @media (max-width: 600px) {
+    .wrapper { padding: 16px 16px 48px; }
+    .header h1 { font-size: 24px; }
+    .card { padding: 20px; }
+    .header-stats { flex-wrap: wrap; gap: 16px; }
+    .card-top { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<div class="header">
+  <div class="header-badge">📬 Weekly Digest</div>
+  <h1>AI Agent 周报</h1>
+  <div class="date">2026-06-23 ~ 2026-06-29 · 第27周</div>
+  <div class="header-stats">
+    <div class="header-stat">
+      <span class="num" style="color:var(--orange)">9</span>
+      <span class="label">热门</span>
+    </div>
+    <div class="header-stat">
+      <span class="num" style="color:var(--blue)">12</span>
+      <span class="label">新发现</span>
+    </div>
+    <div class="header-stat">
+      <span class="num" style="color:var(--green)">5</span>
+      <span class="label">值得留意</span>
+    </div>
+  </div>
+</div>
+
+<!-- 趋势洞察 -->
+<div class="insight-box">
+  <h3>🔭 本周趋势洞察</h3>
+  <div class="insight-item"><strong>前沿模型进入地缘管控时代。</strong> GPT-5.6被美国政府逐案审批放行，标志着顶级大模型正式从市场化产品变为战略资产。对国内开发者而言，自主模型（豆包2.1 Pro、DeepSeek、千问）的战略价值进一步凸显。</div>
+  <div class="insight-item"><strong>Agent从「能干活」进入「能治理」。</strong> GitHub Actions CI安全、Cloudflare临时账号部署、SkillOpt可训练技能、OpenRath Session运行时——基础设施层正在补齐Agent工程化的最后拼图。</div>
+  <div class="insight-item"><strong>中国桌面Agent赛道爆发。</strong> 本周15款本土Codex级产品集中上线（豆包专业版、TRAE Work、Kimi Work等），2亿日活的豆包首次搭载Agent办公模式，标志着Agent从极客工具走向国民应用。</div>
+</div>
+
+<!-- 🔥 热门 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon hot">🔥</div>
+    <div class="section-title">热门</div>
+    <div class="section-count">9 条</div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://openai.com/index/gpt-5-6/" target="_blank">GPT-5.6 系列发布</a>
+      <span class="card-stars">⭐ 行业重磅</span>
+    </div>
+    <div class="card-tagline">OpenAI推出Sol/Terra/Luna三档模型，150万Token上下文，TerminalBench 2.1登顶。首次引入子代理（subagent）架构，复杂任务自动拆解并行处理。但发布方式史无前例——白宫逐案审批放行，仅约20家机构首批获访问权限。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>单一Agent处理复杂多步骤任务时效率瓶颈。Sol的ultra模式自动拆解任务为子代理并行执行，TerminalBench从88.8%提升至91.9%。<br><strong>适合谁：</strong>企业级Agent应用开发者、需要长周期自主执行复杂任务的团队。注意：目前仅限受信合作伙伴，国内获取难度极高。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.anthropic.com/" target="_blank">Anthropic估值9650亿超越OpenAI</a>
+      <span class="card-stars">⭐ 行业重磅</span>
+    </div>
+    <div class="card-tagline">Anthropic完成650亿美元融资，估值9650亿美元，历史首次超越OpenAI。Claude Opus 4.8刷新ScienceQA纪录（76.4分），Claude Code编程工具年化营收63亿美元，企业级付费收入占比超80%。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>信号意义：</strong>Chatbot增长见顶，Agent正在成为新范式。Anthropic用企业级Agent生态（Claude Code + Claude Tag + API）证明了Agent的商业化能力远超聊天机器人。<br><strong>适合谁：</strong>关注AI产业格局的决策者。如果你的团队还在犹豫用不用Agent，Anthropic的财报已经给出了答案。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.anthropic.com/news/introducing-claude-tag" target="_blank">Anthropic Claude Tag</a>
+      <span class="card-stars">⭐ Anthropic官方</span>
+    </div>
+    <div class="card-tagline">以Slack为起点的AI同事范式。Claude以团队成员身份加入频道，任何人@Claude即可委派任务。支持多玩家异步协作、持续学习、主动推送。内部版Tag已生成产品团队65%的代码。</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>AI工具需要切换上下文才能使用，团队协作中AI是孤岛。Claude Tag把AI变成团队频道里的常驻成员，任何人随时可以委派任务，无需切换工具。<br><strong>适合谁：</strong>使用Slack的工程/产品团队，希望AI无缝融入日常工作流的组织。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.doubao.com/" target="_blank">豆包2.1 Pro + Agent办公任务模式</a>
+      <span class="card-stars">⭐ 2亿日活</span>
+    </div>
+    <div class="card-tagline">豆包上线专业版，首个Agent驱动办公任务模式。能自主拆解步骤、调用本地电脑和浏览器，交付可直接使用的成品。RTL芯片设计测试中连续运行18小时，完成6个核心模块1303行代码，对标Claude Opus 4.6。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>Agent工具使用门槛高，普通人难以接触。豆包让2亿日活用户零门槛体验Agent办公，说一句话就能完成调研报告、财报分析、网站搭建。<br><strong>适合谁：</strong>所有需要AI辅助办公的职场人。专业版68元/月起，学生价38元/月。免费用户也可体验办公任务模式。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/google-labs-code/design.md" target="_blank">Google DESIGN.md</a>
+      <span class="card-stars">⭐ 22.3k</span>
+    </div>
+    <div class="card-tagline">Google Labs出品的设计规范格式标准，让AI编码Agent持久理解你的设计系统。YAML前端定义精确Token+Markdown正文解释设计理由，配套CLI支持lint验证、diff比对、一键导出Tailwind/CSS。</div>
+    <div class="card-tags">
+      <span class="tag scene">🖥️ 内容生产</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>AI生成的UI每次风格不一致，Agent不理解品牌色和设计决策。把DESIGN.md放项目根目录，Agent每次自动加载，从此不会再搞错颜色和间距。<br><strong>适合谁：</strong>用AI Agent做前端开发的团队，需要保持一致设计语言的项目。本周从17k涨至22.3k星，趋势强劲。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/deepseek-ai/DSpark" target="_blank">DeepSeek 500亿融资 + DSpark开源</a>
+      <span class="card-stars">⭐ 行业重磅</span>
+    </div>
+    <div class="card-tagline">DeepSeek完成500亿战略融资，全部投入世界模型、端侧模型和算力集群。同步开源DSpark投机解码框架，加速DeepSeek-V4生成速度60-85%。7月24日停用旧版V4名称，开发者需提前迁移。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-body"><strong>解决什么问题：</strong>大模型推理速度瓶颈。DSpark通过半自回归生成（并行骨干+轻量顺序头）实现无损加速，让DeepSeek-V4推理快60-85%。<br><strong>适合谁：</strong>DeepSeek深度用户、需要低成本高性能推理的Agent开发者。注意7月24日迁移deadline。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/CopilotKit/CopilotKit" target="_blank">CopilotKit</a>
+      <span class="card-stars">⭐ 33k</span>
+    </div>
+    <div class="card-tagline">多平台Agent与生成式UI前端框架。一个后端Agent驱动React/Angular/Vue/React Native等多前端，通过AG-UI协议实现动态UI生成、共享状态同步和人机交互工作流。</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>Agent应用前端开发重复劳动多，框架绑定导致代码无法复用。CopilotKit用AG-UI协议解耦前后端，一个Agent后端驱动多个前端，支持Human-in-the-Loop和Self-Learning。<br><strong>适合谁：</strong>需要快速构建多平台Agent应用的全栈开发者，已有React技术栈的团队。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/alibaba/page-agent" target="_blank">Page Agent</a>
+      <span class="card-stars">⭐ 19.8k</span>
+    </div>
+    <div class="card-tagline">阿里巴巴开源的JavaScript网页GUI智能体。通过自然语言控制网页界面，无需录制脚本即可完成表单填写、页面点击等交互，在RPA和浏览器自动化领域具有重要应用价值。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>传统RPA需要录制脚本，UI一变就崩溃。Page Agent通过自然语言理解网页语义，像人一样看懂并操作界面，自适应UI变动。<br><strong>适合谁：</strong>需要网页自动化的运营团队、跨境电商批量操作、数据采集场景。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://openai.com/index/how-agents-are-transforming-work/" target="_blank">Codex内部数据：OpenAI全公司99.8%输出token走Codex</a>
+      <span class="card-stars">⭐ OpenAI官方</span>
+    </div>
+    <div class="card-tagline">OpenAI发布白皮书：全公司每周99.8%输出token产自Codex而非ChatGPT。法务、财务、招聘等非技术部门也将其作为头号AI工具。近1/4请求对应人类需1小时以上才能完成的任务。重度用户单日可产出60+小时Agent工作量。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>信号意义：</strong>造ChatGPT的人已经不用ChatGPT干活了。Agent不是未来的趋势，是已经在发生的现实。如果你的团队还在用聊天机器人做单次问答，该升级了。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ✨ 新发现 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon new">✨</div>
+    <div class="section-title">新发现</div>
+    <div class="section-count">12 条</div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.producthunt.com/products/browseract" target="_blank">BrowserAct</a>
+      <span class="card-stars">⭐ PH 523票</span>
+    </div>
+    <div class="card-tagline">AI代理的网页浏览器自动化工具。为Agent提供浏览器层，可绕过封锁页面、安全执行多任务、获取干净网页数据。支持浏览、点击、提取、填表、上传文件、已登录网站操作等。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>Agent操作网页时遇到验证码、登录墙、反爬机制就卡住。BrowserAct提供真实浏览器环境，让Agent像人一样浏览网页，绕过封锁。<br><strong>适合谁：</strong>需要让Agent操作网页的开发者、跨境电商自动化、数据采集场景。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/aws/agent-toolkit-for-aws" target="_blank">AWS Agent Toolkit</a>
+      <span class="card-stars">⭐ 1.1k</span>
+    </div>
+    <div class="card-tagline">AWS官方出品的AI智能体工具包，包含官方支持的MCP服务器、技能和插件，帮助AI智能体在AWS平台上构建和部署应用。AWS深度拥抱Agent生态的重要信号。</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>Agent在AWS上部署需要手动配置权限、写Infrastructure-as-Code。Agent Toolkit让Agent直接通过MCP协议操作AWS资源。<br><strong>适合谁：</strong>AWS用户、需要让Agent管理云资源的DevOps团队。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/didclawapp-ai/zagens" target="_blank">Zagens</a>
+      <span class="card-stars">⭐ 新发布 v0.7.4</span>
+    </div>
+    <div class="card-tagline">带沙箱与完成门禁的桌面Agent控制台。Tauri 2桌面应用，OS级沙箱隔离，分层完成门禁（编译/Clippy/测试自动验证），Code+Office同一套runtime。Rust+React/TypeScript，MIT协议。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>Agent在本地执行代码的安全风险。Zagens通过OS级沙箱（受限令牌进程、工作区外写入拦截、敏感目录读保护）和完成门禁（模型说做完了不算，要编译/测试通过），让Agent在安全边界内真干活。<br><strong>适合谁：</strong>Windows桌面开发者、对Agent本地执行有硬性安全要求的团队、DeepSeek用户。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/microsoft/skillopt" target="_blank">SkillOpt</a>
+      <span class="card-stars">⭐ 微软开源</span>
+    </div>
+    <div class="card-tagline">微软开源的Skill优化工具。不微调模型权重，而是把Skill文档作为可优化对象，通过rollout、反思、受限编辑和验证集门禁，训练出最优SKILL.md。Skill文档从此是可训练、可评测、可回滚的工程资产。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>Skill文档靠人工手写，效果不稳定，改一处不知道对其他场景的影响。SkillOpt让Skill文档像代码一样可测试、可优化，输入一批任务+验证集，自动产出最优版本。<br><strong>适合谁：</strong>维护大量Agent Skill的团队、需要系统化提升Agent表现的平台。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/OpenRath" target="_blank">OpenRath</a>
+      <span class="card-stars">⭐ 清华+中山大学</span>
+    </div>
+    <div class="card-tagline">多Agent系统Session运行时。将Session作为一等运行时对象，支持fork、merge、追踪lineage，与Sandbox、Tool、Memory、Workflow形成可审计数据流。解决多Agent系统的状态管理难题。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>多个Agent协作时，状态、分支、工具调用证据和工作区归属难以追踪。OpenRath把Session变成可fork/merge的图结构，每一步都有据可查。<br><strong>适合谁：</strong>做多Agent平台、代码执行沙箱和长期任务编排的团队。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://developers.cloudflare.com/changelog/post/2026-06-19-temporary-accounts-for-agents/" target="_blank">Cloudflare临时账号Agent部署</a>
+      <span class="card-stars">⭐ Cloudflare官方</span>
+    </div>
+    <div class="card-tagline">Agent无需账号和API Token即可部署Workers预览。临时账号默认保留60分钟，Agent可验证、重部署并返回live URL，用户之后可登录认领。打通了Agent从代码生成到上线验证的最后一公里。</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>Agent生成代码后，要让用户先创建账号、配置权限、复制Token才能验证，流程断在最后一步。临时账号把试运行和正式接管拆开，Agent先跑起来验证，用户确认后再认领。<br><strong>适合谁：</strong>做Agent编程产品的团队、需要低门槛部署验证的场景。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.producthunt.com/products/oxlo-ai" target="_blank">Oxlo.ai</a>
+      <span class="card-stars">⭐ PH 490票</span>
+    </div>
+    <div class="card-tagline">一个API访问35+前沿模型，包括DeepSeek V4 Pro、Kimi K2.6、GLM 5、Qwen、Llama和Mistral。可对比模型、调整响应，按月订阅而非按token计费，数据不用于训练。</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>调用多个模型需分别对接API、管理账单。Oxlo一个API统一接入，按月订阅可预测成本，不同场景自动选最优模型。<br><strong>适合谁：</strong>需要多模型路由的Agent开发者、成本敏感的小团队。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.producthunt.com/products/gemini-spark" target="_blank">Gemini Spark</a>
+      <span class="card-stars">⭐ PH 324票</span>
+    </div>
+    <div class="card-tagline">Google的24小时全天候个人AI助手。给它一个任务，即使手机和电脑关机也能在后台持续工作。自主运行但始终在用户指引下，执行重大操作前会先确认。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>现有AI助手需要用户在线才能工作。Gemini Spark在云端持续运行，用户离线时也能处理任务，回来时直接看结果。<br><strong>适合谁：</strong>需要24小时不间断AI助手处理日常任务的个人用户。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.producthunt.com/products/agent-arena" target="_blank">Agent Arena</a>
+      <span class="card-stars">⭐ PH 340票</span>
+    </div>
+    <div class="card-tagline">AI代理的首个公共竞技场。Agent在真实世界挑战中竞争、获得奖励、建立声誉并持续进化。可创建或参与任何竞赛，释放Agent潜能。</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>Agent能力缺乏标准化评测和公开比较。Agent Arena提供竞技场，让Agent在真实任务中PK，排行榜公开透明。<br><strong>适合谁：</strong>Agent开发者、需要benchmark自己Agent能力的团队。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.producthunt.com/products/mindstone-rebel" target="_blank">Mindstone Rebel</a>
+      <span class="card-stars">⭐ PH精选</span>
+    </div>
+    <div class="card-tagline">桌面AI工作空间，连接记忆、会议、文件、任务、自动化和工具，让AI助手完成实际工作。Fair Source架构，敏感操作审核确认，支持多种模型选择。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>AI助手无法访问你的工作上下文（文件、会议、任务）。Rebel把所有工作数据连接起来，让Agent真正理解你的工作全景。<br><strong>适合谁：</strong>需要AI深度参与日常工作的知识工作者。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.producthunt.com/products/tencent-edgeone-makers" target="_blank">腾讯EdgeOne Makers</a>
+      <span class="card-stars">⭐ PH精选</span>
+    </div>
+    <div class="card-tagline">腾讯边缘计算平台，像部署网页应用一样在几分钟内发布AI代理。内置Agent运行环境、沙盒工具、内存管理、可观测性、模型网关、无服务器函数和存储。</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>部署Agent需要搭建复杂基础设施。EdgeOne Makers提供一站式Agent部署平台，CLI/Git/CI/CD工作流，几分钟上线。<br><strong>适合谁：</strong>需要快速部署Agent应用的国内开发者、使用腾讯云生态的团队。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/esengine/deepseek-reasonix" target="_blank">Reasonix</a>
+      <span class="card-stars">⭐ 新发布</span>
+    </div>
+    <div class="card-tagline">为DeepSeek Prefix Cache优化的终端Agent。围绕DeepSeek byte-stable prefix cache（128 token粒度、约90%成本折扣）设计Agent循环，长会话命中率稳定90%+。Go重写v1.0，被DeepSeek官方API文档列为推荐集成项。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>DeepSeek用户的长会话token成本。Reasonix利用Prefix Cache机制，让长会话的token命中率稳定在90%+，大幅降低API费用。<br><strong>适合谁：</strong>DeepSeek深度用户、极致在意token账单的开发者。</div>
+    </div>
+  </div>
+</div>
+
+<!-- 📝 值得留意 -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon note">📝</div>
+    <div class="section-title">值得留意</div>
+    <div class="section-count">5 条</div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="#" target="_blank">中国桌面Agent赛道15款产品集中爆发</a>
+      <span class="card-stars">⭐ 行业趋势</span>
+    </div>
+    <div class="card-tagline">品玩/DoNews深度盘点：2026年中国桌面Agent已涌现15款代表性产品。时间线：1月阿里QoderWork→3月腾讯WorkBuddy→5月腾讯Marvis→6月Kimi Work、字节TRAE Work、豆包任务模式。中国Agent市场进入百团大战。</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>信号意义：</strong>中国Agent市场正在经历类似2023年百模大战的爆发期。对用户来说，选择变多但也变杂；对开发者来说，差异化成为关键。<br><strong>影响：</strong>国内Agent生态将从拼模型能力转向拼工程化、安全性和生态整合。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="#" target="_blank">工信部AI智能体互联互通7项国标发布</a>
+      <span class="card-stars">⭐ 政策落地</span>
+    </div>
+    <div class="card-tagline">6月27日，市场监管总局、工信部发布《人工智能智能体互联交互体系》全套7项国家标准，统一Agent交互接口、任务调度、权限管理底层规则。此前各家Agent封闭割裂的痛点被针对性解决。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>里程碑意义：</strong>这是国内Agent赛道的里程碑式政策落地。不同厂商的Agent将能互相调用协作，为办公智能体、工业数字员工等规模化落地铺路。<br><strong>适合谁：</strong>所有国内Agent开发者和企业用户——未来Agent选型可以更关注生态兼容性。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="#" target="_blank">跨境电商AI全链路自动化趋势加速</a>
+      <span class="card-stars">⭐ 行业趋势</span>
+    </div>
+    <div class="card-tagline">亚马逊调研显示98%受访中国卖家已在运营中使用AI工具，16%已进阶至AI工作流。从跟卖监控、差评预警到财务对账，AI Agent正在串联全链路。海贸智Agent、实在Agent等本土方案覆盖选品→Listing→客服→物流全流程。</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>趋势判断：</strong>跨境电商的竞争逻辑已从"谁铺货多"变成"谁自动化程度高"。AI Agent从单点工具（写标题）进化为全链路系统（跟卖监控+差评预警+财务对账+客服售后）。<br><strong>适合谁：</strong>跨境卖家，尤其是单人/小团队运营多店铺的卖家。实在Agent的屏幕操作技术可无API对接任何平台。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="#" target="_blank">全球AI产业迎来盈利拐点</a>
+      <span class="card-stars">⭐ 行业趋势</span>
+    </div>
+    <div class="card-tagline">Exponential View报告：全球生成式AI年化收入达1750亿美元，首次超过算力基础设施全年折旧成本（1110亿美元）。Anthropic单百万Token推理成本从17美元降至2美元，AI Token经济商业模式跑通。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>信号意义：</strong>AI行业从"持续烧钱"进入"开始赚钱"阶段。推理成本大幅下降（Anthropic降88%），Agent的商业模式正在被验证。对创业者和投资者来说，AI不再是纯投入，而是有清晰回报的赛道。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="#" target="_blank">GitHub Actions CI安全治理升级</a>
+      <span class="card-stars">⭐ 平台更新</span>
+    </div>
+    <div class="card-tagline">GitHub发布工作流触发保护（公测），可按用户/角色/事件控制谁能触发CI。Copilot Code Review开始读取AGENTS.md文件，将仓库规则纳入自动审查上下文。Agent的CI权限正在被更细地治理。</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body"><strong>解决什么问题：</strong>Agent执行CI时的权限边界模糊。GitHub Actions现在可以精确控制谁（包括AI Agent）能触发工作流，结合AGENTS.md读取让AI审查更懂项目规则。<br><strong>适合谁：</strong>使用GitHub Actions + Copilot的企业团队，重视CI供应链安全的组织。</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p class="footer-text">由 <strong>快乐小白菜</strong> 自动生成 · <a href="index.html">查看全部归档</a> · <a href="https://nortoncheng.github.io/agent-daily/">门户首页</a></p>
+</div>
+
+</div>
+</body>
+</html>
