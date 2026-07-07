@@ -1,5 +1,341 @@
 [
   {
+    "date": "2026-06-30",
+    "weekday": "周一",
+    "type": "weekly",
+    "stats": {
+      "hot": 8,
+      "new": 14,
+      "note": 8
+    },
+    "sections": [
+      {
+        "name": "🔥 热门",
+        "count": 8,
+        "type": "hot",
+        "title": "🔥 热门",
+        "items": [
+          {
+            "id": "2026-06-30-sonnet5",
+            "name": "Claude Sonnet 5",
+            "tagline": "Anthropic 6月30日发布，SWE-bench 85.2%，1M上下文窗口，128K输出，Effort参数可调。Agent能力接近Opus 4.8但价格仅为六折，首发价输入$2/输出$10每百万Token。免费用户默认模型，AI编程进入平民化Agent时代",
+            "stars": "行业重磅",
+            "url": "https://www.anthropic.com/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Agent执行多步骤任务时能力不足、成本太高。Sonnet 5以Sonnet的价格提供接近Opus的Agent能力\n怎么用：免费用户默认就是Sonnet 5；API调用模型名 claude-sonnet-5；8月31日前首发价，之后恢复$3/$15\n适合谁：所有Agent开发者——从个人到企业都值得迁移，价格降了但Agent能力大幅提升"
+          },
+          {
+            "id": "2026-06-30-linkfox",
+            "name": "LinkFox AI Agent OS",
+            "tagline": "跨境电商AI Agent操作系统发布，深圳8200人现场参会。覆盖市场调研、选品、Listing运营、AI视频生产四大模块，一句话触发全链路自动化。将运营SOP蒸馏为可复用Agent Skill，24小时日产千条Listing",
+            "stars": "行业重磅",
+            "url": "https://www.linkfox.ai/",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：跨境运营人效低，36%时间花在手动更新Listing、调价、纠错。AI Agent OS把分散在后台、数据工具、表格中的工作串联起来\n怎么用：LinkFox AI产品，原生嵌入领星ERP底层，多智能体协同驱动\n适合谁：亚马逊精品/品牌卖家、重度广告投流卖家，已有案例ACoS从32%降至21%"
+          },
+          {
+            "id": "2026-06-30-cursor-ios",
+            "name": "Cursor for iOS",
+            "tagline": "Cursor推出原生iOS应用公测版，支持在手机上启动和管理云端AI编程代理。散步时口述想法，回来代理已完成代码。Composer 2.5限时75折，AI编程进入移动时代",
+            "stars": "PH #1 日榜",
+            "url": "https://cursor.com/blog/ios-mobile-app",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：编程必须在电脑前，碎片时间无法利用。Cursor for iOS让编程代理随时可用\n怎么用：App Store下载公测版，登录Cursor账号即可用。支持远程控制电脑上正在运行的代理\n适合谁：所有Cursor用户，尤其是经常有灵感的碎片时间、需要远程管理代理的开发者"
+          },
+          {
+            "id": "2026-06-30-v0-ds2",
+            "name": "v0 Design Systems 2.0",
+            "tagline": "Vercel旗下v0重大升级。支持从GitHub、npm、Storybook、Figma导入团队设计系统，让AI用真实组件、色彩变量、字体和代码规范生成UI。已通过Microsoft Fluent、Shopify Polaris、IBM Carbon等主流设计系统兼容测试",
+            "stars": "PH #6",
+            "url": "https://v0.app/docs/design-systems-2",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：AI生成的UI和团队设计系统不一致，每次都要手动调整。v0 2.0让AI直接使用团队真实设计Token\n怎么用：从Figma/GitHub/npm导入设计系统，v0自动识别并应用\n适合谁：有成熟设计系统的前端团队，想用AI生成UI但保持设计一致性的项目"
+          },
+          {
+            "id": "2026-06-30-sourcegraph-batch",
+            "name": "Sourcegraph Agentic Batch Changes",
+            "tagline": "Agent驱动的跨仓库批量修改进入公测。Mercari用它从2个仓库扩展到约80个仓库修复GitHub Actions安全问题。Agent按仓库独立推理而非脆弱的查找替换，Canva用它按代码所有权拆分Bazel单体仓库变更",
+            "stars": "公测发布",
+            "url": "https://sourcegraph.com/agentic-batch-changes",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：大规模代码库的安全修复、API迁移等需要跨数十甚至上百个仓库操作，人工无法完成\n怎么用：Sourcegraph Cloud公测期免费，7月8日Sourcegraph 7.5支持自托管\n适合谁：管理大量仓库的平台工程团队、需要批量安全修复的企业"
+          },
+          {
+            "id": "2026-06-30-chrome-devtools-mcp",
+            "name": "Chrome DevTools MCP",
+            "tagline": "Google官方发布Chrome DevTools MCP服务，AI Agent直接接管真实浏览器。自动查看Network请求、抓取性能瓶颈、复现Bug。MCP正在成为连接AI与本地工具的事实标准，45k stars",
+            "stars": "45.0k",
+            "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：前端调试需要手动在DevTools中操作，AI无法直接获取浏览器运行时信息\n怎么用：安装Chrome DevTools MCP Server，Agent通过MCP协议直接操作浏览器DevTools\n适合谁：前端开发者、QA工程师，让AI Agent直接参与浏览器调试和性能分析"
+          },
+          {
+            "id": "2026-06-30-liveclawbench",
+            "name": "LiveClawBench",
+            "tagline": "三星联合北大、港城大、港科大发布AI Agent基准测试。134个可执行任务，发现任务领域只能解释约10%性能波动，任务复杂度画像才是关键。最强模型GPT-5.5在Hard子集Pass^3仅5.3，Agent离可靠个人助理仍有距离",
+            "stars": "三星+北大",
+            "url": "https://arxiv.org/abs/2604.13072",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Agent评测缺乏系统性基准，不知道为什么同一个Agent在不同任务上表现差异巨大\n怎么用：论文在arXiv公开，三轴复杂度框架（环境复杂性/认知负担/运行时适应性）可指导Agent改进方向\n适合谁：Agent开发者、AI研究员，理解Agent能力边界和优化方向"
+          },
+          {
+            "id": "2026-06-30-workbuddy",
+            "name": "腾讯 WorkBuddy",
+            "tagline": "腾讯推出办公AI助手，PH日榜#1。可组建AI专家团队协作，提出请求、指导AI团队、获取第二意见。面向日常办公场景，支持多Agent协同产出更精准的结果",
+            "stars": "PH #1 (386票)",
+            "url": "https://www.producthunt.com/products/workbuddy",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：日常办公中碎片化任务多，单一AI助手难以覆盖多元化需求\n怎么用：组建AI专家团队，按任务类型分配不同Agent协作\n适合谁：日常办公场景广泛的职场人，需要多维度AI协作而非单一对话"
+          }
+        ]
+      },
+      {
+        "name": "🆕 新发现",
+        "count": 14,
+        "type": "new",
+        "title": "🆕 新发现",
+        "items": [
+          {
+            "id": "2026-06-30-career-ops",
+            "name": "santifer/career-ops",
+            "tagline": "AI求职流水线，57.7k stars。批量评估岗位匹配度、根据JD自动生成ATS友好简历，将求职变成自动化批处理系统。用魔法打败HR的魔法——既然公司用AI筛候选人，就用AI筛公司",
+            "stars": "57.7k",
+            "url": "https://github.com/santifer/career-ops",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：海投简历效率低，手动为每个岗位定制简历费时。AI批量匹配+自动生成定制简历\n怎么用：输入简历和求职意向，自动匹配岗位并生成定制版简历\n适合谁：求职者、猎头，尤其是需要批量投递的求职季"
+          },
+          {
+            "id": "2026-06-30-video-use",
+            "name": "browser-use/video-use",
+            "tagline": "代码驱动的自动剪辑室——把原片丢给Agent即可。与Claude Code对话，自动剪掉口癖空白、烧录字幕、调色，直接吐出成品MP4。技术教程博主效率神器，13.7k stars",
+            "stars": "13.7k",
+            "url": "https://github.com/browser-use/video-use",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：视频剪辑耗时，尤其是技术教程类重复操作多。Agent自动完成口癖删除、字幕生成、调色\n怎么用：安装后在Claude Code中对话式操作，描述剪辑需求即可\n适合谁：技术教程博主、需要批量处理视频的内容创作者"
+          },
+          {
+            "id": "2026-06-30-strix",
+            "name": "usestrix/strix",
+            "tagline": "多Agent驱动的自动化渗透测试框架，登顶GitHub日榜单日+1900星。动态运行侦察、尝试漏洞利用并用可复现PoC验证结果，大幅缩短应用安全测试周期并降低误报率，适合嵌入DevSecOps流水线",
+            "stars": "日增1900+",
+            "url": "https://github.com/usestrix/strix",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：安全测试依赖人工专家，效率低、成本高。Strix用多Agent自动完成渗透测试全流程\n怎么用：嵌入CI/CD安全门禁，自动运行侦察和漏洞利用\n适合谁：DevSecOps团队、安全工程师，注意严禁用于未授权系统"
+          },
+          {
+            "id": "2026-06-30-kody",
+            "name": "kentcdodds/kody",
+            "tagline": "Kent C. Dodds打造的开源OSS层，让现有编码Agent更安全、更确定。不是替代Agent而是增强Agent，支持Cloudflare和Kit集成。他用Kody让Cursor修复了缺失的SPF记录和邮件送达问题",
+            "stars": "新发布",
+            "url": "https://github.com/kentcdodds/kody",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：编码Agent在集成和自动化场景中不够确定、不够安全\n怎么用：作为现有编码Agent的增强层，连接Cloudflare、Kit等外部服务\n适合谁：使用Cursor/Claude Code等编码Agent、需要安全集成外部服务的开发者"
+          },
+          {
+            "id": "2026-06-30-agent-browser-tool",
+            "name": "agent-browser",
+            "tagline": "Vercel出品，专为AI Agent设计的Rust浏览器自动化CLI工具。快照生成无障碍访问树并分配稳定引用ID（@e1、@e2），AI只需记住引用ID即可点击，无需解析复杂HTML。内置会话管理、状态持久化、iOS模拟器",
+            "stars": "Vercel新工具",
+            "url": "https://github.com/vercel/agent-browser",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：传统Playwright输出DOM树给AI理解成本高、易出错。agent-browser用无障碍访问树+引用ID简化AI与浏览器的交互\n怎么用：npm install -g agent-browser，CLI命令操作，AI可直接生成命令字符串\n适合谁：构建浏览器自动化Agent的开发者，需要轻量、快速、稳定浏览器操作的场景"
+          },
+          {
+            "id": "2026-06-30-circlechat",
+            "name": "CircleChat",
+            "tagline": "多Agent协作工作空间，PH 146票。设定目标后Agent团队自动分解任务、在看板上认领、在频道中汇报。LLM审查员验证每个交付物，MIT开源可自托管。可观看live.circlechat.co上Agent的公开工作",
+            "stars": "PH 146票",
+            "url": "https://circlechat.co",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：多Agent协作缺乏可视化管理和结果验证机制\n怎么用：设定目标，Agent自动分解任务→认领→执行→审查验证。自托管免费，托管版$29/月/工作空间\n适合谁：想用多Agent协作完成复杂项目的独立开发者和小团队"
+          },
+          {
+            "id": "2026-06-30-termit-protocol",
+            "name": "Termi Protocol",
+            "tagline": "3D可视化AI Agent工作流系统。给编码Agent设计形象、布置办公桌和客厅，在3D环境中实时观看Agent阅读、写作和执行指令。像玩游戏一样观察Agent工作，PH 178票",
+            "stars": "PH 178票",
+            "url": "https://www.producthunt.com/posts/termi-protocol",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：Agent工作过程黑盒，难以理解和调试。Termi Protocol用3D可视化让Agent行为可观测\n怎么用：给Agent设计形象和工作环境，3D实时展示其操作过程\n适合谁：对Agent行为可观测性有需求的开发者、AI教育场景"
+          },
+          {
+            "id": "2026-06-30-seakerai",
+            "name": "SeakerAI",
+            "tagline": "亚马逊卖家AI决策工作台，6000+注册用户，300+付费。覆盖选品、运营、作图、广告和ERP管理，将亚马逊实战SOP产品化。自研市场潜力评分模型，从数据查询升级为决策辅助，正寻求2000万天使轮融资",
+            "stars": "36氪报道",
+            "url": "https://36kr.com/p/3874017717507336",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：亚马逊卖家工具多但分散，数据查询和决策之间存在断层。SeakerAI把选品/运营/作图/广告整合进一个AI决策工作台\n怎么用：SaaS订阅，覆盖选品分析、运营建议、AI生图、广告托管\n适合谁：亚马逊卖家，尤其是需要从看数据到做决策一体化体验的中小卖家"
+          },
+          {
+            "id": "2026-06-30-yifan-agent",
+            "name": "亿帆·Agent",
+            "tagline": "蓝标传媒旗下Madhouse自研，入选TikTok for Business官方榜单。AI+Marketing API双引擎，Q2孵化500+新客，AI素材预检过审率87%，ROAS提升39%。首批入驻TikTok Agentic Hub，一条商品链接即启动投放",
+            "stars": "TikTok官方榜单",
+            "url": "https://www.yifan.ai/",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：跨境中小商家TikTok投放门槛高，缺剪辑、缺运营、缺经验。亿帆Agent全自动完成从商品链接到广告上线的全流程\n怎么用：粘贴商品链接→AI分析卖点→生成素材→自动创建广告。新用户免费使用\n适合谁：Shopify独立站卖家、TikTok新手广告主、日预算低于$200的小团队"
+          },
+          {
+            "id": "2026-06-30-docsalot",
+            "name": "DocsAlot",
+            "tagline": "统一人类和AI代理的文档平台。整合帮助中心、知识库和开发文档，同时生成托管的MCP、llms.txt和skill.md。让文档出现在AI回答中，加速入职培训，Agent不再阅读过时信息",
+            "stars": "PH 32票",
+            "url": "https://docsalot.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：文档分散在多个平台，人类和AI各看各的。DocsAlot统一为一个来源，同时服务人类和AI\n怎么用：整合现有文档，自动生成MCP/llms.txt/skill.md\n适合谁：有AI Agent需求的产品团队，想降低新成员入职培训成本"
+          },
+          {
+            "id": "2026-06-30-trycase",
+            "name": "TryCase",
+            "tagline": "AI编码Agent的临时测试环境。为AI编程代理提供可临时使用的Linux环境，让Agent运行应用、全面测试更改、捕获截图和录制过程，返回验证过的代码而非让用户手动测试",
+            "stars": "PH精选",
+            "url": "https://trycase.dev",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：AI生成的代码缺乏测试验证，需要人工检查。TryCase给Agent一个沙箱环境自主测试\n怎么用：Agent在TryCase的Linux沙箱中运行代码、截图验证、录制过程\n适合谁：用AI Agent写代码的开发者，想减少手动测试验证环节"
+          },
+          {
+            "id": "2026-06-30-bytebot",
+            "name": "Bytebot",
+            "tagline": "开源跨境智能体，容器隔离本地部署，兼容本地大模型。跨Shopify、亚马逊、Temu三大平台，断网离线也能完成选品、Listing撰写、短视频脚本生成。一次授权无按月订阅，适合技术型中小卖家",
+            "stars": "开源新品",
+            "url": "https://github.com/bytebot",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：跨境AI工具订阅费高、数据安全顾虑。Bytebot开源本地部署，一次授权零月费\n怎么用：Docker部署，兼容Ollama等本地模型，支持自定义脚本拓展\n适合谁：会基础脚本的Shopify/亚马逊中小卖家，追求低成本和数据本地化"
+          },
+          {
+            "id": "2026-06-30-databox-skills",
+            "name": "Databox Skills Marketplace",
+            "tagline": "免费AI分析技能库，PH #2日榜。通过MCP连接Claude后，一句话读取实时业务数据（GA4流量、增长工作流、广告效果等）并生成结构化分析报告，无需导出数据。降低数据分析门槛",
+            "stars": "PH #2",
+            "url": "https://databox.com/skills-marketplace",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：看业务数据需要登录多个平台、导出Excel、手动分析。Databox Skills让Claude直接读取实时数据并分析\n怎么用：连接Databox MCP到Claude，用自然语言提问即可\n适合谁：需要频繁查看业务数据的产品经理、运营、营销人员"
+          },
+          {
+            "id": "2026-06-30-vida-ai",
+            "name": "Vida",
+            "tagline": "AI个人克隆，PH #1 (382票)。学习你的工作方式、记住重要事情，随时间推移越来越像你。首批五大场景：回复救援、提示救援、简历救援、工作区清理和每日总结。95个场景待发布",
+            "stars": "PH #1 (382票)",
+            "url": "https://www.producthunt.com/products/vida",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：重复性工作占用了太多时间。Vida学习你的习惯后，在你问之前就帮你处理重复任务\n怎么用：日常使用中Vida逐步学习你的工作方式，首批五大场景已可用\n适合谁：日常有大量重复性任务的职场人，想减少琐事负担"
+          }
+        ]
+      },
+      {
+        "name": "📝 值得留意",
+        "count": 8,
+        "type": "note",
+        "title": "📝 值得留意",
+        "items": [
+          {
+            "id": "2026-06-30-agentpeek",
+            "name": "AgentPeek",
+            "tagline": "AI代理监控工具，用于观察和调试AI Agent的行为和决策过程。在Agent越来越复杂的2026年，可观测性正在成为刚需",
+            "stars": "PH新品",
+            "url": "https://agentpeek.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：Agent执行过程不透明，出错时难以定位根因\n怎么用：接入AgentPeek监控Agent的每一步决策和行为\n适合谁：Agent开发者、需要调试Agent行为的团队"
+          },
+          {
+            "id": "2026-06-30-qik-office",
+            "name": "Qik Office",
+            "tagline": "AI办公室，配备AI经理和AI助手。在共享智能空间中，AI帮助撰写会议纪要、执行命令、研究、安排会议、自动分配任务。完全免费，PH 26票",
+            "stars": "PH新品",
+            "url": "https://www.producthunt.com/posts/qik-office",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：团队协作中AI工具分散，Qik Office用一个AI办公室统一管理\n怎么用：部署AI经理和无限数量的AI助手，在共享空间中协作\n适合谁：小团队、初创企业，免费使用降低AI办公门槛"
+          },
+          {
+            "id": "2026-06-30-pluno",
+            "name": "Pluno",
+            "tagline": "浏览器自动化代理，号称比Claude快10倍，支持复杂网页操作自动化。PH #8日榜，面向需要高速网页自动化的场景",
+            "stars": "PH #8",
+            "url": "https://pluno.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：传统浏览器自动化速度慢，Pluno以10倍速执行复杂网页操作\n怎么用：浏览器扩展或API接入，自动执行网页操作\n适合谁：需要大量网页自动化的运营、数据采集团队"
+          },
+          {
+            "id": "2026-06-30-shopify-sidekick",
+            "name": "Shopify Sidekick",
+            "tagline": "Shopify生态原生AI助手，通过自然语言一分钟内重构前端页面、修改库存促销策略、输出店铺全维诊断报告。生态绑定强但执行确定性100%",
+            "stars": "Shopify官方",
+            "url": "https://www.shopify.com/",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：独立站运营需要频繁调整页面、促销、库存，人工操作效率低\n怎么用：Shopify后台内置，自然语言操作\n适合谁：Shopify独立站卖家，尤其是D2C品牌"
+          },
+          {
+            "id": "2026-06-30-shotlab",
+            "name": "ShotLab",
+            "tagline": "截图美化工具，把无聊的截图变成引人注目的内容。添加背景、边框、贴纸、注释，提升社交媒体帖子的互动率",
+            "stars": "PH 43票",
+            "url": "https://www.producthunt.com/posts/shotlab",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：产品截图和教程截图不够吸引人，影响内容传播效果\n怎么用：上传截图，添加美化元素，一键导出\n适合谁：产品经理、内容创作者、需要在社交媒体展示产品的团队"
+          },
+          {
+            "id": "2026-06-30-codeswtch",
+            "name": "Codeswtch",
+            "tagline": "AI创业公司的工程订阅服务。不雇佣员工、不管理自由职业者、不寄希望于AI，而是按需订阅经验丰富的工程指导。一个订阅无限制请求",
+            "stars": "PH 18票",
+            "url": "https://codeswtch.com",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：AI创业公司缺工程经验，招人太贵、自由职业者难管理。Codeswtch提供按需工程指导\n怎么用：订阅后随时提出工程问题，获取经验丰富的指导\n适合谁：AI创业公司创始人、独立开发者，需要工程判断但不想养团队"
+          },
+          {
+            "id": "2026-06-30-proofling",
+            "name": "Proofling",
+            "tagline": "AI自动收集客户评价，连接Stripe自动向付费客户发送邀请，无需追讨。附同意和验证购买者标识，评价可托管、嵌入网站或导出为proof.json。为不喜欢主动索要评价的创始人打造",
+            "stars": "PH 17票",
+            "url": "https://proofling.com",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：卖家需要客户评价但不好意思主动索要，手动收集效率低\n怎么用：连接Stripe，自动发送评价邀请，收集验证后展示在证明墙上\n适合谁：电商卖家、SaaS创始人，需要社交证明但不想主动求评价"
+          },
+          {
+            "id": "2026-06-30-akiflow",
+            "name": "Akiflow",
+            "tagline": "统一任务和日历管理工具，支持从Claude、ChatGPT或Cursor中直接管理任务和日程。将分散在多个工具中的待办事项集中到一个界面，AI与任务管理深度融合",
+            "stars": "PH #4",
+            "url": "https://akiflow.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：任务分散在多个工具中，AI和日程管理割裂\n怎么用：从Claude/ChatGPT/Cursor中直接管理Akiflow任务和日历\n适合谁：多工具、多任务的职场人，希望AI和日程管理无缝衔接"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-06-23",
     "weekday": "周一",
     "type": "weekly",

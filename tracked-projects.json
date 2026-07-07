@@ -1,0 +1,1056 @@
+{
+  "projects": {
+    "affaan-m/ECC": {
+      "first_seen": "2026-06-02",
+      "stars_at_first": "199k+",
+      "last_update": "2026-06-02",
+      "category": "执行自动化·Agent Harness优化",
+      "level": "🏢大型平台"
+    },
+    "rtk-ai/rtk": {
+      "first_seen": "2026-06-02",
+      "stars_at_first": "56k+",
+      "last_update": "2026-06-02",
+      "category": "执行自动化·LLM Token优化",
+      "level": "🏗️中型框架"
+    },
+    "d4vinci/Scrapling": {
+      "first_seen": "2026-06-02",
+      "stars_at_first": "55.8k",
+      "last_update": "2026-06-02",
+      "category": "信息流转·自适应爬虫",
+      "level": "🏗️中型框架"
+    },
+    "run-llama/liteparse": {
+      "first_seen": "2026-06-02",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-02",
+      "category": "信息流转·PDF解析",
+      "level": "🔧小而美"
+    },
+    "iyulab/undoc": {
+      "first_seen": "2026-06-02",
+      "stars_at_first": "v0.5.0",
+      "last_update": "2026-06-02",
+      "category": "信息流转·Office转Markdown",
+      "level": "🔧小而美"
+    },
+    "colinhacks/pullfrog": {
+      "first_seen": "2026-06-02",
+      "stars_at_first": "~400",
+      "last_update": "2026-06-02",
+      "category": "执行自动化·AI代码审查",
+      "level": "🔧小而美"
+    },
+    "phnx-labs/agents-cli": {
+      "first_seen": "2026-06-02",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-02",
+      "category": "执行自动化·CLI Agent编排",
+      "level": "🔧小而美"
+    },
+    "github/gh-aw": {
+      "first_seen": "2026-06-02",
+      "stars_at_first": "官方功能",
+      "last_update": "2026-06-02",
+      "category": "执行自动化·仓库Agent自动化",
+      "level": "🏢大型平台"
+    },
+    "ggozad/haiku.rag": {
+      "first_seen": "2026-06-02",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-02",
+      "category": "决策支撑·Agentic RAG",
+      "level": "🔧小而美"
+    },
+    "CloakHQ/CloakBrowser": {
+      "first_seen": "2026-06-02",
+      "stars_at_first": "13k",
+      "last_update": "2026-06-02",
+      "category": "信息流转·隐身浏览器",
+      "level": "🏗️中型框架"
+    },
+    "genai-commit": {
+      "first_seen": "2026-06-02",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-02",
+      "category": "执行自动化·AI Commit消息",
+      "level": "🔧小而美"
+    },
+    "opendatalab/MinerU": {
+      "first_seen": "2026-06-03",
+      "stars_at_first": "80k+",
+      "last_update": "2026-06-03",
+      "category": "信息流转·高精度文档解析",
+      "level": "🏢大型平台",
+      "note": "v3.2重大更新：Apache 2.0许可证+PPTX/XLSX原生解析"
+    },
+    "harry0703/MoneyPrinterTurbo": {
+      "first_seen": "2026-06-03",
+      "stars_at_first": "68k+",
+      "last_update": "2026-06-03",
+      "category": "内容生产·短视频自动生成",
+      "level": "🏢大型平台"
+    },
+    "reneza/capcut-cli": {
+      "first_seen": "2026-06-03",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-03",
+      "category": "内容生产·LLM驱动视频剪辑CLI",
+      "level": "🔧小而美"
+    },
+    "1weiho/open-slide": {
+      "first_seen": "2026-06-03",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-03",
+      "category": "内容生产·AI Agent驱动PPT生成",
+      "level": "🔧小而美"
+    },
+    "pdf-oxide": {
+      "first_seen": "2026-06-03",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-03",
+      "category": "信息流转·超快PDF解析",
+      "level": "🔧小而美",
+      "note": "Rust core, 0.8ms/doc, MCP Server"
+    },
+    "all2md": {
+      "first_seen": "2026-06-03",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-03",
+      "category": "信息流转·全格式转Markdown",
+      "level": "🔧小而美",
+      "note": "MCP Server, 双向转换, 插件架构"
+    },
+    "omeryasirkucuk/amx": {
+      "first_seen": "2026-06-03",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-03",
+      "category": "决策支撑·数据库元数据AI生成",
+      "level": "🔧小而美",
+      "note": "三Agent协作, 10种DB引擎, Studio Web UI"
+    },
+    "githubnext/agentics-beyond-code": {
+      "first_seen": "2026-06-03",
+      "stars_at_first": "GitHub Next",
+      "last_update": "2026-06-03",
+      "category": "执行自动化·GitHub非工程角色工作流",
+      "level": "🔧小而美",
+      "note": "16个即用工作流, Safe Outputs安全模型"
+    },
+    "Hommy-master/capcut-mate": {
+      "first_seen": "2026-06-03",
+      "stars_at_first": "1.1k",
+      "last_update": "2026-06-03",
+      "category": "内容生产·剪映API自动化",
+      "level": "🔧小而美"
+    },
+    "OpenAISpace/ai-trend-publish": {
+      "first_seen": "2026-06-03",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-03",
+      "category": "内容生产·自动内容生成发布",
+      "level": "🔧小而美"
+    },
+    "pbakaus/impeccable": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "35.2k",
+      "last_update": "2026-06-08",
+      "category": "内容生产·UI设计词汇表",
+      "level": "🏗️中型框架",
+      "note": "23条指令+27条反模式规则, 支持Claude Code/Cursor/Gemini CLI/Kiro"
+    },
+    "OpenBMB/VoxCPM": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-08",
+      "category": "内容生产·Tokenizer-Free多语言TTS",
+      "level": "🔧小而美",
+      "note": "2B参数, 48kHz, 30语言, 声音克隆+声音设计"
+    },
+    "Leonxlnx/taste-skill": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "35.7k",
+      "last_update": "2026-06-08",
+      "category": "内容生产·AI品味Skill",
+      "level": "🏗️中型框架"
+    },
+    "layoutdesign/context": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-08",
+      "category": "内容生产·设计系统MCP Server",
+      "level": "🔧小而美",
+      "note": "MCP Server + CLI, 11个工具, 免费kit: linear-lite/stripe-lite/notion-lite"
+    },
+    "pewdiepie-archdaemon/odysseus": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "60k+",
+      "last_update": "2026-06-08",
+      "category": "内容生产·自托管AI工作空间",
+      "level": "🏢大型平台",
+      "note": "PewDiePie出品, 一周涨44k星, MIT协议, 270+模型支持"
+    },
+    "next-1688/1688-shopkeeper": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "2.6k",
+      "last_update": "2026-06-08",
+      "category": "发行·1688选品多平台铺货",
+      "level": "🔧小而美",
+      "note": "AI Skill, 1688→抖音/拼多多/淘宝/小红书一键铺货"
+    },
+    "safishamsi/graphify": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-08",
+      "category": "信息流转·代码库知识图谱",
+      "level": "🔧小而美",
+      "note": "支持20+编码Agent, 三遍扫描, 自动重建"
+    },
+    "chopratejas/headroom": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-08",
+      "category": "信息流转·LLM上下文压缩",
+      "level": "🔧小而美",
+      "note": "节省60%+上下文窗口占用"
+    },
+    "mvanhorn/last30days-skill": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "29.4k",
+      "last_update": "2026-06-08",
+      "category": "信息流转·30天趋势研究Skill",
+      "level": "🏗️中型框架"
+    },
+    "anthropics/defending-code-reference-harness": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "Anthropic官方",
+      "last_update": "2026-06-08",
+      "category": "工作流提效·自主漏洞发现与修复",
+      "level": "🏗️中型框架",
+      "note": "五段闭环: 侦察→发现→验证→报告→补丁"
+    },
+    "cost-dev": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "YC W21",
+      "last_update": "2026-06-08",
+      "category": "工作流提效·Agent成本优化CLI",
+      "level": "🔧小而美",
+      "note": "减少Claude输出Token 79%, API成本67%"
+    },
+    "ExpressGradient/lazarus": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-08",
+      "category": "工作流提效·长周期任务编码Agent",
+      "level": "🔧小而美",
+      "note": "单一Python运行时工具, 自压缩上下文"
+    },
+    "heyhyper-ai": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "YC P26",
+      "last_update": "2026-06-08",
+      "category": "信息流转·组织知识图谱",
+      "level": "🏗️中型框架",
+      "note": "公司共享大脑, lifecycle hooks注入Agent上下文"
+    },
+    "tangelo-ltd/tekir": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-08",
+      "category": "信息流转·API Agent引导",
+      "level": "🔧小而美",
+      "note": "在API响应中扩展next_actions/agent_guidance字段"
+    },
+    "Panniantong/Agent-Reach": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-08",
+      "category": "信息流转·全网搜索Skill",
+      "level": "🔧小而美"
+    },
+    "unicity-astrid/astrid": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-08",
+      "category": "工作流提效·Agent操作系统",
+      "level": "🔧小而美",
+      "note": "Rust构建, Agent调度/隔离/观测"
+    },
+    "phuryn/pm-skills": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "12.2k",
+      "last_update": "2026-06-08",
+      "category": "发行·PM技能市场",
+      "level": "🏗️中型框架",
+      "note": "100+PM Agent技能"
+    },
+    "sellerclaw": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "PH #2",
+      "last_update": "2026-06-08",
+      "category": "发行·跨境店铺AI Agent运营",
+      "level": "🏗️中型框架",
+      "note": "多Agent团队, Shopify/eBay, 免费起步"
+    },
+    "vokal-team": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "PH 480票",
+      "last_update": "2026-06-08",
+      "category": "发行·人+Agent协作空间",
+      "level": "🔧小而美"
+    },
+    "botate": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-06-08",
+      "category": "发行·AI辩论决策",
+      "level": "🔧小而美"
+    },
+    "minimi": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "PH 496票",
+      "last_update": "2026-06-08",
+      "category": "发行·Claude环境记忆",
+      "level": "🔧小而美"
+    },
+    "daisy-meeting-recorder": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-06-08",
+      "category": "内容生产·本地会议录音",
+      "level": "🔧小而美",
+      "note": "Apache 2.0, 本地Whisper转录, MCP Server"
+    },
+    "openai-codex-sites": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "OpenAI官方",
+      "last_update": "2026-06-08",
+      "category": "内容生产·交互式Web App生成",
+      "level": "🏢大型平台",
+      "note": "Codex生成可交互托管Web App, 非静态文件"
+    },
+    "navos-ai-tecdo": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "5月上线",
+      "last_update": "2026-06-08",
+      "category": "跨境电商·TikTok Shop AI选品",
+      "level": "🏗️中型框架",
+      "note": "TEC-DO出品, 5分钟完成选品流程"
+    },
+    "shopify-smart-pricing": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "Shopify官方免费",
+      "last_update": "2026-06-08",
+      "category": "跨境电商·AI定价A/B测试",
+      "level": "🔧小而美"
+    },
+    "accio-work-alibaba": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "阿里国际3月上线",
+      "last_update": "2026-06-08",
+      "category": "跨境电商·全链路电商智能体",
+      "level": "🏢大型平台",
+      "note": "39个技能包, 48平台自动建站"
+    },
+    "ringly-io": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-08",
+      "category": "跨境电商·AI语音客服",
+      "level": "🔧小而美",
+      "note": "73%解决率, 40+语言, $0.38/通 vs 人工$2.35"
+    },
+    "moonshotai/kimi-k2-7-code": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "开源首发",
+      "last_update": "2026-06-15",
+      "category": "信息流转·编程Agent模型",
+      "level": "🏢大型平台",
+      "note": "1T MoE, 256K context, MCP工具调用超Opus 4.8"
+    },
+    "anthropic/fable-mythos-5": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "Anthropic官方",
+      "last_update": "2026-06-15",
+      "category": "信息流转·双模型安全分级",
+      "level": "🏢大型平台",
+      "note": "Fable 5公众版+Mythos 5网安版, 安全即溢价"
+    },
+    "AIDC-AI/Pixelle-Video": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "22.4k",
+      "last_update": "2026-06-15",
+      "category": "内容生产·AI全自动短视频",
+      "level": "🏗️中型框架",
+      "note": "阿里开源, 零门槛一键生成短视频"
+    },
+    "Egonex-AI/Understand-Anything": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "58.9k",
+      "last_update": "2026-06-15",
+      "category": "信息流转·代码知识图谱",
+      "level": "🏗️中型框架",
+      "note": "把代码变成可交互知识图谱"
+    },
+    "storeclaw-update": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "PH #2",
+      "last_update": "2026-06-15",
+      "category": "发行·跨境店铺AI Agent运营",
+      "level": "🏗️中型框架",
+      "note": "重大更新: PH周榜#1 + 36kr专题, listing转化率10%→14%"
+    },
+    "supertone-inc/supertonic": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "12.0k",
+      "last_update": "2026-06-15",
+      "category": "内容生产·设备端TTS",
+      "level": "🔧小而美",
+      "note": "50+语言, 1000+字符/秒, ONNX Runtime"
+    },
+    "ruvnet/ruflo": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "59.6k",
+      "last_update": "2026-06-15",
+      "category": "执行自动化·Agent编排平台",
+      "level": "🏗️中型框架",
+      "note": "Claude生态领先的Agent编排"
+    },
+    "alibaba/open-code-review": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "6.8k",
+      "last_update": "2026-06-15",
+      "category": "工作流提效·AI代码审查",
+      "level": "🔧小而美",
+      "note": "阿里大规模验证, 混合架构, Go"
+    },
+    "tamnd/kage": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "1.5k",
+      "last_update": "2026-06-15",
+      "category": "信息流转·网站离线归档",
+      "level": "🔧小而美",
+      "note": "Go编写, MIT协议, 2天1.5k星, Show HN"
+    },
+    "Paca-AI/paca": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "Show HN 161票",
+      "last_update": "2026-06-15",
+      "category": "工作流提效·人AI协作项目管理",
+      "level": "🔧小而美",
+      "note": "Apache 2.0, MCP Server内置, v0.4.0"
+    },
+    "browse-sh": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "PH 482票",
+      "last_update": "2026-06-15",
+      "category": "发行·浏览器自动化技能目录",
+      "level": "🔧小而美",
+      "note": "SKILL.md食谱, 给Agent网页操作肌肉记忆"
+    },
+    "honen": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "PH 538票",
+      "last_update": "2026-06-15",
+      "category": "发行·AI培训基础设施",
+      "level": "🏗️中型框架",
+      "note": "文档变更课程自动更新"
+    },
+    "asmi-ai": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "PH 476票",
+      "last_update": "2026-06-15",
+      "category": "工作流提效·AI电话助手",
+      "level": "🔧小而美",
+      "note": "替你打电话处理生活琐事"
+    },
+    "taste-lab": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "PH #3",
+      "last_update": "2026-06-15",
+      "category": "内容生产·设计DNA提取",
+      "level": "🔧小而美",
+      "note": "禁止干净现代废话, 提取决策价值原则"
+    },
+    "pixpix": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-15",
+      "category": "跨境电商·电商内容全流程Agent",
+      "level": "🏗️中型框架",
+      "note": "20+AI模型, 一张产品图到多平台发布"
+    },
+    "kenn-io/agentsview": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "2.7k",
+      "last_update": "2026-06-15",
+      "category": "工作流提效·编码Agent会话分析",
+      "level": "🔧小而美",
+      "note": "27种Agent自动发现, SQLite本地优先"
+    },
+    "qursor": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "PH 321票",
+      "last_update": "2026-06-15",
+      "category": "内容生产·UI上下文复制",
+      "level": "🔧小而美",
+      "note": "Chrome扩展, 告别模糊截图"
+    },
+    "respan-gateway": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "PH 446票",
+      "last_update": "2026-06-15",
+      "category": "工作流提效·AI网关",
+      "level": "🏗️中型框架",
+      "note": "1000+模型, 内置可观测性+评估"
+    },
+    "folio-ai": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "PH #5",
+      "last_update": "2026-06-15",
+      "category": "内容生产·AI PPT",
+      "level": "🔧小而美",
+      "note": "PowerPoint插件, 咨询金融团队专用"
+    },
+    "groxaxo/Local-VoiceMode-LLM": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-15",
+      "category": "内容生产·本地语音环路",
+      "level": "🔧小而美",
+      "note": "Silero VAD+Parakeet STT+Supertonic TTS, 100%CPU"
+    },
+    "colbymchenry/codegraph": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "本周热门",
+      "last_update": "2026-06-15",
+      "category": "信息流转·代码知识图谱",
+      "level": "🔧小而美",
+      "note": "预索引, 代码变更自动同步"
+    },
+    "netease-tuoke-agent": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "5月上线",
+      "last_update": "2026-06-15",
+      "category": "跨境电商·B2B外贸AI获客",
+      "level": "🏗️中型框架",
+      "note": "7x24小时自动匹配客户"
+    },
+    "langgraph-rce-cve": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "CVE高危",
+      "last_update": "2026-06-15",
+      "category": "工作流提效·安全漏洞",
+      "level": "🏢大型平台",
+      "note": "SQL注入+反序列化RCE, 已修复"
+    },
+    "openclaw-security-attacks": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "安全通告",
+      "last_update": "2026-06-15",
+      "category": "工作流提效·安全漏洞",
+      "level": "🏢大型平台",
+      "note": "Imperva代码注入+Varonis数据泄露, 已修复2026.4.23"
+    },
+    "agentjacking": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "新型攻击",
+      "last_update": "2026-06-15",
+      "category": "工作流提效·安全漏洞",
+      "level": "🏢大型平台",
+      "note": "伪造Sentry错误注入恶意指令, Claude Code/Cursor受影响"
+    },
+    "ai-agent-bankrupted-dn42": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "HN热帖",
+      "last_update": "2026-06-15",
+      "category": "工作流提效·Agent安全事故",
+      "level": "🔧小而美",
+      "note": "扫描DN42失控, $6,531 AWS账单"
+    },
+    "Thysrael/Horizon": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "6.4k",
+      "last_update": "2026-06-15",
+      "category": "信息流转·AI新闻雷达",
+      "level": "🔧小而美",
+      "note": "每日中英文简报自动生成"
+    },
+    "amplitude-ai-sdk": {
+      "first_seen": "2026-06-15",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-15",
+      "category": "工作流提效·Agent分析SDK",
+      "level": "🔧小而美",
+      "note": "追踪LLM/工具调用为Amplitude事件"
+    },
+    "bytedance/deer-flow": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "73.1k",
+      "last_update": "2026-06-22",
+      "category": "信息与工作流提效·长视野Agent框架",
+      "level": "🏢大型平台"
+    },
+    "calesthio/OpenMontage": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "11.7k",
+      "last_update": "2026-06-22",
+      "category": "内容生产·Agent驱动视频制作",
+      "level": "🏗️中型框架"
+    },
+    "DeusData/codebase-memory-mcp": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "11.4k",
+      "last_update": "2026-06-22",
+      "category": "信息与工作流提效·代码知识图谱MCP",
+      "level": "🔧小而美"
+    },
+    "mukul975/Anthropic-Cybersecurity-Skills": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "18.6k",
+      "last_update": "2026-06-22",
+      "category": "信息与工作流提效·网络安全Agent技能",
+      "level": "🏗️中型框架"
+    },
+    "THUDM/GLM-5.2": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "MIT开源",
+      "last_update": "2026-06-22",
+      "category": "信息与工作流提效·开源编程旗舰模型",
+      "level": "🏢大型平台"
+    },
+    "MiniMax-AI/MiniMax-M3": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "开源首发",
+      "last_update": "2026-06-22",
+      "category": "信息与工作流提效·开源多模态旗舰",
+      "level": "🏢大型平台"
+    },
+    "ZhuLinsen/daily_stock_analysis": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "45.7k",
+      "last_update": "2026-06-22",
+      "category": "信息与工作流提效·LLM股票分析",
+      "level": "🏗️中型框架"
+    },
+    "farion1231/cc-switch": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "6.6k",
+      "last_update": "2026-06-22",
+      "category": "发行·多Agent切换器",
+      "level": "🔧小而美"
+    },
+    "sakana-marlin": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "Sakana AI出品",
+      "last_update": "2026-06-22",
+      "category": "信息与工作流提效·虚拟首席战略官",
+      "level": "🏗️中型框架"
+    },
+    "goldfish-ai": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "PH 577票",
+      "last_update": "2026-06-22",
+      "category": "信息与工作流提效·Mac上下文记忆AI",
+      "level": "🔧小而美"
+    },
+    "stride-dev": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-06-22",
+      "category": "发行·AI原生工作空间",
+      "level": "🏗️中型框架"
+    },
+    "autoedit-premiere": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-06-22",
+      "category": "内容生产·Claude AI视频编辑器",
+      "level": "🔧小而美"
+    },
+    "cloudskill-dev": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-06-22",
+      "category": "发行·Agent技能管理平台",
+      "level": "🔧小而美"
+    },
+    "mimo-code": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-06-22",
+      "category": "信息与工作流提效·长期记忆编程Agent",
+      "level": "🔧小而美"
+    },
+    "mockpilot": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-06-22",
+      "category": "内容生产·网站转可编辑模型图",
+      "level": "🔧小而美"
+    },
+    "aevs": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "PH 128票",
+      "last_update": "2026-06-22",
+      "category": "信息与工作流提效·Agent执行验证SDK",
+      "level": "🔧小而美"
+    },
+    "edgee-turbo-models": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "PH精选",
+      "last_update": "2026-06-22",
+      "category": "发行·Claude Code开源模型加速",
+      "level": "🔧小而美"
+    },
+    "shopify-ai-toolkit": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "Shopify官方",
+      "last_update": "2026-06-22",
+      "category": "跨境电商·AI Agent接入Shopify",
+      "level": "🏢大型平台"
+    },
+    "shopify-agentic-storefronts": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "Shopify官方免费",
+      "last_update": "2026-06-22",
+      "category": "跨境电商·AI平台商品发现",
+      "level": "🏢大型平台"
+    },
+    "makersclaw": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-06-22",
+      "category": "发行·即时通讯AI员工",
+      "level": "🏗️中型框架"
+    },
+    "deepseek-funding-2026-06": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "行业重磅",
+      "last_update": "2026-06-22",
+      "category": "信息与工作流提效·融资事件",
+      "level": "🏢大型平台"
+    },
+    "spacex-cursor-acquisition": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "行业重磅",
+      "last_update": "2026-06-22",
+      "category": "信息与工作流提效·并购事件",
+      "level": "🏢大型平台"
+    },
+    "intel-agentic-xeon": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "硬件发布",
+      "last_update": "2026-06-22",
+      "category": "信息与工作流提效·Agent专用CPU",
+      "level": "🏢大型平台"
+    },
+    "apple-core-ai": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "Apple官方",
+      "last_update": "2026-06-22",
+      "category": "内容生产·统一AI框架",
+      "level": "🏢大型平台"
+    },
+    "google-genie3": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "Google Research",
+      "last_update": "2026-06-22",
+      "category": "内容生产·3D环境生成",
+      "level": "🏢大型平台"
+    },
+    "qclaw-wechat": {
+      "first_seen": "2026-06-22",
+      "stars_at_first": "腾讯官方",
+      "last_update": "2026-06-22",
+      "category": "发行·微信AI Agent",
+      "level": "🏢大型平台"
+    },
+    "google-labs-code/design.md": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "22.3k",
+      "last_update": "2026-06-23",
+      "category": "内容生产·AI设计规范标准",
+      "level": "🏗️中型框架"
+    },
+    "CopilotKit/CopilotKit": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "33k",
+      "last_update": "2026-06-23",
+      "category": "发行·Agent+生成式UI框架",
+      "level": "🏗️中型框架"
+    },
+    "alibaba/page-agent": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "19.8k",
+      "last_update": "2026-06-23",
+      "category": "信息与工作流提效·网页GUI智能体",
+      "level": "🏗️中型框架"
+    },
+    "aws/agent-toolkit-for-aws": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "1.1k",
+      "last_update": "2026-06-23",
+      "category": "发行·AWS Agent工具包",
+      "level": "🔧小而美"
+    },
+    "didclawapp-ai/zagens": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "v0.7.4",
+      "last_update": "2026-06-23",
+      "category": "信息与工作流提效·沙箱桌面Agent",
+      "level": "🔧小而美"
+    },
+    "microsoft/skillopt": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "微软开源",
+      "last_update": "2026-06-23",
+      "category": "信息与工作流提效·Skill优化工具",
+      "level": "🔧小而美"
+    },
+    "OpenRath": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "清华+中山大学",
+      "last_update": "2026-06-23",
+      "category": "信息与工作流提效·多Agent Session运行时",
+      "level": "🔧小而美"
+    },
+    "browseract": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "PH 523票",
+      "last_update": "2026-06-23",
+      "category": "信息与工作流提效·AI浏览器自动化",
+      "level": "🔧小而美"
+    },
+    "oxlo-ai": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "PH 490票",
+      "last_update": "2026-06-23",
+      "category": "发行·多模型统一API",
+      "level": "🔧小而美"
+    },
+    "gemini-spark": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "PH 324票",
+      "last_update": "2026-06-23",
+      "category": "信息与工作流提效·24小时AI助手",
+      "level": "🏗️中型框架"
+    },
+    "agent-arena": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "PH 340票",
+      "last_update": "2026-06-23",
+      "category": "发行·AI Agent竞技场",
+      "level": "🔧小而美"
+    },
+    "mindstone-rebel": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "PH精选",
+      "last_update": "2026-06-23",
+      "category": "信息与工作流提效·桌面AI工作空间",
+      "level": "🔧小而美"
+    },
+    "tencent-edgeone-makers": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "PH精选",
+      "last_update": "2026-06-23",
+      "category": "发行·边缘AI代理部署",
+      "level": "🏗️中型框架"
+    },
+    "esengine/deepseek-reasonix": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-23",
+      "category": "信息与工作流提效·DeepSeek优化Agent",
+      "level": "🔧小而美"
+    },
+    "claude-tag": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "Anthropic官方",
+      "last_update": "2026-06-23",
+      "category": "发行·Slack AI同事",
+      "level": "🏗️中型框架"
+    },
+    "gpt-5.6": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "OpenAI官方",
+      "last_update": "2026-06-23",
+      "category": "信息与工作流提效·旗舰模型",
+      "level": "🏢大型平台"
+    },
+    "doubao-2.1-pro": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "2亿日活",
+      "last_update": "2026-06-23",
+      "category": "信息与工作流提效·国民Agent办公",
+      "level": "🏢大型平台"
+    },
+    "deepseek-dspark": {
+      "first_seen": "2026-06-23",
+      "stars_at_first": "500亿融资",
+      "last_update": "2026-06-23",
+      "category": "信息与工作流提效·推理加速框架",
+      "level": "🏢大型平台"
+    },
+    "santifer/career-ops": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "57.7k",
+      "last_update": "2026-06-30",
+      "category": "信息与工作流提效·AI求职流水线",
+      "level": "🏗️中型框架"
+    },
+    "browser-use/video-use": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "13.7k",
+      "last_update": "2026-06-30",
+      "category": "内容生产·Agent驱动视频剪辑",
+      "level": "🔧小而美"
+    },
+    "usestrix/strix": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "日增1900+",
+      "last_update": "2026-06-30",
+      "category": "信息与工作流提效·AI渗透测试",
+      "level": "🔧小而美"
+    },
+    "kentcdodds/kody": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "新发布",
+      "last_update": "2026-06-30",
+      "category": "发行·编码Agent安全增强层",
+      "level": "🔧小而美"
+    },
+    "ChromeDevTools/chrome-devtools-mcp": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "45.0k",
+      "last_update": "2026-06-30",
+      "category": "信息与工作流提效·浏览器MCP",
+      "level": "🏗️中型框架"
+    },
+    "vercel/agent-browser": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "Vercel新工具",
+      "last_update": "2026-06-30",
+      "category": "信息与工作流提效·Agent浏览器自动化",
+      "level": "🔧小而美"
+    },
+    "circlechat": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "PH 146票",
+      "last_update": "2026-06-30",
+      "category": "发行·多Agent协作工作空间",
+      "level": "🔧小而美"
+    },
+    "termi-protocol": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "PH 178票",
+      "last_update": "2026-06-30",
+      "category": "信息与工作流提效·Agent 3D可视化",
+      "level": "🔧小而美"
+    },
+    "seakerai": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "36氪报道",
+      "last_update": "2026-06-30",
+      "category": "跨境电商·亚马逊AI决策工作台",
+      "level": "🔧小而美"
+    },
+    "yifan-agent": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "TikTok官方榜单",
+      "last_update": "2026-06-30",
+      "category": "跨境电商·TikTok投放AI Agent",
+      "level": "🏗️中型框架"
+    },
+    "docsalot": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "PH 32票",
+      "last_update": "2026-06-30",
+      "category": "信息与工作流提效·AI统一文档",
+      "level": "🔧小而美"
+    },
+    "trycase": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "PH精选",
+      "last_update": "2026-06-30",
+      "category": "发行·Agent测试环境",
+      "level": "🔧小而美"
+    },
+    "bytebot": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "开源新品",
+      "last_update": "2026-06-30",
+      "category": "跨境电商·开源跨境智能体",
+      "level": "🔧小而美"
+    },
+    "databox-skills": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "PH #2",
+      "last_update": "2026-06-30",
+      "category": "信息与工作流提效·数据分析技能",
+      "level": "🔧小而美"
+    },
+    "vida-ai": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "PH #1",
+      "last_update": "2026-06-30",
+      "category": "信息与工作流提效·AI个人克隆",
+      "level": "🔧小而美"
+    },
+    "agentpeek": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-06-30",
+      "category": "信息与工作流提效·Agent监控",
+      "level": "🔧小而美"
+    },
+    "qik-office": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-06-30",
+      "category": "发行·AI办公室",
+      "level": "🔧小而美"
+    },
+    "pluno": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "PH #8",
+      "last_update": "2026-06-30",
+      "category": "信息与工作流提效·高速浏览器代理",
+      "level": "🔧小而美"
+    },
+    "shotlab": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "PH 43票",
+      "last_update": "2026-06-30",
+      "category": "内容生产·截图美化",
+      "level": "🔧小而美"
+    },
+    "codeswtch": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "PH 18票",
+      "last_update": "2026-06-30",
+      "category": "发行·工程订阅服务",
+      "level": "🔧小而美"
+    },
+    "proofling": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "PH 17票",
+      "last_update": "2026-06-30",
+      "category": "跨境电商·AI评价收集",
+      "level": "🔧小而美"
+    },
+    "akiflow": {
+      "first_seen": "2026-06-30",
+      "stars_at_first": "PH #4",
+      "last_update": "2026-06-30",
+      "category": "信息与工作流提效·AI任务管理",
+      "level": "🔧小而美"
+    }
+  },
+  "meta": {
+    "created": "2026-06-02",
+    "description": "已收录项目追踪清单，用于去重和更新检测",
+    "last_weekly_update": "2026-06-30"
+  }
+}
