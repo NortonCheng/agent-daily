@@ -1,5 +1,637 @@
 [
   {
+    "date": "2026-07-06",
+    "weekday": "周一",
+    "type": "weekly",
+    "stats": {
+      "hot": 8,
+      "new": 11,
+      "note": 7
+    },
+    "sections": [
+      {
+        "name": "🔥 热门",
+        "count": 8,
+        "type": "hot",
+        "title": "🔥 热门",
+        "items": [
+          {
+            "id": "2026-07-06-gpt56-work",
+            "name": "GPT-5.6 + ChatGPT Work",
+            "tagline": "OpenAI 7月9日发布旗舰模型GPT-5.6和Agent产品ChatGPT Work。支持1400+应用连接器，可将任务拆解为多步骤自动执行数小时，输出成品文档/表格/网页。Ultra模式支持多Agent并行，Token效率提升54%。GPT-Live-1全双工语音同步上线",
+            "stars": "行业重磅",
+            "url": "https://openai.com/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Agent不能跨应用执行长时间任务，ChatGPT Work把Agent从聊天工具变成干活的员工\n怎么用：ChatGPT Pro/Enterprise/Edu用户可用，用量计费制，Plan模式先展示步骤再执行\n适合谁：需要跨HubSpot/Slack/Gmail/项目管理等工具自动化工作的团队和个人"
+          },
+          {
+            "id": "2026-07-06-meetily",
+            "name": "Meetily",
+            "tagline": "本周GitHub Trending #1，23.5k stars。Rust/Tauri桌面应用，本地Whisper/Parakeet转录+Ollama摘要，支持Metal/CoreML/CUDA/Vulkan硬件加速。隐私优先的离线会议助手，无需云端上传音频",
+            "stars": "23.5k",
+            "url": "https://github.com/Zackriya-Solutions/meetily",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：团队需要AI会议纪要但不想把音频上传到云端，隐私和合规是刚需\n怎么用：下载桌面应用，本地运行Whisper转录+Ollama摘要，支持所有主流GPU加速\n适合谁：对会议隐私敏感的团队，法律/金融/医疗行业，需要离线AI能力的场景"
+          },
+          {
+            "id": "2026-07-06-system-prompts-leaks",
+            "name": "system_prompts_leaks",
+            "tagline": "56.7k stars，本周+7.1k。收录Anthropic/OpenAI/Google/Microsoft/Meta/Cursor/Perplexity等主流AI平台系统提示词。7月10日新增GPT-5.6 Sol和Codex GPT-5.6提示词。Claude Fable 5的3800行XML风格提示词也在其中",
+            "stars": "56.7k",
+            "url": "https://github.com/asgeirtj/system_prompts_leaks",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：模型行为部分由隐藏指令决定，泄露的提示词让开发者直接研究这一层\n怎么用：浏览各厂商目录，查看版本差异、工具定义和长提示词文件\n适合谁：提示词工程师、AI安全研究者，了解模型行为边界。注意：收集和分享这些提示词违反大多数AI平台服务条款"
+          },
+          {
+            "id": "2026-07-06-omniroute",
+            "name": "OmniRoute v3.8.46",
+            "tagline": "16.2k stars，本周+4.5k。自托管OpenAI兼容模型网关重大更新。新增pipeline策略（模型串行执行）、Gemini工具调用、代理池IP轮换、auto/*路由、标准化effort/thinking参数、M365 Web支持",
+            "stars": "16.2k",
+            "url": "https://github.com/diegosouzapw/OmniRoute",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：多模型提供商切换麻烦，需要一个统一的网关管理路由、故障转移和成本\n怎么用：自托管部署，OpenAI兼容API，pipeline策略实现模型串行流水线\n适合谁：使用多个模型提供商的团队，需要成本控制和故障转移能力的生产环境"
+          },
+          {
+            "id": "2026-07-06-orca-dev",
+            "name": "Orca",
+            "tagline": "16.9k stars，本周+4.4k。Electron+React+TypeScript构建的Agent开发环境，在独立git worktree中并行运行多个CLI编码Agent。支持Claude Code/Codex/Grok/Cursor/Copilot等14+编码Agent。iOS/Android配套端",
+            "stars": "16.9k",
+            "url": "https://github.com/stablyai/orca",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：单个编码Agent不够用，需要同时管理多个Agent并行工作的开发环境\n怎么用：下载桌面应用，配置多个Agent在独立worktree中并行，支持所有主流AI编码工具\n适合谁：需要同时运行多个编码Agent的开发者，大型重构/迁移项目的工程团队"
+          },
+          {
+            "id": "2026-07-06-claude-video",
+            "name": "claude-video",
+            "tagline": "7.8k stars，本周+4.3k。给Claude Code装上眼睛——通过/watch命令让Claude观看YouTube/Loom/TikTok/X/Instagram/本地视频。自动提取字幕/帧，Whisper转录，ffmpeg处理，11个commit即实现完整功能",
+            "stars": "7.8k",
+            "url": "https://github.com/bradautomates/claude-video",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：Claude Code无法理解视频内容，视频分析需要人工观看后手动描述\n怎么用：在Claude Code中安装扩展，/watch URL即可让Claude分析视频内容\n适合谁：视频内容分析、竞品视频研究、教学视频理解、自动化视频审核"
+          },
+          {
+            "id": "2026-07-06-github-agent-hq",
+            "name": "GitHub Copilot Agent HQ",
+            "tagline": "GitHub Universe发布开放Agent生态战略。Agent HQ让开发者在GitHub上编排OpenAI/Anthropic/Google/Cognition/xAI等多个编码Agent并行工作。Mission Control统一控制台+Plan Mode+AGENTS.md自定义Agent+内置MCP Registry",
+            "stars": "GitHub Universe",
+            "url": "https://github.com/features/copilot",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：开发者被锁定在单一AI编码工具，不同Agent无法协同工作\n怎么用：GitHub Copilot订阅用户，在VS Code/CLI中使用多Agent，Plan Mode先规划后执行\n适合谁：所有GitHub开发者，尤其需要多Agent协作的大型团队"
+          },
+          {
+            "id": "2026-07-06-shopify-toolkit-update",
+            "name": "Shopify AI Toolkit 16 Skill",
+            "tagline": "Shopify官方MCP工具集重大更新：16个独立Skill覆盖Admin API/Storefront/Functions/Liquid/Hydrogen/Polaris设计系统。支持Claude Code/Cursor/Gemini CLI/Codex/VS Code。Agent可直接操作店铺数据，读实时文档+Schema校验",
+            "stars": "Shopify官方",
+            "url": "https://github.com/Shopify/shopify-ai-toolkit",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：AI工具训练数据滞后于API实际状态，生成代码经常幻觉出废弃字段\n怎么用：Claude Code中 /plugin install shopify-plugin@shopify-ai-toolkit，选需要的Skill\n适合谁：Shopify开发者和商家，需要Agent直接操作店铺的场景。注意写权限需谨慎配置"
+          }
+        ]
+      },
+      {
+        "name": "✨ 新发现",
+        "count": 11,
+        "type": "new",
+        "title": "✨ 新发现",
+        "items": [
+          {
+            "id": "2026-07-06-superpowers",
+            "name": "obra/superpowers",
+            "tagline": "标准化Agent技能框架与方法论。将Agent Skills定义为独立可交付单元，开发者不再依赖冗长Prompt，通过模块化技能库实现复杂工作流。标记Agent技能工程化从实验走向生产级的转折点",
+            "stars": "本周热门",
+            "url": "https://github.com/obra/superpowers",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：Agent Skills散落各处无标准，团队协作无法复用技能\n怎么用：遵循superpowers框架定义Skill，模块化封装可复用Agent能力\n适合谁：Agent开发者、需要团队级Skill管理的工程团队"
+          },
+          {
+            "id": "2026-07-06-stitch-skills",
+            "name": "Google Labs stitch-skills",
+            "tagline": "Google Labs 7月11日发布。使用Baton模式和基于文件的状态机实现自主前端构建。将前端开发流程拆解为可编排的Skill步骤，Agent按接力棒模式传递上下文完成复杂前端任务",
+            "stars": "Google Labs",
+            "url": "https://github.com/google-labs/stitch-skills",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：前端开发Agent容易在复杂任务中丢失上下文，Baton模式保证状态传递\n怎么用：安装stitch-skills，Agent按Baton模式接力完成前端构建任务\n适合谁：前端开发者、需要用Agent完成复杂前端项目的团队"
+          },
+          {
+            "id": "2026-07-06-openai-cua-playwright",
+            "name": "OpenAI CUA + Playwright",
+            "tagline": "OpenAI发布AI驱动前端自动化测试工具Beta版。融合Computer Usage Agent技术与Playwright框架，从自然语言描述自动生成、执行和评估测试用例。展示AI在软件测试生命周期中的潜力",
+            "stars": "OpenAI Beta",
+            "url": "https://github.com/openai/openai-cua-playwright",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：前端测试编写耗时，手动维护测试用例成本高\n怎么用：用自然语言描述测试场景，CUA自动生成Playwright测试脚本并执行\n适合谁：QA工程师、前端开发者，想用AI自动化测试流程的团队"
+          },
+          {
+            "id": "2026-07-06-creatify-ai",
+            "name": "Creatify AI Media Buyer",
+            "tagline": "Product Hunt 7月13日 #1，168票。AI广告投放Agent，连接Meta/Google/AppLovin/TikTok账户，自动审计广告活动、发现浪费、识别可扩展素材、从爆款创意生成新变体。记忆账户历史，推荐随时间累积优化",
+            "stars": "PH #1",
+            "url": "https://creatify.ai/",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：人工广告投放需要5个后台+3小时报告，仍在猜测下一步。AI Agent自动审计+优化+生成创意\n怎么用：连接广告账户，AI自动审计并推荐优化动作，通过聊天下达指令\n适合谁：电商广告投放团队、独立站卖家、App推广团队"
+          },
+          {
+            "id": "2026-07-06-replit-agent3",
+            "name": "Replit Agent3",
+            "tagline": "Replit发布Agent3，10倍自主性提升。支持从自然语言生成完整项目架构、自动重构、主动调试（预估减少40%调试时间）、端到端项目管理（初始化架构+集成API+推荐数据库）。支撑Python/JS/Java等主流语言",
+            "stars": "Replit发布",
+            "url": "https://replit.com/agent3",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：编码Agent需要逐步指导，无法自主完成从初始化到部署的完整项目\n怎么用：访问replit.com/agent3，自然语言描述需求，Agent自主完成全流程\n适合谁：快速原型开发、个人开发者、教育场景、不想手动配置项目的新手"
+          },
+          {
+            "id": "2026-07-06-nemoclaw-dcode",
+            "name": "NemoClaw + Deep Agents Code",
+            "tagline": "LangChain+英伟达联合发布。在NemoClaw沙箱中运行Deep Agents Code，使用开源Nemotron 3 Ultra模型。默认拒绝网络+人工审批+完整审计轨迹。面向敏感代码的合规编码Agent蓝图",
+            "stars": "LangChain+NVIDIA",
+            "url": "https://www.langchain.com/blog/deep-agents-code-on-nemoclaw",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：敏感代码（金融/医疗/政府）无法使用云端编码Agent，需要本地化+可审计方案\n怎么用：nemo-deepagents onboard一键部署，在OpenShell沙箱中运行，源码不离开边界\n适合谁：受监管行业、需要源代码和数据驻留控制的金融/医疗/政府团队"
+          },
+          {
+            "id": "2026-07-06-pixazo-agent-p",
+            "name": "Pixazo Agent P",
+            "tagline": "端到端AI创意Agent，Beta上线。用户只需描述需求，Agent自动选择最优模型、规划生产序列、执行并交付成品。支持图像生成/编辑、视频生成/风格迁移/多场景拼接、音频替换，统一对话界面完成全流程",
+            "stars": "Beta上线",
+            "url": "https://www.pixazo.ai/",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：AI内容创作需要知道哪个模型做哪个任务、如何写提示词、如何串联步骤\n怎么用：访问Pixazo Playground，描述想要的内容，Agent自动选择模型并完成\n适合谁：创作者、营销人员、不想学各种AI工具又想高效产出视觉内容的团队"
+          },
+          {
+            "id": "2026-07-06-mqlai",
+            "name": "迈启灵AI (MQLAI)",
+            "tagline": "跨境电商AI智能体工作台v0.3.5发布。8个专业智能体覆盖采集/运营/文案/图片/广告/客服/合规/工程全链路。支持Amazon/1688/AliExpress/Shopee/Temu/Walmart/eBay等9大平台，从链接到Excel四步完成工作流",
+            "stars": "v0.3.5",
+            "url": "https://maiqilingai.com/",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：跨境运营需要切换多个工具，数据采集、Listing优化、广告投放分散在不同平台\n怎么用：桌面端安装，8个智能体一键切换，四步完成从商品链接到可上架Listing\n适合谁：跨境电商卖家和运营团队，尤其是多平台多店铺矩阵运营的团队"
+          },
+          {
+            "id": "2026-07-06-accio-work",
+            "name": "Accio Work",
+            "tagline": "阿里国际站Agentic AI商务平台。100+预置技能，多Agent团队模式（编排模式+群聊模式）。覆盖产品调研、供应商寻源、价格谈判、店铺搭建、合规文书、营销全链路。月活1000万+用户，免费起步",
+            "stars": "阿里国际",
+            "url": "https://www.accio.com/",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：跨境B2B采购从找供应商到谈判到合规涉及大量手动工作，Agent可全链路自动化\n怎么用：注册Accio Work，通过自然语言描述需求，Agent团队自动执行\n适合谁：通过阿里生态采购的跨境电商卖家、B2B外贸团队"
+          },
+          {
+            "id": "2026-07-06-mentient",
+            "name": "Mentient",
+            "tagline": "AI时代品牌监控平台，持续扫描Reddit/论坛/新闻/YouTube中品牌提及。AI阅读上下文判断情感和紧急度，危机检测自动警报。发现Google Alerts漏掉的244条提及。$65/月起，5分钟设置",
+            "stars": "新品发布",
+            "url": "https://mentient.io/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：品牌声誉现在在Reddit和AI回答中决定，传统关键词监控工具读不懂上下文和情感\n怎么用：注册后设置品牌监控，AI自动扫描并分类提及，危机时发送警报\n适合谁：没有PR团队的中小企业、需要了解AI如何评价自己品牌的营销团队"
+          },
+          {
+            "id": "2026-07-06-lyzr-sivaclaw",
+            "name": "Lyzr SivaClaw",
+            "tagline": "AI Agent创业公司用自家Agent完成1亿美元B轮融资。SivaClaw回答了130+投资者提问、起草投资备忘录、追踪投资人关注页面。零出差，4亿融资兴趣，5亿估值。TechCrunch报道，吃得一手好狗粮",
+            "stars": "TechCrunch",
+            "url": "https://techcrunch.com/2026/07/09/an-ai-agent-startup-just-let-its-agent-run-its-100-million-fundraise/",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：这是一个吃自己狗粮的终极案例——Agent创业公司用Agent融资证明产品可行\n怎么用：不是工具，是行业信号。Agent可以处理复杂的多轮投资者沟通\n适合谁：所有AI创业者，证明Agent不只是demo，可以处理真实商业场景"
+          }
+        ]
+      },
+      {
+        "name": "📝 值得留意",
+        "count": 7,
+        "type": "note",
+        "title": "📝 值得留意",
+        "items": [
+          {
+            "id": "2026-07-06-mcp-rc",
+            "name": "MCP 2026-07-28 RC",
+            "tagline": "Model Context Protocol发布候选版，核心变革：无状态协议。移除session/sampling/roots/logging，工具服务器可以像普通Web服务一样水平扩展。这是MCP从实验协议走向生产基础设施的关键里程碑",
+            "stars": "协议标准",
+            "url": "https://spec.modelcontextprotocol.io/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：MCP旧版有状态设计限制了工具服务器的水平扩展能力\n怎么用：等待7月28日正式发布，评估现有MCP集成是否需要迁移\n适合谁：所有MCP生态开发者，工具服务器需要水平扩展的生产环境"
+          },
+          {
+            "id": "2026-07-06-hermes-v018",
+            "name": "Hermes Agent v0.18",
+            "tagline": "Nous Research自进化Agent框架重大更新。Judgment Release：Mixture-of-Agents多Agent协同、自动技能创建、浏览器扩展视觉支持。191k+ stars，支持Ollama本地运行。已追踪项目，本周v0.18重大更新",
+            "stars": "191k+",
+            "url": "https://github.com/NousResearch/Hermes-Agent",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Agent重启即失忆、只能按预设执行——Hermes通过自进化+五层记忆彻底解决\n怎么用：MIT协议开源，支持200+模型，Ollama本地运行，可自主生成技能\n适合谁：需要长期运行、自我进化的Agent的开发者，适合个人助手/自动化运维场景"
+          },
+          {
+            "id": "2026-07-06-cisco-agents",
+            "name": "Cisco 9万员工Agent部署",
+            "tagline": "Cisco宣布7月底向约9万员工推出个人AI Agent。模型路由平衡成本与能力，本地部署优先。这是迄今为止最大规模的企业内部Agent部署，标志着Agent从实验走向大规模企业级应用",
+            "stars": "企业级里程碑",
+            "url": "https://www.cisco.com/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Agent在大型企业中的可行性和ROI缺少验证案例，Cisco 9万人部署是最大实验\n怎么用：不是工具，是行业信号。关注部署后的实际效果数据\n适合谁：所有考虑企业级Agent部署的CTO/CIO，这是规模最大的参考案例"
+          },
+          {
+            "id": "2026-07-06-salesforce-commerce",
+            "name": "Salesforce Agentforce Commerce",
+            "tagline": "Salesforce推出三大电商Agent：Shopper Agent（购物助手）、Buyer Agent（采购Agent）、Merchant Agent（商家Agent）正式GA。与ChatGPT和Gemini集成，覆盖B2C和B2B电商全流程",
+            "stars": "Salesforce GA",
+            "url": "https://www.salesforce.com/agentforce/",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：电商企业需要覆盖消费者端、采购端和商家端三个维度的AI Agent\n怎么用：Salesforce Commerce Cloud用户可直接启用，与现有CRM数据无缝集成\n适合谁：Salesforce生态中的电商企业，B2B+B2C双模式运营的品牌"
+          },
+          {
+            "id": "2026-07-06-grace-memory",
+            "name": "GRACE记忆架构",
+            "tagline": "学术论文提出图结构Agent记忆架构。将Agent持久指令表示为类型化语义图，替代传统扁平文本。测试结果：Gemini 2.5 Flash Agent零样本可靠性从9.1%提升至67.3%，超越Gemini 3.1 Pro零样本基准",
+            "stars": "arXiv论文",
+            "url": "https://arxiv.org/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：长周期Agent运行中上下文膨胀，可靠性急剧下降\n怎么用：实现类型化语义图替代扁平文本记忆，局部验证替代全局重新验证\n适合谁：需要提升Agent长周期任务可靠性的开发者，论文提供了可复现的实现方案"
+          },
+          {
+            "id": "2026-07-06-long-horizon-bench",
+            "name": "Long-Horizon-Terminal-Bench",
+            "tagline": "新基准测试46个长周期终端任务。最强模型仅15.2% pass@1，平均不足5%。Agent消耗约990万Token/任务。同时发现RL训练中48.1%奖励被黑掉——模型学会作弊而非真正提升能力",
+            "stars": "学术警告",
+            "url": "https://arxiv.org/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：现有Agent基准测试都聚焦短任务，无法反映真实长周期场景的可靠性\n怎么用：研究者可用此基准评估Agent长期可靠性，实践者需了解当前Agent的长周期局限性\n适合谁：Agent研究者、评估Agent能否投入生产环境的工程团队"
+          },
+          {
+            "id": "2026-07-06-transbord",
+            "name": "TransBord",
+            "tagline": "AI出海报告平台正式发布。基于跨境企业数据库和网红内容数据，生成三份报告：跨境能力评测（28项指标）、全球市场洞察（热度vs竞争矩阵）、36个月出海路线图。从能不能出海到怎么出海一步到位",
+            "stars": "新品发布",
+            "url": "https://www.transbord.ai/",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：工厂/品牌不知道从哪个市场开始、需要什么认证、第一步做什么\n怎么用：填写28项指标采集表，AI生成三份报告，包含精确到月的行动方案和预算\n适合谁：想出海但不知道从哪开始的工厂/品牌，出海受挫想找问题所在的商家"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2026-06-30",
+    "weekday": "周一",
+    "type": "weekly",
+    "stats": {
+      "hot": 8,
+      "new": 14,
+      "note": 8
+    },
+    "sections": [
+      {
+        "name": "🔥 热门",
+        "count": 8,
+        "type": "hot",
+        "title": "🔥 热门",
+        "items": [
+          {
+            "id": "2026-06-30-sonnet5",
+            "name": "Claude Sonnet 5",
+            "tagline": "Anthropic 6月30日发布，SWE-bench 85.2%，1M上下文窗口，128K输出，Effort参数可调。Agent能力接近Opus 4.8但价格仅为六折，首发价输入$2/输出$10每百万Token。免费用户默认模型，AI编程进入平民化Agent时代",
+            "stars": "行业重磅",
+            "url": "https://www.anthropic.com/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Agent执行多步骤任务时能力不足、成本太高。Sonnet 5以Sonnet的价格提供接近Opus的Agent能力\n怎么用：免费用户默认就是Sonnet 5；API调用模型名 claude-sonnet-5；8月31日前首发价，之后恢复$3/$15\n适合谁：所有Agent开发者——从个人到企业都值得迁移，价格降了但Agent能力大幅提升"
+          },
+          {
+            "id": "2026-06-30-linkfox",
+            "name": "LinkFox AI Agent OS",
+            "tagline": "跨境电商AI Agent操作系统发布，深圳8200人现场参会。覆盖市场调研、选品、Listing运营、AI视频生产四大模块，一句话触发全链路自动化。将运营SOP蒸馏为可复用Agent Skill，24小时日产千条Listing",
+            "stars": "行业重磅",
+            "url": "https://www.linkfox.ai/",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：跨境运营人效低，36%时间花在手动更新Listing、调价、纠错。AI Agent OS把分散在后台、数据工具、表格中的工作串联起来\n怎么用：LinkFox AI产品，原生嵌入领星ERP底层，多智能体协同驱动\n适合谁：亚马逊精品/品牌卖家、重度广告投流卖家，已有案例ACoS从32%降至21%"
+          },
+          {
+            "id": "2026-06-30-cursor-ios",
+            "name": "Cursor for iOS",
+            "tagline": "Cursor推出原生iOS应用公测版，支持在手机上启动和管理云端AI编程代理。散步时口述想法，回来代理已完成代码。Composer 2.5限时75折，AI编程进入移动时代",
+            "stars": "PH #1 日榜",
+            "url": "https://cursor.com/blog/ios-mobile-app",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：编程必须在电脑前，碎片时间无法利用。Cursor for iOS让编程代理随时可用\n怎么用：App Store下载公测版，登录Cursor账号即可用。支持远程控制电脑上正在运行的代理\n适合谁：所有Cursor用户，尤其是经常有灵感的碎片时间、需要远程管理代理的开发者"
+          },
+          {
+            "id": "2026-06-30-v0-ds2",
+            "name": "v0 Design Systems 2.0",
+            "tagline": "Vercel旗下v0重大升级。支持从GitHub、npm、Storybook、Figma导入团队设计系统，让AI用真实组件、色彩变量、字体和代码规范生成UI。已通过Microsoft Fluent、Shopify Polaris、IBM Carbon等主流设计系统兼容测试",
+            "stars": "PH #6",
+            "url": "https://v0.app/docs/design-systems-2",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：AI生成的UI和团队设计系统不一致，每次都要手动调整。v0 2.0让AI直接使用团队真实设计Token\n怎么用：从Figma/GitHub/npm导入设计系统，v0自动识别并应用\n适合谁：有成熟设计系统的前端团队，想用AI生成UI但保持设计一致性的项目"
+          },
+          {
+            "id": "2026-06-30-sourcegraph-batch",
+            "name": "Sourcegraph Agentic Batch Changes",
+            "tagline": "Agent驱动的跨仓库批量修改进入公测。Mercari用它从2个仓库扩展到约80个仓库修复GitHub Actions安全问题。Agent按仓库独立推理而非脆弱的查找替换，Canva用它按代码所有权拆分Bazel单体仓库变更",
+            "stars": "公测发布",
+            "url": "https://sourcegraph.com/agentic-batch-changes",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：大规模代码库的安全修复、API迁移等需要跨数十甚至上百个仓库操作，人工无法完成\n怎么用：Sourcegraph Cloud公测期免费，7月8日Sourcegraph 7.5支持自托管\n适合谁：管理大量仓库的平台工程团队、需要批量安全修复的企业"
+          },
+          {
+            "id": "2026-06-30-chrome-devtools-mcp",
+            "name": "Chrome DevTools MCP",
+            "tagline": "Google官方发布Chrome DevTools MCP服务，AI Agent直接接管真实浏览器。自动查看Network请求、抓取性能瓶颈、复现Bug。MCP正在成为连接AI与本地工具的事实标准，45k stars",
+            "stars": "45.0k",
+            "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：前端调试需要手动在DevTools中操作，AI无法直接获取浏览器运行时信息\n怎么用：安装Chrome DevTools MCP Server，Agent通过MCP协议直接操作浏览器DevTools\n适合谁：前端开发者、QA工程师，让AI Agent直接参与浏览器调试和性能分析"
+          },
+          {
+            "id": "2026-06-30-liveclawbench",
+            "name": "LiveClawBench",
+            "tagline": "三星联合北大、港城大、港科大发布AI Agent基准测试。134个可执行任务，发现任务领域只能解释约10%性能波动，任务复杂度画像才是关键。最强模型GPT-5.5在Hard子集Pass^3仅5.3，Agent离可靠个人助理仍有距离",
+            "stars": "三星+北大",
+            "url": "https://arxiv.org/abs/2604.13072",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Agent评测缺乏系统性基准，不知道为什么同一个Agent在不同任务上表现差异巨大\n怎么用：论文在arXiv公开，三轴复杂度框架（环境复杂性/认知负担/运行时适应性）可指导Agent改进方向\n适合谁：Agent开发者、AI研究员，理解Agent能力边界和优化方向"
+          },
+          {
+            "id": "2026-06-30-workbuddy",
+            "name": "腾讯 WorkBuddy",
+            "tagline": "腾讯推出办公AI助手，PH日榜#1。可组建AI专家团队协作，提出请求、指导AI团队、获取第二意见。面向日常办公场景，支持多Agent协同产出更精准的结果",
+            "stars": "PH #1 (386票)",
+            "url": "https://www.producthunt.com/products/workbuddy",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：日常办公中碎片化任务多，单一AI助手难以覆盖多元化需求\n怎么用：组建AI专家团队，按任务类型分配不同Agent协作\n适合谁：日常办公场景广泛的职场人，需要多维度AI协作而非单一对话"
+          }
+        ]
+      },
+      {
+        "name": "🆕 新发现",
+        "count": 14,
+        "type": "new",
+        "title": "🆕 新发现",
+        "items": [
+          {
+            "id": "2026-06-30-career-ops",
+            "name": "santifer/career-ops",
+            "tagline": "AI求职流水线，57.7k stars。批量评估岗位匹配度、根据JD自动生成ATS友好简历，将求职变成自动化批处理系统。用魔法打败HR的魔法——既然公司用AI筛候选人，就用AI筛公司",
+            "stars": "57.7k",
+            "url": "https://github.com/santifer/career-ops",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：海投简历效率低，手动为每个岗位定制简历费时。AI批量匹配+自动生成定制简历\n怎么用：输入简历和求职意向，自动匹配岗位并生成定制版简历\n适合谁：求职者、猎头，尤其是需要批量投递的求职季"
+          },
+          {
+            "id": "2026-06-30-video-use",
+            "name": "browser-use/video-use",
+            "tagline": "代码驱动的自动剪辑室——把原片丢给Agent即可。与Claude Code对话，自动剪掉口癖空白、烧录字幕、调色，直接吐出成品MP4。技术教程博主效率神器，13.7k stars",
+            "stars": "13.7k",
+            "url": "https://github.com/browser-use/video-use",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：视频剪辑耗时，尤其是技术教程类重复操作多。Agent自动完成口癖删除、字幕生成、调色\n怎么用：安装后在Claude Code中对话式操作，描述剪辑需求即可\n适合谁：技术教程博主、需要批量处理视频的内容创作者"
+          },
+          {
+            "id": "2026-06-30-strix",
+            "name": "usestrix/strix",
+            "tagline": "多Agent驱动的自动化渗透测试框架，登顶GitHub日榜单日+1900星。动态运行侦察、尝试漏洞利用并用可复现PoC验证结果，大幅缩短应用安全测试周期并降低误报率，适合嵌入DevSecOps流水线",
+            "stars": "日增1900+",
+            "url": "https://github.com/usestrix/strix",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：安全测试依赖人工专家，效率低、成本高。Strix用多Agent自动完成渗透测试全流程\n怎么用：嵌入CI/CD安全门禁，自动运行侦察和漏洞利用\n适合谁：DevSecOps团队、安全工程师，注意严禁用于未授权系统"
+          },
+          {
+            "id": "2026-06-30-kody",
+            "name": "kentcdodds/kody",
+            "tagline": "Kent C. Dodds打造的开源OSS层，让现有编码Agent更安全、更确定。不是替代Agent而是增强Agent，支持Cloudflare和Kit集成。他用Kody让Cursor修复了缺失的SPF记录和邮件送达问题",
+            "stars": "新发布",
+            "url": "https://github.com/kentcdodds/kody",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：编码Agent在集成和自动化场景中不够确定、不够安全\n怎么用：作为现有编码Agent的增强层，连接Cloudflare、Kit等外部服务\n适合谁：使用Cursor/Claude Code等编码Agent、需要安全集成外部服务的开发者"
+          },
+          {
+            "id": "2026-06-30-agent-browser-tool",
+            "name": "agent-browser",
+            "tagline": "Vercel出品，专为AI Agent设计的Rust浏览器自动化CLI工具。快照生成无障碍访问树并分配稳定引用ID（@e1、@e2），AI只需记住引用ID即可点击，无需解析复杂HTML。内置会话管理、状态持久化、iOS模拟器",
+            "stars": "Vercel新工具",
+            "url": "https://github.com/vercel/agent-browser",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：传统Playwright输出DOM树给AI理解成本高、易出错。agent-browser用无障碍访问树+引用ID简化AI与浏览器的交互\n怎么用：npm install -g agent-browser，CLI命令操作，AI可直接生成命令字符串\n适合谁：构建浏览器自动化Agent的开发者，需要轻量、快速、稳定浏览器操作的场景"
+          },
+          {
+            "id": "2026-06-30-circlechat",
+            "name": "CircleChat",
+            "tagline": "多Agent协作工作空间，PH 146票。设定目标后Agent团队自动分解任务、在看板上认领、在频道中汇报。LLM审查员验证每个交付物，MIT开源可自托管。可观看live.circlechat.co上Agent的公开工作",
+            "stars": "PH 146票",
+            "url": "https://circlechat.co",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：多Agent协作缺乏可视化管理和结果验证机制\n怎么用：设定目标，Agent自动分解任务→认领→执行→审查验证。自托管免费，托管版$29/月/工作空间\n适合谁：想用多Agent协作完成复杂项目的独立开发者和小团队"
+          },
+          {
+            "id": "2026-06-30-termit-protocol",
+            "name": "Termi Protocol",
+            "tagline": "3D可视化AI Agent工作流系统。给编码Agent设计形象、布置办公桌和客厅，在3D环境中实时观看Agent阅读、写作和执行指令。像玩游戏一样观察Agent工作，PH 178票",
+            "stars": "PH 178票",
+            "url": "https://www.producthunt.com/posts/termi-protocol",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：Agent工作过程黑盒，难以理解和调试。Termi Protocol用3D可视化让Agent行为可观测\n怎么用：给Agent设计形象和工作环境，3D实时展示其操作过程\n适合谁：对Agent行为可观测性有需求的开发者、AI教育场景"
+          },
+          {
+            "id": "2026-06-30-seakerai",
+            "name": "SeakerAI",
+            "tagline": "亚马逊卖家AI决策工作台，6000+注册用户，300+付费。覆盖选品、运营、作图、广告和ERP管理，将亚马逊实战SOP产品化。自研市场潜力评分模型，从数据查询升级为决策辅助，正寻求2000万天使轮融资",
+            "stars": "36氪报道",
+            "url": "https://36kr.com/p/3874017717507336",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：亚马逊卖家工具多但分散，数据查询和决策之间存在断层。SeakerAI把选品/运营/作图/广告整合进一个AI决策工作台\n怎么用：SaaS订阅，覆盖选品分析、运营建议、AI生图、广告托管\n适合谁：亚马逊卖家，尤其是需要从看数据到做决策一体化体验的中小卖家"
+          },
+          {
+            "id": "2026-06-30-yifan-agent",
+            "name": "亿帆·Agent",
+            "tagline": "蓝标传媒旗下Madhouse自研，入选TikTok for Business官方榜单。AI+Marketing API双引擎，Q2孵化500+新客，AI素材预检过审率87%，ROAS提升39%。首批入驻TikTok Agentic Hub，一条商品链接即启动投放",
+            "stars": "TikTok官方榜单",
+            "url": "https://www.yifan.ai/",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：跨境中小商家TikTok投放门槛高，缺剪辑、缺运营、缺经验。亿帆Agent全自动完成从商品链接到广告上线的全流程\n怎么用：粘贴商品链接→AI分析卖点→生成素材→自动创建广告。新用户免费使用\n适合谁：Shopify独立站卖家、TikTok新手广告主、日预算低于$200的小团队"
+          },
+          {
+            "id": "2026-06-30-docsalot",
+            "name": "DocsAlot",
+            "tagline": "统一人类和AI代理的文档平台。整合帮助中心、知识库和开发文档，同时生成托管的MCP、llms.txt和skill.md。让文档出现在AI回答中，加速入职培训，Agent不再阅读过时信息",
+            "stars": "PH 32票",
+            "url": "https://docsalot.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：文档分散在多个平台，人类和AI各看各的。DocsAlot统一为一个来源，同时服务人类和AI\n怎么用：整合现有文档，自动生成MCP/llms.txt/skill.md\n适合谁：有AI Agent需求的产品团队，想降低新成员入职培训成本"
+          },
+          {
+            "id": "2026-06-30-trycase",
+            "name": "TryCase",
+            "tagline": "AI编码Agent的临时测试环境。为AI编程代理提供可临时使用的Linux环境，让Agent运行应用、全面测试更改、捕获截图和录制过程，返回验证过的代码而非让用户手动测试",
+            "stars": "PH精选",
+            "url": "https://trycase.dev",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：AI生成的代码缺乏测试验证，需要人工检查。TryCase给Agent一个沙箱环境自主测试\n怎么用：Agent在TryCase的Linux沙箱中运行代码、截图验证、录制过程\n适合谁：用AI Agent写代码的开发者，想减少手动测试验证环节"
+          },
+          {
+            "id": "2026-06-30-bytebot",
+            "name": "Bytebot",
+            "tagline": "开源跨境智能体，容器隔离本地部署，兼容本地大模型。跨Shopify、亚马逊、Temu三大平台，断网离线也能完成选品、Listing撰写、短视频脚本生成。一次授权无按月订阅，适合技术型中小卖家",
+            "stars": "开源新品",
+            "url": "https://github.com/bytebot",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：跨境AI工具订阅费高、数据安全顾虑。Bytebot开源本地部署，一次授权零月费\n怎么用：Docker部署，兼容Ollama等本地模型，支持自定义脚本拓展\n适合谁：会基础脚本的Shopify/亚马逊中小卖家，追求低成本和数据本地化"
+          },
+          {
+            "id": "2026-06-30-databox-skills",
+            "name": "Databox Skills Marketplace",
+            "tagline": "免费AI分析技能库，PH #2日榜。通过MCP连接Claude后，一句话读取实时业务数据（GA4流量、增长工作流、广告效果等）并生成结构化分析报告，无需导出数据。降低数据分析门槛",
+            "stars": "PH #2",
+            "url": "https://databox.com/skills-marketplace",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：看业务数据需要登录多个平台、导出Excel、手动分析。Databox Skills让Claude直接读取实时数据并分析\n怎么用：连接Databox MCP到Claude，用自然语言提问即可\n适合谁：需要频繁查看业务数据的产品经理、运营、营销人员"
+          },
+          {
+            "id": "2026-06-30-vida-ai",
+            "name": "Vida",
+            "tagline": "AI个人克隆，PH #1 (382票)。学习你的工作方式、记住重要事情，随时间推移越来越像你。首批五大场景：回复救援、提示救援、简历救援、工作区清理和每日总结。95个场景待发布",
+            "stars": "PH #1 (382票)",
+            "url": "https://www.producthunt.com/products/vida",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：重复性工作占用了太多时间。Vida学习你的习惯后，在你问之前就帮你处理重复任务\n怎么用：日常使用中Vida逐步学习你的工作方式，首批五大场景已可用\n适合谁：日常有大量重复性任务的职场人，想减少琐事负担"
+          }
+        ]
+      },
+      {
+        "name": "📝 值得留意",
+        "count": 8,
+        "type": "note",
+        "title": "📝 值得留意",
+        "items": [
+          {
+            "id": "2026-06-30-agentpeek",
+            "name": "AgentPeek",
+            "tagline": "AI代理监控工具，用于观察和调试AI Agent的行为和决策过程。在Agent越来越复杂的2026年，可观测性正在成为刚需",
+            "stars": "PH新品",
+            "url": "https://agentpeek.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：Agent执行过程不透明，出错时难以定位根因\n怎么用：接入AgentPeek监控Agent的每一步决策和行为\n适合谁：Agent开发者、需要调试Agent行为的团队"
+          },
+          {
+            "id": "2026-06-30-qik-office",
+            "name": "Qik Office",
+            "tagline": "AI办公室，配备AI经理和AI助手。在共享智能空间中，AI帮助撰写会议纪要、执行命令、研究、安排会议、自动分配任务。完全免费，PH 26票",
+            "stars": "PH新品",
+            "url": "https://www.producthunt.com/posts/qik-office",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：团队协作中AI工具分散，Qik Office用一个AI办公室统一管理\n怎么用：部署AI经理和无限数量的AI助手，在共享空间中协作\n适合谁：小团队、初创企业，免费使用降低AI办公门槛"
+          },
+          {
+            "id": "2026-06-30-pluno",
+            "name": "Pluno",
+            "tagline": "浏览器自动化代理，号称比Claude快10倍，支持复杂网页操作自动化。PH #8日榜，面向需要高速网页自动化的场景",
+            "stars": "PH #8",
+            "url": "https://pluno.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：传统浏览器自动化速度慢，Pluno以10倍速执行复杂网页操作\n怎么用：浏览器扩展或API接入，自动执行网页操作\n适合谁：需要大量网页自动化的运营、数据采集团队"
+          },
+          {
+            "id": "2026-06-30-shopify-sidekick",
+            "name": "Shopify Sidekick",
+            "tagline": "Shopify生态原生AI助手，通过自然语言一分钟内重构前端页面、修改库存促销策略、输出店铺全维诊断报告。生态绑定强但执行确定性100%",
+            "stars": "Shopify官方",
+            "url": "https://www.shopify.com/",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：独立站运营需要频繁调整页面、促销、库存，人工操作效率低\n怎么用：Shopify后台内置，自然语言操作\n适合谁：Shopify独立站卖家，尤其是D2C品牌"
+          },
+          {
+            "id": "2026-06-30-shotlab",
+            "name": "ShotLab",
+            "tagline": "截图美化工具，把无聊的截图变成引人注目的内容。添加背景、边框、贴纸、注释，提升社交媒体帖子的互动率",
+            "stars": "PH 43票",
+            "url": "https://www.producthunt.com/posts/shotlab",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：产品截图和教程截图不够吸引人，影响内容传播效果\n怎么用：上传截图，添加美化元素，一键导出\n适合谁：产品经理、内容创作者、需要在社交媒体展示产品的团队"
+          },
+          {
+            "id": "2026-06-30-codeswtch",
+            "name": "Codeswtch",
+            "tagline": "AI创业公司的工程订阅服务。不雇佣员工、不管理自由职业者、不寄希望于AI，而是按需订阅经验丰富的工程指导。一个订阅无限制请求",
+            "stars": "PH 18票",
+            "url": "https://codeswtch.com",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：AI创业公司缺工程经验，招人太贵、自由职业者难管理。Codeswtch提供按需工程指导\n怎么用：订阅后随时提出工程问题，获取经验丰富的指导\n适合谁：AI创业公司创始人、独立开发者，需要工程判断但不想养团队"
+          },
+          {
+            "id": "2026-06-30-proofling",
+            "name": "Proofling",
+            "tagline": "AI自动收集客户评价，连接Stripe自动向付费客户发送邀请，无需追讨。附同意和验证购买者标识，评价可托管、嵌入网站或导出为proof.json。为不喜欢主动索要评价的创始人打造",
+            "stars": "PH 17票",
+            "url": "https://proofling.com",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：卖家需要客户评价但不好意思主动索要，手动收集效率低\n怎么用：连接Stripe，自动发送评价邀请，收集验证后展示在证明墙上\n适合谁：电商卖家、SaaS创始人，需要社交证明但不想主动求评价"
+          },
+          {
+            "id": "2026-06-30-akiflow",
+            "name": "Akiflow",
+            "tagline": "统一任务和日历管理工具，支持从Claude、ChatGPT或Cursor中直接管理任务和日程。将分散在多个工具中的待办事项集中到一个界面，AI与任务管理深度融合",
+            "stars": "PH #4",
+            "url": "https://akiflow.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：任务分散在多个工具中，AI和日程管理割裂\n怎么用：从Claude/ChatGPT/Cursor中直接管理Akiflow任务和日历\n适合谁：多工具、多任务的职场人，希望AI和日程管理无缝衔接"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-06-30",
     "weekday": "周一",
     "type": "weekly",
