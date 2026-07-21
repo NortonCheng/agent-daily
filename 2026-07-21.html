@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent 日报 | 2026-07-21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --surface-hover: #f5f5f7;
+    --border: #e8e8ed;
+    --border-light: #f0f0f2;
+    --text-primary: #1a1a2e;
+    --text-secondary: #6b6b80;
+    --text-tertiary: #9b9bb0;
+    --accent: #6c5ce7;
+    --accent-light: rgba(108,92,231,0.08);
+    --accent-medium: rgba(108,92,231,0.15);
+    --green: #00b894;
+    --green-light: rgba(0,184,148,0.08);
+    --orange: #e17055;
+    --orange-light: rgba(225,112,85,0.08);
+    --blue: #0984e3;
+    --blue-light: rgba(9,132,227,0.08);
+    --red: #d63031;
+    --pink: #fd79a8;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --radius-xs: 6px;
+  }
+
+  body {
+    font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
+  }
+
+  /* ── Header ── */
+  .header {
+    padding: 48px 0 40px;
+  }
+
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .header .date {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
+  .header-stats {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .header-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .header-stat .num {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .header-stat .label {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  /* ── Section ── */
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .section-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .section-icon.hot { background: var(--orange-light); }
+  .section-icon.new { background: var(--blue-light); }
+  .section-icon.note { background: var(--green-light); }
+
+  .section-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .section-count {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    font-weight: 500;
+    margin-left: auto;
+  }
+
+  /* ── Project Card ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 16px;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: #dddde5;
+    transform: translateY(-1px);
+  }
+
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+
+  .card-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .card-name:hover { color: var(--accent); }
+
+  .card-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--orange);
+    background: var(--orange-light);
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .card-tagline {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .card-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  .tag.scene {
+    background: var(--green-light);
+    color: var(--green);
+  }
+
+  .tag.type-sm {
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+
+  .tag.type-md {
+    background: var(--blue-light);
+    color: var(--blue);
+  }
+
+  .tag.type-lg {
+    background: var(--orange-light);
+    color: var(--orange);
+  }
+
+  /* ── Usage Section (Key differentiator) ── */
+  .card-usage {
+    background: linear-gradient(135deg, #f8f7ff 0%, #f0f4ff 100%);
+    border: 1px solid rgba(108,92,231,0.1);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+  }
+
+  .card-usage-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  .card-usage-body {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.8;
+  }
+
+  .card-usage-body strong {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .card-usage-body em {
+    font-style: normal;
+    background: linear-gradient(180deg, transparent 60%, rgba(108,92,231,0.15) 60%);
+    font-weight: 500;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    padding: 32px 0 0;
+    border-top: 1px solid var(--border-light);
+    margin-top: 40px;
+  }
+
+  .footer-text {
+    font-size: 13px;
+    color: var(--text-tertiary);
+  }
+
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .footer a:hover { text-decoration: underline; }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .wrapper { padding: 16px 16px 48px; }
+    .header h1 { font-size: 24px; }
+    .card { padding: 20px; }
+    .header-stats { flex-wrap: wrap; gap: 16px; }
+    .card-top { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+<div class="header">
+  <div class="header-badge">📬 Daily Digest</div>
+  <h1>AI Agent 日报</h1>
+  <div class="date">2026-07-21 · 星期周一</div>
+  <div class="header-stats">
+    <div class="header-stat">
+      <span class="num" style="color:var(--orange)">8</span>
+      <span class="label">热门</span>
+    </div>
+    <div class="header-stat">
+      <span class="num" style="color:var(--blue)">12</span>
+      <span class="label">新发现</span>
+    </div>
+    <div class="header-stat">
+      <span class="num" style="color:var(--green)">7</span>
+      <span class="label">值得留意</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon hot">🔥</div>
+    <span class="section-title">🔥 热门</span>
+    <span class="section-count">8 条</span>
+  </div>
+  <div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://github.com/MadsLorentzen/ai-job-search" target="_blank">ai-job-search</a>
+    <span class="card-stars">⭐ 23k</span>
+  </div>
+  <div class="card-tagline">本周GitHub Trending #1，23k stars，单周+13k。基于Claude Code构建的AI求职自动化框架，评估JD、定制简历、撰写求职信、准备面试，全流程本地执行。MIT协议开源，代表Agent从写代码延伸到处理个人事务性工作流</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-sm">🔧小而美</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：求职流程重复繁琐，Agent自动评估职位、定制简历、写求职信、准备面试
+怎么用：Fork仓库，配置Claude Code，本地运行，完全掌控自己的求职流水线
+适合谁：求职者、想自动化求职流程的开发者</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://github.com/OpenCut-app/OpenCut" target="_blank">OpenCut</a>
+    <span class="card-stars">⭐ 70k</span>
+  </div>
+  <div class="card-tagline">70k stars，本周+7.2k。开源CapCut替代品，跨平台视频编辑器。用Web技术栈（TypeScript/React）构建，支持AI辅助剪辑、字幕自动生成、转场效果。对不想被CapCut订阅费锁定的创作者是重大利好</div>
+  <div class="card-tags">
+    <span class="tag scene">🖥️ 内容生产</span>
+    <span class="tag type-md">🏗️中型框架</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：CapCut订阅费上涨且数据隐私存疑，需要开源替代方案
+怎么用：下载桌面应用或Web版，导入视频即可使用AI辅助剪辑功能
+适合谁：短视频创作者、不想为剪辑软件付费的个人和团队</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://github.com/iOfficeAI/OfficeCLI" target="_blank">OfficeCLI</a>
+    <span class="card-stars">⭐ 18k</span>
+  </div>
+  <div class="card-tagline">18k stars，本周+7.1k。面向AI Agent的免装Office自动化工具，单个二进制文件无需安装Office即可读写Word/Excel/PPT。让AI Agent原生操作办公文档，不用再通过GUI模拟点击</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-sm">🔧小而美</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：AI Agent无法直接读写Office文档，需要人工在GUI中操作
+怎么用：下载单二进制文件，Agent通过CLI直接读写Word/Excel/PPT
+适合谁：需要Agent处理办公文档的团队，批量文档自动化场景</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://github.com/xai-org/grok-build" target="_blank">Grok Build</a>
+    <span class="card-stars">⭐ 9.3k</span>
+  </div>
+  <div class="card-tagline">9.3k stars，xAI开源编码Agent CLI。Apache 2.0协议，完整暴露Grok编码栈的Agent循环：上下文处理、工具执行、插件、Skills、MCP集成。虽不接受外部贡献，但可本地编译运行，是研究生产级Agent架构的绝佳参考</div>
+  <div class="card-tags">
+    <span class="tag scene">📤 发行</span>
+    <span class="tag type-md">🏗️中型框架</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：缺少生产级编码Agent的开源参考实现，大多数开源Agent是demo级别
+怎么用：git clone后本地编译运行，研究Agent循环架构和MCP集成方式
+适合谁：构建自有Agent工具的团队、想研究前沿Agent架构的工程师</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://github.com/DeusData/codebase-memory-mcp" target="_blank">Codebase-Memory-MCP 重大更新</a>
+    <span class="card-stars">⭐ 32k</span>
+  </div>
+  <div class="card-tagline">32k stars（从11.4k暴涨至32k）。MCP Server为AI编码Agent提供代码库知识图谱，tree-sitter解析158种语言，token消耗减少99%。单静态C二进制零依赖，几分钟索引Linux内核级代码库。已追踪项目，本周爆发式增长</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-md">🏗️中型框架</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：AI编码Agent反复扫描大型代码库消耗大量Token，效率极低
+怎么用：安装MCP Server，Agent自动通过知识图谱查询代码结构，无需逐文件扫描
+适合谁：维护大型代码库的团队，使用Claude Code/Cursor的开发者</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://github.com/HKUDS/Vibe-Trading" target="_blank">Vibe-Trading</a>
+    <span class="card-stars">⭐ 24k</span>
+  </div>
+  <div class="card-tagline">24k stars，本周+4.2k。港大数据科学实验室出品，自然语言驱动的交易Agent。452个预建Alpha因子，Point-in-Time数据防前视偏差，支持回测和实盘交易。注意：项目方警告有假冒代币诈骗</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-md">🏗️中型框架</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：量化交易门槛高，Agent让普通用户用自然语言描述策略即可回测和交易
+怎么用：自然语言描述交易想法，Agent自动回测验证，可选连接券商实盘
+适合谁：对量化交易感兴趣的开发者，需要研究级回测框架的交易员</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://github.com/TencentCloud/CubeSandbox" target="_blank">CubeSandbox</a>
+    <span class="card-stars">⭐ 10k</span>
+  </div>
+  <div class="card-tagline">10k stars，腾讯云开源。面向AI Agent的轻量安全沙箱，Rust构建。为Agent提供隔离的执行环境，防止恶意代码逃逸或误操作影响宿主系统。Agent安全基础设施从可选变为刚需的标志性项目</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-md">🏗️中型框架</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：Agent执行代码时可能误操作或被执行恶意代码，需要安全沙箱隔离
+怎么用：集成到Agent运行时，所有代码执行在沙箱中完成，不影响宿主系统
+适合谁：部署Agent到生产环境的团队，需要安全执行不可信代码的场景</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://www.anthropic.com/" target="_blank">Claude Cowork 移动端</a>
+    <span class="card-stars">⭐ Anthropic发布</span>
+  </div>
+  <div class="card-tagline">Anthropic 7月发布Claude Cowork网页版和移动端。Agent在桌面端启动任务后，可脱离电脑在云端继续运行数小时，用户通过手机接收结果、审批关键节点。标志着Agent从同步工具进化为异步工作者</div>
+  <div class="card-tags">
+    <span class="tag scene">📤 发行</span>
+    <span class="tag type-lg">🏢大型平台</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：Agent任务需要数小时，用户不能一直守在电脑前
+怎么用：桌面端启动任务，关电脑后Agent在云端继续，手机端查看结果和审批
+适合谁：所有Claude Cowork用户，需要Agent异步执行长时间任务的场景</div>
+  </div>
+</div>
+</div>
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon new">✨</div>
+    <span class="section-title">✨ 新发现</span>
+    <span class="section-count">12 条</span>
+  </div>
+  <div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://techcrunch.com/2026/07/20/natural-raises-30m-ai-agent-payments/" target="_blank">Natural</a>
+    <span class="card-stars">⭐ $30M融资</span>
+  </div>
+  <div class="card-tagline">YC-backed创业公司，$30M融资，为AI Agent重塑支付基础设施。给Agent发放可编程借记卡，设置消费限额和审批规则，Agent自主完成采购和支付。对标Stripe但面向Agent经济体</div>
+  <div class="card-tags">
+    <span class="tag scene">📤 发行</span>
+    <span class="tag type-md">🏗️中型框架</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：Agent无法自主完成支付，需要人类介入所有涉及资金的环节
+怎么用：注册Natural，给Agent发放虚拟借记卡，设置预算和审批规则
+适合谁：需要Agent自主采购、订阅管理的企业和自动化团队</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://github.com/" target="_blank">all-agentic-architectures</a>
+    <span class="card-stars">⭐ 本周热门</span>
+  </div>
+  <div class="card-tagline">Python库封装35个生产级Agent架构模式：Reflexion、LATS、GraphRAG、MemGPT、Voyager等，统一接口跨9种LLM。告别每个模式都要从头实现，Agent开发者的一站式模式参考库</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-sm">🔧小而美</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：Agent架构模式分散在各论文中，实现需要大量工程工作
+怎么用：pip install后导入所需模式，统一接口切换不同架构和LLM
+适合谁：Agent开发者、需要快速实验不同Agent架构的研究者和工程师</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://github.com/" target="_blank">Waggle</a>
+    <span class="card-stars">⭐ 本周热门</span>
+  </div>
+  <div class="card-tagline">多Agent间通信token化方案。传统Agent间传递完整上下文消耗15x Token，Waggle用小型可解析token替代，携带归属、读追踪和修正传播。每个Agent用自己的视角解析token，修正自动传播到所有持有者</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-sm">🔧小而美</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：多Agent间传递完整上下文极其浪费Token，Waggle将开销降低15x
+怎么用：集成到多Agent编排框架中，Agent间用Waggle token替代原始上下文传递
+适合谁：多Agent系统开发者，需要降低Agent间通信成本的团队</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://github.com/" target="_blank">Bonsai 27B</a>
+    <span class="card-stars">⭐ Reddit热议</span>
+  </div>
+  <div class="card-tagline">首个在手机上运行的27B级模型。1-bit量化权重+WebGPU自定义内核，浏览器内直接运行，零服务端往返。标志着大模型从云端走向端侧，Agent本地推理的里程碑</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-sm">🔧小而美</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：大模型推理依赖云端，隐私敏感场景和离线场景无法使用
+怎么用：浏览器中加载WebGPU内核，直接在手机上运行27B模型推理
+适合谁：需要本地推理的隐私敏感场景、离线Agent应用、边缘设备部署</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://github.com/" target="_blank">FerryAI</a>
+    <span class="card-stars">⭐ 本周热门</span>
+  </div>
+  <div class="card-tagline">PHP 8.3+原生AI推理，通过FFI运行ONNX/GGUF/RubixML模型，无需Python或HTTP微服务。让PHP技术栈直接使用AI能力，对大量PHP后端团队是降维打击</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-sm">🔧小而美</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：PHP后端无法直接运行AI推理，必须依赖Python微服务增加架构复杂度
+怎么用：composer安装，直接在PHP进程中加载ONNX/GGUF模型运行推理
+适合谁：PHP技术栈团队，不想引入Python依赖又想用AI能力的场景</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://www.producthunt.com/products/manta-ai" target="_blank">Manta AI</a>
+    <span class="card-stars">⭐ PH本月新品</span>
+  </div>
+  <div class="card-tagline">Product Hunt本月新品，AI Agent自主Web应用测试。纯自然语言驱动，自动发现回归缺陷、生成可复现Bug报告。不写测试脚本，Agent像真实用户一样操作和验证</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-sm">🔧小而美</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：Web应用测试脚本编写和维护成本高，回归测试覆盖率不足
+怎么用：用自然语言描述测试场景，Agent自动执行并生成可复现Bug报告
+适合谁：QA工程师、前端团队，想用AI降低测试编写和维护成本的场景</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://www.producthunt.com/products/agentcard" target="_blank">Agentcard</a>
+    <span class="card-stars">⭐ PH本月新品</span>
+  </div>
+  <div class="card-tagline">Product Hunt本月新品，给AI Agent发放可编程借记卡。设置消费限额、审批规则和用途限制，Agent自主完成小额采购。Agent经济的基础设施拼图，让Agent真正能花钱</div>
+  <div class="card-tags">
+    <span class="tag scene">📤 发行</span>
+    <span class="tag type-sm">🔧小而美</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：Agent不能自主完成支付，任何涉及资金的操作都需要人类介入
+怎么用：注册后给Agent发虚拟借记卡，设置预算和消费类别限制
+适合谁：需要Agent自主采购API额度、订阅服务的开发者和团队</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://www.producthunt.com/products/tabstack" target="_blank">Tabstack by Mozilla</a>
+    <span class="card-stars">⭐ Mozilla出品</span>
+  </div>
+  <div class="card-tagline">Mozilla出品，无爬虫网页数据提取+浏览器自动化。结构化提取、引用研究、自然语言交互操作动态网站。给Agent一个不依赖爬虫脚本的网页数据获取方式</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-sm">🔧小而美</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：传统爬虫脚本维护成本高，网站改版即失效
+怎么用：自然语言描述需要提取的数据，Tabstack自动处理动态网站和反爬
+适合谁：需要持续从网页提取数据的团队，Agent数据采集场景</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://github.com/" target="_blank">Reasonix 1.0</a>
+    <span class="card-stars">⭐ Go重写</span>
+  </div>
+  <div class="card-tagline">DeepSeek原生编码Agent从TypeScript完全重写为Go。围绕DeepSeek前缀缓存优化，大幅降低长会话Token成本。展示Agent工程化趋势：从快速原型到性能优化的转变</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-sm">🔧小而美</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：TypeScript版Agent在长会话中Token消耗过高，Go重写带来显著性能提升
+怎么用：替换原版Reasonix，Go版本天然支持高并发和前缀缓存优化
+适合谁：DeepSeek用户，需要长会话Agent且关注Token成本的开发者</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://36kr.com/p/3894202301250819" target="_blank">AI Agent手机元年</a>
+    <span class="card-stars">⭐ WAIC 2026</span>
+  </div>
+  <div class="card-tagline">WAIC 2026三款Agent手机同时亮相：阶跃STEPX Neo（自研Agent OS）、荣耀Robot Phone（机械云台+多模态感知）、努比亚NaviX Ultra（豆包+MCP协议）。7大品牌端侧AI集体备案，IDC预计2026年中国AI手机出货1.47亿台</div>
+  <div class="card-tags">
+    <span class="tag scene">📤 发行</span>
+    <span class="tag type-lg">🏢大型平台</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：手机AI停留在聊天层面，不能真正替用户跨App完成任务
+怎么用：三条路线并行：阶跃自研Agent OS、努比亚MCP协议打通、荣耀物理形态创新
+适合谁：所有智能手机用户，关注AI终端变革的从业者和投资者</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://www.linkfox.ai/" target="_blank">LinkFox AI</a>
+    <span class="card-stars">⭐ 150万用户</span>
+  </div>
+  <div class="card-tagline">腾讯云+紫讯联合打造，150万+登录用户，500亿Token/月。跨境电商Agent工作台，覆盖选品分析、Listing生成、广告投放全链路。AI从工具变成同事，跨境电商率先落地Agent规模化</div>
+  <div class="card-tags">
+    <span class="tag scene">🛒 跨境电商</span>
+    <span class="tag type-md">🏗️中型框架</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：跨境运营需要多岗位协同，Agent将金牌运营的经验沉淀为企业数字资产
+怎么用：注册LinkFox AI，Agent承担市场分析、文案生成、图片制作等重复性工作
+适合谁：跨境电商卖家，尤其是需要规模化运营多店铺的团队</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://www.mingxin.com/" target="_blank">明心数智跨境AIOS</a>
+    <span class="card-stars">⭐ WAIC首发</span>
+  </div>
+  <div class="card-tagline">WAIC 2026首发，明思MYNGX+MingHarness双产品。多智能体协同将跨境业务从数周压缩至30分钟，500套茶具出海全链路自动流转。AI出具方案+人工终审+100%存证审计链，解决产业AI黑箱信任难题</div>
+  <div class="card-tags">
+    <span class="tag scene">🛒 跨境电商</span>
+    <span class="tag type-md">🏗️中型框架</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：跨境业务链条长、合规复杂，通用AI无法处理专业业务
+怎么用：输入自然语言指令，多Agent协同完成关务/物流/财税/营销全链路
+适合谁：外贸集团、中小跨境卖家、工贸工厂，需要全链路AI化的出海企业</div>
+  </div>
+</div>
+</div>
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon note">📝</div>
+    <span class="section-title">📝 值得留意</span>
+    <span class="section-count">7 条</span>
+  </div>
+  <div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://spec.modelcontextprotocol.io/" target="_blank">MCP 2026-07-28 RC</a>
+    <span class="card-stars">⭐ 协议标准</span>
+  </div>
+  <div class="card-tagline">Model Context Protocol发布候选版，核心变革：无状态协议。移除session/sampling/roots/logging，工具服务器可像普通Web服务一样水平扩展。MCP从实验协议走向生产基础设施的关键里程碑</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-lg">🏢大型平台</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：MCP旧版有状态设计限制工具服务器水平扩展，新版彻底解决
+怎么用：等待7月28日正式发布，评估现有MCP集成是否需要迁移
+适合谁：所有MCP生态开发者，工具服务器需要水平扩展的生产环境</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://36kr.com/p/3899383692691078" target="_blank">Tokenmaxxing失败</a>
+    <span class="card-stars">⭐ 36氪深度</span>
+  </div>
+  <div class="card-tagline">36氪Q2深度报告：企业轰轰烈烈搞Tokenmaxxing（不设上限堆Token），两个月后即告停止。Agent提效的部分被审核、判断等人工瓶颈卡住。核心问题从Agent能不能干活，转向如何搭建高效Human-in-the-Loop体系</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-lg">🏢大型平台</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：企业盲目堆Token无法解决Agent落地的根本瓶颈，需要重新设计人机协作流程
+怎么用：不是工具，是行业教训。Agent部署需要配套审核、判断和担责的组织体系
+适合谁：正在规划Agent规模化部署的企业决策者，避免重蹈覆辙</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://36kr.com/p/3899383692691078" target="_blank">Multi-Agent Q2报告</a>
+    <span class="card-stars">⭐ 行业洞察</span>
+  </div>
+  <div class="card-tagline">36氪Q2 Agent趋势报告：Multi-Agent从概念走向落地，编排者-执行者模式最稳妥。但多Agent消耗Token是单Agent的4倍，且去掉中心编排者后准确率反而不如单体Agent。协作能力需要专门设计，不是简单堆模型</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-lg">🏢大型平台</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：Multi-Agent被过度炒作，实际效果需要冷静评估
+怎么用：不是工具，是行业洞察。Multi-Agent对可并行任务有效，但需要配套制度设计
+适合谁：Architect和CTO，需要判断Multi-Agent是否适合自己的场景</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://techcrunch.com/2026/07/20/netflix-paid-587m-for-ben-afflecks-ai-filmmaking-startup/" target="_blank">Netflix $587M收购AI电影公司</a>
+    <span class="card-stars">⭐ 行业重磅</span>
+  </div>
+  <div class="card-tagline">Netflix以5.87亿美元现金收购Ben Affleck创立的AI电影制作公司InterPositive。AI正在从后期制作工具变成内容生产主力，好莱坞顶级玩家开始All-in AI原生内容</div>
+  <div class="card-tags">
+    <span class="tag scene">🖥️ 内容生产</span>
+    <span class="tag type-lg">🏢大型平台</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：AI电影制作从工具变成产业，顶级流媒体平台开始战略布局
+怎么用：不是工具，是行业信号。AI内容生产从辅助工具走向核心生产力
+适合谁：内容创作者、影视从业者，关注AI对内容产业结构性影响的投资者</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://www.wondershare.com/" target="_blank">万兴科技AI Agent矩阵</a>
+    <span class="card-stars">⭐ WAIC展出</span>
+  </div>
+  <div class="card-tagline">WAIC 2026亮相：万兴剧厂Agent助手（无限画布+影视级分镜）、Filmora.AI（AI原生视频画布）、Virbo AI（18类商品视频带货+多语言+虚拟分控防限流）。AI内容生产从单点工具走向全链路Agent化</div>
+  <div class="card-tags">
+    <span class="tag scene">🖥️ 内容生产</span>
+    <span class="tag type-md">🏗️中型框架</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：内容生产各环节割裂，Agent将创意到成片全流程整合
+怎么用：万兴剧厂做影视分镜、Filmora.AI做品牌广告、Virbo AI做电商带货视频
+适合谁：影视创作者、品牌营销团队、跨境电商卖家</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://www.worldaic.com.cn/" target="_blank">WAIC 2026：Agent站上C位</a>
+    <span class="card-stars">⭐ 行业风向标</span>
+  </div>
+  <div class="card-tagline">2026世界人工智能大会：展览面积首破10万㎡，1100+企业参展。10%+论坛主题与智能体有关，10款镇馆之宝中4款是智能体产品。AI Agent从实验室概念正式进入产业价值兑现期</div>
+  <div class="card-tags">
+    <span class="tag scene">📡 信息与工作流提效</span>
+    <span class="tag type-lg">🏢大型平台</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：不是工具，是行业信号。AI Agent已从概念验证进入规模化产业落地
+怎么用：关注WAIC展出的Agent产品，判断产业落地节奏和方向
+适合谁：所有关注AI产业化的从业者，AI Agent创业者和投资者</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-top">
+    <a class="card-name" href="https://www.alimama.com/" target="_blank">阿里妈妈AI万相</a>
+    <span class="card-stars">⭐ 阿里生态</span>
+  </div>
+  <div class="card-tagline">电商专属智能体引擎，四大协同Agent：意图识别+商品理解+创意生成+投放优化。依托阿里生态独家数据，7x24小时自动调优。电商从用AI写描述的时代进入AI接管运营的时代</div>
+  <div class="card-tags">
+    <span class="tag scene">🛒 跨境电商</span>
+    <span class="tag type-lg">🏢大型平台</span>
+  </div>
+  <div class="card-usage">
+    <div class="card-usage-header">📖 怎么用</div>
+    <div class="card-usage-body">解决什么问题：电商商家需要手动管理投放、创意和优化，无法24小时精细化运营
+怎么用：阿里生态商家可直接使用，四个Agent协同覆盖从选品到投放全链路
+适合谁：天猫淘宝品牌、零售电商，尤其大促期间需要规模化提效的商家</div>
+  </div>
+</div>
+</div><div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background:var(--accent-light)">📊</div>
+    <span class="section-title">本周趋势洞察</span>
+  </div>
+  <div class="card" style="border-left: 3px solid var(--accent);">
+  <div class="card-name" style="margin-bottom:8px">AI Agent从电脑走进手机，智能体手机元年开启</div>
+  <div class="card-tagline">WAIC 2026三款Agent手机同时亮相，7大品牌端侧AI集体备案。阶跃自研Agent OS、努比亚MCP协议打通、荣耀物理形态创新，三条路线目标一致：让手机从被动工具变成主动帮用户办事的Agent。IDC预计2026年中国AI手机出货1.47亿台，占市场53%。Agent手机不是功能升级，是入口革命。</div>
+</div>
+<div class="card" style="border-left: 3px solid var(--accent);">
+  <div class="card-name" style="margin-bottom:8px">Agent安全基础设施从可选变成刚需</div>
+  <div class="card-tagline">腾讯CubeSandbox开源、MCP无状态协议RC发布、Tokenmaxxing教训揭示Agent成本失控风险。Agent安全不再只是假设场景——沙箱隔离、协议安全、成本控制正在成为Agent生产部署的三道硬门槛。</div>
+</div>
+<div class="card" style="border-left: 3px solid var(--accent);">
+  <div class="card-name" style="margin-bottom:8px">跨境电商率先实现Agent规模化落地</div>
+  <div class="card-tagline">LinkFox AI 150万用户500亿Token/月、明心数智跨境AIOS从数周到30分钟、阿里妈妈AI万相全链路协同。跨境电商因其标准化流程和高度竞争，成为Agent最快落地的产业。从用AI写描述的时代进入AI接管运营的时代。</div>
+</div>
+</div>
+
+<div class="footer">
+  <p class="footer-text">由 <strong>快乐小白菜</strong> 自动生成 · <a href="index.html">查看全部归档</a></p>
+</div>
+
+</div>
+</body>
+</html>

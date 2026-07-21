@@ -601,8 +601,8 @@
     },
     "DeusData/codebase-memory-mcp": {
       "first_seen": "2026-06-22",
-      "stars_at_first": "11.4k",
-      "last_update": "2026-06-22",
+      "stars_at_first": "32k",
+      "last_update": "2026-07-21",
       "category": "信息与工作流提效·代码知识图谱MCP",
       "level": "🔧小而美"
     },
@@ -1046,11 +1046,200 @@
       "last_update": "2026-06-30",
       "category": "信息与工作流提效·AI任务管理",
       "level": "🔧小而美"
+    },
+    "Zackriya-Solutions/meetily": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "23.5k",
+      "last_update": "2026-07-06",
+      "category": "信息与工作流提效·本地会议助手",
+      "level": "🔧小而美"
+    },
+    "diegosouzapw/OmniRoute": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "16.2k",
+      "last_update": "2026-07-06",
+      "category": "信息与工作流提效·模型网关",
+      "level": "🏗️中型框架"
+    },
+    "stablyai/orca": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "16.9k",
+      "last_update": "2026-07-06",
+      "category": "发行·Agent开发环境",
+      "level": "🏗️中型框架"
+    },
+    "bradautomates/claude-video": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "7.8k",
+      "last_update": "2026-07-06",
+      "category": "内容生产·Claude视频扩展",
+      "level": "🔧小而美"
+    },
+    "obra/superpowers": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "本周热门",
+      "last_update": "2026-07-06",
+      "category": "信息与工作流提效·Agent技能框架",
+      "level": "🔧小而美"
+    },
+    "google-labs/stitch-skills": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "Google Labs",
+      "last_update": "2026-07-06",
+      "category": "内容生产·前端构建技能",
+      "level": "🔧小而美"
+    },
+    "openai/cua-playwright": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "OpenAI Beta",
+      "last_update": "2026-07-06",
+      "category": "信息与工作流提效·前端测试自动化",
+      "level": "🏗️中型框架"
+    },
+    "maiqilingai": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "v0.3.5",
+      "last_update": "2026-07-06",
+      "category": "跨境电商·AI智能体工作台",
+      "level": "🏗️中型框架"
+    },
+    "alibaba/accio-work": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "阿里国际",
+      "last_update": "2026-07-06",
+      "category": "跨境电商·Agentic商务平台",
+      "level": "🏢大型平台"
+    },
+    "transbord": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "新品发布",
+      "last_update": "2026-07-06",
+      "category": "跨境电商·AI出海报告",
+      "level": "🔧小而美"
+    },
+    "mentient": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "新品发布",
+      "last_update": "2026-07-06",
+      "category": "信息与工作流提效·品牌监控",
+      "level": "🔧小而美"
+    },
+    "pixazo-agent-p": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "Beta上线",
+      "last_update": "2026-07-06",
+      "category": "内容生产·AI创意Agent",
+      "level": "🔧小而美"
+    },
+    "creatify-ai-media-buyer": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "PH #1",
+      "last_update": "2026-07-06",
+      "category": "发行·AI广告投放",
+      "level": "🏗️中型框架"
+    },
+    "replit-agent3": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "Replit发布",
+      "last_update": "2026-07-06",
+      "category": "发行·编码Agent",
+      "level": "🏗️中型框架"
+    },
+    "langchain/nemoclaw-dcode": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "LangChain+NVIDIA",
+      "last_update": "2026-07-06",
+      "category": "信息与工作流提效·安全编码Agent",
+      "level": "🏗️中型框架"
+    },
+    "lyzr-sivaclaw": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "TechCrunch",
+      "last_update": "2026-07-06",
+      "category": "发行·Agent融资",
+      "level": "🏗️中型框架"
+    },
+    "optimumai/agentx-kit": {
+      "first_seen": "2026-07-06",
+      "stars_at_first": "MIT开源",
+      "last_update": "2026-07-06",
+      "category": "信息与工作流提效·Agent脚手架",
+      "level": "🔧小而美"
+    },
+    "MadsLorentzen/ai-job-search": {
+      "first_seen": "2026-07-21",
+      "stars_at_first": "23k",
+      "last_update": "2026-07-21",
+      "category": "信息与工作流提效·AI求职自动化",
+      "level": "🔧小而美"
+    },
+    "OpenCut-app/OpenCut": {
+      "first_seen": "2026-07-21",
+      "stars_at_first": "70k",
+      "last_update": "2026-07-21",
+      "category": "内容生产·开源视频编辑",
+      "level": "🏗️中型框架"
+    },
+    "iOfficeAI/OfficeCLI": {
+      "first_seen": "2026-07-21",
+      "stars_at_first": "18k",
+      "last_update": "2026-07-21",
+      "category": "信息与工作流提效·Agent办公自动化",
+      "level": "🔧小而美"
+    },
+    "xai-org/grok-build": {
+      "first_seen": "2026-07-21",
+      "stars_at_first": "9.3k",
+      "last_update": "2026-07-21",
+      "category": "发行·编码Agent CLI",
+      "level": "🏗️中型框架"
+    },
+    "HKUDS/Vibe-Trading": {
+      "first_seen": "2026-07-21",
+      "stars_at_first": "24k",
+      "last_update": "2026-07-21",
+      "category": "信息与工作流提效·交易Agent",
+      "level": "🏗️中型框架"
+    },
+    "TencentCloud/CubeSandbox": {
+      "first_seen": "2026-07-21",
+      "stars_at_first": "10k",
+      "last_update": "2026-07-21",
+      "category": "信息与工作流提效·Agent安全沙箱",
+      "level": "🏗️中型框架"
+    },
+    "natural-payments": {
+      "first_seen": "2026-07-21",
+      "stars_at_first": "$30M融资",
+      "last_update": "2026-07-21",
+      "category": "发行·Agent支付基础设施",
+      "level": "🏗️中型框架"
+    },
+    "linkfox-ai": {
+      "first_seen": "2026-07-21",
+      "stars_at_first": "150万用户",
+      "last_update": "2026-07-21",
+      "category": "跨境电商·Agent运营平台",
+      "level": "🏗️中型框架"
+    },
+    "mingxin-myngx": {
+      "first_seen": "2026-07-21",
+      "stars_at_first": "WAIC首发",
+      "last_update": "2026-07-21",
+      "category": "跨境电商·跨境AIOS",
+      "level": "🏗️中型框架"
+    },
+    "wondershare-agent-matrix": {
+      "first_seen": "2026-07-21",
+      "stars_at_first": "WAIC展出",
+      "last_update": "2026-07-21",
+      "category": "内容生产·AI Agent矩阵",
+      "level": "🏗️中型框架"
     }
   },
   "meta": {
     "created": "2026-06-02",
     "description": "已收录项目追踪清单，用于去重和更新检测",
-    "last_weekly_update": "2026-06-30"
+    "last_weekly_update": "2026-07-21"
   }
 }
