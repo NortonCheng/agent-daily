@@ -1235,11 +1235,167 @@
       "last_update": "2026-07-21",
       "category": "内容生产·AI Agent矩阵",
       "level": "🏗️中型框架"
+    },
+    "mattpocock/skills": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "16.5k",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·Agent Skills"
+    },
+    "addyosmani/agent-skills": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "7.7k",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·生产级Agent Skills"
+    },
+    "JuliusBrussee/caveman": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "9.1k",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·Token优化"
+    },
+    "bojieli/ai-agent-book": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "19.2k",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·AI Agent开源书籍"
+    },
+    "tirth8205/code-review-graph": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "26.2k",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·代码知识图谱"
+    },
+    "apache/ossie": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "1.6k",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·Skills标准化"
+    },
+    "kangarooking/cangjie-skill": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "4.6k",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·内容转Skills"
+    },
+    "grix": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-07-27",
+      "category": "发行·Agent组织层"
+    },
+    "onecli": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "Show HN",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·凭证网关"
+    },
+    "ami-agent": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "Show HN",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·本地Agent"
+    },
+    "superserve": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "Show HN",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·Agent沙箱"
+    },
+    "hol-guard": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·Agent防火墙"
+    },
+    "palmier-pro": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "Show HN 105",
+      "last_update": "2026-07-27",
+      "category": "内容生产·AI视频编辑器"
+    },
+    "phi-vscode": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "v0.7.5",
+      "last_update": "2026-07-27",
+      "category": "发行·VS Code Agent扩展"
+    },
+    "tabstack-mozilla": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "Mozilla",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·网页数据提取"
+    },
+    "sazo-crossborder": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "$20M",
+      "last_update": "2026-07-27",
+      "category": "跨境电商·AI跨境商务"
+    },
+    "esw-agentic-commerce": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "ESW发布",
+      "last_update": "2026-07-27",
+      "category": "跨境电商·AI购物闭环"
+    },
+    "aegisai": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "$36M",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·AI安全"
+    },
+    "general-compute-asic": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "$15M",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·ASIC云"
+    },
+    "runway-media-router": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "Runway",
+      "last_update": "2026-07-27",
+      "category": "内容生产·模型路由"
+    },
+    "alignpath": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·AI求职"
+    },
+    "shackle": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "Show HN",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·Agent门控"
+    },
+    "NousResearch/hermes-agent": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "219k",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·自进化Agent框架"
+    },
+    "gnassro/phi": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "v0.7.5",
+      "last_update": "2026-07-27",
+      "category": "发行·VS Code Pi Agent"
+    },
+    "nanonets/ami": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "Show HN",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·影子Agent"
+    },
+    "fame510/shackle": {
+      "first_seen": "2026-07-27",
+      "stars_at_first": "Show HN",
+      "last_update": "2026-07-27",
+      "category": "信息与工作流提效·Agent门控"
     }
   },
   "meta": {
     "created": "2026-06-02",
     "description": "已收录项目追踪清单，用于去重和更新检测",
-    "last_weekly_update": "2026-07-21"
+    "last_weekly_update": "2026-07-27"
   }
 }
