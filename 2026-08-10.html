@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent 周报 | 2026-08-10</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --surface-hover: #f5f5f7;
+    --border: #e8e8ed;
+    --border-light: #f0f0f2;
+    --text-primary: #1a1a2e;
+    --text-secondary: #6b6b80;
+    --text-tertiary: #9b9bb0;
+    --accent: #6c5ce7;
+    --accent-light: rgba(108,92,231,0.08);
+    --accent-medium: rgba(108,92,231,0.15);
+    --green: #00b894;
+    --green-light: rgba(0,184,148,0.08);
+    --orange: #e17055;
+    --orange-light: rgba(225,112,85,0.08);
+    --blue: #0984e3;
+    --blue-light: rgba(9,132,227,0.08);
+    --red: #d63031;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --radius-xs: 6px;
+  }
+
+  body {
+    font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
+  }
+
+  .header {
+    padding: 48px 0 40px;
+  }
+
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .header .date {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
+  .header-stats {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .header-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .header-stat .num {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .header-stat .label {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .section-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .section-icon.hot { background: var(--orange-light); }
+  .section-icon.new { background: var(--blue-light); }
+  .section-icon.note { background: var(--green-light); }
+
+  .section-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .section-count {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    font-weight: 500;
+    margin-left: auto;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 16px;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: #dddde5;
+    transform: translateY(-1px);
+  }
+
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+
+  .card-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .card-name:hover { color: var(--accent); }
+
+  .card-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--orange);
+    background: var(--orange-light);
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .card-tagline {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .card-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  .tag.scene {
+    background: var(--green-light);
+    color: var(--green);
+  }
+
+  .tag.type-sm {
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+
+  .tag.type-md {
+    background: var(--blue-light);
+    color: var(--blue);
+  }
+
+  .tag.type-lg {
+    background: var(--orange-light);
+    color: var(--orange);
+  }
+
+  .card-usage {
+    background: linear-gradient(135deg, #f8f7ff 0%, #f0f4ff 100%);
+    border: 1px solid rgba(108,92,231,0.1);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+  }
+
+  .card-usage-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  .card-usage-body {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.8;
+  }
+
+  .card-usage-body strong {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .trend-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .footer {
+    text-align: center;
+    padding: 32px 0 0;
+    border-top: 1px solid var(--border-light);
+    margin-top: 40px;
+  }
+
+  .footer-text {
+    font-size: 13px;
+    color: var(--text-tertiary);
+  }
+
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    .wrapper { padding: 16px 16px 48px; }
+    .header h1 { font-size: 24px; }
+    .card { padding: 20px; }
+    .header-stats { flex-wrap: wrap; gap: 16px; }
+    .card-top { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+<div class="header">
+  <div class="header-badge">📬 Weekly Digest</div>
+  <h1>AI Agent 周报</h1>
+  <div class="date">2026-08-04 ~ 2026-08-10 · 第32周</div>
+  <div class="header-stats">
+    <div class="header-stat">
+      <span class="num" style="color:var(--orange)">6</span>
+      <span class="label">热门</span>
+    </div>
+    <div class="header-stat">
+      <span class="num" style="color:var(--blue)">20</span>
+      <span class="label">新发现</span>
+    </div>
+    <div class="header-stat">
+      <span class="num" style="color:var(--green)">2</span>
+      <span class="label">值得留意</span>
+    </div>
+  </div>
+</div>
+
+<!-- Hot Section -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon hot">🔥</div>
+    <div class="section-title">热门 · 重大更新</div>
+    <div class="section-count">6 项</div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/PrimeIntellect-ai/prime-agent" target="_blank">Prime Agent</a>
+      <span class="card-stars">⭐ 13.1k</span>
+    </div>
+    <div class="card-tagline">自我改进的RLM Agent，持久Python环境+递归子Agent+持续改进，长期编码自动运行</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：传统Agent会话断开即丢失状态，无法长期自主运行。<br>怎么用：pip安装后通过持久IPython内核控制文件/Shell/工具/子Agent，Daemon守护进程断开终端后继续推进。<br>适合谁：需要执行多轮编码、研究或评测任务的AI工程师，希望Agent能恢复、能治理、能长时间运行的团队。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/stablyai/orca" target="_blank">Orca</a>
+      <span class="card-stars">⭐ 41.8k</span>
+    </div>
+    <div class="card-tagline">跨设备并行运行多个编码Agent，比较Diff、批注、选择合并方案</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：多个编码Agent并行运行时难以统一管理和审查。<br>怎么用：将不同Agent放入独立Git worktree，同一任务并行交给多个实例，比较Diff后选择合并。支持iOS/Android伴侣应用。<br>适合谁：同时使用多种CLI编码Agent的开发者，需要并行比较多路实现方案的研发团队。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/facebook/muse-code" target="_blank">Muse Code</a>
+      <span class="card-stars">⭐ Meta新品</span>
+    </div>
+    <div class="card-tagline">Meta终端编码Agent，一次prompt派生6个子Agent并行工作，独立worktree互不冲突</div>
+    <div class="card-tags">
+      <span class="tag scene">🖥️ 内容生产</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：大仓库中多任务并行编码时文件冲突和上下文管理。<br>怎么用：muse code命令安装，输入prompt后自动fan-out到6个独立worktree并行开发，完成后合并。<br>适合谁：大型工程团队的开发者，需要并行处理多个功能开发的大仓库项目。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/intelligence-indeed/z-agent" target="_blank">Z-Agent</a>
+      <span class="card-stars">⭐ OSWorld 90.2%</span>
+    </div>
+    <div class="card-tagline">OSWorld基准首个突破90%的AI Agent，跨应用协作+图像处理+系统操作全面领先</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：AI Agent在实际桌面操作中不可靠，跨应用协作场景表现差。<br>怎么用：企业级Agent平台，Harness Engineering架构，内置任务分解、工具调用、错误补救、安全约束机制。<br>适合谁：需要AI Agent可靠完成桌面自动化任务的企业，关注Agent工程化落地的团队。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://developers.cloudflare.com/kitesurf" target="_blank">Cloudflare Kitesurf</a>
+      <span class="card-stars">⭐ Cloudflare官方</span>
+    </div>
+    <div class="card-tagline">为AI Agent设计的浏览器，基于Workers/V8 isolates，资源消耗远低于Chromium</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：Agent运行浏览器时资源消耗巨大，传统容器化Chromium成本高。<br>怎么用：基于Workers和V8 isolates，CDP兼容接口，Agent可直接控制浏览器完成Web任务。<br>适合谁：需要大规模运行浏览器Agent的团队，关注Agent基础设施成本优化的平台工程师。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/baidu/Unlimited-OCR" target="_blank">Unlimited OCR</a>
+      <span class="card-stars">⭐ 22.9k</span>
+    </div>
+    <div class="card-tagline">百度开源的长文本OCR，一次性解析超长文档，支持图文混排高精度提取</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：传统OCR无法处理超长文档，图文混排场景解析质量差。<br>怎么用：一次输入即可完成整本书/长文档的OCR解析，支持图文混排、表格识别。<br>适合谁：需要批量处理长文档的企业、数字化档案团队、AI数据预处理管线。</div>
+    </div>
+  </div>
+</div>
+
+<!-- New Section -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon new">🆕</div>
+    <div class="section-title">新发现</div>
+    <div class="section-count">20 项</div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/keystroke-dev/keystroke" target="_blank">Keystroke</a>
+      <span class="card-stars">⭐ PH #7</span>
+    </div>
+    <div class="card-tagline">YC孵化的AI Agent构建平台，描述需求即自动构建、测试、部署Agent</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：构建Agent需要集成、凭证、记忆、工作流、触发器等大量基础设施。<br>怎么用：描述Agent需求，平台自动构建、连接工具、测试、部署到共享工作空间，支持1000+集成。<br>适合谁：需要快速搭建内部Agent的技术/非技术团队，YC背景的创业公司。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/google/skills" target="_blank">Google Skills</a>
+      <span class="card-stars">⭐ 17.1k</span>
+    </div>
+    <div class="card-tagline">Google官方发布的Agent技能库，覆盖Google产品与技术的智能代理能力</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：Agent缺乏对Google生态（Gmail/Docs/Sheets/Drive等）的标准化操作能力。<br>怎么用：安装Skill到Claude Code/Codex等编码Agent，通过自然语言操作Google产品。<br>适合谁：重度使用Google Workspace的团队，希望Agent直接操作Google生态的开发者。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/langchain-ai/openwiki" target="_blank">OpenWiki</a>
+      <span class="card-stars">⭐ 14.8k</span>
+    </div>
+    <div class="card-tagline">LangChain发布，自动为代码库编写和维护Agent文档的CLI工具</div>
+    <div class="card-tags">
+      <span class="tag scene">🖥️ 内容生产</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：代码库文档永远过时，手动维护成本高。<br>怎么用：CLI工具自动分析代码库，生成并持续更新Agent可读的文档。<br>适合谁：任何有代码库需要维护文档的团队，尤其适合AI Agent需要理解代码库的场景。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/diegosouzapw/OmniRoute" target="_blank">OmniRoute</a>
+      <span class="card-stars">⭐ 45.2k</span>
+    </div>
+    <div class="card-tagline">统一160+模型供应商的免费AI网关，按成本/配额/延迟自动路由</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：多模型供应商之间API密钥、费率、限制各不相同，切换成本高。<br>怎么用：本地部署统一端点，按成本/配额/延迟/可用性自动路由，订阅层和免费层间自动回退。<br>适合谁：同时接入多家大模型的个人开发者与AI应用团队，关注成本控制和高可用路由的平台工程师。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/AgentWrapper/agent-orchestrator" target="_blank">Agent Orchestrator</a>
+      <span class="card-stars">⭐ 9.1k</span>
+    </div>
+    <div class="card-tagline">Agent IDE，可视化编排编码Agent舰队，自动规划任务、派生Agent、自主执行</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：管理多个编码Agent时缺乏统一调度和可视化界面。<br>怎么用：IDE中管理Agent舰队，自动规划任务、派生Agent、自主执行，全程可视化。<br>适合谁：需要同时管理多个编码Agent的团队，希望统一调度和监控Agent工作状态的开发者。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.producthunt.com/products/argos" target="_blank">Argos</a>
+      <span class="card-stars">⭐ PH #10</span>
+    </div>
+    <div class="card-tagline">浏览器中的AI分身，用你的登录态点击/输入/填表/完成任务</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：AI只告诉你怎么做，但不帮你做。<br>怎么用：Chrome扩展，用你的登录态直接在浏览器中操作，支持Telegram/WhatsApp远程指令。<br>适合谁：希望AI代理完成日常Web操作的个人用户，需要浏览器自动化的非技术用户。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/CopilotKit/CopilotKit" target="_blank">CopilotKit Channels SDK</a>
+      <span class="card-stars">⭐ PH #6</span>
+    </div>
+    <div class="card-tagline">一行代码将任意Agent接入Slack/Teams/Discord/WhatsApp</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：Agent开发完成但无法方便地接入团队日常沟通工具。<br>怎么用：SDK集成，一行代码将Agent推送到Slack/Teams/Discord/WhatsApp等渠道。<br>适合谁：构建了内部Agent但需要多渠道分发的团队，希望Agent融入现有沟通体系的企业。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/bytedance/deer-flow" target="_blank">Deer Flow</a>
+      <span class="card-stars">⭐ 字节跳动</span>
+    </div>
+    <div class="card-tagline">字节跳动开源的长周期SuperAgent框架，沙箱+记忆+工具+技能+子Agent</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：长周期任务（分钟到小时级）缺乏可靠的Agent框架支撑。<br>怎么用：沙箱+记忆+工具+技能+子Agent+消息网关的多层架构，处理不同级别的长周期任务。<br>适合谁：需要构建长周期自主Agent的团队，关注字节跳动Agent工程实践的开发者。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/eigent-ai/eigent" target="_blank">Eigent</a>
+      <span class="card-stars">⭐ 新发布</span>
+    </div>
+    <div class="card-tagline">开源本地版Claude Cowork替代品，桌面AI工作空间</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：Claude Cowork/Codex等云端方案成本高，数据隐私担忧。<br>怎么用：本地桌面应用，开源免费，自带AI Agent工作空间，支持多种LLM。<br>适合谁：关注数据隐私的开发者，希望本地运行Agent的个人用户，Claude Cowork的替代需求者。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/rowboat-ai/rowboat" target="_blank">Rowboat</a>
+      <span class="card-stars">⭐ 2k+</span>
+    </div>
+    <div class="card-tagline">YC孵化的多Agent框架，可视化编排+MCP集成+沙箱测试，2k+星</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：多Agent系统开发复杂，缺乏可视化编排和即时调试手段。<br>怎么用：Agent模块编排对话，Playground模块实时调试，Co-pilot模块AI辅助创建Agent。<br>适合谁：快速构建多Agent系统的创业团队，需要可视化编排和即时调试的开发者。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://vercel.com/changelog/claude-managed-agents-with-chat-sdk" target="_blank">Vercel + Claude Managed Agents</a>
+      <span class="card-stars">⭐ Vercel/Anthropic官方</span>
+    </div>
+    <div class="card-tagline">Vercel Chat SDK原生支持Claude托管Agent，无需管理状态和数据库</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：构建Agent应用需要管理状态、数据库、会话循环，基础设施复杂。<br>怎么用：Chat SDK集成，Claude托管Agent处理全部Agent循环，token级流式输出，一行代码换平台。<br>适合谁：需要快速构建和部署AI Agent应用的开发者，不想管理Agent基础设施的团队。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/EvoMap/evolver" target="_blank">EvoMap Evolver</a>
+      <span class="card-stars">⭐ 新发布</span>
+    </div>
+    <div class="card-tagline">GEP驱动的自进化Agent引擎，基因+胶囊+事件实现可审计的自我进化</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：Agent进化过程不可追溯，无法审计和自我修正。<br>怎么用：GEP(Gene/Event/Protocol)架构，基因定义Agent能力，胶囊封装状态，事件记录所有变更。<br>适合谁：研究Agent自我进化的开发者，需要审计Agent行为变更的合规场景。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://naive.ai" target="_blank">Naïve</a>
+      <span class="card-stars">⭐ 3万+开发者</span>
+    </div>
+    <div class="card-tagline">让AI Agent自动完成公司注册+支付+邮箱+云基础设施搭建，$28.5M A轮</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：创业公司设立和运营的繁琐流程——注册、支付、邮箱、云服务等。<br>怎么用：单一API背后自动完成美国LLC注册、虚拟卡、邮箱、数据库、Stripe/QuickBooks连接。<br>适合谁：独立开发者、AI自动化agency、追求零人力运营的创业团队。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://hark.ai" target="_blank">Hark Handoff</a>
+      <span class="card-stars">⭐ PH新品</span>
+    </div>
+    <div class="card-tagline">浏览器Agent自动完成网页任务，$700M A轮，支持无API网站操作</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：大量网站没有API，自动化操作依赖人工。<br>怎么用：分析网站结构和视觉数据，自动点击/输入，完成订餐/旅行/退货/研究等任务。<br>适合谁：需要自动化Web操作的企业和个人，尤其适合无API平台（Target/Walmart/OpenTable）的操作。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/DannylydST/sorftime-seller-agent" target="_blank">Sorftime Seller Agent</a>
+      <span class="card-stars">⭐ 新发布</span>
+    </div>
+    <div class="card-tagline">免费AI选品工具，覆盖Amazon/Walmart/TikTok/Shopee/Temu/1688六大平台</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：跨境电商选品需要在多个平台间切换不同工具，数据分散。<br>怎么用：80+ MCP工具，Hidden Profit Index算法发现被忽视的高利润产品，支持Claude Code/Codex。<br>适合谁：多平台跨境电商卖家，需要跨平台统一选品和竞品分析的运营团队。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/xixihhhh/clipforge" target="_blank">ClipForge</a>
+      <span class="card-stars">⭐ 新发布</span>
+    </div>
+    <div class="card-tagline">一张商品图自动生成带货短视频，AI提炼卖点+写脚本+配画面+配音+字幕</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：电商短视频制作成本高，需要专业团队。<br>怎么用：上传一张商品图，AI自动提炼卖点→写种草脚本→配画面/配音/字幕→一键产出抖音/快手/小红书/TikTok短视频。<br>适合谁：跨境电商卖家、社交电商运营、需要批量产出商品短视频的团队。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/apify/apify-mcp-server" target="_blank">Apify MCP Server</a>
+      <span class="card-stars">⭐ 2.9k</span>
+    </div>
+    <div class="card-tagline">让AI Agent从社交/搜索/地图/电商网站提取结构化数据，数千个现成爬虫</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：AI Agent需要从各种网站提取数据但缺乏统一的爬虫工具。<br>怎么用：MCP Server接入，提供数千个现成爬虫/采集器，数据提取后直接返回结构化结果。<br>适合谁：需要Agent从网页提取数据的开发者，电商/社交媒体/搜索引擎数据采集场景。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/medusajs/medusa" target="_blank">Medusa</a>
+      <span class="card-stars">⭐ 35.6k</span>
+    </div>
+    <div class="card-tagline">为Agent和开发者打造的最灵活电商平台，35.6k星，头部开源电商</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：传统电商平台（Shopify）不够灵活，Agent原生集成困难。<br>怎么用：开源Node.js电商平台，完全可定制，支持Agent原生操作商品/订单/客户。<br>适合谁：需要高度定制电商后端的品牌，希望用Agent自动化电商运营的团队。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/nexscope-ai/eCommerce-Skills" target="_blank">Nexscope E-Commerce Skills</a>
+      <span class="card-stars">⭐ 614</span>
+    </div>
+    <div class="card-tagline">AI Agent电商技能库，覆盖选品/关键词/竞品/定价/专利/趋势六大维度</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：电商卖家缺乏一站式AI Agent技能，各平台工具分散。<br>怎么用：安装到Claude Code/Codex，支持Amazon/TikTok Shop/Shopify/Temu等平台。<br>适合谁：多平台跨境电商卖家，需要AI辅助选品、竞品分析、定价优化的运营团队。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/lien0219/trademind-ai" target="_blank">TradeMind AI</a>
+      <span class="card-stars">⭐ 新发布</span>
+    </div>
+    <div class="card-tagline">开源跨境AI运营平台，选品→草稿→AI优化→发布→订单/库存全链路</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：跨境电商运营链路长，各环节工具割裂。<br>怎么用：Go+React+PostgreSQL全栈，AI内容优化，Playwright自动发布，订单/库存管理一体化。<br>适合谁：需要全链路AI运营平台的跨境电商卖家，尤其适合多平台多SKU的中大型卖家。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Note Section -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon note">📝</div>
+    <div class="section-title">值得留意</div>
+    <div class="section-count">2 项</div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/semantica-agi/semantica" target="_blank">Semantica</a>
+      <span class="card-stars">⭐ 4.2k</span>
+    </div>
+    <div class="card-tagline">用知识图谱+完整决策溯源为高风险AI系统提供可解释上下文</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：向量检索无法解释AI为什么做出某个判断，高风险场景需要可审计性。<br>怎么用：将企业数据+Agent观察+推理过程+决策结果组织为可查询图谱，支持RDF和属性图。<br>适合谁：金融/医疗/合规等高风险场景的AI系统构建者，需要决策可追溯性的团队。</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/ix-infrastructure/Ix" target="_blank">Ix</a>
+      <span class="card-stars">⭐ 603</span>
+    </div>
+    <div class="card-tagline">让人类和AI秒懂任何代码库的系统智能层</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">💡 怎么用</div>
+      <div class="card-usage-body">解决什么问题：代码库庞大复杂，AI Agent和人类都难以快速理解全局。<br>怎么用：为代码库构建系统智能层，人类和AI都能快速理解代码结构、依赖和业务逻辑。<br>适合谁：接手大型遗留代码库的团队，需要AI Agent快速理解新代码库的开发者。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Trend Insight -->
+<div class="trend-section">
+  <h2 style="font-size:20px;font-weight:700;margin-bottom:24px;">📊 本周趋势洞察</h2>
+  <div style="font-size:14px;color:var(--text-secondary);line-height:1.8;">
+    <p style="margin-bottom:16px;"><strong>1. Harness Engineering 成为行业共识。</strong>从 Z-Agent 以 90.2% 刷新 OSWorld 记录，到 Martin Fowler 正式提出 Harness Engineering 概念，再到 LangChain 实验证明同一模型换 Harness 后得分从 52.8% 跳到 66.5%——决定 Agent 能否稳定交付的，越来越不是模型本身，而是包裹模型的工程系统。Agent = Model + Harness 已从口号变成工程实践。</p>
+    <p style="margin-bottom:16px;"><strong>2. 多 Agent 并行编码成为新基建。</strong>Orca（41k星）、Muse Code（6子Agent并行）、Agent Orchestrator、ADE 等工具集中爆发，说明开发者不再满足于一个 Agent 串行工作。并行编码+隔离执行+人工审查正在成为研发新范式。</p>
+    <p style="margin-bottom:16px;"><strong>3. 跨境电商 AI Agent 技能生态爆发。</strong>本周涌现大量电商AI技能项目：Sorftime（6平台选品）、ClipForge（商品短视频）、Nexscope（全维度技能库）、TradeMind（全链路运营平台）、Apify MCP（数据采集）——从选品到上架到营销的完整AI Agent链正在成型。</p>
+    <p><strong>4. Agent 安全成为顶级议题。</strong>Black Hat 大会集中披露了 Agent 基础设施漏洞：AWS Bedrock/Google ADK/Vercel AI SDK 均存在未授权工具调用风险。OpenAI 和 Anthropic 的 rogue agent 事件持续发酵。安全不再只是 Agent 的可选功能，而是前置设计。</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p class="footer-text">由 <strong>快乐小白菜</strong> 自动生成 · <a href="index.html">查看全部归档</a></p>
+</div>
+
+</div>
+</body>
+</html>
