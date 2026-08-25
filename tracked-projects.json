@@ -223,6 +223,356 @@
       "last_update": "2026-08-10",
       "category": "信息与工作流提效·代码库智能理解",
       "level": "🔧小而美"
+    },
+    "esengine/DeepSeek-Reasonix": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "34.7k",
+      "last_update": "2026-08-17",
+      "category": "内容生产·DeepSeek原生编码Agent",
+      "level": "🏗️中型框架"
+    },
+    "microsoft/Sico": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "181",
+      "last_update": "2026-08-17",
+      "category": "发行·数字员工平台",
+      "level": "🏗️中型框架"
+    },
+    "alibaba/page-agent": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "阿里巴巴",
+      "last_update": "2026-08-17",
+      "category": "信息与工作流提效·JS原生页面Agent",
+      "level": "🏗️中型框架"
+    },
+    "strands-agents/harness-sdk": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "6.9k",
+      "last_update": "2026-08-17",
+      "category": "发行·Agent Harness SDK",
+      "level": "🏗️中型框架"
+    },
+    "JetBrains/koog": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "JetBrains",
+      "last_update": "2026-08-17",
+      "category": "信息与工作流提效·JVM Agent框架",
+      "level": "🏗️中型框架"
+    },
+    "SerendipityOneInc/ZooData-Skills": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-17",
+      "category": "跨境电商·电商数据技能",
+      "level": "🔧小而美"
+    },
+    "IBM/mcp-context-forge": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "IBM",
+      "last_update": "2026-08-17",
+      "category": "信息与工作流提效·AI Gateway",
+      "level": "🏗️中型框架"
+    },
+    "strukto-ai/mirage": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-17",
+      "category": "信息与工作流提效·Agent虚拟文件系统",
+      "level": "🔧小而美"
+    },
+    "Mirix-AI/MIRIX": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-17",
+      "category": "信息与工作流提效·屏幕活动追踪Agent",
+      "level": "🔧小而美"
+    },
+    "ModelEngine-Group/nexent": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-17",
+      "category": "发行·零代码Agent平台",
+      "level": "🏗️中型框架"
+    },
+    "omnigent-ai/omnigent": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-17",
+      "category": "发行·Meta-Harness编排",
+      "level": "🏗️中型框架"
+    },
+    "google-antigravity/antigravity-sdk-python": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "Google官方",
+      "last_update": "2026-08-17",
+      "category": "内容生产·Google AI SDK",
+      "level": "🏢大型平台"
+    },
+    "browser-use/workflow-use": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "Browser Use",
+      "last_update": "2026-08-17",
+      "category": "信息与工作流提效·RPA 2.0",
+      "level": "🏗️中型框架"
+    },
+    "rekursiv-ai/sagent": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "30",
+      "last_update": "2026-08-17",
+      "category": "信息与工作流提效·自变异Agent CLI",
+      "level": "🔧小而美"
+    },
+    "citrolabs/ego-lite": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-17",
+      "category": "信息与工作流提效·Agent浏览器",
+      "level": "🔧小而美"
+    },
+    "embabel/embabel-agent": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-17",
+      "category": "信息与工作流提效·JVM Agent框架",
+      "level": "🔧小而美"
+    },
+    "HKUDS/nanobot": {
+      "first_seen": "2026-08-17",
+      "stars_at_first": "HKUDS",
+      "last_update": "2026-08-17",
+      "category": "信息与工作流提效·轻量个人Agent框架",
+      "level": "🔧小而美"
+    },
+    "helium10-helium": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "Helium 10官方",
+      "last_update": "2026-08-24",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台"
+    },
+    "slack-code": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "Salesforce官方",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "chatgpt-agent": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "OpenAI官方",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "stripe-openrouter": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "The Neuron头条",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "anthropic-platform-ga": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "Anthropic官方",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "deepseek-vision": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "DeepSeek官方",
+      "last_update": "2026-08-24",
+      "category": "🖥️ 内容生产",
+      "level": "🏢大型平台"
+    },
+    "meta-ai-mac": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "Meta官方",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "notion-skills": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "Notion官方",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "proliferate": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "HN 42pts",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "superset-ide": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "maritime": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "HN 8pts",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "vercel-agent-browser": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "Vercel官方",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "bernstein": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "herdr": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "mission-control": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "goclaw": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "taisly-agent-kit": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-24",
+      "category": "📤 发行",
+      "level": "🔧小而美"
+    },
+    "socials-studio": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-24",
+      "category": "📤 发行",
+      "level": "🔧小而美"
+    },
+    "omnidistribute": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-24",
+      "category": "📤 发行",
+      "level": "🔧小而美"
+    },
+    "storeclaw": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "商业产品",
+      "last_update": "2026-08-24",
+      "category": "🛒 跨境电商",
+      "level": "🏗️中型框架"
+    },
+    "sideconvo": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "Shopify App Store",
+      "last_update": "2026-08-24",
+      "category": "🛒 跨境电商",
+      "level": "🔧小而美"
+    },
+    "openmontage": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-24",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架"
+    },
+    "agency-orchestrator": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-24",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架"
+    },
+    "crewcode": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "anjadhe": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "HN新品",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "meetless-agent": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "HN新品",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "chatonbo": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "Shopify生态",
+      "last_update": "2026-08-24",
+      "category": "🛒 跨境电商",
+      "level": "🔧小而美"
+    },
+    "linkfox-ai": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "Toolify推荐",
+      "last_update": "2026-08-24",
+      "category": "🛒 跨境电商",
+      "level": "🏗️中型框架"
+    },
+    "gen15-robot": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "Generalist AI",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "deepseek-harness": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "160k+",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "perplexity-agent-api": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "Perplexity官方",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "grok-build": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "xAI官方",
+      "last_update": "2026-08-24",
+      "category": "🖥️ 内容生产",
+      "level": "🏢大型平台"
+    },
+    "tutti": {
+      "first_seen": "2026-08-24",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-24",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
     }
   },
   "meta": {

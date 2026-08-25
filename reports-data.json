@@ -1,5 +1,365 @@
 [
   {
+    "date": "2026-08-24",
+    "weekday": "周一",
+    "type": "weekly",
+    "stats": {
+      "hot": 8,
+      "new": 18,
+      "note": 7
+    },
+    "sections": [
+      {
+        "type": "hot",
+        "title": "🔥 热门 · 重大更新",
+        "items": [
+          {
+            "id": "2026-08-24-helium10-helium",
+            "name": "Helium 10 Helium",
+            "tagline": "Amazon卖家AI Agent正式发布，诊断P&L、发现关键词机会、推荐行动，一站式对话式运营",
+            "stars": "Helium 10官方",
+            "url": "https://www.helium10.com/helium",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Amazon卖家需在多个仪表盘间切换分析数据，Helium用对话式Agent统一诊断性能、推荐行动。\n怎么用：在Helium 10平台内用自然语言提问，Agent自动拉取广告/关键词/Listing数据给出分析。\n适合谁：所有Amazon卖家，尤其是多SKU品牌需要快速定位P&L问题的团队。"
+          },
+          {
+            "id": "2026-08-24-slack-code",
+            "name": "Slack Code",
+            "tagline": "AI编码Agent进入协作频道，@Claude/@Devin/@Copilot直接建代码频道，团队可审查diff+预览HTML",
+            "stars": "Salesforce官方",
+            "url": "https://slack.com/slack-code",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：编码Agent工作在孤独的终端里，产品经理/设计师无法参与审查。\n怎么用：在Slack中@一个编码Agent（Claude Code/Devin/Copilot），自动创建Code Channel，团队可实时看diff、HTML预览、批准后合并。\n适合谁：使用Slack的工程团队，希望非技术成员也能参与编码Agent工作流。"
+          },
+          {
+            "id": "2026-08-24-chatgpt-agent",
+            "name": "ChatGPT Agent",
+            "tagline": "OpenAI发布独立Agent模型，可控制整台电脑执行多步任务，已向付费用户推送",
+            "stars": "OpenAI官方",
+            "url": "https://www.theverge.com/ai/2026/8/chatgpt-agent",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：ChatGPT从对话工具升级为可执行多步操作的工作Agent，例如自动填表、预订停车位。\n怎么用：付费用户启用后，Agent可操作桌面应用和浏览器完成多步任务。\n适合谁：ChatGPT Plus/Pro用户，有重复性桌面操作想自动化的个人和团队。"
+          },
+          {
+            "id": "2026-08-24-stripe-openrouter",
+            "name": "Stripe收购OpenRouter",
+            "tagline": "支付巨头吞下AI模型路由网关，500+模型80+供应商统一结算，支付+AI基础设施融合",
+            "stars": "The Neuron头条",
+            "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-august-20-2026/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：开发者使用多模型需管理多个API Key和账单，OpenRouter统一路由，Stripe收购后支付体验进一步整合。\n怎么用：通过OpenRouter API调用任意模型，账单由Stripe处理。\n适合谁：需要多模型策略的AI应用开发者，关注AI基础设施投资趋势的人。"
+          },
+          {
+            "id": "2026-08-24-anthropic-platform-ga",
+            "name": "Anthropic Claude Platform GA",
+            "tagline": "Computer Use + Browser Tool + Skills API + Files API全部正式版，Agent构建四大件就位",
+            "stars": "Anthropic官方",
+            "url": "https://www.anthropic.com/news/claude-platform-ga",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：之前构建Claude Agent需频繁往返交互，Computer Use新工具集减少20-40%交互轮次。\n怎么用：通过API调用computer_toolset_20260801和browser_toolset_20260801，Skills API支持版本化固定。Files API速率提升5倍至500rpm。\n适合谁：用Claude API构建Agent的开发者，需要稳定生产级基础设施的团队。"
+          },
+          {
+            "id": "2026-08-24-deepseek-vision",
+            "name": "DeepSeek V4-Flash-Vision-Exp",
+            "tagline": "DeepSeek首个多模态模型上线API，Agent多模态基准接近Opus 4.8，文本能力持平V4-Flash",
+            "stars": "DeepSeek官方",
+            "url": "https://api-docs.deepseek.com/",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：DeepSeek生态缺少多模态输入能力，无法处理图片理解+Agent任务。\n怎么用：通过API发送base64图片或URL，模型可同时理解文本和图像，每张图仅384 tokens。\n适合谁：使用DeepSeek构建Agent但需要图片理解能力的开发者，成本敏感型多模态场景。"
+          },
+          {
+            "id": "2026-08-24-meta-ai-mac",
+            "name": "Meta AI Mac App",
+            "tagline": "Meta AI推出macOS桌面应用，支持窗口共享+系统级听写，可直接连接Instagram/Facebook/广告账户",
+            "stars": "Meta官方",
+            "url": "https://www.theverge.com/2026/8/19/meta-ai-mac-app",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：桌面AI助手战场上Meta姗姗来迟，但凭借社交+广告数据原生的独特优势差异化。\n怎么用：下载Mac App，共享窗口让AI理解屏幕内容，还可连接Instagram/Facebook账户分析社媒表现。\n适合谁：Mac用户，尤其是运营社媒和Meta广告的创作者和商家。"
+          },
+          {
+            "id": "2026-08-24-notion-skills",
+            "name": "Notion Skills",
+            "tagline": "可复用页面编码团队流程，导出为SKILL.md供Claude Code/Codex/Cursor/Gemini使用",
+            "stars": "Notion官方",
+            "url": "https://www.notion.so/product/skills",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：团队流程散落在文档和聊天中，Agent无法获取标准化操作指南。\n怎么用：在Notion中创建Skill页面，Notion Agent自动加载对应流程，或导出为SKILL.md供外部编码Agent使用。\n适合谁：已用Notion管理知识库的团队，希望让Agent理解团队SOP的组织。"
+          }
+        ]
+      },
+      {
+        "type": "new",
+        "title": "✨ 新发现 · 本周值得关注",
+        "items": [
+          {
+            "id": "2026-08-24-proliferate",
+            "name": "Proliferate",
+            "tagline": "YC S25开源自托管Codex替代品，支持Claude Code/Codex/OpenCode/Cursor/Grok多Agent协作",
+            "stars": "HN 42pts",
+            "url": "https://github.com/proliferate-ai/proliferate",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：不想被OpenAI锁定，需要一个开源自托管的AI IDE统一管理多个编码Agent。\n怎么用：Docker部署，支持5种Agent原生集成，可构建Agent间工作流，父Agent可派生子Agent。\n适合谁：需要多Agent协作的开发团队，对供应商锁定敏感的企业。"
+          },
+          {
+            "id": "2026-08-24-superset-ide",
+            "name": "Superset",
+            "tagline": "可并行编排100+编码Agent的Agentic IDE，支持任意Agent+自有订阅，YC孵化",
+            "stars": "新发布",
+            "url": "https://github.com/superset-sh/superset",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：单个编码Agent效率有限，需要同时跑多个处理不同任务。\n怎么用：macOS应用，在一个界面管理多个Agent并行工作，使用自己的模型订阅。\n适合谁：需要大规模并行编码的团队，单Agent效率瓶颈的开发者。"
+          },
+          {
+            "id": "2026-08-24-maritime",
+            "name": "Maritime",
+            "tagline": "MIT孵化，$1/月/Agent的托管平台，微VM隔离运行，免费3个Agent永久使用",
+            "stars": "HN 8pts",
+            "url": "https://maritime.sh",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：给每个客户运行独立Agent实例需要复杂的基础设施，Maritime提供开箱即用的微VM隔离。\n怎么用：用模板启动OpenClaw/Hermes/DeepSeek Agent，或通过CLI/SDK部署自定义Agent。\n适合谁：需要给客户部署独立Agent实例的SaaS公司，想低成本运行Agent的独立开发者。"
+          },
+          {
+            "id": "2026-08-24-vercel-agent-browser",
+            "name": "Vercel Agent Browser",
+            "tagline": "让AI真正像人类一样使用网站，零配置，Rust驱动，过滤93%无关上下文",
+            "stars": "Vercel官方",
+            "url": "https://vercel.com/agent-browser",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：传统浏览器自动化工具给AI塞太多无关页面元素，导致效率低下。\n怎么用：Agent Browser精简页面到核心交互元素，支持可见模式调试和后台批量模式。\n适合谁：需要让AI Agent操作网页的开发者，替代笨重的Selenium/Playwright方案。"
+          },
+          {
+            "id": "2026-08-24-bernstein",
+            "name": "Bernstein",
+            "tagline": "确定性Agent编排器，可复现审计，字节级一致重放，支持40+编码Agent",
+            "stars": "新发布",
+            "url": "https://github.com/sipyourdrink-ltd/bernstein",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：Agent执行结果不可复现，无法审计，企业场景无法接受。\n怎么用：在Git worktree中运行Agent，协调层不含模型，通过HMAC审计链确保可复现。\n适合谁：需要Agent操作可审计的金融/合规/企业场景，对确定性有要求的团队。"
+          },
+          {
+            "id": "2026-08-24-herdr",
+            "name": "Herdr",
+            "tagline": "编码Agent的运行时，Rust+TUI，作为tmux复用器管理多个Agent",
+            "stars": "新发布",
+            "url": "https://github.com/herdrdev/herdr",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：多个编码Agent共享终端混乱，需要统一的运行时管理它们。\n怎么用：Rust构建的终端复用器，为每个Agent提供独立工作空间，类似tmux但专为Agent设计。\n适合谁：在终端同时跑多个编码Agent的开发者。"
+          },
+          {
+            "id": "2026-08-24-mission-control",
+            "name": "Mission Control",
+            "tagline": "自托管Agent控制平面，调度任务、审查运行、追踪花费、管理OpenClaw/Claude Code/Codex",
+            "stars": "新发布",
+            "url": "https://github.com/builderz-labs/mission-control",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：企业部署多个Agent后缺乏统一管控面板，无法追踪成本和运行状态。\n怎么用：Next.js+SQLite自托管，连接OpenClaw/Claude Code/Codex等运行时，集中调度和监控。\n适合谁：企业级Agent部署，需要成本控制和运行审计的团队。"
+          },
+          {
+            "id": "2026-08-24-goclaw",
+            "name": "GoClaw",
+            "tagline": "Go语言重写OpenClaw，多租户隔离+5层安全+原生并发，企业级Agent部署",
+            "stars": "新发布",
+            "url": "https://github.com/GoClaw/GoClaw",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：OpenClaw的Node.js单进程架构不适合多租户企业部署，GoClaw提供原生并发和隔离。\n怎么用：Go部署，多租户隔离，PostgreSQL后端，支持Telegram/Discord/WebSocket等渠道。\n适合谁：需要给多个用户/团队部署Agent实例的企业，关注安全隔离的架构师。"
+          },
+          {
+            "id": "2026-08-24-taisly-agent-kit",
+            "name": "Taisly Agent Kit",
+            "tagline": "视频发布MCP Server，TikTok/Reels/Shorts/X/Facebook一键发布，Agent原生视频分发",
+            "stars": "新发布",
+            "url": "https://github.com/taisly/agent",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：视频创作者需手动登录各平台逐一上传，Taisly让Agent直接操作视频发布。\n怎么用：MCP Server接入Claude Code/Codex/Cursor，用自然语言指令发布视频到多个平台。\n适合谁：短视频创作者、社媒运营团队，需要自动化视频分发的工作流。"
+          },
+          {
+            "id": "2026-08-24-socials-studio",
+            "name": "Socials Studio",
+            "tagline": "给Claude Code一个想法或OpenMontage视频，自动生成五平台campaign并发布",
+            "stars": "新发布",
+            "url": "https://github.com/tradewithmeai/socials-studio",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：社媒营销需要手动为每个平台写不同文案和调整内容格式。\n怎么用：Claude Code Skill，输入一个想法或视频，自动生成Twitter/LinkedIn/Instagram/Bluesky/YouTube适配内容并发布。\n适合谁：社媒运营人员、独立创作者、小团队营销自动化。"
+          },
+          {
+            "id": "2026-08-24-omnidistribute",
+            "name": "OmniDistribute",
+            "tagline": "一键分发Markdown文章到32+平台（Dev.to/Hashnode/Medium/社媒），自动生成静态博客",
+            "stars": "新发布",
+            "url": "https://github.com/chirag127/OmniDistribute",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：技术博客作者写完文章后需手动发布到多个开发者平台。\n怎么用：TypeScript CLI，一条命令将Markdown推送到Dev.to/Hashnode/Medium等平台，同时生成Hugo静态博客。\n适合谁：技术博客作者、开发者关系团队，需要最大化内容分发覆盖面的内容创作者。"
+          },
+          {
+            "id": "2026-08-24-storeclaw",
+            "name": "StoreClaw",
+            "tagline": "电商专属AI增长引擎，35套电商技能，原生连接Amazon/Shopify/WooCommerce/TikTok Shop",
+            "stars": "商业产品",
+            "url": "https://storeclaw.ai",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：跨境卖家人均使用6-8款SaaS，数据割裂，AI只能输出文字建议无法执行。\n怎么用：Agent直连店铺后台读取真实数据，内置商业安全边界（预算/库存/折扣限制），自动执行竞品监控/库存预警/社媒排期。\n适合谁：多平台跨境卖家，想用AI替代人工运营的电商团队。"
+          },
+          {
+            "id": "2026-08-24-sideconvo",
+            "name": "Sideconvo",
+            "tagline": "Shopify语音+聊天AI Agent，能理解产品目录、推荐商品、语音交互，5分钟上线",
+            "stars": "Shopify App Store",
+            "url": "https://www.sideconvo.ai/",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：Shopify店铺缺少真人导购，用户问题得不到即时回答导致弃购。\n怎么用：安装Shopify App，Agent自动学习产品目录和FAQ，支持文字和语音对话，可推荐商品并引导结算。\n适合谁：Shopify独立站卖家，尤其是SKU较多需要AI导购的店铺。"
+          },
+          {
+            "id": "2026-08-24-openmontage",
+            "name": "OpenMontage",
+            "tagline": "世界首个开源Agentic视频制作系统，12条生产线+100+工具+700+技能文件",
+            "stars": "新发布",
+            "url": "https://github.com/calesthio/OpenMontage",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：视频制作流程复杂，需要多个工具切换，OpenMontage将编码Agent变成完整视频工作室。\n怎么用：Python框架，12条生产流水线（从脚本到发布），100+工具覆盖FFmpeg/Remotion/ElevenLabs等。\n适合谁：需要批量视频生产的创作者、营销团队、AI视频自动化探索者。"
+          },
+          {
+            "id": "2026-08-24-agency-orchestrator",
+            "name": "Agency Orchestrator",
+            "tagline": "一句话→一人公司AI专家团队→完整交付物，零代码YAML，11个LLM供应商，267中文+184英文",
+            "stars": "新发布",
+            "url": "https://github.com/jnMetaCode/agency-orchestrator",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：独立开发者缺少团队，Agency Orchestrator用一句话组建AI专家团队完成项目。\n怎么用：Web Studio或Docker部署，YAML配置团队角色，自动验收核验，支持网页/桌面/Docker交付。\n适合谁：独立开发者、小型创业团队，需要快速产出项目交付物的场景。"
+          },
+          {
+            "id": "2026-08-24-crewcode",
+            "name": "CrewCode",
+            "tagline": "开源多Agent编码任务控制中心，Git worktree隔离，支持并行运行多个AI编码Agent",
+            "stars": "PH新品",
+            "url": "https://github.com/onpoint-dev-tools",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：管理多个编码Agent时无法隔离工作空间，容易冲突。\n怎么用：桌面应用，用Git worktree为每个Agent创建独立工作区，支持diff审查和编排。\n适合谁：同时跑多个编码Agent的开发者，需要隔离工作空间避免冲突。"
+          },
+          {
+            "id": "2026-08-24-anjadhe",
+            "name": "Anjadhe",
+            "tagline": "隐私优先macOS个人AI助手，本地运行，读邮件做计划，无需账户无需服务器",
+            "stars": "HN新品",
+            "url": "https://github.com/Anjadhe/Anjadhe",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：现有AI助手需要云账户和服务器，隐私敏感用户无法接受。\n怎么用：macOS桌面应用，本地llama.cpp推理，SQLite存储，读邮件生成任务和行程，学习你的写作风格。\n适合谁：重视隐私的Mac用户，希望AI助手完全本地运行的个人。"
+          },
+          {
+            "id": "2026-08-24-meetless-agent",
+            "name": "Meetless Agent",
+            "tagline": "编码Agent的活跃真实源，监控Agent行为、注入规则、协调上下文，开源编码Agent连接器",
+            "stars": "HN新品",
+            "url": "https://github.com/Meetless/mla",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：编码Agent用错误或过时上下文执行任务，手动监控多个Agent会话效率低。\n怎么用：MLA监控Agent任务和输出，持续提供正确上下文，在触发规则时自动注入。\n适合谁：同时管理多个编码Agent的开发者，需要确保Agent输出质量的技术负责人。"
+          }
+        ]
+      },
+      {
+        "type": "note",
+        "title": "📝 值得留意",
+        "items": [
+          {
+            "id": "2026-08-24-chatonbo",
+            "name": "Chatonbo",
+            "tagline": "2026年最佳Shopify AI聊天机器人，$19/月，10分钟上线，自动学习产品目录+订单追踪",
+            "stars": "Shopify生态",
+            "url": "https://www.chatonbo.ai",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：Shopify店铺缺少AI客服，客户问题得不到即时回答。\n怎么用：安装后自动爬取产品目录和FAQ，10分钟上线，支持14种语言，WhatsApp转人工。\n适合谁：Shopify卖家，尤其是中小型店铺想用AI降低客服成本。"
+          },
+          {
+            "id": "2026-08-24-linkfox-ai",
+            "name": "LinkFox AI",
+            "tagline": "跨境电商AI Agent操作系统，专注选品研究和Listing自动化，多平台数据聚合",
+            "stars": "Toolify推荐",
+            "url": "https://linkfox.ai",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：跨境卖家选品依赖人工调研，Listing优化耗时。\n怎么用：AI Agent自动分析多平台商品数据，生成优化Listing，支持定时任务自动化。\n适合谁：多平台跨境卖家，尤其是需要系统化选品和Listing管理的团队。"
+          },
+          {
+            "id": "2026-08-24-gen15-robot",
+            "name": "GEN-1.5",
+            "tagline": "机器人从3-12秒演示中学会新任务，无需微调，one-shot学习成功率59%，微调后83%",
+            "stars": "Generalist AI",
+            "url": "https://generalist.ai",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：机器人编程需要专业工程师，每次换任务都要重新集成。\n怎么用：给机器人演示3-12秒，它就能学会新任务（开罐子、取钱包等），多模态处理视频+传感器+语言。\n适合谁：制造业、物流自动化，关注具身智能前沿的技术团队。"
+          },
+          {
+            "id": "2026-08-24-deepseek-harness",
+            "name": "DeepSeek Harness",
+            "tagline": "160k+星，插件优先架构的Agent Harness，模型无关，dsh CLI+Web UI，快速增长中",
+            "stars": "160k+",
+            "url": "https://github.com/deepseek-ai/harness",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：需要一个模型无关、完全开源、可自托管的Agent运行框架。\n怎么用：dsh CLI安装，插件式添加模型和工具，支持DeepSeek/Kimi/OpenAI/Anthropic等模型。\n适合谁：需要自托管Agent框架的开发者，关注开源Agent生态的技术人。"
+          },
+          {
+            "id": "2026-08-24-perplexity-agent-api",
+            "name": "Perplexity Agent API",
+            "tagline": "一个端点41个模型，内置网页搜索+金融搜索+沙箱代码执行，多模型Agent工作流基础设施",
+            "stars": "Perplexity官方",
+            "url": "https://docs.perplexity.ai/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Agent需要多模型+搜索+代码执行，需要分别集成多个API。\n怎么用：一个API端点调用41个模型，内置搜索和沙箱执行，简化Agent工作流构建。\n适合谁：需要构建多模型Agent工作流的开发者，希望减少API集成复杂度的团队。"
+          },
+          {
+            "id": "2026-08-24-grok-build",
+            "name": "Grok Build",
+            "tagline": "一句话生成应用/网站/游戏/仪表盘，自带域名，跨Web/iOS/Android，支持子Agent+浏览器+数据库",
+            "stars": "xAI官方",
+            "url": "https://x.ai/grok-build",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：非开发者想把想法变成可用的应用/网站，但缺乏编程能力。\n怎么用：输入一句话描述，Grok Build自动生成完整应用，支持子Agent、浏览器、数据库和GitHub导出。\n适合谁：非技术创业者、产品经理快速验证想法，需要快速原型的人。"
+          },
+          {
+            "id": "2026-08-24-tutti",
+            "name": "Tutti",
+            "tagline": "人与Agent协作构建平台，共享上下文、实时协作、Mac原生应用",
+            "stars": "新发布",
+            "url": "https://github.com/tutti-os/tutti",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：编码Agent和人类开发者之间缺乏共享工作空间，上下文割裂。\n怎么用：macOS桌面应用，提供共享工作区，Agent和人类可实时协作，支持MCP和多种Agent。\n适合谁：与Agent密切协作的开发者，希望改善人机协作体验的团队。"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-08-17",
     "weekday": "周一",
     "type": "weekly",
