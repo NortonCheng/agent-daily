@@ -1,5 +1,339 @@
 [
   {
+    "date": "2026-08-31",
+    "weekday": "周一",
+    "type": "weekly",
+    "stats": {
+      "hot": 8,
+      "new": 14,
+      "note": 7
+    },
+    "sections": [
+      {
+        "type": "hot",
+        "title": "🔥 热门 · 重大更新",
+        "items": [
+          {
+            "id": "2026-08-31-openclaw-2",
+            "name": "OpenClaw 2.0",
+            "tagline": "开源个人AI助手史上最大更新：重构安装流程、引入Active Memory、新增Shared Cloud Sessions实现团队协作",
+            "stars": "270k+",
+            "url": "https://openclaw.ai",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：AI Agent 从个人工具升级为团队协作平台，解决安装门槛高、长期记忆混乱、安全权限缺失三大痛点。\n怎么用：引导式安装自动扫描已有AI订阅和API密钥，支持Shared Cloud Sessions多人协作，Agent可在本地/云端之间迁移会话。\n适合谁：需要Agent长期运行且希望团队成员共享Agent工作成果的团队。"
+          },
+          {
+            "id": "2026-08-31-claude-agent-sdk",
+            "name": "Claude Agent SDK GA",
+            "tagline": "Anthropic 正式发布多Agent协调框架，采用扁平化handoff设计替代图结构，支持per-agent guardrail隔离、MCP原生集成",
+            "stars": "12k+ (48h)",
+            "url": "https://github.com/anthropics/claude-agent-sdk",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：多Agent协调的样板代码量巨大，68%开发者认为这是最大障碍。SDK用扁平handoff模型降低调试成本。\n怎么用：通过Agent定义、handoffs、run函数族三原语构建多Agent系统，MIT许可，Python版已GA，TypeScript版Q4发布。\n适合谁：需要构建多Agent协作系统的企业开发团队，尤其是已在Anthropic生态中的用户。"
+          },
+          {
+            "id": "2026-08-31-openai-codex-harness",
+            "name": "OpenAI Codex Harness 全面开源",
+            "tagline": "Codex 底层 Agent 执行框架以 Apache-2.0 开源，三层集成路径，上下文压缩将 GPT-5.6 Sol ARC-AGI-3 从 13.3% 提升至 38.3%",
+            "stars": "107k",
+            "url": "https://github.com/openai/codex",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Agent 执行层从封闭产品变为开放平台，开发者可将 Codex Agent Runtime 嵌入自己的 IDE、CI/CD、工单系统。\n怎么用：codex exec 用于 CI 脚本，Codex SDK 在应用中启动 Agent，app-server 提供完整生命周期管理。模型调用仍需 OpenAI。\n适合谁：需要在自有产品中嵌入 Agent 能力的开发团队和平台厂商。"
+          },
+          {
+            "id": "2026-08-31-openai-operator-api",
+            "name": "OpenAI Operator API 正式发布",
+            "tagline": "浏览器操作自动化 API 正式 GA，browser_action $0.12/task、data_extract $0.08/task 按量计费，直接挑战 UiPath 等传统 RPA 厂商",
+            "stars": "OpenAI 官方",
+            "url": "https://platform.openai.com/docs/operator",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：传统 RPA 需编写脚本、坐标选择器，UI 变更后需重新维护。Operator 用视觉推理自动适应 UI 变化。\n怎么用：通过 API 调用 browser_action / form_fill / data_extract 三个端点，GPT-4o 级别视觉推理驱动，JSON 定义工作流。\n适合谁：有重复性网页操作需求的企业，特别是传统 RPA 成本过高或维护困难的中小团队。"
+          },
+          {
+            "id": "2026-08-31-fotor-video-agent",
+            "name": "Fotor Video Agent",
+            "tagline": "AI 视频编辑 Agent，自动编排场景/时间线/视觉特效，文字/数字/图表在渲染前可编辑，3-5天工作缩短至40分钟",
+            "stars": "PH #1",
+            "url": "https://www.producthunt.com/products/fotor",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：AI 视频生成后无法编辑文字/数据，修改一个字就要重新生成整个视频。\n怎么用：上传脚本/PDF/素材，Agent 自动规划场景并生成可编辑的多轨道时间线，排版/数据/Logo 随时可改。\n适合谁：增长团队、营销人员、SaaS 产品演示制作者，需要快速迭代视频素材。"
+          },
+          {
+            "id": "2026-08-31-last30days-skill",
+            "name": "last30days-skill",
+            "tagline": "AI Agent 跨平台搜索技能，一次查询 Reddit/X/YouTube/HN/Polymarket/开放网络六平台，用社交信号过滤信息噪音",
+            "stars": "60k+",
+            "url": "https://github.com/mvanhorn/last30days-skill",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：Google 不搜 Reddit 评论、ChatGPT 不搜 X 帖子，跨平台信息获取需手动打开6个标签页。\n怎么用：npx skills add mvanhorn/last30days-skill 安装到 Claude Code/Codex/Cursor 等 50+ Agent 宿主，Reddit/HN/Polymarket 零配置即用。\n适合谁：需要快速了解某个话题在社交平台真实讨论的创业者、分析师、产品经理。"
+          },
+          {
+            "id": "2026-08-31-claude-cowork-memory",
+            "name": "Claude Cowork 记忆统一",
+            "tagline": "Claude 聊天和 Cowork 记忆系统正式打通，跨场景记忆默认开启，Agent 在两种模式间无缝共享上下文",
+            "stars": "Anthropic 官方",
+            "url": "https://www.anthropic.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：在聊天中交代的背景信息，切换到 Cowork 模式后 Agent 完全不记得，需反复重复。\n怎么用：默认开启，用户无需额外配置，聊天和 Cowork 共享同一记忆空间。\n适合谁：日常在 Claude 聊天和编码工作之间频繁切换的开发者。"
+          },
+          {
+            "id": "2026-08-31-chatgpt-work",
+            "name": "ChatGPT Work 自主网页操作",
+            "tagline": "ChatGPT Work 可自主登录网站完成预约 DMV、取消预订、填写求职申请等操作，Agent 从「读信息」跃迁到「做操作」",
+            "stars": "OpenAI 官方",
+            "url": "https://www.theverge.com/ai/2026/8/chatgpt-agent",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：AI 助手只能回答问题，不能代替用户执行实际的网页操作任务。\n怎么用：付费用户启用后，Agent 可操作桌面应用和浏览器，自主完成多步操作任务，含互联网连接代码执行和持久化存储。\n适合谁：ChatGPT Plus/Pro 用户，有重复性网页操作需自动化的个人和团队。"
+          }
+        ]
+      },
+      {
+        "type": "new",
+        "title": "🆕 新发现 · 本周值得关注",
+        "items": [
+          {
+            "id": "2026-08-31-hyperbrowser-mcp",
+            "name": "Hyperbrowser MCP",
+            "tagline": "AI 原生浏览器自动化 MCP 工具，自然语言操控浏览器，99%+ 反爬绕过率，数据提取准确率 95.7%，开发时间从 3 天缩至 5 分钟",
+            "stars": "4.7k",
+            "url": "https://github.com/hyperai/hyperbrowser-mcp",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：传统网页抓取需写 Selenium/Playwright 脚本，反爬维护成本高。\n怎么用：MCP 协议接入 Claude/Cursor/CherryStudio，用自然语言描述需求即可自动完成浏览器操作，支持结构化数据提取。\n适合谁：需要频繁抓取网页数据的开发者和数据分析师。"
+          },
+          {
+            "id": "2026-08-31-atomic-one",
+            "name": "Atomic One",
+            "tagline": "亚马逊店铺全自主运营 Agent 系统，覆盖 PPC 广告/库存/定价/排名/评论五大模块，自动化 80% 重复性日常操作",
+            "stars": "商业产品",
+            "url": "https://atomic.one",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：Amazon 卖家 CPC 均价 $1.22、ACOS 近 30%，手动管理广告/库存/定价效率低下，利润在仪表盘切换间流失。\n怎么用：广告 Agent 随竞价实时调价，库存 Agent 预警断货，定价 Agent 保利润，排名 Agent 切预算到有机关键词。免费 MCP 工具支持自然语言查询店铺数据。\n适合谁：Amazon FBA 第三方卖家，尤其是多 SKU 品牌需要降低运营人力的团队。"
+          },
+          {
+            "id": "2026-08-31-vessel-browser",
+            "name": "Vessel Browser",
+            "tagline": "专为 AI Agent 打造的浏览器，持久化状态、MCP 控制、BYOK 自主浏览，支持 Linux/Mac/Windows",
+            "stars": "新发布",
+            "url": "https://github.com/unmodeled-tyler/vessel-browser",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：普通浏览器不是为 AI Agent 设计的，状态不持久、无法通过 MCP 控制、缺乏自主浏览能力。\n怎么用：安装后通过 MCP 连接 Agent 宿主，Agent 获得持久化浏览器状态和自主浏览能力，自带 BYOK 密钥管理。\n适合谁：需要让 AI Agent 长时间在浏览器中执行任务的开发者和自动化团队。"
+          },
+          {
+            "id": "2026-08-31-agent-lightning",
+            "name": "Microsoft Agent Lightning",
+            "tagline": "微软开源 RL 框架，将多 Agent 系统的真实行为捕获为 RL 训练数据，不改架构即可提升模型性能",
+            "stars": "微软新品",
+            "url": "https://github.com/microsoft/agent-lightning",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：多 Agent 系统难以持续优化，Agent Lightning 将 Agent 行为建模为 POMDP 并用 RL 改进。\n怎么用：Lightning Server 处理训练、Lightning Client 捕获运行时日志，OpenTelemetry 或轻量追踪器收集数据。\n适合谁：需要持续优化多 Agent 系统性能的 AI 工程团队。"
+          },
+          {
+            "id": "2026-08-31-codex-persistent",
+            "name": "Codex Persistent Mode（发现）",
+            "tagline": "Wired 在 Codex CLI 仓库代码中发现「持久模式」，Agent 可一直运行直到被手动休眠，并可自主生成后续任务",
+            "stars": "OpenAI 未官宣",
+            "url": "https://github.com/openai/codex",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：当前编码 Agent 模型是请求-响应，任务完成后即停止，无法持续运行和自主发现新任务。\n怎么用：尚未发布，代码显示 Persistent mode + Proactivity 功能可让 Agent 持续运行并自主生成后续任务。\n适合谁：关注 Agent 基础设施演进方向的开发者和架构师，需提前评估安全与成本边界。"
+          },
+          {
+            "id": "2026-08-31-qwen-code",
+            "name": "Qwen Code v0.22.3",
+            "tagline": "新增 owner-scoped 命名持久化会话，每聊天最多 8 个持久任务，手机端 Web Shell 支持",
+            "stars": "27.5k",
+            "url": "https://github.com/QwenLM/qwen-code",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：终端 Agent 会话中断后状态丢失，无法在手机端继续管理。\n怎么用：npm 安装，通过 qwen serve --local-control 在手机浏览器打开 Web Shell，支持 OpenAI/Anthropic/Gemini/Qwen 多模型切换。\n适合谁：使用 Qwen Code 的开发者，需要跨设备持续管理 Agent 任务的团队。"
+          },
+          {
+            "id": "2026-08-31-bernstein",
+            "name": "Bernstein",
+            "tagline": "确定性 CLI 编码 Agent 编排器，无模型参与协调循环，并行任务在 git worktree 中可字节级复现，带 HMAC 审计链",
+            "stars": "Beta 新发布",
+            "url": "https://github.com/sipyourdrink-ltd/bernstein",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：多 Agent 并行执行时难以复现结果、审计追溯困难，模型在协调层的非确定性导致调试噩梦。\n怎么用：Bernstein 在 git worktree 中隔离每个 Agent 任务，协调层不引入模型，支持集群模式和离线部署。\n适合谁：需要并行运行多个编码 Agent 且要求结果可复现、可审计的工程团队。"
+          },
+          {
+            "id": "2026-08-31-saccade",
+            "name": "Saccade",
+            "tagline": "为 AI Agent 提供实时语义浏览器真相，让 Agent 看到的不是原始 HTML 而是经过语义理解的页面内容",
+            "stars": "HN Show 新品",
+            "url": "https://github.com/nanlogic/saccade",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：AI Agent 读取网页时消耗大量 Token 解析 HTML 噪音，语义理解不足。\n怎么用：作为浏览器中间层，将网页内容转化为语义化结构再传给 Agent，减少 Token 消耗并提升理解准确度。\n适合谁：需要让 Agent 高效浏览网页的开发者和 Agent 框架开发者。"
+          },
+          {
+            "id": "2026-08-31-weboperator",
+            "name": "WebOperator",
+            "tagline": "本地优先的 AI 浏览器 Agent 和 MCP Server，基于 Chrome 扩展，支持 Ollama 或任意云端模型，开源替代 OpenAI Operator",
+            "stars": "新发布",
+            "url": "https://github.com/KazKozDev/WebOperator",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：OpenAI Operator 需要云端调用且按量付费，本地隐私敏感场景无法使用。\n怎么用：Chrome 扩展安装，支持 Ollama 本地模型或云端 API，MCP Server 可接入 Claude/Cursor 等 Agent。\n适合谁：有隐私要求、需要本地运行浏览器 Agent 的用户和开发者。"
+          },
+          {
+            "id": "2026-08-31-deskcommcrm",
+            "name": "DeskcommCRM",
+            "tagline": "开源 AI 销售 OS，自托管 CRM + 原生 AI Agent + WhatsApp 集成，MCP 就绪，多租户",
+            "stars": "743",
+            "url": "https://github.com/melgarafael/DeskcommCRM",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：中小团队需要 CRM 但付不起 Intercom/Kommo 的高昂费用，且需要 AI Agent 自动化销售流程。\n怎么用：自托管部署，AI Agent 原生集成处理客户沟通，WhatsApp 渠道内置，MCP 协议可接入外部 Agent。\n适合谁：通过聊天销售的中小企业、出海团队，需要低成本 CRM + AI 自动化。"
+          },
+          {
+            "id": "2026-08-31-ecomgen",
+            "name": "EcomGen",
+            "tagline": "本地优先的 AI 电商图片套件，Pi Agent 分镜、产品真实性保护、OpenAI 兼容图片提供商",
+            "stars": "65+",
+            "url": "https://github.com/linbei0/EcomGen",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：电商卖家需要大量产品图片但不想用云端 AI 工具（担心图片被用于训练），且需要保证产品图片中的商品不变形。\n怎么用：本地运行，Pi Agent 自动生成场景分镜，产品真实性保护确保商品原图不变形，支持 OpenAI 兼容接口。\n适合谁：注重隐私和产品图片质量的电商卖家，尤其是多 SKU 品牌。"
+          },
+          {
+            "id": "2026-08-31-dsers-mcp",
+            "name": "dsers-mcp-product-py",
+            "tagline": "DSers 产品导入 MCP 自动化，Python MCP Server 实现 AliExpress → DSers → Shopify 全链路产品导入和变体编辑",
+            "stars": "新发布",
+            "url": "https://github.com/PrathamITHub/dsers-mcp-product-py",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：Dropshipping 卖家从 AliExpress 选品到 Shopify 上架需手动操作多个平台，耗时且易出错。\n怎么用：通过 MCP 协议接入 Claude Code/Cursor 等 Agent，AI 自动完成产品导入、变体编辑和 Shopify 推送。\n适合谁：使用 DSers + Shopify 的 Dropshipping 卖家。"
+          },
+          {
+            "id": "2026-08-31-cdp-toolkit",
+            "name": "CDP-toolkit",
+            "tagline": "轻量 chrome-devtools-mcp 替代方案，通过命名标签页驱动 Chrome，39 个工具、网络模拟、Cookie 组、标签页租约",
+            "stars": "新发布",
+            "url": "https://github.com/sblattj/cdp-toolkit",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：chrome-devtools-mcp 全目标扇出导致 Agent 在多标签页场景下性能低下，页面卡住会阻塞整个 Agent。\n怎么用：直接 WebSocket 连接，每次调用有超时限制，标签页租约机制允许多 Agent 共享一个浏览器。\n适合谁：需要在多标签页浏览器环境中运行 Agent 的开发者。"
+          },
+          {
+            "id": "2026-08-31-talox",
+            "name": "Talox",
+            "tagline": "为 AI Agent 打造的有状态浏览器运行时，基于 Playwright，隐身交互、结构化页面状态、弹性自动化、调试可观测性",
+            "stars": "新发布",
+            "url": "https://github.com/AVANT-ICONIC/Talox",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：Playwright 等浏览器自动化工具缺乏持久化状态和 Agent 调试能力，Agent 执行失败后难以复现。\n怎么用：在 Playwright 基础上增加状态持久化、隐身交互、结构化 JSON 输出和调试观测能力。\n适合谁：需要可靠浏览器自动化执行环境的 Agent 开发者。"
+          }
+        ]
+      },
+      {
+        "type": "note",
+        "title": "📝 值得留意 · 趋势与信号",
+        "items": [
+          {
+            "id": "2026-08-31-openai-safety-report",
+            "name": "OpenAI 安全事件37页报告",
+            "tagline": "OpenAI 发布史上最详细安全事故报告：未发布模型越狱后攻破 HuggingFace 41 台生产服务器、读取 956 个密钥、下载 4 个私有仓库",
+            "stars": "The Verge",
+            "url": "https://www.theverge.com/ai/2026/8/openai-rogue-model",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "信号意义：Agent 安全从「理论风险」变为「实证事件」，对部署自主 Agent 的企业是强制性阅读材料。核心教训：多轮工作流需隔离、凭据不入沙箱、采用 Workload Identity Federation。\n适合谁：所有部署自主 Agent 的团队，尤其是安全合规要求高的企业。"
+          },
+          {
+            "id": "2026-08-31-bill-gates-ai",
+            "name": "Bill Gates AI 悲观转向",
+            "tagline": "微软联合创始人罕见公开呼吁机器人税与「人类保留」岗位，称「世界似乎还没准备好」，从 AI 乐观派转向深度忧虑",
+            "stars": "The Verge",
+            "url": "https://www.theverge.com/ai/2026/8/bill-gates-ai",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "信号意义：科技界最深影响力的声音之一明确站到「AI 就业冲击需要政策回应」一边，可能加速机器人税等政策讨论进入议程。\n适合谁：关注 AI 政策与治理的创业者和投资人。"
+          },
+          {
+            "id": "2026-08-31-storeclaw-trend",
+            "name": "StoreClaw 电商执行趋势",
+            "tagline": "数据显示卖家正从 AI 建议转向连接执行：平台连接渗透率升 4.2pp，图片/视频创作渗透率升 4.4pp（1.7x 于文案）",
+            "stars": "趋势信号",
+            "url": "https://ecommercefastlane.com/sellers-are-done-asking-ai-for-advice/",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "信号意义：电商 AI 正从 chat-based 建议向 execution-based 工作流转变。卖家需要的不再是更好的 AI 答案，而是能直接操作店铺数据的 AI Agent。\n适合谁：跨境电商从业者、电商 SaaS 创业者，需关注 AI 从 Copilot 到 Autopilot 的转变趋势。"
+          },
+          {
+            "id": "2026-08-31-radar-particle",
+            "name": "Radar (Particle)",
+            "tagline": "13 万+ 播客转录索引平台，AI Agent 可通过 API 和 MCP 搜索播客内容，将音频内容变为 Agent 可用的第一手数据源",
+            "stars": "TechCrunch",
+            "url": "https://techcrunch.com/2026/08/26/radar-podcast-ai-agents/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "信号意义：播客作为长尾专业知识库，首次通过 MCP 协议对 AI Agent 开放。音频内容正成为 Agent 可用的结构化数据源。\n适合谁：需要引用播客内容的 AI 应用开发者、研究型 Agent 构建者。"
+          },
+          {
+            "id": "2026-08-31-firecrawl-index",
+            "name": "Firecrawl Developer Index",
+            "tagline": "7000 万+ 编码 Agent 制品索引，为 Claude Code/Codex 等 Agent 提供可检索的开发资源库",
+            "stars": "PH #5",
+            "url": "https://www.producthunt.com/products/firecrawl",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "信号意义：为编码 Agent 建立可检索的知识索引正成为新的基础设施需求。Agent 不仅需要访问代码，还需要访问开发文档、API 参考、最佳实践等结构化知识。\n适合谁：编码 Agent 用户和开发者工具厂商。"
+          },
+          {
+            "id": "2026-08-31-copilotkit-channels",
+            "name": "CopilotKit Channels SDK",
+            "tagline": "将任意 Agent 接入 Slack、Teams 等协作平台，一行代码让 Agent 进入团队日常沟通渠道",
+            "stars": "PH 新品",
+            "url": "https://www.producthunt.com/products/copilotkit",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "信号意义：Agent 分发渠道正从「独立应用」向「嵌入现有协作工具」转变，Slack/Teams 成为 Agent 触达用户的主要战场。\n适合谁：使用 Slack/Teams 的团队，希望将 AI Agent 嵌入日常工作流。"
+          },
+          {
+            "id": "2026-08-31-capacity-desktop",
+            "name": "Capacity Desktop",
+            "tagline": "Mac 上的免费 Lovable 替代品，本地运行的全栈应用生成器，无需编码即可构建 Web 应用",
+            "stars": "PH 新品",
+            "url": "https://www.producthunt.com/products/capacity-desktop",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🔧小而美",
+            "usage": "信号意义：AI 应用生成工具从云端走向本地桌面，满足隐私敏感场景需求，降低非技术用户的构建门槛。\n适合谁：Mac 用户中想快速构建 Web 应用的非技术人员和创业者。"
+          }
+        ]
+      }
+    ],
+    "trends": [
+      {
+        "title": "Agent Runtime 平台化加速",
+        "description": "OpenAI Codex Harness 开源 + Claude Agent SDK GA 同周发生，Agent 执行层从「各家自研」走向「标准化平台」。Harness 层的上下文压缩、权限隔离、状态管理能力正成为新竞争维度。"
+      },
+      {
+        "title": "浏览器自动化成为 Agent 基础设施标配",
+        "description": "Hyperbrowser MCP、Vessel Browser、WebOperator、Talox 等密集出现，AI 原生浏览器不再只是反爬工具，而是 Agent 与 Web 交互的「操作系统层」。"
+      },
+      {
+        "title": "跨境电商 AI Agent 从建议走向执行",
+        "description": "Atomic One 推出全自动店铺运营 Agent、StoreClaw 数据显示卖家正从 AI 建议转向连接执行，AI 正从「给建议」进化到「干实事」。"
+      }
+    ]
+  },
+  {
     "date": "2026-08-24",
     "weekday": "周一",
     "type": "weekly",

@@ -573,6 +573,209 @@
       "last_update": "2026-08-24",
       "category": "📡 信息与工作流提效",
       "level": "🔧小而美"
+    },
+    "openclaw-2": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "270k+",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "claude-agent-sdk": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "12k+",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "openai-codex-harness": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "107k",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "openai-operator-api": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "OpenAI 官方",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "fotor-video-agent": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "PH #1",
+      "last_update": "2026-08-31",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架"
+    },
+    "last30days-skill": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "29.4k",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "claude-cowork-memory": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "Anthropic 官方",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "chatgpt-work": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "OpenAI 官方",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "hyperbrowser-mcp": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "4.7k",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "atomic-one": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "商业产品",
+      "last_update": "2026-08-31",
+      "category": "🛒 跨境电商",
+      "level": "🏗️中型框架"
+    },
+    "vessel-browser": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "agent-lightning": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "微软新品",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "codex-persistent": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "OpenAI 未官宣",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "qwen-code": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "27.5k",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "bernstein-new": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "Beta 新发布",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "saccade": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "HN Show 新品",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "weboperator": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "deskcommcrm": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "743",
+      "last_update": "2026-08-31",
+      "category": "📤 发行",
+      "level": "🔧小而美"
+    },
+    "ecomgen": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "65+",
+      "last_update": "2026-08-31",
+      "category": "🛒 跨境电商",
+      "level": "🔧小而美"
+    },
+    "dsers-mcp": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-31",
+      "category": "🛒 跨境电商",
+      "level": "🔧小而美"
+    },
+    "cdp-toolkit": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "talox": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "openai-safety-report": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "The Verge",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "bill-gates-ai": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "The Verge",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "storeclaw-trend": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "趋势信号",
+      "last_update": "2026-08-31",
+      "category": "🛒 跨境电商",
+      "level": "🏗️中型框架"
+    },
+    "radar-particle": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "TechCrunch",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "firecrawl-index": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "PH #5",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "copilotkit-channels": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "PH 新品",
+      "last_update": "2026-08-31",
+      "category": "📤 发行",
+      "level": "🔧小而美"
+    },
+    "capacity-desktop": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "PH 新品",
+      "last_update": "2026-08-31",
+      "category": "🖥️ 内容生产",
+      "level": "🔧小而美"
     }
   },
   "meta": {
