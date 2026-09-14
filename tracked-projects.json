@@ -573,10 +573,537 @@
       "last_update": "2026-08-24",
       "category": "📡 信息与工作流提效",
       "level": "🔧小而美"
+    },
+    "openclaw-2": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "270k+",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "claude-agent-sdk": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "12k+",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "openai-codex-harness": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "107k",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "openai-operator-api": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "OpenAI 官方",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "fotor-video-agent": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "PH #1",
+      "last_update": "2026-08-31",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架"
+    },
+    "last30days-skill": {
+      "first_seen": "2026-06-08",
+      "stars_at_first": "29.4k",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "claude-cowork-memory": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "Anthropic 官方",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "chatgpt-work": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "OpenAI 官方",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "hyperbrowser-mcp": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "4.7k",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "atomic-one": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "商业产品",
+      "last_update": "2026-08-31",
+      "category": "🛒 跨境电商",
+      "level": "🏗️中型框架"
+    },
+    "vessel-browser": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "agent-lightning": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "微软新品",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "codex-persistent": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "OpenAI 未官宣",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "qwen-code": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "27.5k",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "bernstein-new": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "Beta 新发布",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "saccade": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "HN Show 新品",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "weboperator": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "deskcommcrm": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "743",
+      "last_update": "2026-08-31",
+      "category": "📤 发行",
+      "level": "🔧小而美"
+    },
+    "ecomgen": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "65+",
+      "last_update": "2026-08-31",
+      "category": "🛒 跨境电商",
+      "level": "🔧小而美"
+    },
+    "dsers-mcp": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-31",
+      "category": "🛒 跨境电商",
+      "level": "🔧小而美"
+    },
+    "cdp-toolkit": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "talox": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "新发布",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "openai-safety-report": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "The Verge",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "bill-gates-ai": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "The Verge",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台"
+    },
+    "storeclaw-trend": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "趋势信号",
+      "last_update": "2026-08-31",
+      "category": "🛒 跨境电商",
+      "level": "🏗️中型框架"
+    },
+    "radar-particle": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "TechCrunch",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美"
+    },
+    "firecrawl-index": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "PH #5",
+      "last_update": "2026-08-31",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架"
+    },
+    "copilotkit-channels": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "PH 新品",
+      "last_update": "2026-08-31",
+      "category": "📤 发行",
+      "level": "🔧小而美"
+    },
+    "capacity-desktop": {
+      "first_seen": "2026-08-31",
+      "stars_at_first": "PH 新品",
+      "last_update": "2026-08-31",
+      "category": "🖥️ 内容生产",
+      "level": "🔧小而美"
+    },
+    "NousResearch/hermes-agent": {
+      "first_seen": "2026-09-07",
+      "stars_at_first": "240k+",
+      "last_update": "2026-09-07",
+      "category": "📡 信息与工作流提效·个人Agent",
+      "level": "🏢大型平台"
+    },
+    "tt-a1i/archify": {
+      "first_seen": "2026-09-07",
+      "stars_at_first": "49.6k",
+      "last_update": "2026-09-07",
+      "category": "🖥️ 内容生产·架构图Skill",
+      "level": "🏗️中型框架"
+    },
+    "K-Dense-AI/scientific-agent-skills": {
+      "first_seen": "2026-09-07",
+      "stars_at_first": "43k",
+      "last_update": "2026-09-07",
+      "category": "🖥️ 内容生产·科学Agent技能",
+      "level": "🏗️中型框架"
+    },
+    "DietrichGebert/ponytail": {
+      "first_seen": "2026-09-07",
+      "stars_at_first": "123k",
+      "last_update": "2026-09-07",
+      "category": "📡 信息与工作流提效·代码精简",
+      "level": "🏗️中型框架"
+    },
+    "nafeeur/maskshift": {
+      "first_seen": "2026-09-07",
+      "stars_at_first": "HN Show",
+      "last_update": "2026-09-07",
+      "category": "📡 信息与工作流提效·极简编码Agent",
+      "level": "🏗️中型框架"
+    },
+    "mezmo/aura": {
+      "first_seen": "2026-09-07",
+      "stars_at_first": "HN 24pts",
+      "last_update": "2026-09-07",
+      "category": "📡 信息与工作流提效·生产事故调查",
+      "level": "🏗️中型框架"
+    },
+    "popov95s/sensez": {
+      "first_seen": "2026-09-07",
+      "stars_at_first": "HN Show",
+      "last_update": "2026-09-07",
+      "category": "📡 信息与工作流提效·代码质量检测",
+      "level": "🔧小而美"
+    },
+    "mattpocock/skills": {
+      "first_seen": "2026-09-07",
+      "stars_at_first": "GitHub Trending",
+      "last_update": "2026-09-07",
+      "category": "📡 信息与工作流提效·工程师Skills",
+      "level": "🔧小而美"
+    },
+    "coreyhaines31/marketingskills": {
+      "first_seen": "2026-09-07",
+      "stars_at_first": "GitHub Trending",
+      "last_update": "2026-09-07",
+      "category": "📤 发行·营销Skills",
+      "level": "🔧小而美"
+    },
+    "Tencent/BrowserSkill": {
+      "first_seen": "2026-09-07",
+      "stars_at_first": "腾讯新品",
+      "last_update": "2026-09-07",
+      "category": "📡 信息与工作流提效·浏览器Agent",
+      "level": "🔧小而美"
+    },
+    "kangise/ecommerce-ai-skills": {
+      "first_seen": "2026-09-07",
+      "stars_at_first": "878 prompts",
+      "last_update": "2026-09-07",
+      "category": "🛒 跨境电商·AI知识库",
+      "level": "🏗️中型框架"
+    },
+    "anthropics/claude-plugins-community": {
+      "first_seen": "2026-09-07",
+      "stars_at_first": "3.1k",
+      "last_update": "2026-09-07",
+      "category": "📡 信息与工作流提效·插件市场",
+      "level": "🏗️中型框架"
+    },
+    "meta-muse": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "9月9日发布",
+      "last_update": "2026-09-14",
+      "category": "执行自动化·个人Agent",
+      "level": "🏢大型平台"
+    },
+    "openai-agents-api": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "公测",
+      "last_update": "2026-09-14",
+      "category": "执行自动化·Agent编排API",
+      "level": "🏢大型平台"
+    },
+    "hyperframes": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "48k+",
+      "last_update": "2026-09-14",
+      "category": "内容生产·AI视频渲染",
+      "level": "🏗️中型框架"
+    },
+    "graphify": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "100k+",
+      "last_update": "2026-09-14",
+      "category": "信息提效·代码知识图谱",
+      "level": "🏗️中型框架"
+    },
+    "claude-commerce-agents": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "官方开源",
+      "last_update": "2026-09-14",
+      "category": "跨境电商·Agent电商蓝图",
+      "level": "🏗️中型框架"
+    },
+    "salesforce-agentforce-agents": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "官方发布",
+      "last_update": "2026-09-14",
+      "category": "执行自动化·企业数字员工",
+      "level": "🏢大型平台"
+    },
+    "cursor-projects": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "官方Beta",
+      "last_update": "2026-09-14",
+      "category": "执行自动化·多Agent协作",
+      "level": "🏗️中型框架"
+    },
+    "chatgpt-images-2.5": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "官方发布",
+      "last_update": "2026-09-14",
+      "category": "内容生产·图像生成",
+      "level": "🏢大型平台"
+    },
+    "caveman": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "105k+",
+      "last_update": "2026-09-14",
+      "category": "执行自动化·Token压缩",
+      "level": "🔧小而美"
+    },
+    "mempalace": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "59k+",
+      "last_update": "2026-09-14",
+      "category": "基础设施·Agent记忆系统",
+      "level": "🏗️中型框架"
+    },
+    "headroom": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "71.8k+",
+      "last_update": "2026-09-14",
+      "category": "基础设施·上下文压缩",
+      "level": "🏗️中型框架"
+    },
+    "career-ops": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "71.4k+",
+      "last_update": "2026-09-14",
+      "category": "信息提效·求职自动化",
+      "level": "🏗️中型框架"
+    },
+    "awesome-llm-apps": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "开源合集",
+      "last_update": "2026-09-14",
+      "category": "信息提效·Agent与Skills合集",
+      "level": "🔧小而美"
+    },
+    "context-mode": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "GitHub热榜",
+      "last_update": "2026-09-14",
+      "category": "基础设施·上下文优化MCP",
+      "level": "🔧小而美"
+    },
+    "devin-voice": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "官方上线",
+      "last_update": "2026-09-14",
+      "category": "执行自动化·语音编程Agent",
+      "level": "🏗️中型框架"
+    },
+    "switch-agent-bridge": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "PH日榜#1",
+      "last_update": "2026-09-14",
+      "category": "发行·Agent接入聊天平台",
+      "level": "🔧小而美"
+    },
+    "mathmodelagent": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "GitHub热榜",
+      "last_update": "2026-09-14",
+      "category": "内容生产·学术论文生成",
+      "level": "🔧小而美"
+    },
+    "luma-ray3": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "官方发布",
+      "last_update": "2026-09-14",
+      "category": "内容生产·HDR视频生成",
+      "level": "🏗️中型框架"
+    },
+    "runway-adobe-plugins": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "官方上线",
+      "last_update": "2026-09-14",
+      "category": "内容生产·剪辑软件AI插件",
+      "level": "🏗️中型框架"
+    },
+    "openai-plugins": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "5.6k+",
+      "last_update": "2026-09-14",
+      "category": "发行·Agent插件标准",
+      "level": "🏗️中型框架"
+    },
+    "visiby": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "PH发布",
+      "last_update": "2026-09-14",
+      "category": "发行·AEO品牌可见性",
+      "level": "🔧小而美"
+    },
+    "signalscout": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "开源",
+      "last_update": "2026-09-14",
+      "category": "发行·社媒意图挖掘",
+      "level": "🔧小而美"
+    },
+    "jungle-scout-ai": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "官方发布",
+      "last_update": "2026-09-14",
+      "category": "跨境电商·选品数据AI",
+      "level": "🏗️中型框架"
+    },
+    "aeon-agentic-checkout": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "官方上线",
+      "last_update": "2026-09-14",
+      "category": "跨境电商·Agent支付结算",
+      "level": "🏗️中型框架"
+    },
+    "hivehq": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "SaaS",
+      "last_update": "2026-09-14",
+      "category": "跨境电商·TikTok Shop利润分析",
+      "level": "🔧小而美"
+    },
+    "nextsmartship-temu": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "官方上线",
+      "last_update": "2026-09-14",
+      "category": "跨境电商·Temu履约",
+      "level": "🔧小而美"
+    },
+    "anthropic-pace-frontier": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "行业共识",
+      "last_update": "2026-09-14",
+      "category": "行业信号·AI安全治理",
+      "level": "🏢大型平台"
+    },
+    "navier-stokes-agents": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "争议中",
+      "last_update": "2026-09-14",
+      "category": "行业信号·Agent集群科研",
+      "level": "🏢大型平台"
+    },
+    "claude-fermat-proof": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "里程碑",
+      "last_update": "2026-09-14",
+      "category": "行业信号·形式化数学",
+      "level": "🏢大型平台"
+    },
+    "deepseek-v4.1-flash": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "开放权重",
+      "last_update": "2026-09-14",
+      "category": "模型·开源高吞吐推理",
+      "level": "🏢大型平台"
+    },
+    "gpt-live-1": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "官方发布",
+      "last_update": "2026-09-14",
+      "category": "模型·全双工语音API",
+      "level": "🏢大型平台"
+    },
+    "chatgpt-financial-services": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "官方发布",
+      "last_update": "2026-09-14",
+      "category": "信息提效·金融行业版",
+      "level": "🏢大型平台"
+    },
+    "cognition-2b": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "Series E",
+      "last_update": "2026-09-14",
+      "category": "行业信号·AI编程融资",
+      "level": "🏢大型平台"
+    },
+    "amazon-ai-listing": {
+      "first_seen": "2026-09-14",
+      "stars_at_first": "官方上线",
+      "last_update": "2026-09-14",
+      "category": "跨境电商·Listing生成",
+      "level": "🏢大型平台"
     }
   },
   "meta": {
     "created": "2026-06-02",
-    "description": "已收录项目追踪清单，用于去重和更新检测"
+    "description": "已收录项目追踪清单，用于去重和更新检测",
+    "total_projects": 157,
+    "last_updated": "2026-09-14"
   }
 }
