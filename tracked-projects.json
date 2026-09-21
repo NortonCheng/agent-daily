@@ -1098,12 +1098,174 @@
       "last_update": "2026-09-14",
       "category": "跨境电商·Listing生成",
       "level": "🏢大型平台"
+    },
+    "chatgpt-sponsored-agents": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "媒体周报-OpenAI广告智能体",
+      "note": "跨境电商·OpenAI Sponsored Agents 广告 + Shopify 原生集成，9/23 国际市场，HubSpot 首个 CRM 合作"
+    },
+    "qwen-image-2.1": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "GitHub周榜-官方发布",
+      "note": "内容生产·图像模型 - 7B 开源权重，统一生成+编辑+原生RGBA透明，支持10参考图局部重绘"
+    },
+    "google-ax": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "HN热帖-官方开源",
+      "note": "信息提效·Agent编排器 - Google 开源 Agent Executor，声明式YAML，沙箱隔离+网络策略，面向Agent负载"
+    },
+    "meta-one-business": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "媒体周报-Meta商家订阅",
+      "note": "发行·Meta One for Business 四档订阅，IG竞品分析+Stories排期+WhatsApp AI客服，9/15全球上线"
+    },
+    "alibaba-open-code-review": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "GitHub周榜-周增14.1k星",
+      "note": "信息提效·AI代码审查 - 阿里内部两年工具开源，确定性流水线+LLM Agent，ocr命令"
+    },
+    "i-have-adhd": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "GitHub周榜-周增7.9k星",
+      "note": "信息提效·Agent输出规范Skill - 先说下一步动作/编号/复述状态/压废话，支持10+工具"
+    },
+    "weknora": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "GitHub周榜-周增4.7k星",
+      "note": "信息提效·知识平台 - 腾讯开源，RAG+推理智能体+自维护Wiki三层，接飞书/钉钉/企微/Notion"
+    },
+    "openviking": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "GitHub周榜-月增8.7k星",
+      "note": "信息提效·Agent上下文数据库 - 火山引擎开源，viking://虚拟文件系统，L0/L1/L2分层+目录递归检索，带MCP"
+    },
+    "tencentcloud-octop": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "媒体周报-腾讯云开源",
+      "note": "信息提效·自托管多用户多Agent助手 - MIT，专家设计独立工作空间/模型/记忆，一条命令部署"
+    },
+    "trendradar": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "GitHub周榜-62k星",
+      "note": "信息提效·舆情雷达 - 35+平台聚合+权重排序+三层关键词，MCP对话式分析，企微/飞书/钉钉推送"
+    },
+    "pageindex": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "GitHub周榜-35.7k星",
+      "note": "信息提效·RAG引擎 - 无向量库目录树索引+LLM推理检索，FinanceBench 98.7%，MIT"
+    },
+    "openresearch": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "GitHub周榜-周增939星",
+      "note": "信息提效·科研智能体 - alphaXiv开源，coding agent转并行research agent，本地优先"
+    },
+    "openshell": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "GitHub周榜-NVIDIA官方",
+      "note": "信息提效·Agent安全运行时 - 声明式YAML约束文件/网络/进程，凭据端点绑定注入"
+    },
+    "pippit-ai": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "媒体周报-电商内容平台",
+      "note": "跨境电商·产品链接生成带货视频/图 - CapCut商业版团队，AI数字人多语言，直发TikTok/Reels"
+    },
+    "awesome-gpt-image-2": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "GitHub周榜-月增21.9k星",
+      "note": "内容生产·提示词案例库 - GPT Image 2/2.5，530+案例20+行业模板，Prompt as Code"
+    },
+    "viktor": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "媒体周报-产品增长",
+      "note": "信息提效·Slack/Teams AI同事 - 连接3000+工具干活，7个月$50M年化，6.3万团队"
+    },
+    "youdao-confucius4-r2t2": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "媒体周报-有道开放日",
+      "note": "内容生产·流式ASR开源 - 200-600ms真流式识别+术语注入，配套T3PO翻译模型"
+    },
+    "storeready": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "ShowHN-苹果审核工具",
+      "note": "发行·App Store审核预检 - AI生成App过审工具，审核checklist化"
+    },
+    "openjev": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "HN热帖-617赞",
+      "note": "信息提效·决策模型实验 - 浏览器WebGPU读logits出概率vs生成JSON对比，复现TypeSafe Jev"
+    },
+    "alexa-for-shopping": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "媒体周报-亚马逊更新",
+      "note": "跨境电商·AI购物助手 - Rufus并入并占据主搜索栏，AI摘要+比价+365天价格历史透明"
+    },
+    "amazon-ai-prompts": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "媒体周报-亚马逊广告",
+      "note": "跨境电商·AI Prompts广告 - Sponsored Products/Brands GA+Rufus Prompts Report，listing转化联动"
+    },
+    "accio": {
+      "first_seen": "2026-06-08",
+      "date": "2026-09-21",
+      "source": "媒体周报-A2A落地",
+      "note": "跨境电商·agentic采购团队 - 9/15落地泰国，Smart Assistant Agent原生进Seller Workbench，拥抱A2A（6/8曾以Accio Work收录）"
+    },
+    "fastmoss": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "媒体周报-TikTok数据",
+      "note": "跨境电商·数据雷达 - TikTok美区达人/商品/直播数据与爆品追踪"
+    },
+    "clipcat": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "媒体周报-Agent Skill",
+      "note": "跨境电商·TikTok Shop运营Skill - Codex/Claude Code变身带货运营员，发现→复刻→生成→分析"
+    },
+    "cursor-plugins": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "GitHub周榜-Cursor官方",
+      "note": "信息提效·插件规范 - Cursor开放插件生态，官方插件仓库7.7k星"
+    },
+    "socialpost-ai": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "媒体周报-LinkedIn日更",
+      "note": "发行·Trending功能 - 每日热门帖改写为品牌语气草稿，标注角度+保留原帖链接，1.5万企业使用"
+    },
+    "rudder": {
+      "first_seen": "2026-09-21",
+      "date": "2026-09-21",
+      "source": "ShowHN-代码署名权",
+      "note": "信息提效·人类决策占比 - 本地插件按提示词意图重写单测，覆盖率代理AI代码中人类决策占比"
     }
   },
   "meta": {
     "created": "2026-06-02",
     "description": "已收录项目追踪清单，用于去重和更新检测",
-    "total_projects": 157,
-    "last_updated": "2026-09-14"
+    "total_projects": 184,
+    "last_updated": "2026-09-21"
   }
 }
