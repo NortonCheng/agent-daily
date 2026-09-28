@@ -1260,6 +1260,202 @@
       "date": "2026-09-21",
       "source": "ShowHN-代码署名权",
       "note": "信息提效·人类决策占比 - 本地插件按提示词意图重写单测，覆盖率代理AI代码中人类决策占比"
+    },
+    "anthropic-skills-library": {
+      "category": "信息与工作流提效·官方技能库",
+      "url": "https://github.com/anthropics/skills",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "amazon-seller-assistant-2": {
+      "category": "跨境电商·卖家AI助手",
+      "url": "https://sell.amazon.com/blog",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "amazon-selling-partner-plugin": {
+      "category": "跨境电商·Claude店铺接入",
+      "url": "https://sell.amazon.com",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "amazon-multichannel-selling": {
+      "category": "跨境电商·多渠道管理",
+      "url": "https://sell.amazon.com",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "opencut-rewrite": {
+      "category": "内容生产·视频编辑器",
+      "url": "https://github.com/OpenCut-app/OpenCut",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "aitoearn": {
+      "category": "发行·内容变现平台",
+      "url": "https://github.com/yikart/AiToEarn",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "openai-sandbox-pause": {
+      "category": "信息与工作流提效·大厂动态",
+      "url": "https://openai.com",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "jev-chat-jarvis": {
+      "category": "发行·对话副驾",
+      "url": "https://github.com/jev-chat/jev-chat-jarvis",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "video-use": {
+      "category": "内容生产·AI剪辑",
+      "url": "https://github.com/browser-use/video-use",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "opencreator": {
+      "category": "内容生产·创作工作台",
+      "url": "https://github.com/krillinai/OpenCreator",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "autoclip": {
+      "category": "内容生产·切片流水线",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "ai-employees": {
+      "category": "信息与工作流提效·AI员工",
+      "url": "https://github.com/markfulton/ai-employees",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "filtmall-shopping-skill": {
+      "category": "跨境电商·agent购物技能",
+      "url": "https://github.com/filtalgo/Filtmall-Shopping-Skill",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "ecommerce-visual-copywriting-skill": {
+      "category": "跨境电商·listing文案技能",
+      "url": "https://github.com/feichanggege/ecommerce-visual-copywriting-skill",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "book-to-skill": {
+      "category": "信息与工作流提效·知识转技能",
+      "url": "https://github.com/virgiliojr94/book-to-skill",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "substrate": {
+      "category": "基础设施·agent运行时",
+      "url": "https://github.com/agent-substrate/substrate",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "ai-memory": {
+      "category": "基础设施·agent记忆",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "hy-image-35-preview": {
+      "category": "内容生产·图像模型",
+      "url": "https://cloud.tencent.com/product/hunyuan",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "qwen-audio-31": {
+      "category": "内容生产·语音模型",
+      "url": "https://huggingface.co/collections/Qwen",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "pixverse-r2": {
+      "category": "内容生产·交互视频",
+      "url": "https://pixverse.ai",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "jev-seo": {
+      "category": "发行·GEO审计",
+      "url": "https://github.com/AgriciDaniel/jev-seo",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "pendpost": {
+      "category": "发行·社媒审批发布",
+      "url": "https://github.com/pendpost/pendpost",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "reddit-shopify-dpa": {
+      "category": "发行·社媒广告集成",
+      "url": "https://ads.reddit.com",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "copilot-redesign": {
+      "category": "信息与工作流提效·大厂动态",
+      "url": "https://www.microsoft.com/microsoft-copilot",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "meta-connect-2026": {
+      "category": "信息与工作流提效·大厂动态",
+      "url": "https://about.fb.com/news/",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "pi-cli": {
+      "category": "信息与工作流提效·LLM CLI",
+      "url": "https://github.com/earendil-works/pi",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "miaoshou-ai-assistant": {
+      "category": "跨境电商·选品AI",
+      "url": "https://www.91miaoshou.com",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
+    },
+    "agentgateway": {
+      "category": "基础设施·agent网关",
+      "url": "https://github.com/agentgateway/agentgateway",
+      "added": "2026-09-28",
+      "last_update": "2026-09-28",
+      "status": "活跃"
     }
   },
   "meta": {

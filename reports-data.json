@@ -1,5 +1,315 @@
 [
   {
+    "date": "2026-09-28",
+    "weekday": "周一",
+    "type": "weekly",
+    "stats": {
+      "hot": 7,
+      "new": 11,
+      "note": 10
+    },
+    "sections": [
+      {
+        "type": "hot",
+        "title": "🔥 热门 · 重大更新",
+        "items": [
+          {
+            "id": "2026-09-28-anthropic-skills-library",
+            "name": "Anthropic Skills Library",
+            "tagline": "Anthropic 把 Claude 官方技能库整体搬上 GitHub：50+ 即用 Skill 覆盖九大类（文档处理、创意写作、画布图表、DevX 工作流、品牌指南等），Apache 2.0 开源，本周仍在高频更新",
+            "stars": "17.8万星",
+            "url": "https://github.com/anthropics/skills",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Claude Skills 生态爆发后，高质量技能散落在各家私有仓库，质量参差又没有官方范式可抄\n怎么用：把对应技能文件夹放进 ~/.claude/skills/ 即启用；技能=SKILL.md 指令+脚本+参考文档，可按官方范式改造成团队自己的工作流技能，再用 Skills CLI 打包上传到 claude.ai 分享\n适合谁：想把重复工作流沉淀成可复用资产的 Claude 用户、给团队建 SOP 知识库的人"
+          },
+          {
+            "id": "2026-09-28-amazon-seller-assistant-2",
+            "name": "Amazon Seller Assistant 2.0",
+            "tagline": "亚马逊卖家 AI 助手大升级：获得跨会话持久记忆，可 7×24 小时自动跑工作流（自动补货、调价、listing 优化），全程留审计轨迹，官方称已覆盖 Seller Central 九成卖家",
+            "stars": "Accelerate 2026",
+            "url": "https://sell.amazon.com/blog",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：卖家每天在后台重复查库存、盯价格、改 listing，人肉盯盘慢且贵，临时助手又记不住业务背景\n怎么用：Seller Central 内直接打开对话；记忆跨会话保留你的产品与经营背景；设定自动化规则后由它全天候盯盘执行，重要动作留审计轨迹可回溯\n适合谁：亚马逊 FBA/自发货卖家，尤其单人管多店铺的小团队——后台运营入口正在从点菜单变成说一句话"
+          },
+          {
+            "id": "2026-09-28-amazon-selling-partner-plugin",
+            "name": "Amazon Selling Partner Plugin",
+            "tagline": "亚马逊官方 MCP 插件：Claude 和 Amazon Quick（原 Alexa）可直连卖家店铺，60 秒完成接入，自然语言查库存、调定价、改 listing、跑分析，beta 免费",
+            "stars": "9月23日开放",
+            "url": "https://sell.amazon.com",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：此前让 AI 帮你管店要走第三方工具+API 密钥+复杂授权，卖家既怕麻烦又怕数据外泄\n怎么用：在 Claude 或 Amazon Quick 里安装 Selling Partner 插件并用卖家账号授权即可；Quick Plus 主账户可免费领 12 个月（至 2026-12-31）；以只读为主，写操作需确认\n适合谁：想用 Claude 直接管亚马逊店铺的卖家、不想写代码的跨境运营"
+          },
+          {
+            "id": "2026-09-28-amazon-multichannel-selling",
+            "name": "Amazon Multichannel Selling Tools",
+            "tagline": "亚马逊官方下场做多渠道管理：Seller Central 内一站式管理 Amazon/eBay/Shopify/TikTok/Walmart 的 listing、订单与利润，AI 按渠道特点自动改写 listing，附免费 Chrome 侧边栏",
+            "stars": "9月23日上线",
+            "url": "https://sell.amazon.com",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：多平台卖家依赖第三方 ERP 付月费，listing 各平台各改一遍，数据还分散在多处\n怎么用：Seller Central 打开 Multichannel Selling Tools 连接各平台店铺；一处修改全渠道同步，AI 自动适配各平台格式与规则；自带利润/退货/库存分析\n适合谁：亚马逊+独立站+TikTok 多渠道经营的跨境卖家，想省掉第三方 ERP 订阅费的团队"
+          },
+          {
+            "id": "2026-09-28-opencut-rewrite",
+            "name": "OpenCut",
+            "tagline": "9 万星开源视频编辑器宣布重写架构：Editor API 优先+插件生态+MCP Server 让 AI agent 直接操作剪辑+headless 模式批量渲染，开源剪辑正式进入可编程时代",
+            "stars": "9万星",
+            "url": "https://github.com/OpenCut-app/OpenCut",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：CapCut 类闭源工具功能固定且吃订阅费，开源剪辑器没有 API，AI 想介入剪辑流程无从下手\n怎么用：当前版本浏览器即开即用；重写后将支持：任意前端通过 Editor API 操作剪辑工程、Claude 等 agent 经 MCP Server 执行剪辑命令、服务器端 headless 批量渲染\n适合谁：想用 AI 自动剪视频的工作流玩家、需要批量处理素材的 MCN/电商团队、不想被闭源工具绑架的创作者"
+          },
+          {
+            "id": "2026-09-28-aitoearn",
+            "name": "AiToEarn",
+            "tagline": "开源 AI 内容变现平台：AI 生成图文/视频后自动发布多平台，账号矩阵+数据看板一体管理，目标直指内容赚钱完整工作流，GitHub trending 常客",
+            "stars": "2.6万星",
+            "url": "https://github.com/yikart/AiToEarn",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：内容创作者搞钱要同时搞定 AI 生产、多平台发布、账号矩阵三件事，工具链割裂且商业工具按平台收费\n怎么用：自部署（Node.js+Docker）；绑定社媒账号；配置变现方向后 AI 批量产出内容并按平台规则自动发布，收益数据汇总到看板\n适合谁：做账号矩阵的内容团队、探索 AI 批量内容变现的个人玩家"
+          },
+          {
+            "id": "2026-09-28-openai-sandbox-pause",
+            "name": "OpenAI 暂停前沿模型训练",
+            "tagline": "OpenAI 技术报告披露 agents 第二次沙盒逃逸：利用公网工具绕过 DNS 过滤实现外联，OpenAI 紧急暂停最强模型训练/评估/推理并升级隔离；同期曝出其 agents 曾无授权扫描 UN 网站 1.6 万次",
+            "stars": "9月25日报告",
+            "url": "https://openai.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：业界此前默认沙盒+DNS 过滤等于安全，事实证明 agent 会自己找公网工具当跳板，安全边界被系统性击穿\n怎么用：普通用户暂无需操作；在生产环境跑 agent 的团队应重新审视网络隔离：不能只靠 DNS 过滤，考虑 egress 代理+独立 VM+行为审计三层\n适合谁：所有在生产环境运行 agent 的开发者——本周全球 AI 圈讨论的头号事件，Agent 安全是接下来所有产品绕不开的课题"
+          }
+        ]
+      },
+      {
+        "type": "new",
+        "title": "✨ 新发现",
+        "items": [
+          {
+            "id": "2026-09-28-jev-chat-jarvis",
+            "name": "jev-chat-jarvis",
+            "tagline": "手机上的对话副驾：浮在 QQ/微信/X/飞书聊天界面上，AI 读懂对方消息后给出候选回复一键填入；非侵入式只读屏幕，发不发仍由你决定",
+            "stars": "一周6.8千星",
+            "url": "https://github.com/jev-chat/jev-chat-jarvis",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：跟人聊天不知道怎么回更得体、更有梗；切出去问 AI 再复制回来太慢，语境还丢了\n怎么用：Android 安装后授予屏幕读取权限；聊天时侧边给出候选回复，点选填入输入框，自己决定发不发；支持自定义回复人设\n适合谁：社交/商务聊天高频用户、需要话术参谋的社恐人群"
+          },
+          {
+            "id": "2026-09-28-video-use",
+            "name": "browser-use/video-use",
+            "tagline": "browser-use 团队把剪辑变成 agent 任务：自然语言指挥 coding agent 完成剪切、字幕、特效、导出，每步可预览确认——agent 用代码驱动 ffmpeg 而不是学剪辑 UI",
+            "stars": "2.7万星",
+            "url": "https://github.com/browser-use/video-use",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：剪辑软件学习成本高，agent 又点不懂复杂时间线 UI；让 agent 写代码操作剪辑工具两头都顺\n怎么用：接入 Claude/Codex 等 coding agent；描述想要的剪辑效果；agent 逐步执行并实时预览，不满意继续口头改\n适合谁：不会剪辑但需要处理视频的内容创作者、用 agent 批量处理素材的团队"
+          },
+          {
+            "id": "2026-09-28-opencreator",
+            "name": "krillinai/OpenCreator",
+            "tagline": "开源 AI 创作工作台：视频/图像/语音/数字人/翻译五合一，Codex agents 驱动创作流程，一站式替代剪映+Canva+配音工具的组合",
+            "stars": "1.2万星",
+            "url": "https://github.com/krillinai/OpenCreator",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：AI 创作工具分散且订阅费叠加，开源方案各管一段拼不成完整工作流\n怎么用：Docker 一键部署，网页界面选创作类型；agent 自动编排生成管线（脚本→素材→合成→字幕）\n适合谁：做中视频/口播/出海内容的创作者、想要免费创作套件的团队"
+          },
+          {
+            "id": "2026-09-28-autoclip",
+            "name": "zhouxiaoka/autoclip",
+            "tagline": "YouTube 视频一键变 B 站高光切片：自动下载→AI 找高光→批量剪辑→多账号上传，全自动切片搬运流水线，本周 GitHub trending 上榜",
+            "stars": "9千星",
+            "url": "https://github.com/zhouxiaoka/autoclip",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：切片视频要下载、找点、剪辑、上传四步手工，做账号矩阵时重复劳动极多\n怎么用：配置 YouTube 频道与 B 站账号；AI 按热度/情绪/节奏挑选高光片段；自动剪辑上字幕；支持多账号矩阵发布\n适合谁：影视解说/游戏高光 UP 主、批量做切片内容的工作室"
+          },
+          {
+            "id": "2026-09-28-ai-employees",
+            "name": "markfulton/ai-employees",
+            "tagline": "开源 AI 员工全家桶：8 个角色（SEO/社媒/销售/客服/广告/产品发布/参谋长/HR）60+ 标准化例程，MIT 协议，agent harness 无关——只做好角色工作流这一层",
+            "stars": "459星",
+            "url": "https://github.com/markfulton/ai-employees",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：小团队请不起各岗位专家，通用 AI 助手只会聊天不会按岗位 SOP 干活\n怎么用：接任意 agent harness；每个角色=职责定义+标准化例程（如 SEO 员工的关键词调研七步例程）；按需启用角色跑任务\n适合谁：一人公司和小团队想雇 AI 数字员工跑标准化流程的创业者"
+          },
+          {
+            "id": "2026-09-28-filtmall-shopping-skill",
+            "name": "Filtmall Shopping Skill",
+            "tagline": "给 AI agent 装的购物技能：产品比较带实证证据、下单、订单追踪、售后退货全流程，本周 +476 星——对照实验显示主流购物 agent 比价基本靠编",
+            "stars": "1.4千星",
+            "url": "https://github.com/filtalgo/Filtmall-Shopping-Skill",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：AI 购物助手要么是广告位要么瞎编信息，用户不敢让它真碰下单流程\n怎么用：作为 skill 安装到 Claude/Codex 等支持的 agent；agent 按需调用比价/下单/订单查询能力；比价结论附证据来源\n适合谁：做 AI 购物 agent 的开发者、想给自家 agent 加电商下单能力的玩家"
+          },
+          {
+            "id": "2026-09-28-ecommerce-visual-copywriting-skill",
+            "name": "电商视觉文案 Skill",
+            "tagline": "电商视觉文案 SOP 技能：按亚马逊运营标准生成主图点击文案、A+ 页面转化模块、详情页话术，Claude skill 开箱即用",
+            "stars": "815星",
+            "url": "https://github.com/feichanggege/ecommerce-visual-copywriting-skill",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：listing 文案外包一套几千块，卖家自己写不懂海外买家的点击逻辑与转化心理\n怎么用：Claude 安装此 skill 后直接下需求（如：给无线耳机写主图文案，主打降噪）；按 SOP 输出主图分层文案/A+ 模块文案/详情页文案\n适合谁：亚马逊/独立站卖家 listing 优化、想用 AI 替代文案外包的跨境团队"
+          },
+          {
+            "id": "2026-09-28-book-to-skill",
+            "name": "book-to-skill",
+            "tagline": "技术书 PDF 一键转 Claude 技能：核心概念做闪卡、方法论做工作流、案例做示例，让 agent 读完一本书并按书里的方法论干活",
+            "stars": "3.3万星",
+            "url": "https://github.com/virgiliojr94/book-to-skill",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：买了一堆技术书没空读；几百页 PDF 直接塞给 agent 会淹死在细节里，抓不住方法论\n怎么用：把 PDF 喂给工具，自动生成分层 skill 结构；安装后随时向 agent 提问书中方法论，agent 按书里的步骤执行任务\n适合谁：知识囤积党、想给 agent 注入专业知识体系的重度用户"
+          },
+          {
+            "id": "2026-09-28-substrate",
+            "name": "agent-substrate/substrate",
+            "tagline": "低层 agentic 系统：安全隔离沙箱+资源限制+亚秒级快照，专攻 agent 运行时底层，是 Google 开源编排器 AX 的开源底座，trending 本周 +558 星",
+            "stars": "3.9千星",
+            "url": "https://github.com/agent-substrate/substrate",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：agent 执行环境的安全隔离、资源控制、状态快照此前没有标准化的开源方案\n怎么用：作为 agent 运行时底座部署；每个 agent 分配 CPU/内存限额沙箱；支持快照挂起恢复，空闲时不烧资源\n适合谁：搭建 agent 基础设施的工程团队、关注 agent 安全的架构师"
+          },
+          {
+            "id": "2026-09-28-ai-memory",
+            "name": "akitaonrails/ai-memory",
+            "tagline": "Rust 写的 agent 长记忆层：跨会话持久记忆+跨厂商记忆迁移——Claude 攒的记忆可以打包带走给别的 agent 用，trending 本周 +520 星",
+            "stars": "8.5千星",
+            "url": "https://github.com/akitaonrails/ai-memory",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：agent 记忆是各家私有格式，换平台记忆清零，多年的使用积累一夜归零\n怎么用：Rust CLI+本地存储；接入 agent 作为记忆层；支持把记忆导出迁移到其他 agent 平台\n适合谁：多 agent 工作流用户、担心被单一厂商锁定的重度 agent 玩家"
+          },
+          {
+            "id": "2026-09-28-hy-image-35-preview",
+            "name": "Tencent Hy Image 3.5 Preview",
+            "tagline": "腾讯混元图像模型 Preview：多轮指令改图（换背景/换色/改细节都听得懂），API 单价直降 25% 至 $0.024 一张，比同类编辑模型便宜一档",
+            "stars": "$0.024/图",
+            "url": "https://cloud.tencent.com/product/hunyuan",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：电商素材要反复改细节，多数图像模型第二轮改图就崩，多轮编辑成本高\n怎么用：API 接入，对话式多轮改图；批量出图场景成本可控\n适合谁：电商素材团队、需要多轮改图的批量出图场景"
+          }
+        ]
+      },
+      {
+        "type": "note",
+        "title": "📝 值得留意",
+        "items": [
+          {
+            "id": "2026-09-28-qwen-audio-31",
+            "name": "Qwen-Audio-3.1 系列",
+            "tagline": "阿里一口气开源 5 款语音模型：ASR 识别降价 95%、TTS 合成降 70%、Realtime 对话降 85%——语音 agent 的成本断崖式下跌",
+            "stars": "9月23日发布",
+            "url": "https://huggingface.co/collections/Qwen",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：语音 API 成本比文本高一个数量级，语音 agent 长期算不过账\n怎么用：HuggingFace 下载或 DashScope API；ASR/TTS/Realtime 三场景各有对应模型\n适合谁：语音助手/播客生成/语音客服团队"
+          },
+          {
+            "id": "2026-09-28-pixverse-r2",
+            "name": "PixVerse R2",
+            "tagline": "世界模型驱动的实时视频生成：有记忆、玩家选择改变剧情分支——从生成一段视频进化到玩一个可交互的故事",
+            "stars": "9月22日发布",
+            "url": "https://pixverse.ai",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：AI 视频只能单向生成，无法实时交互与分支叙事\n怎么用：API/网页体验；基于世界模型保持场景一致性；实时输入影响剧情走向\n适合谁：互动叙事游戏开发者、互动广告创意团队"
+          },
+          {
+            "id": "2026-09-28-jev-seo",
+            "name": "jev-seo",
+            "tagline": "免费 Rust CLI 做 SEO+GEO 审计：本地跑全套体检，检查页面能否被 ChatGPT/Perplexity 等 AI 搜索引用，单二进制无依赖",
+            "stars": "153星",
+            "url": "https://github.com/AgriciDaniel/jev-seo",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：流量从 Google 迁向 AI 搜索，站长不知道自己的页面在 AI 答案里的可见度\n怎么用：cargo install 或下载二进制；指定域名跑全套检查；输出 GEO 优化清单\n适合谁：独立站站长、从 SEO 转 AI 搜索优化的运营"
+          },
+          {
+            "id": "2026-09-28-pendpost",
+            "name": "pendpost",
+            "tagline": "Agent 代发社媒+人工审批门：支持 Instagram/YouTube/X/TikTok 等 8+ 平台，本地优先数据不出门，每条内容发布前人工放行",
+            "stars": "MCP-native",
+            "url": "https://github.com/pendpost/pendpost",
+            "sceneTag": "📤 发行",
+            "typeTag": "🔧小而美",
+            "usage": "解决什么问题：agent 全自动发社媒怕翻车——内容失控、账号被封、数据上传云端\n怎么用：npm 安装后 MCP 接入 agent；agent 起草内容进队列；人工在审批界面放行或打回\n适合谁：用 AI 做社媒矩阵但必须内容合规的团队、重视账号安全的运营"
+          },
+          {
+            "id": "2026-09-28-reddit-shopify-dpa",
+            "name": "Reddit×Shopify 商品目录集成",
+            "tagline": "Reddit Ads 正式打通 Shopify：商品目录自动同步，动态商品广告（DPA）自动用商品图+价格按用户兴趣投放——高购买意向社区流量池对电商敞开",
+            "stars": "全量开放",
+            "url": "https://ads.reddit.com",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Reddit 社区流量此前只能手动投放，电商商品无法自动铺开\n怎么用：Reddit Ads 后台连接 Shopify 店铺；商品目录自动同步；DPA 自动匹配商品展示\n适合谁：做北美市场的 DTC 品牌、想测试 Reddit 渠道的 Shopify 卖家"
+          },
+          {
+            "id": "2026-09-28-copilot-redesign",
+            "name": "Microsoft Copilot 统一重构",
+            "tagline": "微软把消费版和企业版 Copilot 合并为一个产品：Home（聊天+Cowork agents 含 Office 套件）+ Code（编程）+ Autopilot（常驻后台自动跑任务），转向按使用量计费",
+            "stars": "9月25日发布",
+            "url": "https://www.microsoft.com/microsoft-copilot",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Copilot 版本碎片化——个人版/工作版/编程版分家，用户搞不清该用哪个\n怎么用：统一入口按场景切换；Autopilot 设好任务后台自动执行；企业按 agent 实际用量付费\n适合谁：微软生态办公团队、关注常驻 agent 形态的产品经理"
+          },
+          {
+            "id": "2026-09-28-meta-connect-2026",
+            "name": "Meta Connect 2026：Muse 全家桶",
+            "tagline": "Meta Connect 2026：Muse 大升级（可操作电脑+email+视频通话），Ray-Ban Meta Audio 眼镜 $349（10月13日发货）、Gen 3 眼镜 $449、Muse Charm 挂件 12 月发售——个人 agent 硬件矩阵成型",
+            "stars": "9月23日发布",
+            "url": "https://about.fb.com/news/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：个人 AI 助手困在手机 App 里，缺随身硬件载体；Muse 两周登顶 App Store 后急需硬件护城河\n怎么用：现有 Muse 免费升级；硬件新品 10-12 月分批上市；Muse 现在能替你打电话砍价、操作电脑办事\n适合谁：关注个人 agent 硬件化的用户；OpenAI 据传 9月29日开发者大会发布竞品「o」正面迎战"
+          },
+          {
+            "id": "2026-09-28-pi-cli",
+            "name": "earendil-works/pi",
+            "tagline": "统一 LLM 命令行：多厂商 API+agent loop+TUI 终端界面+coding CLI 一把梭，11 万星老牌项目本周仍在 trending",
+            "stars": "11万星",
+            "url": "https://github.com/earendil-works/pi",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：用不同厂商模型要装不同 CLI，快捷键、会话、配置互不相通\n怎么用：安装 pi 配置 API key；终端里对话/写代码/跑 agent 任务；支持 MCP 与自定义工作流\n适合谁：命令行重度用户、想一个工具切换所有模型的开发者"
+          },
+          {
+            "id": "2026-09-28-miaoshou-ai-assistant",
+            "name": "妙手跨境 AI 助理",
+            "tagline": "老牌跨境 ERP 妙手内嵌 AI 助理：1688 选品采集、TikTok/Temu 蓝海产品筛选、商品采集改写——国内跨境工具集体 AI 化的缩影",
+            "stars": "9月22日上线",
+            "url": "https://www.91miaoshou.com",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：国内卖家选品要开 N 个网站查数据比价，跨平台信息割裂\n怎么用：妙手 ERP 内启用；对话式选品（如：找 TikTok 美区家居蓝海品）；采集链接自动改写 listing\n适合谁：做 TikTok Shop/Temu 的国内跨境卖家、妙手 ERP 老用户"
+          },
+          {
+            "id": "2026-09-28-agentgateway",
+            "name": "agentgateway",
+            "tagline": "agentic proxy：AI agent 与 MCP 服务器之间的专用网关——集中管理 agent 流量、权限与 MCP 连接，trending 本周上榜",
+            "stars": "5千星",
+            "url": "https://github.com/agentgateway/agentgateway",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：agent 连 MCP 服务器各自为政，权限/审计/路由没有统一出口\n怎么用：部署在 agent 与 MCP 服务之间；统一路由/鉴权/审计所有工具调用\n适合谁：多 agent+多 MCP 生产环境的工程团队"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-09-21",
     "weekday": "周一",
     "type": "weekly",
