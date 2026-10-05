@@ -1,5 +1,322 @@
 [
   {
+    "date": "2026-10-05",
+    "weekday": "周一",
+    "type": "weekly",
+    "weekRange": "2026年9月28日 - 10月4日",
+    "weekNo": "第40周",
+    "stats": {
+      "hot": 9,
+      "new": 9,
+      "note": 9
+    },
+    "total": 27,
+    "trends": [
+      {
+        "label": "1. 「Agent 即员工」从口号变成产品形态",
+        "desc": "OpenAI dots 给每个数字员工配一台云电脑让它 7×24 打工、Paperclip 9.1 万星用组织架构和预算审批管理 AI 团队、Instinct 一个月估值翻 4 倍拿到 10 亿美元——个人 Agent 与 AI 员工管理同时成为主战场，审计、权限、预算这些「HR 式」能力正在变成 agent 产品的基础设施。"
+      },
+      {
+        "label": "2. 决策模型两周内爆发成新品类",
+        "desc": "继 Jev 之后，OpenAI Decisions API、Cloudflare 开源 Clef、亚马逊 Strands Decider、上海AI实验室 Intern-Decision、陈大年 StartLux-Decision（0.8B-27B 全开源）一周内全部跟进——「判断」正从「生成」中剥离，成为廉价、高频、可本地部署的基础设施，这是 agent 工作流降本的关键拼图。"
+      },
+      {
+        "label": "3. 前沿模型进入「半代升级+价格战」节奏",
+        "desc": "Opus 5.5 降价、Sonnet 5.5 以一半价格逼近 Opus、GPT-6.1 Sol 半价对标 Astra、Gemini 4 Argon 把输出上限拉到 100 万 token——单位智能的价格曲线在快速下移，长时 agent 任务的商业模型因此重算；同时 Reflection 预告发布开放权重模型，开放权重赛道迎来西方厂商反攻。"
+      }
+    ],
+    "sections": [
+      {
+        "type": "hot",
+        "title": "🔥 热门 · 重大更新",
+        "items": [
+          {
+            "id": "2026-10-05-openai-dots",
+            "name": "OpenAI dots",
+            "tagline": "OpenAI DevDay 重磅发布：always-on 常驻 agent 上线——每个 dot 自带一台云电脑，由 GPT-6 Astra 驱动，接入你选的应用后 7×24 小时朝目标干活，能在 ChatGPT 里对话、通话，还接入了 Slack 和 Teams，奥特曼称其为迄今最爱的 OpenAI 产品",
+            "stars": "DevDay 2026",
+            "url": "https://openai.com/index/introducing-dots/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：传统 AI 助手是「你问它答」，关掉窗口就停工；长期任务没人盯、没人汇报，每次对话上下文还要从零开始\n怎么用：Pro / Business Premium 用户在 ChatGPT 中创建 dot；给它一个目标并设定自主权限边界；连接应用后它会主动汇报进展、请示需要你拍板的决策，通过插件生态扩展能力\n适合谁：有重复性长期事务要处理的付费用户、想把「待办」变成「代办」的知识工作者"
+          },
+          {
+            "id": "2026-10-05-paperclip",
+            "name": "Paperclip",
+            "tagline": "GitHub 周榜第一的开源 Agent 管理平台：把 Claude/Codex/OpenClaw 等不同 agent 组成一家「AI 公司」——组织架构、任务分配、预算控制、审批门、审计追踪一应俱全，MIT 协议，9.1 万星",
+            "stars": "9.1万星",
+            "url": "https://github.com/paperclipai/paperclip",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：agent 越用越多却各自为政：开一堆终端窗口人肉盯梢，谁在干活、花了多少钱、有没有越权全靠猜\n怎么用：npx paperclipai onboard 一条命令初始化；按组织架构设 CEO/工程师/运营等角色并派任务；预算超限自动暂停、敏感操作走人工审批，全程留审计日志；支持 Docker Compose 自托管，MIT 协议\n适合谁：手里跑着 5 个以上 agent 的重度用户、想让 AI 团队跑在自家基础设施上的小团队"
+          },
+          {
+            "id": "2026-10-05-hindsight-agent-memory",
+            "name": "Hindsight",
+            "tagline": "本周涨星最快的 Agent 记忆系统：retain→recall→reflect 三段式让 agent 越用越聪明，4.5 万星一周净增 1.6 万，vectorize 出品",
+            "stars": "4.5万星",
+            "url": "https://github.com/vectorize-io/hindsight",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：agent 每次对话从零开始：昨天处理过的事故、写过的方案今天全部忘光，知识和教训无法沉淀\n怎么用：Python 包安装后几行代码接入：retain 写入经验、recall 按上下文检索、reflect 周期性整理记忆；本地 SDK 与托管 API 双模式\n适合谁：做客服/运维/研究类 agent 的开发者、想让 agent 积累领域经验的团队"
+          },
+          {
+            "id": "2026-10-05-claude-5-5-series",
+            "name": "Claude Opus 5.5 / Sonnet 5.5",
+            "tagline": "Anthropic 半代升级双连发：Opus 5.5 长任务成本大降，Sonnet 5.5 以一半价格逼近 Opus 表现——输出提速 30%+、单任务成本最多省 30%，Terminal-Bench 4.0 得分 70.6% 反超 Opus",
+            "stars": "9月28日发布",
+            "url": "https://www.anthropic.com/news",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：长时间 agent 任务烧 token 太贵；上一代 Sonnet 与旗舰差距明显，日常任务用 Opus 浪费、用 Sonnet 又不够\n怎么用：API 直接调用 claude-sonnet-5-5 / claude-opus-5-5；两者都是 1M 上下文+128K 输出；Sonnet 5.5 是首个内置网络防护的 Sonnet，高风险安全请求自动降级；Sonnet 4.5 将于 11 月 30 日退役\n适合谁：按 token 付费的开发团队、把 Claude 接进 agent 流水线的工程团队"
+          },
+          {
+            "id": "2026-10-05-deepseek-harness-v02",
+            "name": "DeepSeek Harness v0.2",
+            "tagline": "国产 Agent Harness 国庆上新：v0.2 桌面端 macOS/Windows 安装包开箱即用，新增独立插件管理页面，并实验性兼容 Claude Code Mods 生态——「一切皆插件」再进一步",
+            "stars": "v0.2 国庆发布",
+            "url": "https://github.com/deepseek-ai/deepseek-harness",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：Agent harness 生态彼此割裂，Claude Code 的 Mods 插件生态进不来；命令行装插件对非开发者门槛太高\n怎么用：官网下载桌面端安装包，或继续 npx @deepseek-ai/dsh web；插件管理页面输入 npm 包名即可安装/停用/卸载；可导入文档、表格、PDF 做资料整理、数据分析、PPT 制作\n适合谁：不想碰命令行的普通用户、想复用 Claude Code 插件生态的开发者"
+          },
+          {
+            "id": "2026-10-05-shopify-canvas",
+            "name": "Shopify Canvas",
+            "tagline": "Shopify 把建店交给 AI：对话式设计界面 Canvas 上线，商家用自然语言描述需求、Sidekick AI 直接编辑主题代码并实时渲染页面，支持多屏幕尺寸预览",
+            "stars": "10月1日上线",
+            "url": "https://www.shopify.com/news",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：中小商家不会写代码，改店铺主题要么雇人要么被固定模板锁死，改个布局都费劲\n怎么用：含主题定制档位的套餐可用（桌面端先行）；在 Canvas 里与 Sidekick 对话描述改动；AI 编辑主题代码实时渲染，可切换屏幕尺寸预览；暂不支持第三方主题与 app blocks\n适合谁：独立站卖家、想快速做店铺改版和活动页的运营团队"
+          },
+          {
+            "id": "2026-10-05-eleven-v4",
+            "name": "Eleven v4",
+            "tagline": "ElevenLabs 新旗舰 TTS 会「演戏」而不只是念稿：按角色、情绪、场景决定语气，Artificial Analysis 盲测约 75% 听众偏好度排第一；Turbo 版中位延迟 100ms 直供实时语音 agent",
+            "stars": "9月28日发布",
+            "url": "https://elevenlabs.io/blog/eleven-v4",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：TTS 读稿机械感强，情绪要靠 SSML 标签一点点调；低延迟模型又快又平，表达力和速度一直不可兼得\n怎么用：在 ElevenCreative / ElevenAgents / ElevenAPI 中调用；文本里直接写 [laughs]、[said angrily] 等标签控制表演，自然语言也能描述语气；10 秒音频即可克隆音色，覆盖 90+ 语言\n适合谁：播客/有声书/游戏配音创作者、做实时语音 agent 的开发团队"
+          },
+          {
+            "id": "2026-10-05-mirofish",
+            "name": "MiroFish",
+            "tagline": "大学生开发的群体智能预测引擎：把一份文档变成知识图谱+数千个有性格设定的 AI 人格在模拟社会里博弈，产出舆情/时政推演报告，7.5 万星并获陈天桥 3000 万元种子轮投资",
+            "stars": "7.5万星",
+            "url": "https://github.com/666ghj/MiroFish",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：传统预测靠专家拍脑袋或数据模型外推，「群体会怎么反应」这类复杂涌现行为一直没法模拟\n怎么用：Docker 部署并接 OpenAI 兼容 API；上传 PDF/Markdown 种子材料；系统自动抽取图谱、生成人格、构建两个模拟社交平台并运行；ReportAgent 汇总成可追问的推演报告（官方注明：输出是探索性模拟而非科学预测）\n适合谁：做政策影响评估/舆情预警/金融情景推演的分析团队"
+          },
+          {
+            "id": "2026-10-05-hark-personal-agent",
+            "name": "Hark",
+            "tagline": "Figure AI 创始人 Brett Adcock 的个人 AI 助手上线：Agent Handoff 每次任务启动一台独立虚拟电脑（浏览器+文件系统+终端），Online-Mind2Web 人工评测 97.7% 排名第一，前 10 万名用户免费领付费套餐",
+            "stars": "本周上线",
+            "url": "https://www.figure.ai",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：个人助理类 agent 大多只会聊天，真让它去订机票、发消息、查账单就露馅，浏览器实操是短板\n怎么用：注册后在应用里直接发任务；Handoff 为每个任务启动独立虚拟电脑，自己开网页、填表、执行，完成后交回结果与截图\n适合谁：需要外包跑腿事务（订餐/购物/订票/约时间）的忙碌人群"
+          }
+        ]
+      },
+      {
+        "type": "new",
+        "title": "✨ 新发现",
+        "items": [
+          {
+            "id": "2026-10-05-opendots",
+            "name": "OpenDots",
+            "tagline": "OpenAI dots 发布 48 小时内，CopilotKit 就开源了自托管替代品：MIT 协议，任意 AG-UI agent + OpenAI 兼容模型都能跑，每个 Dot 同样有角色、权限和自己的虚拟电脑",
+            "stars": "1.4千星",
+            "url": "https://github.com/CopilotKit/OpenDots",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：OpenAI dots 闭源、绑定 OpenAI 模型、部分套餐和地区不可用；企业更不想让数字员工的数据出内网\n怎么用：clone 模板自托管（alpha 阶段）；通过 AG-UI 协议接入任意 agent；按需开启浏览器/文件/shell 权限（默认关闭），产出进 Spaces/Pages，草稿需人工批准后才落盘\n适合谁：想私有化部署 AI 员生的团队、被 dots 地区/套餐限制挡在门外的用户"
+          },
+          {
+            "id": "2026-10-05-hypit",
+            "name": "Hypit",
+            "tagline": "给 coding agent 的「视频制作语言」：丢进一条爆款视频，agent 复刻的整个工作流——换脸、换词、换 B-roll，一条命令产出 100 个变体，1.8 万星一周涨 2.4 千",
+            "stars": "1.8万星",
+            "url": "https://github.com/hypit-ai/hypit",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：爆款视频火在结构而不只是内容，但人工拆解镜头、节奏、字幕锚点再复刻，效率低到没法规模化\n怎么用：安装后给 Claude Code / Codex / 腾讯 WorkBuddy 使用；agent 把视频写成工作流源文件，渲染引擎编译成 mp4；生成模型可选，字幕与动效可纯代码渲染，不烧 GPU 也能批量出片\n适合谁：做短视频矩阵的团队、想批量复制爆款结构的自媒体"
+          },
+          {
+            "id": "2026-10-05-impeccable",
+            "name": "Impeccable",
+            "tagline": "前谷歌开发者布道师出品、7 万星的 AI 界面去「模板脸」设计语言：61 条确定性检测规则不调 LLM、24 个设计命令词，专治满屏 Inter 字体+紫蓝渐变+卡片套卡片；同赛道 9 万星的 Taste skill 一起构成「给 AI 装审美」浪潮",
+            "stars": "7万星",
+            "url": "https://github.com/pbakaus/impeccable",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：所有 AI 生成的前端都长得一样——同款字体、同款渐变、同款圆角图标，一眼假、没有品牌辨识度\n怎么用：npx impeccable install 装进 Claude Code/Cursor/Codex；/impeccable polish 等命令词驱动打磨；CLI+浏览器扩展跑 61 条规则检测反模式，落盘前直接拦截坏设计\n适合谁：用 AI 写前端却被吐槽「AI 味」的开发者、没有设计师的独立开发团队"
+          },
+          {
+            "id": "2026-10-05-video-shotcraft",
+            "name": "video-shotcraft",
+            "tagline": "把 Claude Code 变成动效工作室的开源 skill：104 张镜头配方卡+161 个动效预览+Remotion 参考实现，产品宣传视频从分镜、动画、音效到节拍同步一步到位",
+            "stars": "1万星",
+            "url": "https://github.com/Vincentwei1021/video-shotcraft",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：让 AI 做产品视频，出来的东西没有镜头语言——不会运镜、不会卡点、没有节奏感\n怎么用：作为 skill 装进 Claude Code / Codex；给出产品资料与视觉方向，agent 按镜头配方卡做分镜、动画、音效设计，Remotion 代码渲染出 mp4\n适合谁：做产品发布视频/营销物料的开发者、独立开发者"
+          },
+          {
+            "id": "2026-10-05-deeplumen-agentic-page",
+            "name": "DeepLumen Agentic Page",
+            "tagline": "国内团队的 Agentic Commerce 解法：把商品和品牌信息重组成 AI 易读的结构化页面并实时同步价格库存，2000+ Shopify 商家已接入，最快上线首日就有 AI 渠道成交",
+            "stars": "2000+商家接入",
+            "url": "https://36kr.com/p/4004240967258249",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：品牌网站是为人眼浏览设计的，AI 购物助手抓不到准确的价格/库存/退换政策，推荐了也变不成订单\n怎么用：Shopify 应用市场安装 Agentic Page；商品与品牌信息自动结构化；AI 渠道流量与归因订单在后台可查\n适合谁：独立站卖家、想接住 ChatGPT/Perplexity 等 AI 购物流量的 DTC 品牌"
+          },
+          {
+            "id": "2026-10-05-turbodiffusion",
+            "name": "TurboDiffusion",
+            "tagline": "清华+生数科技开源视频生成加速框架：5 秒视频从 3 分钟压到 2 秒（100-200 倍），720P 在单张 RTX 5090 上几十秒出片，兼容 Wan2.1/2.2 全系列模型",
+            "stars": "980+星",
+            "url": "https://turbodiffusion.video/",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：开源视频模型效果好但生成太慢，消费级显卡跑一次要等几分钟，批量量产内容不现实\n怎么用：SageAttention 低比特注意力+可训练稀疏线性注意力+rCM 步数蒸馏三招叠加；仅需约 6 步微调即可迁移到自己的视频模型\n适合谁：本地部署视频生成的工作室、用 Wan 系列批量做内容的团队"
+          },
+          {
+            "id": "2026-10-05-cloudflare-clef",
+            "name": "Cloudflare Clef",
+            "tagline": "Cloudflare 开源自家训练的首批决策模型 clef / clef-flash（基于 Qwen3.5-9B）：单选/评分/判断类请求秒回结构化结果，Workers AI 直接调用；同期 OpenAI Decisions API、上海AI实验室 Intern-Decision、陈大年 StartLux-Decision 全部跟进，决策模型两周内爆发成新品类",
+            "stars": "10月1日开源",
+            "url": "https://blog.cloudflare.com/clef-decision-models/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：让 LLM 做分类/判断/打分既贵又慢还不稳定，agent 工作流里成千上万次路由决策烧不起\n怎么用：Workers AI 调用 @cf/cloudflare/clef 或低延迟版 clef-flash；输入状态+选项，输出带概率的结构化决策；配套 RL 微调平台即将自助开放\n适合谁：做 agent 工作流编排/内容审核/意图识别的开发者"
+          },
+          {
+            "id": "2026-10-05-openoutreach",
+            "name": "OpenOutreach",
+            "tagline": "开源自托管 LinkedIn 自动化：Playwright 隐身模式发现/富化目标客户档案、Jinja 模板自动发连接请求+跟进消息，本地 SQLite 全量数据自持，多账号无额外费用",
+            "stars": "3.1千星",
+            "url": "https://github.com/eracle/OpenOutreach",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：B2B 获客靠 LinkedIn 手动加人效率低，SaaS 工具按账号收费，托管服务还有连坐封号风险\n怎么用：Docker 一键部署；导入目标客户画像；Jinja 模板发连接请求并自动跟进（预留 GPT 接口做个性化），状态存本地 SQLite 可断点续跑；注意自动化行为本身有平台封号风险，控制频率\n适合谁：独立开发者/初创团队的销售、做 B2B 线索拓展的 founder"
+          },
+          {
+            "id": "2026-10-05-postiz-agentic-scheduling",
+            "name": "Postiz Agentic Scheduling",
+            "tagline": "开源社媒排程工具上线 agentic 调度：内置 MCP Server+CLI，Claude/ChatGPT/Codex 可以直接在终端或对话里替你起草并定时发帖，覆盖 LinkedIn/Instagram/X 等 30+ 平台",
+            "stars": "开源可自托管",
+            "url": "https://github.com/gitroomhq/postiz-app",
+            "sceneTag": "📤 发行",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：社媒管理工具要么贵要么闭源，AI 写好内容还要人肉复制粘贴回排程工具，跨平台运营全是手工活\n怎么用：云端订阅或自托管；AI 助手生成文案/配图/短视频；MCP 让 agent 直接创建和管理排期，n8n/Make/Zapier 可联动；支持常青内容按周期自动重发\n适合谁：多平台运营的创作者、需要批量管理社媒的营销团队"
+          }
+        ]
+      },
+      {
+        "type": "note",
+        "title": "📝 值得留意",
+        "items": [
+          {
+            "id": "2026-10-05-amazon-ads-agent",
+            "name": "Amazon Ads Agent",
+            "tagline": "亚马逊 unBoxed 发布统一广告智能体：DSP 与广告控制台合并，对话式创建/优化全渠道 campaign（赞助广告+展示+视频+音频），支持实时分析问答",
+            "stars": "unBoxed 2026",
+            "url": "https://advertising.amazon.com",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：亚马逊广告后台复杂，DSP 和控制台两套系统两套逻辑，中小卖家学不动也学不起\n怎么用：广告后台开启 Ads Agent；对话式设定目标和预算；AI 基于购买信号自动建 campaign 并持续优化，随时可手动接管\n适合谁：投亚马逊广告的跨境卖家、广告优化师"
+          },
+          {
+            "id": "2026-10-05-tiktok-shop-ai-image-policy",
+            "name": "TikTok Shop AI 图片新规",
+            "tagline": "TikTok Shop 更新 AI 生成商品图规则：图片必须与实物一致（颜色/材质/尺寸/配件），服装、美妆、家居、珠宝、3C 配件类卖家需留存实物照片、供应链样品记录与生成过程证据",
+            "stars": "9月24日更新",
+            "url": "https://seller.tiktokshops.com",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：AI 生图让商品图与实物脱节，客诉和退货率上升，平台开始收紧治理\n怎么用：立即盘点用 AI 生成主图/详情图/营销素材的 listing；建立「实物图+生成记录」资产台账备查；AI 图只做风格化处理，不改变商品本体属性——用 AI 做白底图的团队尤其注意留证\n适合谁：所有用 AI 做商品图的 TikTok Shop 卖家"
+          },
+          {
+            "id": "2026-10-05-akool-tiktok-shop",
+            "name": "Akool × TikTok Shop",
+            "tagline": "Akool 上线 TikTok Shop 集成：产品图一键生成 AI 产品视频和数字人口播视频，直接发布到 TikTok Shop，不用拍摄不用剪辑",
+            "stars": "9月29日上线",
+            "url": "https://main.akool.com/blog-posts/tiktok-shop-is-now-live-on-akool-one-click-ai-videos-for-sellers",
+            "sceneTag": "🛒 跨境电商",
+            "typeTag": "🏗️中型框架",
+            "usage": "解决什么问题：短视频带货内容产能跟不上，每条都实拍成本高，中小卖家养不起内容团队\n怎么用：登录 Akool TikTok Shop 版；上传产品图；选择图生视频或数字人模板，生成后一键发布到店铺\n适合谁：TikTok Shop 卖家、需要批量做带货素材的团队"
+          },
+          {
+            "id": "2026-10-05-gemini-4-argon",
+            "name": "Gemini 4 Argon",
+            "tagline": "谷歌新前沿模型分阶段发布：输出上限从 64K 提到 100 万 token，DeepSWE 得分 77.9%，能自主发现并修补高危漏洞——但先只开放给受信任的网络安全防御者",
+            "stars": "10月1日发布",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-4-argon/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：长程推理被输出窗口卡脖子；前沿能力先给谁用，成为大厂新的发布难题\n怎么用：Fairwind 计划机构优先，普通开发者/企业/消费者版本「尽快」开放；关注 Gemini API 更新公告\n适合谁：需要超长输出（大规模代码迁移/长报告）的工程团队、网安团队"
+          },
+          {
+            "id": "2026-10-05-instinct-funding",
+            "name": "Instinct 10亿美元C轮",
+            "tagline": "个人 agent 公司 Instinct 完成 10 亿美元 C 轮（估值 100 亿，一个月估值翻 4 倍）：自有虚拟手机和电脑，短信/电话下达任务就能替你订餐厅、退订、采购——本周 10 个最大融资轮里 9 个投了 AI",
+            "stars": "估值100亿美元",
+            "url": "https://techlensmedia.com/news/ai-funding-this-week-capital-builds-the-full-stack-from-agents-to-physical-ai",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：没空处理的跑腿事务（订餐厅/取消订阅/采购）过去需要真人助理，贵且难约；个人 agent 赛道被资本押注为下一个超级入口\n怎么用：early access 阶段；短信或电话给 Instinct 即可下达任务，它用自己的虚拟手机和电脑执行\n适合谁：关注个人 Agent 赛道的产品人和投资人——资本已经用真金白银投票"
+          },
+          {
+            "id": "2026-10-05-openai-safety-wh-house",
+            "name": "OpenAI 安全风波与白宫协议",
+            "tagline": "OpenAI 资深安全员工罗宾逊离职发文称「试错时代已结束」，呼吁效仿航空/核工业的多重防护；同日谷歌/Anthropic/OpenAI/英伟达签署《白宫超级智能协议》前沿责任承诺（自愿性质）",
+            "stars": "10月3日",
+            "url": "https://openai.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：模型连续突破沙盒之后，行业信任与监管同步收紧，安全叙事从后台走到了头版\n怎么用：普通用户暂无需操作；企业用户应关注模型服务条款变化，自查部署的审计与隔离要求\n适合谁：在生产环境跑 agent 的团队、关注 AI 治理的产品与合规岗"
+          },
+          {
+            "id": "2026-10-05-perplexity-photon",
+            "name": "Perplexity Photon",
+            "tagline": "Perplexity 自研 Rust 检索引擎 Photon 上线：替换掉 fork 的开源引擎，为 AI 原生检索+重排序设计，p99 延迟大幅下降",
+            "stars": "9月30日",
+            "url": "https://www.marktechpost.com/2026/09/30/perplexity-introduces-photon-a-rust-based-retrieval-engine-that-cuts-p99-latency/",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：通用搜索引擎的延迟和排序逻辑不适配 AI 实时问答，答案生成快慢越来越取决于检索层\n怎么用：Perplexity 用户无感升级；其 Rust+AI 原生排序的检索基础设施思路可被 RAG 产品借鉴\n适合谁：做搜索/RAG 产品的工程团队"
+          },
+          {
+            "id": "2026-10-05-cogvideox-v15",
+            "name": "CogVideoX v1.5",
+            "tagline": "智谱开源 CogVideoX v1.5：5B 文生视频+5B 图生视频双模型，支持 10 秒/4K/60fps 与任意宽高比，图生视频的复杂语义理解大幅增强",
+            "stars": "开源新模型",
+            "url": "https://github.com/THUDM/CogVideoX",
+            "sceneTag": "🖥️ 内容生产",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：开源视频模型画质和时长难兼顾，复杂语义的图生视频效果一直上不去\n怎么用：HuggingFace 下载权重本地部署，或用智谱 MaaS「新清影」平台 API 直接调用\n适合谁：本地部署视频生成的开发者、内容生产团队"
+          },
+          {
+            "id": "2026-10-05-anthropic-frontier-academy",
+            "name": "Anthropic 前沿学院",
+            "tagline": "Anthropic 宣布 1 亿美元前沿学院计划：2027 年前培养 1 万名 AI 部署工程师，直接对准企业买了模型却没人会落地的工程人才断层",
+            "stars": "1亿美元投入",
+            "url": "https://www.anthropic.com",
+            "sceneTag": "📡 信息与工作流提效",
+            "typeTag": "🏢大型平台",
+            "usage": "解决什么问题：企业采购了前沿模型却没有足够的工程师把 agent 真正部署进业务，落地卡在人才断层\n怎么用：关注 Anthropic 官方培训计划与认证体系；团队可预留预算安排工程师受训\n适合谁：想转型 AI 部署工程师的开发者、企业 AI 团队负责人"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-09-28",
     "weekday": "周一",
     "type": "weekly",
