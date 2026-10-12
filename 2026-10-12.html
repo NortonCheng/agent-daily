@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent 周报 | 2026-09-28</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --surface-hover: #f5f5f7;
+    --border: #e8e8ed;
+    --border-light: #f0f0f2;
+    --text-primary: #1a1a2e;
+    --text-secondary: #6b6b80;
+    --text-tertiary: #9b9bb0;
+    --accent: #6c5ce7;
+    --accent-light: rgba(108,92,231,0.08);
+    --accent-medium: rgba(108,92,231,0.15);
+    --green: #00b894;
+    --green-light: rgba(0,184,148,0.08);
+    --orange: #e17055;
+    --orange-light: rgba(225,112,85,0.08);
+    --blue: #0984e3;
+    --blue-light: rgba(9,132,227,0.08);
+    --red: #d63031;
+    --pink: #fd79a8;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --radius-xs: 6px;
+  }
+
+  body {
+    font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
+  }
+
+  /* ── Header ── */
+  .header {
+    padding: 48px 0 40px;
+  }
+
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .header .date {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
+  .header-stats {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .header-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .header-stat .num {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .header-stat .label {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  /* ── Section ── */
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .section-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .section-icon.hot { background: var(--orange-light); }
+  .section-icon.new { background: var(--blue-light); }
+  .section-icon.note { background: var(--green-light); }
+
+  .section-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .section-count {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    font-weight: 500;
+    margin-left: auto;
+  }
+
+  /* ── Project Card ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 16px;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: #dddde5;
+    transform: translateY(-1px);
+  }
+
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+
+  .card-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .card-name:hover { color: var(--accent); }
+
+  .card-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--orange);
+    background: var(--orange-light);
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .card-tagline {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .card-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  .tag.scene {
+    background: var(--green-light);
+    color: var(--green);
+  }
+
+  .tag.type-sm {
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+
+  .tag.type-md {
+    background: var(--blue-light);
+    color: var(--blue);
+  }
+
+  .tag.type-lg {
+    background: var(--orange-light);
+    color: var(--orange);
+  }
+
+  /* ── Usage Section (Key differentiator) ── */
+  .card-usage {
+    background: linear-gradient(135deg, #f8f7ff 0%, #f0f4ff 100%);
+    border: 1px solid rgba(108,92,231,0.1);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+  }
+
+  .card-usage-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  .card-usage-body {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.8;
+  }
+
+  .card-usage-body strong {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .card-usage-body em {
+    font-style: normal;
+    background: linear-gradient(180deg, transparent 60%, rgba(108,92,231,0.15) 60%);
+    font-weight: 500;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    padding: 32px 0 0;
+    border-top: 1px solid var(--border-light);
+    margin-top: 40px;
+  }
+
+  .footer-text {
+    font-size: 13px;
+    color: var(--text-tertiary);
+  }
+
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .footer a:hover { text-decoration: underline; }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .wrapper { padding: 16px 16px 48px; }
+    .header h1 { font-size: 24px; }
+    .card { padding: 20px; }
+    .header-stats { flex-wrap: wrap; gap: 16px; }
+    .card-top { flex-direction: column; gap: 8px; }
+  }
+
+  /* ── Trends Box (Weekly) ── */
+  .trends-box { background: linear-gradient(135deg, #fff8f0 0%, #fff3e0 100%); border: 1px solid rgba(225,112,85,0.15); border-radius: var(--radius); padding: 28px; margin-bottom: 40px; }
+  .trends-box h3 { font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; }
+  .trend-item { padding: 12px 0; border-bottom: 1px solid rgba(225,112,85,0.08); }
+  .trend-item:last-child { border-bottom: none; }
+  .trend-item .trend-label { font-size: 13px; font-weight: 700; color: var(--orange); margin-bottom: 4px; }
+  .trend-item .trend-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+  <div class="badge">📡 AI Agent 周报 · 第41周</div>
+  <h1>本周 AI Agent 圈 · 精选 31 条</h1>
+  <div class="date">2026年10月5日 - 10月11日</div>
+  <div class="header-stats">
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">🔥 热门更新</div></div>
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">✨ 新发现</div></div>
+    <div class="stat"><div class="stat-num">11</div><div class="stat-label">📝 值得留意</div></div>
+  </div>
+</div>
+<div class="trends-box">
+  <h3>📈 本周趋势洞察</h3>
+  <div class="trend-item">
+    <div class="trend-label">1. 「逆向与复刻」成为本周最热新赛道</div>
+    <div class="trend-desc">REA 三天破 8 万星登顶 Trending、3.6 万星网站克隆模板持续走红、HN 热帖用 5000 亿 token 让 agent 反编译 FPS 游戏，GitHub 上还冒出用 Rust 净室复刻 Adobe 全家桶的 craft 系列仓库——「把闭源产品变成可复用知识」正从猎奇变成工程化能力，版权与合规争议同步升温。</div>
+  </div>
+  <div class="trend-item">
+    <div class="trend-label">2. Agent 商务基础设施一周三连落地</div>
+    <div class="trend-desc">Sierra/Meta 牵头 Personal Agent Protocol（Shopify/Stripe/Walmart 创始伙伴）、TikTok 发布 Agentic Commerce（Buy Direct 一键结账+对话导购）、亚马逊 Seller Assistant 上线 Workflows 自动化——距 Black Friday 只剩一个多月，Q4 将成为「第一场由 AI agent 参与导购与下单的假日季」，商品数据的结构化质量就是新的流量入口。</div>
+  </div>
+  <div class="trend-item">
+    <div class="trend-label">3. 单位智能价格战开打：判断与生成全面「白菜价」</div>
+    <div class="trend-desc">Haiku 5.5 与 GPT-6 Luna 同锚 $0.10/$0.50、Decisions API 只收输入费、Grok Imagine Video Lite $0.02/秒（比 Sora 2 Pro 便宜 86%）、Nano Banana 2.1 降价一半至 $0.0336/千张、Vidu Q4 首发价 $0.014/秒——低价高频模型让 agent 工作流里「多模型编排」从优化项变成默认架构。</div>
+  </div>
+</div>
+<div class="section-header">
+  <span class="section-icon hot">🔥</span>
+  <span class="section-title">热门 · 重大更新</span>
+  <span class="section-count">10</span>
+</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/morluto/rea" target="_blank">REA</a>
+      <span class="card-stars">3天破8万星</span>
+    </div>
+    <div class="card-tagline">本周 GitHub 现象级事件：逆向工程 MCP 服务器 REA 三天从 0 冲到近 8 万星登顶 Trending——把 Hopper/Ghidra/IDA Pro 打包成 41 个检测工具+14 套调查工作流，让 Claude Code/Codex/Cursor 对着任意闭源软件（二进制/网站/安卓 APK/固件）回答「这个功能怎么实现的」并附证据与置信度，v4.1 新增 APK 反编译与固件分析</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>看到竞品或老应用里一个好功能想复刻，没有源码；逆向工程工具链门槛极高，学 IDA/Ghidra 没几周下不来<br>
+        <strong>怎么用：</strong>npx rea-agents setup 一条命令注册进 Claude Code/Codex/Cursor 等 agent；把目标丢给它用自然语言提问，agent 调用反编译/追踪/观察工具完成调查，输出带证据、置信度与已知局限的报告，还能照着写一份适配你技术栈的实现——仅用于你有权分析的软件<br>
+        <strong>适合谁：</strong>做竞品研究与兼容层的产品团队、安全研究员、需要理解遗留二进制的工程师
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.anthropic.com/news" target="_blank">Claude Haiku 5.5</a>
+      <span class="card-stars">10月7日发布</span>
+    </div>
+    <div class="card-tagline">Anthropic 补齐 Claude 5.5 家族最后一块拼图：最快最便宜的小模型 $0.10/$0.50 每百万 token、1M 上下文、OSWorld 72.4% 刷新 GUI 操控纪录，思考强度三档可调；官方推荐当 Claude Code 里的打工人子代理，成本约为 Sonnet 5.5 的 1/20，缓存命中输入仅 $0.01</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>agent 工作流里高频小任务（单测生成/文件索引/路由判断）用旗舰模型烧钱，用旧小模型又不够聪明<br>
+        <strong>怎么用：</strong>API/Bedrock/Vertex AI 全面可用；在 Claude Code 多代理编排里把 worker 角色切到 Haiku 5.5 跑批量任务；注意超过 10 万输入 token 后单价×5，长上下文任务换 GPT-6 Luna<br>
+        <strong>适合谁：</strong>做 agent 编排的开发者、需要海量低成本调用的工程团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://openai.com" target="_blank">ChatGPT 智能界面（GPT-6 全量）</a>
+      <span class="card-stars">10月7日全量</span>
+    </div>
+    <div class="card-tagline">OpenAI 把 ChatGPT 升级成「会生成界面的对话」：智能界面在回答里直接流出可交互的滑杆、筛选胶囊、实时图表、地图和小计算器，比价、调参、正则调试不用来回问答；GPT-6 同步向全球全部用户推送（免费版走 Luna，付费版走 Sol）</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>纯文本对话做不了「比较和调整」类任务，让 AI 算三档折扣的利润要么贴表格要么反复追问<br>
+        <strong>怎么用：</strong>直接在 ChatGPT 里问比较类/计算类/筛选类问题即可触发交互组件；免费与 Go 用户经 GPT-6 Luna 渲染，Plus/Pro/企业版走 GPT-6 Sol 支持多状态复杂组件<br>
+        <strong>适合谁：</strong>所有 ChatGPT 用户；研究 AI 交互形态的产品经理与设计师建议实测
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://cloud.google.com/blog" target="_blank">Gemini Agent for Work</a>
+      <span class="card-stars">企业预览</span>
+    </div>
+    <div class="card-tagline">谷歌在 Gemini at Work 大会发布通用办公 agent：给目标不给步骤，它在 Gmail/Docs/Sheets/Drive 全家桶+微软 365+Slack 里自主规划执行；「数字同事」可以有自己的邮箱、日历和通讯录身份，任务能后台跑几天，Smart Routing 还能按任务把活派给 Claude</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>办公自动化至今是「一个场景一个工具」，跨应用的复杂任务（筹备会议→汇总材料→发通知）没有 agent 能端到端接住<br>
+        <strong>怎么用：</strong>企业管理员申请企业预览；用目标语言下达任务；可创建带独立 Workspace 账号的 coworker agent，同事像对待真人一样拉群、@它、看它以自己名义回复；全程加密身份+审计日志+Agent Gateway 管控<br>
+        <strong>适合谁：</strong>Google Workspace 企业、想把跨应用流程交给数字员工的运营与 IT 团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.sierra.ai" target="_blank">Personal Agent Protocol</a>
+      <span class="card-stars">10月6日发起</span>
+    </div>
+    <div class="card-tagline">Sierra 联合 Meta 发起开放标准 PAP，定义个人 AI 助手如何向商家「亮明身份+出示授权」：OAuth 三档权限（访客/只读/可写），商家自选对接路径（网站/MCP·OpenAPI/自家 agent），v0.1 规范月底发布——Shopify/Stripe/Walmart/Genesys 为创始伙伴；Meta Muse 已登顶 App Store，亚马逊和 Delta 则在封杀 AI 购物代理</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>个人 agent 替用户购物下单时，商家要么把它当爬虫一律拦截（流失订单），要么裸奔放行（安全失控）<br>
+        <strong>怎么用：</strong>商家侧等月底 v0.1 规范与参考实现；Shopify 商家先检查后台 Agentic 渠道开关（默认全开）；独立站提前把商品目录、价格、库存、退换政策结构化，AI 渠道来了才能被正确读取<br>
+        <strong>适合谁：</strong>独立站与 DTC 卖家、跨境电商技术团队、做 AI 购物助手赛道的开发者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.techrepublic.com/article/news-tiktok-ai-shopping-assistant-one-click-checkout/" target="_blank">TikTok Agentic Commerce</a>
+      <span class="card-stars">10月5日发布</span>
+    </div>
+    <div class="card-tagline">TikTok 在 Advertising Week 发布 Agentic Commerce 三件套：Shopping Assistant 对话式导购（记得住你的偏好，尺码/物流/库存随问随答）、Buy Direct 让用户在 For You 信息流里一键结账、Agentic Leads 用 DM 里的对话 agent 收集并筛选线索；Salesforce/Shopify/Shoplazza/Stripe 已接入，测试资格制开放</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>用户刷到商品视频后被跳转出 App 的购物流程劝退，商品咨询靠人工客服接不住秒回<br>
+        <strong>怎么用：</strong>广告主申请测试资格；重点不是配置工具而是把商品信息结构化补齐（尺码区间/材质规格/库存状态/物流时效），AI 助手只能答对卖家喂给它的数据；欧洲暂未开放<br>
+        <strong>适合谁：</strong>TikTok Shop 卖家、在 TikTok 投流的跨境品牌
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://mistral.ai" target="_blank">Mistral Large 4</a>
+      <span class="card-stars">10月6日API预览</span>
+    </div>
+    <div class="card-tagline">欧洲大模型对开源阵营的反攻：Mistral Large 4 以 1.05 万亿总参/约 50B 激活的 MoE 架构开放 API 预览，1M 上下文原生多模态，Cybench 93 分；促销价 $0.68/$2.09 每百万 token，完整开放权重承诺 10 月底放出——正与欧洲安全部门联合红队测试</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>想自托管前沿开源权重模型，此前基本只有中国系可选；欧美企业还要数据主权和合规叙事<br>
+        <strong>怎么用：</strong>Mistral Studio 现在就能试 API；等月底权重开源后本地部署；其自主补漏、二进制分析等高阶能力接入生产前注意安全边界<br>
+        <strong>适合谁：</strong>欧洲企业、自建推理基础设施的团队、关注开源权重格局的开发者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://reflection.ai" target="_blank">Reflection Beam</a>
+      <span class="card-stars">10月5日发布</span>
+    </div>
+    <div class="card-tagline">被称为「美国版 DeepSeek」的 Reflection AI 发布 501B 稀疏 MoE 模型 Beam：每 token 仅激活 23B，SWE-bench Verified 80.9%、GPQA 90.5%，长程工程与 agent 工具调用特化，承诺本月内以 Apache 2.0 开放权重；周末更曝出英伟达正洽谈收购或增持——开源模型阵营的资本暗战开打</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>开源权重赛道需要一个美国选项来对标 DeepSeek；算力厂商也在抢着锁定头部开放模型团队<br>
+        <strong>怎么用：</strong>关注 waitlist 与权重落地节奏；企业可提前评估其 23B 激活架构带来的低推理成本；英伟达若入主，开源承诺的兑现方式值得盯紧<br>
+        <strong>适合谁：</strong>自托管阵营、关注模型格局与算力产业整合的投资人和产品人
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank">Nano Banana 2.1</a>
+      <span class="card-stars">10月6日GA</span>
+    </div>
+    <div class="card-tagline">谷歌图像旗舰 Nano Banana 2.1 正式版：生成价砍到 $0.0336/千张（约上一代一半），新增 4K 分辨率与最宽 1:8 的全景比例，多轮对话角色一致性与文本渲染显著增强；Gemini App/AI Mode/Flow/Stitch/Google Ads 全线接入，旧模型 10 月 29 日退役</div>
+    <div class="card-tags">
+      <span class="tag scene">🖥️ 内容生产</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>批量生成营销图和电商素材时按张计费太贵，宽幅/全景等版式支持不足<br>
+        <strong>怎么用：</strong>Gemini App 或 AI Studio 直接用；API 切换到 gemini-nano-banana-2.1；正在用 gemini-3.1-flash-image 的尽快迁移<br>
+        <strong>适合谁：</strong>批量做商品图/营销素材的内容团队、Google 生态开发者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.prnewswire.com/news-releases/vidu-launches-q4-preview-making-flagship-ai-video-creation-accessible-to-everyone-302901266.html" target="_blank">Vidu Q4 Preview</a>
+      <span class="card-stars">10月7日发布</span>
+    </div>
+    <div class="card-tagline">生数科技新一代视频旗舰首个预览版：人物表演、镜头语言、复杂视效全面升级，最多吃 15 张参考图+3 段参考音频做精准控制，直接输出 2K/4K；首发价 $0.014/秒，网页端与 API 同步开放，美图系应用已宣布接入</div>
+    <div class="card-tags">
+      <span class="tag scene">🖥️ 内容生产</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>国产视频模型在人物演技和运镜上与旗舰存在代差，多素材参考控制不够灵活<br>
+        <strong>怎么用：</strong>Vidu 网页版或 API 上传参考图（角色/场景/商品）与参考音频（配乐/音色），生成 2K/4K 成片；首发优惠期尽快囤额度<br>
+        <strong>适合谁：</strong>短视频与广告素材批量生产团队、MCN 与电商内容团队
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-header">
+  <span class="section-icon new">✨</span>
+  <span class="section-title">新发现</span>
+  <span class="section-count">10</span>
+</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/docker/docker-agent" target="_blank">Docker Agent</a>
+      <span class="card-stars">4.2k星</span>
+    </div>
+    <div class="card-tagline">Docker 官方开源 docker-agent：像管理容器一样管理 agent——agent.yaml 声明模型/指令/工具，docker agent run 直接跑，push 到 OCI 镜像仓库就能分发；MCP 原生+内置 think/todo/memory 工具，RAG 检索四件套齐全，支持 OpenAI/Claude/Gemini/Bedrock/xAI 及本地 Model Runner，Docker Desktop 4.63 起自带</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>agent 定义散落在各家框架的代码里，没法像基础设施一样版本化、审计和分发<br>
+        <strong>怎么用：</strong>升级 Docker Desktop 到 4.63+；写 agent.yaml 声明 agent 与工具集，挂 MCP server；docker agent run 起飞，或 docker agent pull 直接拉别人发布的 agent；多 agent 团队自动委派<br>
+        <strong>适合谁：</strong>用 Docker 的工程团队、想统一管理公司 agent 资产的平台工程
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.soket.ai" target="_blank">Soket LOOP</a>
+      <span class="card-stars">10月8日开源</span>
+    </div>
+    <div class="card-tagline">印度 IndiaAI 计划背书的 Soket AI 开源长周期 agent harness LOOP：专为「跑几周而不是几分钟」的任务设计，跨会话维持上下文、工具调用与任务协调，支持接入你自己的模型和基础设施；开发者预览已放出 Linux/macOS/Windows 版，瞄准银行、网安、国防等需要完全自控的机构</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>主流 harness 都假设任务分钟级完成；连续跑数周的任务缺乏上下文持久化与自主协调机制，机构还要求模型与数据完全自持<br>
+        <strong>怎么用：</strong>拉取 GitHub developer preview 部署；接入自有模型与基础设施；适合长周期监控、合规巡检、持续研究类任务<br>
+        <strong>适合谁：</strong>有数据主权要求的机构、跑长周期自动化任务的工程团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://platform.openai.com" target="_blank">OpenAI Decisions API 公测</a>
+      <span class="card-stars">10月7日公测</span>
+    </div>
+    <div class="card-tagline">Decisions API 转正进入公测：GPT-6 Luna 驱动的「判断专用端点」，输出类型化裁决，速度约为通用对话 API 的 10 倍，且只收输入 token 费用（$0.10/1M），缓存读取与输出全免费——继 Cloudflare Clef、亚马逊 Strands Decider 之后，决策模型正式成为大厂标配品类</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>agent 流水线里成千上万次分类/审核/路由调用用通用对话 API，又贵又慢又难解析<br>
+        <strong>怎么用：</strong>platform.openai.com 开通公测；把 A/B 判定、内容审核、意图路由迁移到 Decisions API，输入状态+候选项，直接拿结构化裁决消费<br>
+        <strong>适合谁：</strong>做 agent 编排、内容审核、实验判定的工程团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/thedotmack/claude-mem" target="_blank">claude-mem</a>
+      <span class="card-stars">9.9万星</span>
+    </div>
+    <div class="card-tagline">9.9 万星、本周再涨 3.6k 的 agent 记忆方案 claude-mem：在会话开始/工具调用/结束时自动采集一切，AI 压缩后存进向量库，下次会话自动注入相关记忆——agent 完全无需配合改动，Claude Code/Codex/Gemini/Copilot 等全支持，被称为「事件溯源+LLM 投影」的 2026 范式</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>每个 CLI agent 会话都从零开始，反复解释同一套架构、踩过的坑和配置约定<br>
+        <strong>怎么用：</strong>npm 安装后 hook 自动挂载；会话结束自动压缩归档，新会话按相关性注入历史上下文；支持检索工具随时查询记忆库<br>
+        <strong>适合谁：</strong>重度使用 Claude Code/Codex 等 CLI agent 的开发者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://irisgo.ai" target="_blank">IrisGo for Solopreneurs</a>
+      <span class="card-stars">PH日榜第1</span>
+    </div>
+    <div class="card-tagline">Product Hunt 周中日榜第一（539 票）：AI 操作系统 IrisGo 靠「演示一次」学工作流——Watch &amp; Learn 录下你的操作转成可复用自动化，换参数即可重放；每天主动推简报、分诊邮件、盯待办，Siri 创始工程师团队出品，吴恩达 AI Fund 领投，公测期免费</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>单人创业者被邮件分诊、日程整理、会议纪要这类重复操作吃掉大量时间，传统 RPA 配置门槛又太高<br>
+        <strong>怎么用：</strong>装客户端（Win 11/Apple Silicon）；像给同事演示一样做一遍操作，确认生成的自动化流程；此后后台自动跑，敏感数据默认留在本地<br>
+        <strong>适合谁：</strong>自由职业者、单人创业者、不想写代码的个人效率玩家
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/rociiu/talorys" target="_blank">Talorys</a>
+      <span class="card-stars">HN 289分</span>
+    </div>
+    <div class="card-tagline">本周 HN 最高分热帖（289 分 133 评）：开源个人 AI agent Talorys 完全跑在 Cloudflare 免费套餐上——Pages+Workers+Durable Objects+Workers AI 组合，零服务器零数据库零第三方账号，npx create-talorys 一条命令部署进你自己的 CF 账号；免费额度边界与数据主权是评论区焦点</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧 小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>自托管个人 agent 通常要买服务器、管数据库，维护成本劝退个人用户<br>
+        <strong>怎么用：</strong>npx create-talorys@latest 一键部署到自己的 Cloudflare 账号；用 Web UI 对话、设提醒、生成项目摘要；简单提醒不消耗模型额度，用量面板可见<br>
+        <strong>适合谁：</strong>想零成本拥有自托管个人助理的开发者、Cloudflare 生态用户
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/Leonxlnx/taste-skill" target="_blank">taste-skill</a>
+      <span class="card-stars">9.4万星</span>
+    </div>
+    <div class="card-tagline">给编码 agent 装「审美」的最火社区技能（9.4 万星）：13 个 SKILL.md 一条命令装进 Claude Code/Cursor/Codex，专治 AI 前端的「模板脸」——无聊的默认字体、千篇一律的紫蓝渐变、卡片套卡片的 slop 输出；与上期 Impeccable 构成「反 Slop」双雄，本周持续日增上千星</div>
+    <div class="card-tags">
+      <span class="tag scene">🖥️ 内容生产</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>AI 生成前端在不确定时滑向训练语料的平均值，产出一眼假的通用页面<br>
+        <strong>怎么用：</strong>一条命令安装 design-taste-frontend；写落地页/作品集/改版时由 skill 接管默认审美决策，引导但不锁死视觉风格<br>
+        <strong>适合谁：</strong>没有设计师的独立开发者、要快速出高质感页面的初创团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/JCodesMore/ai-website-cloner-template" target="_blank">ai-website-cloner-template</a>
+      <span class="card-stars">3.6万星</span>
+    </div>
+    <div class="card-tagline">3.6 万星的「一条命令克隆网站」模板仓库：GitHub 点 Use this template 即可让 AI 编码 agent 复刻任意网站，v0.6.1 强化规则式保真度，把克隆过程改造成可审计的固定流程而非让 agent 自由发挥——本周 GitHub 热榜常客，与 REA 一起构成「逆向复刻」双热度</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>看中一个网站想快速复刻成自己的起点，让 AI 凭截图重写总是差之千里<br>
+        <strong>怎么用：</strong>仓库点 Use this template；按 README 跑克隆命令，agent 按规则流程抓取结构/样式/资产生成可改代码库；仅用于学习与有权复刻的场景<br>
+        <strong>适合谁：</strong>前端开发者、做落地页快速起稿的营销团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/xpzouying/xiaohongshu-mcp" target="_blank">xiaohongshu-mcp</a>
+      <span class="card-stars">1.6万星</span>
+    </div>
+    <div class="card-tagline">1.6 万星的小红书自动化 MCP：Go 服务端驱动无头浏览器模拟真人操作，AI 助手直接发图文/视频笔记、定时发布（1 小时到 14 天）、搜笔记、看详情、评论点赞收藏一条龙——小红书没有开放 API，这层浏览器自动化补齐了中文社媒的 agent 发行缺口，生态已出 200 行代码轻量版</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>AI 把笔记写好了，发布还是要人肉登录搬运；小红书矩阵运营全靠手工<br>
+        <strong>怎么用：</strong>MCP 配置接入 Claude Code/Cursor；扫码登录一次；用自然语言指挥发布/搜索/互动，支持定时发布与原创声明；控制操作频率防风控<br>
+        <strong>适合谁：</strong>做小红书矩阵的创作者、个人品牌与私域运营者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://aicrier.com/post/d4h8dn55poprglxvpole" target="_blank">GenPage 3.0</a>
+      <span class="card-stars">PH日榜第2</span>
+    </div>
+    <div class="card-tagline">Product Hunt 周中日榜第二（506 票）：GenPage 3.0 用 agent 学你的品牌，给每个广告、每个关键词、每个目标客户自动生成专属落地页并持续 A/B 迭代到 Autopilot；3.0 新增 Concierge、双向 MCP 支持与 Google Ads 集成——把「一个官网接待所有流量」变成「千人千面页面」</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>高价买来的广告流量全部落到同一个首页，意图错配浪费预算；为每个投放单元手工做页面根本不现实<br>
+        <strong>怎么用：</strong>接入品牌素材与投放账户；GenPage 按流量意图批量生成个性化页面并自动测试优化；通过 MCP 让自家 agent 直接调度页面生产<br>
+        <strong>适合谁：</strong>投放团队、做 ABM 的 B2B 市场、独立站增长负责人
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-header">
+  <span class="section-icon note">📝</span>
+  <span class="section-title">值得留意</span>
+  <span class="section-count">11</span>
+</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://business.x.com" target="_blank">X Lift</a>
+      <span class="card-stars">10月6日发布</span>
+    </div>
+    <div class="card-tagline">X 官方在 Advertising Week 发布 AI 投放工具 X Lift：粘贴商家主页 URL 即自动生成多版广告创意，几步内完成审核发布——平台下场做「一键广告」，与 TikTok 的 Agentic Commerce 同场竞速</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>中小商家在 X 投广告不会写素材也没预算外包，创意生产是投放最大瓶颈<br>
+        <strong>怎么用：</strong>X 广告后台粘贴落地页 URL；选择生成的创意组合，人工过目后发布投放<br>
+        <strong>适合谁：</strong>在 X 上投流的品牌方、跨境电商营销团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://sellercentral.amazon.com" target="_blank">Amazon 假日 AI 工具包更新</a>
+      <span class="card-stars">Accelerate落地</span>
+    </div>
+    <div class="card-tagline">亚马逊把 Accelerate 大会新品落进卖家后台：Seller Assistant 新增 Workflows 自动化——描述任务+设护栏，让 AI 盯补货和调价（转化率跌破 2% 自动砍广告预算），每步操作留痕；Amazon Quick 送 12 个月 Plus 订阅（12 月 31 日前主账号可领）；Selling Partner 插件接入 Claude 测试版</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>假日季补货、调价、盯广告全是高频人肉操作，卖家最缺的就是时间<br>
+        <strong>怎么用：</strong>Seller Central 里用自然语言给 Seller Assistant 下任务并设护栏，选择只建议或直接执行；主账号尽快领 Quick Plus；把店铺数据接进 Claude 帮你改 listing 文案<br>
+        <strong>适合谁：</strong>亚马逊品牌卖家、跨境运营团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://x.ai" target="_blank">Grok Imagine Video 1.5 Lite</a>
+      <span class="card-stars">10月6日上线</span>
+    </div>
+    <div class="card-tagline">xAI 把视频生成打到白菜价：Grok Imagine Video 1.5 Lite 上线公开 API，图生视频含原生音频只要 $0.02/秒，比 Sora 2 Pro（约 $0.15/秒）便宜 86%——明确瞄准开发者、学生和初创，把 AI 视频从奢侈品打成日用品</div>
+    <div class="card-tags">
+      <span class="tag scene">🖥️ 内容生产</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>API 集成 AI 视频生成太贵，独立开发者和学生团队烧不起<br>
+        <strong>怎么用：</strong>xAI API 直接调用；输入图片生成带音频的短视频，按秒计费；适合短视频工具类产品做成本兜底<br>
+        <strong>适合谁：</strong>独立开发者、预算敏感的内容工具团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://bfl.ai" target="_blank">FLUX 3 Image</a>
+      <span class="card-stars">10月8日发布</span>
+    </div>
+    <div class="card-tagline">Black Forest Labs 发布 FLUX 3 Image：4K 输出、边界盒布局控制、最多 10 张参考图组合——多参考图编排和版式控制是本轮升级重点，继续巩固开源生态里最能打的图像模型地位</div>
+    <div class="card-tags">
+      <span class="tag scene">🖥️ 内容生产</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>多参考图融合与版式控制一直是图像生成的软肋，营销排版类需求搞不定<br>
+        <strong>怎么用：</strong>BFL 官方渠道调用；用边界盒指定元素位置，喂多张参考图控制风格与主体；关注开源权重后续发布<br>
+        <strong>适合谁：</strong>ComfyUI 工作流用户、营销素材与设计团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://synthid.google" target="_blank">SynthID Detector</a>
+      <span class="card-stars">10月全球上线</span>
+    </div>
+    <div class="card-tagline">谷歌 SynthID 检测门户全球上线：免费开放给媒体、研究者和普通用户上传图片/视频/音频，检测是否含 SynthID 隐形水印——AI 内容溯源第一次有了面向大众的公共验证入口；注意只覆盖谷歌系生成内容，其他厂商内容测不出</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>AI 生成内容泛滥，编辑部和平台需要工具分辨素材是否机器生成<br>
+        <strong>怎么用：</strong>打开检测门户上传文件即可验证；用 AI 做商品图/素材的团队建议保留生成工具的溯源记录备查<br>
+        <strong>适合谁：</strong>内容审核与合规团队、媒体编辑、平台治理岗
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.perplexity.ai" target="_blank">Perplexity Computer Automations</a>
+      <span class="card-stars">本周上架</span>
+    </div>
+    <div class="card-tagline">Perplexity Computer 上线 Automations：agent 可按时间表或 Slack/Gmail/Outlook/Linear/GitHub 事件触发自动开工，且跨次运行保留记忆——从「随叫随到的搜索 agent」升级成「在后台值班的数字员工」；同期还发布了跑在 DGX Spark 上的便携版 Computer</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>agent 不会主动干活，每件事都要人肉触发，跑完就忘<br>
+        <strong>怎么用：</strong>Perplexity Computer 里创建 Automation：设定定时或事件触发器，指定任务与记忆范围，到点自动执行并汇报<br>
+        <strong>适合谁：</strong>Perplexity Pro/Max 用户、想用 agent 跑监控与例行业务的团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://huggingface.co/Qwen" target="_blank">Qwen-Image-2.1-Turbo</a>
+      <span class="card-stars">10月9日发布</span>
+    </div>
+    <div class="card-tagline">Qwen 团队放出 Qwen-Image-2.1-Turbo：8 步去噪即可出图的 7B 加速版检查点，生成与编辑兼顾——本地跑 Qwen 系图像模型的等待时间直接砍到零头，ComfyUI 工作流把采样步数调到 8 即可</div>
+    <div class="card-tags">
+      <span class="tag scene">🖥️ 内容生产</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>本地部署开源图像模型出图慢，批量迭代效率低<br>
+        <strong>怎么用：</strong>HuggingFace 下载 Turbo 权重替换原版；ComfyUI 采样步数设 8；效果与速度自行权衡调参<br>
+        <strong>适合谁：</strong>本地部署图像生成的工作室、ComfyUI 玩家
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/ai-forever" target="_blank">Kandinsky 6.0</a>
+      <span class="card-stars">10月6日开源</span>
+    </div>
+    <div class="card-tagline">Kandinsky 6.0 开源权重发布（MIT）：29B Pro 与 3B Lite 两档文生视频模型，直接生成带 44kHz 同步音频的 5 秒短片，支持最高 Full HD 超分，ComfyUI 工作流同步上线——开源生态里「一条模型出声画」的拼图补齐</div>
+    <div class="card-tags">
+      <span class="tag scene">🖥️ 内容生产</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>开源视频模型基本是「哑片」，音画同步还要另一条管线拼装<br>
+        <strong>怎么用：</strong>下载权重接 ComfyUI；3B Lite 消费级显卡可跑，29B Pro 追求质量；出片后走超分工序拉到 Full HD<br>
+        <strong>适合谁：</strong>本地部署视频生成的创作者、ComfyUI 工作流玩家
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.anthropic.com" target="_blank">Claude 封号潮与新使用政策</a>
+      <span class="card-stars">半年1140万</span>
+    </div>
+    <div class="card-tagline">Anthropic 报告外流引爆讨论：2026 上半年封禁 1140 万个 Claude 账号，39.8 万次申诉仅 4.2 万成功（成功率约一成）；11 月 12 日起实施新使用政策，明确禁止对模型实施极端残忍行为——一边是治理收紧，一边是生态绑定越来越深，账号风险成了生产环境的真实变量</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-lg">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>主力工作流深度绑定 Claude 后，一次误封就可能让团队断炊，申诉成功率又低<br>
+        <strong>怎么用：</strong>企业侧建议配置多云通道（Bedrock/Vertex）与备用账号；申诉前备好合规使用证据；11 月 12 日前 review 团队使用姿势，新政策主要针对极端行为，正常使用不受影响<br>
+        <strong>适合谁：</strong>Claude 重度用户、拿 Claude 做生产的团队负责人
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/KKKKhazix/AIHOT" target="_blank">AIHOT</a>
+      <span class="card-stars">7千星</span>
+    </div>
+    <div class="card-tagline">7 千星的「自己找热点、自己写日报」网站框架：agent 每天自动追热点、写行业日报、发布成站，把信源和精选标准换成你自己的，它就是你的行业情报站——和这份周报干的是同一件事，开源给你抄作业</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧 小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>想给自己所在的行业做一个持续更新的热点站，没有编辑团队根本养不起<br>
+        <strong>怎么用：</strong>clone 仓库改信源与筛选标准；部署后每天自动抓取、撰写并发布日报页面；适合叠加自有观点形成半自动内容站<br>
+        <strong>适合谁：</strong>独立开发者、行业社群主理人、垂直媒体创业者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/Ebony-Vinyl/dsh-our-free-model" target="_blank">dsh-our-free-model</a>
+      <span class="card-stars">单日+1.3k星</span>
+    </div>
+    <div class="card-tagline">DeepSeek Harness 社区插件 dsh-our-free-model 单日涨超 1.3k 星：宣称装上即免登录免 API Key 直用 DeepSeek V4.1 Flash、Kimi K3 等前沿模型——零门槛尝鲜前沿模型的新姿势，但共享额度的来源与稳定性需自担风险，生产用途不建议依赖</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-sm">🔧 小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        <strong>解决什么问题：</strong>想白嫖前沿模型试水，注册、绑卡、买额度一套流程太劝退<br>
+        <strong>怎么用：</strong>dsh 内安装该插件即可调用；适合个人尝鲜与原型验证；注意第三方共享额度的服务条款与隐私风险<br>
+        <strong>适合谁：</strong>DeepSeek Harness 用户、零预算的个人开发者
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-text">由 <a href="https://nortoncheng.github.io/agent-daily/" target="_blank">快乐小白菜</a> 自动生成 · AI Agent 周报 · 2026-10-12</div>
+</div>
+
+</div>
+</body>
+</html>

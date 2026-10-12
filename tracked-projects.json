@@ -1456,12 +1456,477 @@
       "added": "2026-09-28",
       "last_update": "2026-09-28",
       "status": "活跃"
+    },
+    "openai-dots": {
+      "name": "OpenAI dots",
+      "url": "https://openai.com/index/introducing-dots/",
+      "category": "信息与工作流提效·常驻Agent",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "DevDay 2026"
+    },
+    "paperclip": {
+      "name": "Paperclip",
+      "url": "https://github.com/paperclipai/paperclip",
+      "category": "信息与工作流提效·Agent管理平台",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "9.1万星"
+    },
+    "hindsight-agent-memory": {
+      "name": "Hindsight",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "category": "信息与工作流提效·Agent记忆",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "4.5万星"
+    },
+    "claude-5-5-series": {
+      "name": "Claude Opus 5.5 / Sonnet 5.5",
+      "url": "https://www.anthropic.com/news",
+      "category": "信息与工作流提效·大模型动态",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "9月28日发布"
+    },
+    "deepseek-harness-v02": {
+      "name": "DeepSeek Harness v0.2",
+      "url": "https://github.com/deepseek-ai/deepseek-harness",
+      "category": "信息与工作流提效·Agent Harness",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "v0.2 国庆发布"
+    },
+    "shopify-canvas": {
+      "name": "Shopify Canvas",
+      "url": "https://www.shopify.com/news",
+      "category": "跨境电商·AI建站",
+      "scene": "🛒 跨境电商",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "10月1日上线"
+    },
+    "eleven-v4": {
+      "name": "Eleven v4",
+      "url": "https://elevenlabs.io/blog/eleven-v4",
+      "category": "内容生产·语音合成",
+      "scene": "🖥️ 内容生产",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "9月28日发布"
+    },
+    "mirofish": {
+      "name": "MiroFish",
+      "url": "https://github.com/666ghj/MiroFish",
+      "category": "信息与工作流提效·群体模拟",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "7.5万星"
+    },
+    "hark-personal-agent": {
+      "name": "Hark",
+      "url": "https://www.figure.ai",
+      "category": "信息与工作流提效·个人Agent",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "本周上线"
+    },
+    "opendots": {
+      "name": "OpenDots",
+      "url": "https://github.com/CopilotKit/OpenDots",
+      "category": "信息与工作流提效·开源AI同事",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "1.4千星"
+    },
+    "hypit": {
+      "name": "Hypit",
+      "url": "https://github.com/hypit-ai/hypit",
+      "category": "内容生产·爆款视频复刻",
+      "scene": "🖥️ 内容生产",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "1.8万星"
+    },
+    "impeccable": {
+      "name": "Impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "category": "内容生产·AI设计语言",
+      "scene": "🖥️ 内容生产",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "7万星"
+    },
+    "video-shotcraft": {
+      "name": "video-shotcraft",
+      "url": "https://github.com/Vincentwei1021/video-shotcraft",
+      "category": "内容生产·产品视频skill",
+      "scene": "🖥️ 内容生产",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "1万星"
+    },
+    "deeplumen-agentic-page": {
+      "name": "DeepLumen Agentic Page",
+      "url": "https://36kr.com/p/4004240967258249",
+      "category": "跨境电商·AI购物入口",
+      "scene": "🛒 跨境电商",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "2000+商家接入"
+    },
+    "turbodiffusion": {
+      "name": "TurboDiffusion",
+      "url": "https://turbodiffusion.video/",
+      "category": "内容生产·视频生成加速",
+      "scene": "🖥️ 内容生产",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "980+星"
+    },
+    "cloudflare-clef": {
+      "name": "Cloudflare Clef",
+      "url": "https://blog.cloudflare.com/clef-decision-models/",
+      "category": "信息与工作流提效·决策模型",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "10月1日开源"
+    },
+    "openoutreach": {
+      "name": "OpenOutreach",
+      "url": "https://github.com/eracle/OpenOutreach",
+      "category": "发行·LinkedIn获客",
+      "scene": "📤 发行",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "3.1千星"
+    },
+    "postiz-agentic-scheduling": {
+      "name": "Postiz Agentic Scheduling",
+      "url": "https://github.com/gitroomhq/postiz-app",
+      "category": "发行·社媒排程",
+      "scene": "📤 发行",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "开源可自托管"
+    },
+    "amazon-ads-agent": {
+      "name": "Amazon Ads Agent",
+      "url": "https://advertising.amazon.com",
+      "category": "跨境电商·广告智能体",
+      "scene": "🛒 跨境电商",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "unBoxed 2026"
+    },
+    "tiktok-shop-ai-image-policy": {
+      "name": "TikTok Shop AI 图片新规",
+      "url": "https://seller.tiktokshops.com",
+      "category": "跨境电商·平台政策",
+      "scene": "🛒 跨境电商",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "9月24日更新"
+    },
+    "akool-tiktok-shop": {
+      "name": "Akool × TikTok Shop",
+      "url": "https://main.akool.com/blog-posts/tiktok-shop-is-now-live-on-akool-one-click-ai-videos-for-sellers",
+      "category": "跨境电商·商品视频",
+      "scene": "🛒 跨境电商",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "9月29日上线"
+    },
+    "gemini-4-argon": {
+      "name": "Gemini 4 Argon",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-4-argon/",
+      "category": "信息与工作流提效·大模型动态",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "10月1日发布"
+    },
+    "instinct-funding": {
+      "name": "Instinct 10亿美元C轮",
+      "url": "https://techlensmedia.com/news/ai-funding-this-week-capital-builds-the-full-stack-from-agents-to-physical-ai",
+      "category": "信息与工作流提效·融资动态",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "估值100亿美元"
+    },
+    "openai-safety-wh-house": {
+      "name": "OpenAI 安全风波与白宫协议",
+      "url": "https://openai.com",
+      "category": "信息与工作流提效·大厂动态",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "10月3日"
+    },
+    "perplexity-photon": {
+      "name": "Perplexity Photon",
+      "url": "https://www.marktechpost.com/2026/09/30/perplexity-introduces-photon-a-rust-based-retrieval-engine-that-cuts-p99-latency/",
+      "category": "信息与工作流提效·检索引擎",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "9月30日"
+    },
+    "cogvideox-v15": {
+      "name": "CogVideoX v1.5",
+      "url": "https://github.com/THUDM/CogVideoX",
+      "category": "内容生产·开源视频模型",
+      "scene": "🖥️ 内容生产",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "开源新模型"
+    },
+    "anthropic-frontier-academy": {
+      "name": "Anthropic 前沿学院",
+      "url": "https://www.anthropic.com",
+      "category": "信息与工作流提效·人才培养",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-05",
+      "stars_at_first": "1亿美元投入"
+    },
+    "rea-reverse-engineering": {
+      "name": "REA",
+      "url": "https://github.com/morluto/rea",
+      "category": "信息与工作流提效·逆向工程MCP",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "3天破8万星"
+    },
+    "claude-haiku-5-5": {
+      "name": "Claude Haiku 5.5",
+      "url": "https://www.anthropic.com/news",
+      "category": "信息与工作流提效·小模型API",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月7日发布"
+    },
+    "chatgpt-intelligent-ui": {
+      "name": "ChatGPT 智能界面（GPT-6 全量）",
+      "url": "https://openai.com",
+      "category": "信息与工作流提效·产品交互",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月7日全量"
+    },
+    "gemini-agent-for-work": {
+      "name": "Gemini Agent for Work",
+      "url": "https://cloud.google.com/blog",
+      "category": "信息与工作流提效·办公Agent",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "企业预览"
+    },
+    "personal-agent-protocol": {
+      "name": "Personal Agent Protocol",
+      "url": "https://www.sierra.ai",
+      "category": "跨境电商·Agent商务协议",
+      "scene": "🛒 跨境电商",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月6日发起"
+    },
+    "tiktok-agentic-commerce": {
+      "name": "TikTok Agentic Commerce",
+      "url": "https://www.techrepublic.com/article/news-tiktok-ai-shopping-assistant-one-click-checkout/",
+      "category": "跨境电商·对话式购物",
+      "scene": "🛒 跨境电商",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月5日发布"
+    },
+    "mistral-large-4": {
+      "name": "Mistral Large 4",
+      "url": "https://mistral.ai",
+      "category": "信息与工作流提效·开源权重旗舰",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月6日API预览"
+    },
+    "reflection-beam": {
+      "name": "Reflection Beam",
+      "url": "https://reflection.ai",
+      "category": "信息与工作流提效·开源权重模型",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月5日发布"
+    },
+    "nano-banana-2-1": {
+      "name": "Nano Banana 2.1",
+      "url": "https://ai.google.dev/gemini-api/docs/changelog",
+      "category": "内容生产·图像模型",
+      "scene": "🖥️ 内容生产",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月6日GA"
+    },
+    "vidu-q4-preview": {
+      "name": "Vidu Q4 Preview",
+      "url": "https://www.prnewswire.com/news-releases/vidu-launches-q4-preview-making-flagship-ai-video-creation-accessible-to-everyone-302901266.html",
+      "category": "内容生产·视频模型",
+      "scene": "🖥️ 内容生产",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月7日发布"
+    },
+    "docker-agent": {
+      "name": "Docker Agent",
+      "url": "https://github.com/docker/docker-agent",
+      "category": "信息与工作流提效·Agent运行时",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "4.2k星"
+    },
+    "soket-loop": {
+      "name": "Soket LOOP",
+      "url": "https://www.soket.ai",
+      "category": "信息与工作流提效·长周期Harness",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月8日开源"
+    },
+    "openai-decisions-api": {
+      "name": "OpenAI Decisions API 公测",
+      "url": "https://platform.openai.com",
+      "category": "信息与工作流提效·决策模型",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月7日公测"
+    },
+    "claude-mem": {
+      "name": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "category": "信息与工作流提效·Agent记忆",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "9.9万星"
+    },
+    "irisgo": {
+      "name": "IrisGo for Solopreneurs",
+      "url": "https://irisgo.ai",
+      "category": "信息与工作流提效·桌面自动化",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "PH日榜第1"
+    },
+    "talorys": {
+      "name": "Talorys",
+      "url": "https://github.com/rociiu/talorys",
+      "category": "信息与工作流提效·自托管Agent",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "HN 289分"
+    },
+    "taste-skill": {
+      "name": "taste-skill",
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "category": "内容生产·AI审美技能",
+      "scene": "🖥️ 内容生产",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "9.4万星"
+    },
+    "ai-website-cloner-template": {
+      "name": "ai-website-cloner-template",
+      "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+      "category": "信息与工作流提效·网站克隆",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "3.6万星"
+    },
+    "xiaohongshu-mcp": {
+      "name": "xiaohongshu-mcp",
+      "url": "https://github.com/xpzouying/xiaohongshu-mcp",
+      "category": "发行·小红书自动化",
+      "scene": "📤 发行",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "1.6万星"
+    },
+    "genpage-3": {
+      "name": "GenPage 3.0",
+      "url": "https://aicrier.com/post/d4h8dn55poprglxvpole",
+      "category": "发行·个性化落地页",
+      "scene": "📤 发行",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "PH日榜第2"
+    },
+    "x-lift": {
+      "name": "X Lift",
+      "url": "https://business.x.com",
+      "category": "发行·AI广告生成",
+      "scene": "📤 发行",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月6日发布"
+    },
+    "amazon-holiday-ai-tools": {
+      "name": "Amazon 假日 AI 工具包更新",
+      "url": "https://sellercentral.amazon.com",
+      "category": "跨境电商·假日自动化",
+      "scene": "🛒 跨境电商",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "Accelerate落地"
+    },
+    "grok-imagine-video-lite": {
+      "name": "Grok Imagine Video 1.5 Lite",
+      "url": "https://x.ai",
+      "category": "内容生产·低价视频API",
+      "scene": "🖥️ 内容生产",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月6日上线"
+    },
+    "flux-3-image": {
+      "name": "FLUX 3 Image",
+      "url": "https://bfl.ai",
+      "category": "内容生产·图像模型",
+      "scene": "🖥️ 内容生产",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月8日发布"
+    },
+    "synthid-detector": {
+      "name": "SynthID Detector",
+      "url": "https://synthid.google",
+      "category": "发行·内容溯源",
+      "scene": "📤 发行",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月全球上线"
+    },
+    "perplexity-automations": {
+      "name": "Perplexity Computer Automations",
+      "url": "https://www.perplexity.ai",
+      "category": "信息与工作流提效·自动化触发",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "本周上架"
+    },
+    "qwen-image-2-1-turbo": {
+      "name": "Qwen-Image-2.1-Turbo",
+      "url": "https://huggingface.co/Qwen",
+      "category": "内容生产·图像加速模型",
+      "scene": "🖥️ 内容生产",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月9日发布"
+    },
+    "kandinsky-6": {
+      "name": "Kandinsky 6.0",
+      "url": "https://github.com/ai-forever",
+      "category": "内容生产·开源视频模型",
+      "scene": "🖥️ 内容生产",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "10月6日开源"
+    },
+    "claude-ban-wave-policy": {
+      "name": "Claude 封号潮与新使用政策",
+      "url": "https://www.anthropic.com",
+      "category": "信息与工作流提效·平台政策",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "半年1140万"
+    },
+    "aihot": {
+      "name": "AIHOT",
+      "url": "https://github.com/KKKKhazix/AIHOT",
+      "category": "信息与工作流提效·自动化日报站",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "7千星"
+    },
+    "dsh-free-model": {
+      "name": "dsh-our-free-model",
+      "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+      "category": "信息与工作流提效·免费模型插件",
+      "scene": "📡 信息与工作流提效",
+      "first_seen": "2026-10-12",
+      "stars_at_first": "单日+1.3k星"
     }
   },
   "meta": {
     "created": "2026-06-02",
     "description": "已收录项目追踪清单，用于去重和更新检测",
-    "total_projects": 184,
-    "last_updated": "2026-09-21"
-  }
+    "total_projects": 270,
+    "last_updated": "2026-10-12 weekly"
+  },
+  "last_updated": "2026-10-12 weekly"
 }
