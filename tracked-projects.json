@@ -1293,7 +1293,7 @@
       "category": "内容生产·视频编辑器",
       "url": "https://github.com/OpenCut-app/OpenCut",
       "added": "2026-09-28",
-      "last_update": "2026-09-28",
+      "last_update": "2026-10-19",
       "status": "活跃"
     },
     "aitoearn": {
@@ -1479,7 +1479,8 @@
       "category": "信息与工作流提效·Agent记忆",
       "scene": "📡 信息与工作流提效",
       "first_seen": "2026-10-05",
-      "stars_at_first": "4.5万星"
+      "stars_at_first": "4.5万星",
+      "last_update": "2026-10-19"
     },
     "claude-5-5-series": {
       "name": "Claude Opus 5.5 / Sonnet 5.5",
@@ -1679,7 +1680,8 @@
       "category": "信息与工作流提效·逆向工程MCP",
       "scene": "📡 信息与工作流提效",
       "first_seen": "2026-10-12",
-      "stars_at_first": "3天破8万星"
+      "stars_at_first": "3天破8万星",
+      "last_update": "2026-10-19"
     },
     "claude-haiku-5-5": {
       "name": "Claude Haiku 5.5",
@@ -1695,7 +1697,8 @@
       "category": "信息与工作流提效·产品交互",
       "scene": "📡 信息与工作流提效",
       "first_seen": "2026-10-12",
-      "stars_at_first": "10月7日全量"
+      "stars_at_first": "10月7日全量",
+      "last_update": "2026-10-19"
     },
     "gemini-agent-for-work": {
       "name": "Gemini Agent for Work",
@@ -1920,13 +1923,205 @@
       "scene": "📡 信息与工作流提效",
       "first_seen": "2026-10-12",
       "stars_at_first": "单日+1.3k星"
+    },
+    "artcraft-suite": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "30.9k",
+      "last_update": "2026-10-19",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/storytold/artcraft"
+    },
+    "moli-browser": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "18.5k",
+      "last_update": "2026-10-19",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/lexmount/moli"
+    },
+    "agent-reach": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "99k",
+      "last_update": "2026-10-19",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/Panniantong/Agent-Reach"
+    },
+    "voicestudio": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "62k",
+      "last_update": "2026-10-19",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/debpalash/VoiceStudio"
+    },
+    "diagram-design": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "53.7k",
+      "last_update": "2026-10-19",
+      "category": "🖥️ 内容生产",
+      "level": "🔧 小而美",
+      "url": "https://github.com/cathrynlavery/diagram-design"
+    },
+    "supoclip": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "PH上榜",
+      "last_update": "2026-10-19",
+      "category": "🖥️ 内容生产",
+      "level": "🔧 小而美",
+      "url": "https://www.producthunt.com/posts/supoclip"
+    },
+    "openmaic": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "40.6k",
+      "last_update": "2026-10-19",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/THU-MAIC/OpenMAIC"
+    },
+    "open-seo": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "23.5k",
+      "last_update": "2026-10-19",
+      "category": "📤 发行",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/every-app/open-seo"
+    },
+    "social-media-research-skills": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "技能包",
+      "last_update": "2026-10-19",
+      "category": "📤 发行",
+      "level": "🔧 小而美",
+      "url": "https://github.com/ScrapeCreators/social-media-research-skills"
+    },
+    "ai-job-search": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "50.6k",
+      "last_update": "2026-10-19",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧 小而美",
+      "url": "https://github.com/MadsLorentzen/ai-job-search"
+    },
+    "qwen-office-ecom": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "邀测",
+      "last_update": "2026-10-19",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://www.alibaba.com/news"
+    },
+    "hy-memory-2": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "新开源",
+      "last_update": "2026-10-19",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/Tencent-Hunyuan/Hy-Memory"
+    },
+    "opengcua": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "新开源",
+      "last_update": "2026-10-19",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/Tongyi-MAI/OpenGCUA"
+    },
+    "framer-ai-agents": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "新发布",
+      "last_update": "2026-10-19",
+      "category": "🖥️ 内容生产",
+      "level": "🏢大型平台",
+      "url": "https://www.framer.com"
+    },
+    "magpie-switcher": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "13.2k",
+      "last_update": "2026-10-19",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧 小而美",
+      "url": "https://github.com/yetone/magpie"
+    },
+    "cli-anything": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "53.5k",
+      "last_update": "2026-10-19",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/HKUDS/CLI-Anything"
+    },
+    "cc-switch": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "144.7k",
+      "last_update": "2026-10-19",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧 小而美",
+      "url": "https://github.com/farion1231/cc-switch"
+    },
+    "ai-affiliate-video-risk": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "行业信号",
+      "last_update": "2026-10-19",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://www.channelnewsasia.com"
+    },
+    "notion-context-agents": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "新功能",
+      "last_update": "2026-10-19",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://www.notion.com"
+    },
+    "qwengo": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "官宣邀测",
+      "last_update": "2026-10-19",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://www.tongyi.com"
+    },
+    "shopify-agent-catalog": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "10亿商品开放",
+      "last_update": "2026-10-19",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://www.shopify.com/news"
+    },
+    "tiktok-affiliate-agent": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "美区上线",
+      "last_update": "2026-10-19",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://seller.tiktokshops.com"
+    },
+    "wyn-global-account": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "广交会发布",
+      "last_update": "2026-10-19",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://www.worldfirst.com"
+    },
+    "deepseek-1017-search-api": {
+      "first_seen": "2026-10-19",
+      "stars_at_first": "新版本",
+      "last_update": "2026-10-19",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://api-docs.deepseek.com"
     }
   },
   "meta": {
     "created": "2026-06-02",
     "description": "已收录项目追踪清单，用于去重和更新检测",
-    "total_projects": 270,
-    "last_updated": "2026-10-12 weekly"
+    "total_projects": 294,
+    "last_updated": "2026-10-19 weekly"
   },
-  "last_updated": "2026-10-12 weekly"
+  "last_updated": "2026-10-19 weekly"
 }
