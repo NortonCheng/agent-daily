@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent 周报 | 2026-10-26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --surface-hover: #f5f5f7;
+    --border: #e8e8ed;
+    --border-light: #f0f0f2;
+    --text-primary: #1a1a2e;
+    --text-secondary: #6b6b80;
+    --text-tertiary: #9b9bb0;
+    --accent: #6c5ce7;
+    --accent-light: rgba(108,92,231,0.08);
+    --accent-medium: rgba(108,92,231,0.15);
+    --green: #00b894;
+    --green-light: rgba(0,184,148,0.08);
+    --orange: #e17055;
+    --orange-light: rgba(225,112,85,0.08);
+    --blue: #0984e3;
+    --blue-light: rgba(9,132,227,0.08);
+    --red: #d63031;
+    --pink: #fd79a8;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --radius-xs: 6px;
+  }
+
+  body {
+    font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
+  }
+
+  /* ── Header ── */
+  .header {
+    padding: 48px 0 40px;
+  }
+
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .header .date {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
+  .header-stats {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .header-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .header-stat .num {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .header-stat .label {
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  /* ── Section ── */
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .section-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .section-icon.hot { background: var(--orange-light); }
+  .section-icon.new { background: var(--blue-light); }
+  .section-icon.note { background: var(--green-light); }
+
+  .section-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .section-count {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    font-weight: 500;
+    margin-left: auto;
+  }
+
+  /* ── Project Card ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 16px;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: #dddde5;
+    transform: translateY(-1px);
+  }
+
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 10px;
+  }
+
+  .card-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .card-name:hover { color: var(--accent); }
+
+  .card-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--orange);
+    background: var(--orange-light);
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .card-tagline {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .card-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  .tag.scene {
+    background: var(--green-light);
+    color: var(--green);
+  }
+
+  .tag.type-sm {
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+
+  .tag.type-md {
+    background: var(--blue-light);
+    color: var(--blue);
+  }
+
+  .tag.type-lg {
+    background: var(--orange-light);
+    color: var(--orange);
+  }
+
+  /* ── Usage Section (Key differentiator) ── */
+  .card-usage {
+    background: linear-gradient(135deg, #f8f7ff 0%, #f0f4ff 100%);
+    border: 1px solid rgba(108,92,231,0.1);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+  }
+
+  .card-usage-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  .card-usage-body {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.8;
+  }
+
+  .card-usage-body strong {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .card-usage-body em {
+    font-style: normal;
+    background: linear-gradient(180deg, transparent 60%, rgba(108,92,231,0.15) 60%);
+    font-weight: 500;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    padding: 32px 0 0;
+    border-top: 1px solid var(--border-light);
+    margin-top: 40px;
+  }
+
+  .footer-text {
+    font-size: 13px;
+    color: var(--text-tertiary);
+  }
+
+  .footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .footer a:hover { text-decoration: underline; }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .wrapper { padding: 16px 16px 48px; }
+    .header h1 { font-size: 24px; }
+    .card { padding: 20px; }
+    .header-stats { flex-wrap: wrap; gap: 16px; }
+    .card-top { flex-direction: column; gap: 8px; }
+  }
+
+  /* ── Trends Box (Weekly) ── */
+  .trends-box { background: linear-gradient(135deg, #fff8f0 0%, #fff3e0 100%); border: 1px solid rgba(225,112,85,0.15); border-radius: var(--radius); padding: 28px; margin-bottom: 40px; }
+  .trends-box h3 { font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; }
+  .trend-item { padding: 12px 0; border-bottom: 1px solid rgba(225,112,85,0.08); }
+  .trend-item:last-child { border-bottom: none; }
+  .trend-item .trend-label { font-size: 13px; font-weight: 700; color: var(--orange); margin-bottom: 4px; }
+  .trend-item .trend-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+  <div class="badge">📡 AI Agent 周报 · 第43周</div>
+  <h1>本周 AI Agent 圈 · 精选 31 条</h1>
+  <div class="date">2026年10月20日 - 10月26日</div>
+  <div class="header-stats">
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">🔥 热门更新</div></div>
+    <div class="stat"><div class="stat-num">12</div><div class="stat-label">✨ 新发现</div></div>
+    <div class="stat"><div class="stat-num">9</div><div class="stat-label">📝 值得留意</div></div>
+  </div>
+</div>
+<div class="trends-box">
+  <h3>📈 本周趋势洞察</h3>
+  <div class="trend-item">
+    <div class="trend-label">1. 个人智能体大战进入「主动性」下半场</div>
+    <div class="trend-desc">Anthropic 以 Claude Duet 入局（Opus 5.5+6000 连接器+独立虚拟机持续执行），与 Meta Muse、OpenAI Dots 正面会师；设计垂类的 Lovart Arti 也长出跨项目记忆与定时主动干活的能力。焦点已从「能不能执行」转向「能不能主动发现待办并长期在线」，新皮层周报直言：这一拨产品的核心关键词就是主动性。</div>
+  </div>
+  <div class="trend-item">
+    <div class="trend-label">2. Agent 基础设施成为资本与标准的双重主战场</div>
+    <div class="trend-desc">Daytona 以 10 亿美元估值拿下 Agent Cloud 第一笔独角兽融资，NVIDIA OpenShell 参考架构+ServiceNow Arc 让安全执行层企业级落地，阿里 OpenSandbox 与 Anthropic Agent Skills 标准先后进入 AAIF——「agent 住在哪、谁来看守」从工程问题升级为资本与行业标准之争，沙箱与技能正在复制 MCP 的标准化路径。</div>
+  </div>
+  <div class="trend-item">
+    <div class="trend-label">3. Agentic commerce 攻防白热化，首批真实数据出炉</div>
+    <div class="trend-desc">Walmart/Sam’s Club 立规矩迎接 agent 购物，Amazon 继续封锁 Muse 却向卖家递出假日 AI 套件；Meta 财报给出 Muse 六周 1000 万用户、客单价超 200 美元的首份成绩单，The Verge 实测又曝出 agent 用保留机制霸占孤品库存的规则漏洞——渠道、规则与风控正围绕 agent 购物快速成形，假日季将是第一场硬仗。</div>
+  </div>
+</div>
+<div class="section-header">
+  <span class="section-icon hot">🔥</span>
+  <span class="section-title">热门 · 重大更新</span>
+  <span class="section-count">10</span>
+</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.anthropic.com" target="_blank">Claude Duet</a>
+      <span class="card-stars">10月21日发布</span>
+    </div>
+    <div class="card-tagline">Anthropic 10月21日推出个人 AI 智能体 Claude Duet：基于 Claude Opus 5.5，连接邮件、日历、银行与企业系统，无需指令主动发现待办并持续执行，可调用 Claude Marketplace 超 6000 个连接器与插件，用户关机后仍在独立虚拟机里继续干活——iOS/Android/网页三端齐发，首批向美国 Pro/Max 用户开放研究预览，正面突袭 Meta Muse 与 OpenAI Dots</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：个人助手只会被动应答，不会主动发现该干的事，关掉电脑任务就断<br>
+        怎么用：美国 Pro/Max 用户申请研究预览候补，授权连接邮件/日历/企业应用后，Duet 主动汇总信息、推送每日简报、委托后持续执行并在完成或需审阅时通知<br>
+        适合谁：职场专业人士、小企业主、关注个人智能体大战的从业者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.theverge.com" target="_blank">Walmart 开放智能体购物</a>
+      <span class="card-stars">10月22日开放</span>
+    </div>
+    <div class="card-tagline">Walmart 10月22日正式邀请 AI 智能体代用户购物，Sam’s Club 同步支持，并立下明确规矩：智能体不得超出用户意图、不得更改支付方式、只能访问完成任务所需的信息——与封锁 Muse 的 Amazon 形成鲜明对照，零售巨头的 agent 政策分化进一步显形</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：AI 购物 agent 能不能进店、按什么规矩进店，决定下一代购物流量入口的归属<br>
+        怎么用：用户委托 AI agent 在 Walmart/Sam’s Club 比价与下单，平台按意图范围、支付方式不可变、最小信息访问三条边界校验 agent 行为<br>
+        适合谁：美国市场电商从业者、关注 agentic commerce 的跨境卖家与平台研究者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://investor.fb.com" target="_blank">Muse 首份成绩单</a>
+      <span class="card-stars">10月21日财报</span>
+    </div>
+    <div class="card-tagline">Meta Q3 财报披露 Muse 上线六周成绩单：美加用户突破 1000 万，活跃用户占比 25%，通过 Muse 购物下单的平均客单价超 200 美元；扎克伯格同时给出按交易抽佣的商业模式——个人智能体第一次拿出大规模真实交易数据，Meta 预计 AI 业务明年开始贡献增量收入</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：个人 agent 到底能不能带来真实交易，市场一直缺数据<br>
+        怎么用：消费者经 Muse 导购下单；卖家与品牌应关注商品结构化数据能否被 agent 准确读取，以争取 agent 渠道流量与推荐位<br>
+        适合谁：跨境卖家、品牌方、评估 agentic commerce 投入产出的决策者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.daytona.io" target="_blank">Daytona Agent Cloud</a>
+      <span class="card-stars">B轮6000万美元</span>
+    </div>
+    <div class="card-tagline">给每个 agent 一台电脑的 Daytona 完成 6000 万美元 B 轮、估值 10 亿美元：专做 agent 沙箱算力——毫秒级启动、带状态暂停、fork 并行副本、任务结束即销毁，是唯一同时提供 Linux/Windows/macOS/GPU 沙箱的平台；天使名单集齐 Stripe 与 Shopify 创始人等顶级 operator，1 月以来收入涨约 25 倍，Writer 单月在其上开了 30 万个沙箱</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：agent 上生产需要隔离、状态、清理等执行基础设施，自建费时，把凭证直接给 agent 又危险<br>
+        怎么用：单一 API 开通沙箱，agent 在里面跑代码/用 Git/开浏览器，支持暂停快照与 fork 并行试错，n8n、Meta、Anthropic 等均已接入<br>
+        适合谁：在生产环境跑多 agent 工作流的团队、构建 agent 产品的平台方
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/NVIDIA/OpenShell" target="_blank">NVIDIA OpenShell + ServiceNow Arc</a>
+      <span class="card-stars">GTC柏林发布</span>
+    </div>
+    <div class="card-tagline">上期收录的 OpenShell 本周两大进展：NVIDIA 在 GTC 柏林发布即刻可用的 OpenShell 参考架构（默认视 agent 为不可信，用网关/监督模块/沙箱/策略审查器层层隔离），Vera CPU 在 agent 工作负载下性能达 x86 两倍；ServiceNow 长任务自主智能体 Arc 同步 GA，执行与安全交由 OpenShell——CoreWeave 上新架构沙箱启动快 3 倍，单机架并行 1.1 万个 agent 环境</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：agent 执行缺统一的安全隔离底座，各家自建标准不一<br>
+        怎么用：按 OpenShell 参考架构部署，agent 进程默认进沙箱并过策略审查；企业可直接启用 ServiceNow 之上开箱即用的 Arc<br>
+        适合谁：企业 IT 与平台团队、agent 安全架构师
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/alibaba/OpenSandbox" target="_blank">智能体标准进 AAIF</a>
+      <span class="card-stars">AAIF收录</span>
+    </div>
+    <div class="card-tagline">一周两项标准动作：阿里 OpenSandbox 被国际 AI 开源组织 AAIF 正式收录，成为中国主导项目首次进入 AAIF 体系（内部日均创建沙箱百万级、582 名开发者共建）；Anthropic 同期把 Agent Skills 开放标准捐赠给 AAIF，已获 70+ 平台支持、约 2.8 亿次安装——继 MCP 之后，agent 沙箱与技能正在加速成为行业通行标准</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：agent 执行环境与技能格式各家实现不一，跨框架迁移成本高<br>
+        怎么用：基于 OpenSandbox 规范接入或自建运行时；按 Agent Skills 格式写一次技能，即可被 70+ 平台的 agent 复用<br>
+        适合谁：agent 平台开发者、建设内部 agent 基础设施的企业
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.notion.com" target="_blank">Notion Auto</a>
+      <span class="card-stars">本周上线</span>
+    </div>
+    <div class="card-tagline">Notion 重构版 Agent 上线：单个 agent 可连续运行数小时，Opus 5.5 与 Astra 以约低 90% 的成本接入，可直接挂接 ChatGPT 订阅，Notion MCP 全面翻新，新积分制覆盖全部 AI 用量——知识库里长出的长时任务 agent 正式开卖，先向新用户开放</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：Notion AI 此前难以承担跨小时级长任务，且各项 AI 功能计费分散<br>
+        怎么用：新用户开通后把长时任务（跨页面整理、调研、批量内容生成）交给 agent，可自带 ChatGPT 计划或用积分付费，经 MCP 与外部工具互通<br>
+        适合谁：Notion 重度用户、想把知识库变成 agent 工作底座的团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/cloudflare/security-audit-skill" target="_blank">Cloudflare security-audit-skill</a>
+      <span class="card-stars">38.7万星</span>
+    </div>
+    <div class="card-tagline">Cloudflare 的安全审计技能以 38.7 万星冲上 GitHub 周榜第二：把多阶段安全审计拆成发现与验证两个独立角色，产出经独立核验、机器可读的审计结论——agent 安全审计工程化的范本，正在成为 Claude Code/Codex 的标配技能</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：让 agent 找安全问题容易误报，结论没人敢直接采信<br>
+        怎么用：作为技能安装进 coding agent，发起多阶段审计，发现与验证分角色执行，输出机器可读报告供流水线消费<br>
+        适合谁：需要代码安全审计的团队、DevSecOps 工程师
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.moonshotai.com" target="_blank">Kimi K3.1 Pro</a>
+      <span class="card-stars">HN 852分</span>
+    </div>
+    <div class="card-tagline">月之暗面发布开源权重模型 Kimi K3.1 Pro：K3.1 系列首发，100 万 token 上下文，编码、3D 建模与金融研究能力显著增强，同步推出 Highspeed 高速版，HN 上 852 分 494 评热议——开源阵营的长上下文火力再升级</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：长上下文任务（大代码库、金融研究、超长文档）依赖闭源模型，成本与可控性受限<br>
+        怎么用：下载开源权重私有化部署或调用 API，对延迟敏感的场景选 Highspeed 版本<br>
+        适合谁：需要长上下文推理的开发者、想压模型成本的团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.lovart.ai" target="_blank">Lovart 2.0 + Arti</a>
+      <span class="card-stars">10月19日上线</span>
+    </div>
+    <div class="card-tagline">AI 设计工具 Lovart 10月19日上线 2.0 并推出个人设计 agent Arti：跨项目记忆、主动参与协作流程、定时执行任务、主动检查设计画布——设计工具从听令执行进化为主动搭活的设计同事，与本周个人智能体的主动性浪潮同频</div>
+    <div class="card-tags">
+      <span class="tag scene">🖥️ 内容生产</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：设计 AI 只会单次执行指令，换个项目又要从头交代风格与背景<br>
+        怎么用：在 Lovart 中与 Arti 长期协作，它记住项目风格与偏好，可定时执行设计任务并主动跟进画布进展<br>
+        适合谁：设计师、电商视觉团队、品牌内容创作者
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-header">
+  <span class="section-icon new">✨</span>
+  <span class="section-title">新发现</span>
+  <span class="section-count">12</span>
+</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/tashfeenahmed/freellmapi" target="_blank">FreeLLMAPI</a>
+      <span class="card-stars">3.9万星</span>
+    </div>
+    <div class="card-tagline">3.9 万星冲上月榜：把 34 家 LLM 供应商的免费额度聚合到一个 OpenAI 兼容的 /v1 端点后——635 个免费模型端点智能路由、限流自动故障转移、密钥加密存储，每月 74 亿 token 流经，个人实验与小型 agent 项目的模型自由</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：agent 实验烧模型费用，各家免费额度分散难管<br>
+        怎么用：自托管后把 agent 的 baseURL 指过去即可自动路由与故障转移，可再叠 cc-switch/magpie 等工具切换供应商<br>
+        适合谁：个人开发者、预算有限的小团队、做模型评测的实验者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/earthtojake/text-to-cad" target="_blank">text-to-cad</a>
+      <span class="card-stars">22.5k星</span>
+    </div>
+    <div class="card-tagline">22.5k 星的新物种：给 agent 装上 CAD 超能力——用自然语言生成参数化 3D 模型，让 coding agent 直接产出可制造的设计，从电商配件到产品原型，AI 设计第一次从图片走进工程图纸</div>
+    <div class="card-tags">
+      <span class="tag scene">🖥️ 内容生产</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：3D 建模依赖专业 CAD 技能，产品从想法到制造沟通成本高<br>
+        怎么用：接入 agent 工作流，用自然语言描述尺寸与结构即可生成 CAD 模型，导出后对接 3D 打印或 CNC<br>
+        适合谁：产品设计师、硬件团队、做定制配件的电商卖家
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/ruvnet/ruflo" target="_blank">Ruflo</a>
+      <span class="card-stars">7.8万星</span>
+    </div>
+    <div class="card-tagline">前身 Claude Flow 的 7.8 万星 agent 元 harness 本周冲进周榜第九（周增 3200 星）：给 Claude Code/Codex 加上百个专职 agent、蜂群协调、持久记忆与可视化驾驶舱，每个 agent 的成本与 token 可追踪、运行结果可回放对比，v3.56 连发中</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：复杂长任务需要多个 agent 分工并行，但组织、监督与成本核算全靠手工<br>
+        怎么用：npx ruflo init wizard 初始化，在 Claude Code 插件市场安装 ruflo-core，用驾驶舱查看工作流、成本并回放对比各次运行<br>
+        适合谁：Claude Code/Codex 重度用户、多 agent 编排实验者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/anomalyco/opencode" target="_blank">OpenCode 2</a>
+      <span class="card-stars">21.8万星</span>
+    </div>
+    <div class="card-tagline">21.8 万星的开源 coding agent 本周发布 OpenCode 2（v2.1.0）并冲上周榜第五：MIT 许可、不绑定任何供应商，75+ 模型可用 GitHub Copilot 或 ChatGPT 订阅直接登录，内置只读 plan 代理（动手前先征求许可），原生打通 GitHub Issues/PR 自动修复流——官方称月活开发者 1600 万</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：想用不绑定厂商与订阅体系的 coding agent，又要足够强的工程能力<br>
+        怎么用：brew install anomalyco/tap/opencode-v2，用现有订阅登录或自带 API Key；在 GitHub Issue 里 @opencode 即可自动调查、修复并开 PR<br>
+        适合谁：想完全掌控工具链的开发者、开源生态爱好者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/OpenBMB/VoxCPM" target="_blank">VoxCPM</a>
+      <span class="card-stars">4万星</span>
+    </div>
+    <div class="card-tagline">OpenBMB 的 4 万星开源 TTS 新贵上榜：不走 tokenizer，用端到端扩散自回归架构直接生成连续语音表示，支持多语种、创意音色设计与声音克隆——Apache-2.0 可商用，本地语音生产赛道继 VoiceStudio 后又一强援</div>
+    <div class="card-tags">
+      <span class="tag scene">🖥️ 内容生产</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：语音合成要么机械感重要么按量收费贵，敏感内容不想上云<br>
+        怎么用：PyTorch 本地部署，输入文本直接合成连续语音，可克隆指定音色或设计全新声音<br>
+        适合谁：视频与播客配音、有声书团队、多语种内容生产者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/TauricResearch/TradingAgents" target="_blank">TradingAgents</a>
+      <span class="card-stars">11.3万星</span>
+    </div>
+    <div class="card-tagline">11.3 万星的多智能体金融交易框架持续冲高：Tauric Research 开源的 Python 框架附 arXiv 论文，用分析师、研究员、交易员、风控等多角色 LLM 模拟交易公司分工辩论后出决策——金融决策工作流 agent 化的代表作</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：单模型做金融判断易片面，人类研究分工又贵又难复制<br>
+        怎么用：Python 部署，为各 LLM 分派分析师/研究员/交易员/风控角色，多角色辩论后输出交易建议，仅用于研究与模拟<br>
+        适合谁：量化研究者、金融工程学习者、多智能体架构实验者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.shoplazza.com" target="_blank">Athena by Shoplazza</a>
+      <span class="card-stars">PH 新品</span>
+    </div>
+    <div class="card-tagline">建站平台店匠（Shoplazza）在 Product Hunt 上线 Athena：整个电商技术栈的编排智能体——建站、商品目录、营销、履约由一个 agent 统筹协调，面向精简 DTC 团队；中国跨境建站厂商正式下场 agentic commerce</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：DTC 小团队在建站、商品、营销、发货多个后台之间来回切换，人少事多<br>
+        怎么用：在店匠平台启用 Athena，把店铺运营各环节交给编排 agent 统筹执行，人只做关键确认<br>
+        适合谁：独立站卖家、精益运营的跨境 DTC 团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/heqiangdiao-wq/AI-Cross-Border-Ecommerce-Agent-Toolkit" target="_blank">AI 跨境电商运营智能体工具箱</a>
+      <span class="card-stars">507星·周+450</span>
+    </div>
+    <div class="card-tagline">本周暴涨的国产开源工具箱：把跨境电商运营 SOP 拆成 7 个可复用的 AI Agent 工作流，每个都带 Prompt、模板与真实案例，一周新增 450+ 星——运营老师傅的经验第一次被打包成可直接安装的 agent 技能</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-md">🔧 小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：跨境运营 SOP 散落在文档和个人脑子里，无法直接交给 agent 执行<br>
+        怎么用：MIT 开源，把对应工作流的 Prompt 与模板装进 Claude Code 等 agent 按流程跑，再按自己品类改模板<br>
+        适合谁：跨境电商运营、想把团队 SOP 沉淀成自动化的小团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/xjli360/sealeap-ecommerce-skills" target="_blank">SeaLeap 跨境技能包</a>
+      <span class="card-stars">本周开源</span>
+    </div>
+    <div class="card-tagline">SeaLeap 开源两套跨境电商 agent 技能：sealeap-amazon-skills 覆盖亚马逊选品、Listing、广告、库存与运营；sealeap-ecommerce-skills 更收录 195 个 MIT 技能，横跨 Shopify、Etsy、eBay、TikTok Shop、Walmart、美客多、OZON、Wayfair——平台运营知识正在被拆成可安装的技能模块</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-md">🔧 小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：多平台运营知识分散，agent 不懂各平台的专业操作套路<br>
+        怎么用：在 Claude Code/Cursor 等支持 Skills 的 agent 中安装技能包，按平台工作流执行选品、listing 优化、广告策略与库存分析<br>
+        适合谁：多平台跨境卖家、代运营服务商
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.producthunt.com/products/verity-score" target="_blank">Verity Score</a>
+      <span class="card-stars">PH 新品</span>
+    </div>
+    <div class="card-tagline">Shopify 生态的 GEO 新工具登上 Product Hunt：监测 AI 助手们怎么描述你的店铺、给出修正建议并自动生成博客内容——当用户从搜索框转向问 AI，生成式引擎优化（GEO）正在成为独立站的新必修课</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-md">🔧 小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：AI 推荐你的店铺时说错卖点与参数，却没人监测、没人修<br>
+        怎么用：接入 Shopify 店铺，追踪品牌在 AI 回答中的表述，按建议修正结构化数据并生成 GEO 导向内容<br>
+        适合谁：独立站运营、SEO 向 GEO 转型的从业者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/benord-labs/frink" target="_blank">Frink</a>
+      <span class="card-stars">Show HN 新作</span>
+    </div>
+    <div class="card-tagline">Show HN 新作、MIT 开源的桌面应用，自称 agent 版 n8n：用一句话描述例行工作，Frink 生成可读可改的工作流——定时、webhook、Linear/Sentry 等事件皆可触发，步骤可以是 agent 回合、shell 命令、条件分支与人工审批；最多 4 个 agent 并行各占独立 worktree，所有待办汇进一个 Work Queue</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🔧 小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：agent 自动化需要编排、触发与人工审批节点，现有工具要么在云上要么太重<br>
+        怎么用：本地安装（macOS/Linux），自带 Claude Code/Codex 等登录，用自然语言描述流程、人工审阅步骤后运行，数据全存本地 SQLite<br>
+        适合谁：想要 local-first agent 自动化的开发者与小团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/anthropics/knowledge-work-plugins" target="_blank">Anthropic 知识工作插件集</a>
+      <span class="card-stars">3.1万星</span>
+    </div>
+    <div class="card-tagline">Anthropic 官方为 Claude Cowork 开源的知识工作插件集：3.1 万星、日增 500+、冲上月榜第八——文档、分析、调研、报告等办公场景插件官方打包，Cowork 生态正从程序员扩到全体办公室人群</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：非编程岗位难享 agent 红利，自己攒插件门槛高且质量参差<br>
+        怎么用：在 Claude Cowork 中安装官方插件集，直接调用文档处理、调研分析等现成技能，按官方范式扩展自己的插件<br>
+        适合谁：知识工作者、推动 agent 进办公室的团队
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-header">
+  <span class="section-icon note">📝</span>
+  <span class="section-title">值得留意</span>
+  <span class="section-count">9</span>
+</div>
+<div class="grid">
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.theverge.com" target="_blank">Verge 实测：agent 霸库存</a>
+      <span class="card-stars">10月22日实测</span>
+    </div>
+    <div class="card-tagline">The Verge 记者用 Meta Muse 在二手奢侈品平台 The RealReal 把 10 件孤品加进购物车，20 分钟保留期到期就再加购、循环占位一整天且不付款——为防黄牛设计的保留规则被 agent 合规地反复利用；The RealReal 表示继续欢迎 agent 但保有防护机制，agent 购物的规则滥用风险首次浮出水面</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：为人类设计的平台规则可能被 agent 用正常功能反复利用，产生库存占位等新问题<br>
+        怎么用：平台需针对 agent 增加频率限制与行为审计；卖家与运营应监测 agent 流量带来的库存与转化异常<br>
+        适合谁：电商平台规则设计者、关注 agent 流量风险的卖家与运营
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://platform.openai.com" target="_blank">OpenAI Decisions API 转正</a>
+      <span class="card-stars">正式GA</span>
+    </div>
+    <div class="card-tagline">上期收录的 Decisions API 本周正式 GA：GPT-6 Luna 提供有界应答，单请求最多 400 个问题并给出指定概率，输入仅 0.10 美元/百万 token——评测、标注、路由等结构化决策场景从此有了便宜的专用通道</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：分类、评分、路由等决策类任务用通用对话 API 又贵又难批量化<br>
+        怎么用：API 批量提交问题获取带概率的有界输出，嵌入评测管线、数据标注与工作流分支判断<br>
+        适合谁：AI 应用开发者、构建评测与标注流水线的团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/pingdotgg/t3code" target="_blank">t3code</a>
+      <span class="card-stars">2.9万星</span>
+    </div>
+    <div class="card-tagline">t3 创始人 Ping 团队的 TypeScript 系 coding agent t3code 以 2.9 万星冲上月榜：终端优先、轻快顺手——coding agent 的多线产品正把各语言生态逐一覆盖</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏗️中型框架</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：想要贴合 TS 生态习惯的轻量 coding agent<br>
+        怎么用：终端安装即用，接入现有模型供应商，与 t3 生态工具链协同<br>
+        适合谁：TypeScript/Next.js 开发者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/Louis-CFM/coucou" target="_blank">coucou</a>
+      <span class="card-stars">6.4k星</span>
+    </div>
+    <div class="card-tagline">Swift 新星（6.4k 星，新晋日榜）：常驻 Mac 刘海和 iPhone 的小伙伴，盯着你正在跑的 agent、随时瞄一眼它们在干嘛——并行跑 agent 成为常态后，看着 agent 本身成了新需求</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🔧 小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：多个 agent 并行跑，来回切窗口看进度太累，错过需要人工介入的时刻<br>
+        怎么用：安装后常驻刘海显示 agent 状态，iPhone 端同步查看，异常时提醒接管<br>
+        适合谁：并行跑多个 coding agent 的开发者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/onehumanbeing/esp32-iphone-agent" target="_blank">esp32-iphone-agent</a>
+      <span class="card-stars">3.8k星</span>
+    </div>
+    <div class="card-tagline">3.8k 星的硬核新玩法：用一块 7 美元的 ESP32 让 AI 模型操作真 iPhone——AirPlay 当眼睛、USB HID 当手，用物理外设路线绕开 iOS 自动化限制，给 agent 设备控制提供了低成本硬件思路</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🔧 小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：iOS 封闭难自动化，云手机贵且有延迟，真机控制一直是空白<br>
+        怎么用：ESP32 硬件接线 + AirPlay 采屏 + HID 注入操作，让模型像人一样操作真实 iPhone，仅用于自己有权控制的设备<br>
+        适合谁：移动端自动化实验者、硬件极客
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://github.com/zpoint/vibe-seller" target="_blank">vibe-seller</a>
+      <span class="card-stars">101星</span>
+    </div>
+    <div class="card-tagline">面向跨境卖家的开源 AI 自动化框架（Apache-2.0）：支持亚马逊、Noon、美客多、千牛等平台的浏览器自动化，紫鸟/Chrome 等浏览器可跑，任意大模型自由接入——跨境卖家的自动化底座又多一个国产开源选项</div>
+    <div class="card-tags">
+      <span class="tag scene">🛒 跨境电商</span>
+      <span class="tag type-md">🔧 小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：跨境卖家跨平台重复操作难统一自动化，商业工具贵且封闭<br>
+        怎么用：克隆部署，选择目标平台与浏览器，接入任意 LLM 下达任务指令，从上架到日常运营逐步托管<br>
+        适合谁：有动手能力的跨境小卖家、自动化爱好者
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.infoq.com" target="_blank">哈佛研究：瓶颈在评审</a>
+      <span class="card-stars">本周热议</span>
+    </div>
+    <div class="card-tagline">哈佛新研究戳中热点：AI 编程助手显著提高代码产量，但评审等下游瓶颈抵消了增益，生产力并未同步提升——AI 写得越多，人的评审越成卡点，与本周 Cloudflare 审计技能、agent 自验证工具的走红互为印证</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：团队引入 AI 编程后，预期效率收益被评审瓶颈吃掉，投入产出说不清<br>
+        怎么用：引入 AI 编程的同时配套评审自动化（agent 互审、安全验证技能、可验证正确性工具），重新平衡流水线各环节<br>
+        适合谁：工程管理者、正在规模化采用 AI 编程的团队
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://teckdeck.io/posts/ai-this-week-oct-19-25-openai-claude-on-google-cloud-agent-skills-to-aaif-decisions-api-ga" target="_blank">美国 DHS 禁用 DeepSeek</a>
+      <span class="card-stars">10月20日指令</span>
+    </div>
+    <div class="card-tagline">美国国土安全部 10月20日发布指令，禁止联邦民事机构使用 DeepSeek——模型层面的管制继续收紧；同周 OpenAI 模型与 Claude 先后进驻 Google Cloud，多云互驻与合规边界正在同步重塑</div>
+    <div class="card-tags">
+      <span class="tag scene">📡 信息与工作流提效</span>
+      <span class="tag type-md">🏢大型平台</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：出海与跨国业务的模型选型面临持续变化的合规风险，信息滞后即踩坑<br>
+        怎么用：涉及美国政企客户的项目核对所用模型政策；多云可用性格局下同步评估成本与迁移路径<br>
+        适合谁：跨境团队、企业架构与合规负责人
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-top">
+      <a class="card-name" href="https://www.producthunt.com/products/zeroclick" target="_blank">ZeroClick</a>
+      <span class="card-stars">PH 新品</span>
+    </div>
+    <div class="card-tagline">PH 新概念产品：把产品直接卖给 AI agent——为商品提供 agent 可读、可下单的接口，让 agent 代用户完成采购；配合 Shopify 开放目录、Walmart 迎 agent，面向 agent 这个新客户的基础设施正在成形</div>
+    <div class="card-tags">
+      <span class="tag scene">📤 发行</span>
+      <span class="tag type-md">🔧 小而美</span>
+    </div>
+    <div class="card-usage">
+      <div class="card-usage-header">📋 使用说明</div>
+      <div class="card-usage-body">
+        解决什么问题：agent 替人买东西时，缺少标准的商品接口、授权与结算流程<br>
+        怎么用：把商品接入 ZeroClick，向 agent 暴露结构化购买入口，跟踪 agent 渠道转化<br>
+        适合谁：SaaS 与数字产品开发者、想提前布局 agent 渠道的团队
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-text">由 <a href="https://nortoncheng.github.io/agent-daily/" target="_blank">快乐小白菜</a> 自动生成 · AI Agent 周报 · 2026-10-26</div>
+</div>
+</div>
+</body>
+</html>

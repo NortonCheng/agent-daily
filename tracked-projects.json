@@ -1175,7 +1175,8 @@
       "first_seen": "2026-09-21",
       "date": "2026-09-21",
       "source": "GitHub周榜-NVIDIA官方",
-      "note": "信息提效·Agent安全运行时 - 声明式YAML约束文件/网络/进程，凭据端点绑定注入"
+      "note": "信息提效·Agent安全运行时 - 声明式YAML约束文件/网络/进程，凭据端点绑定注入",
+      "last_update": "2026-10-26"
     },
     "pippit-ai": {
       "first_seen": "2026-09-21",
@@ -1778,7 +1779,8 @@
       "category": "信息与工作流提效·决策模型",
       "scene": "📡 信息与工作流提效",
       "first_seen": "2026-10-12",
-      "stars_at_first": "10月7日公测"
+      "stars_at_first": "10月7日公测",
+      "last_update": "2026-10-26"
     },
     "claude-mem": {
       "name": "claude-mem",
@@ -2115,13 +2117,245 @@
       "category": "📡 信息与工作流提效",
       "level": "🏢大型平台",
       "url": "https://api-docs.deepseek.com"
+    },
+    "claude-duet": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "新发布",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://www.anthropic.com"
+    },
+    "walmart-agentic-shopping": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "开放",
+      "last_update": "2026-10-26",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://www.theverge.com"
+    },
+    "muse-10m-milestone": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "1000万用户",
+      "last_update": "2026-10-26",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://investor.fb.com"
+    },
+    "daytona-agent-cloud": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "$1B估值",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://www.daytona.io"
+    },
+    "aaif-opensandbox": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "AAIF收录",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://github.com/alibaba/OpenSandbox"
+    },
+    "notion-auto": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "新上线",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://www.notion.com"
+    },
+    "cloudflare/security-audit-skill": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "387k",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/cloudflare/security-audit-skill"
+    },
+    "kimi-k31-pro": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "新发布",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://www.moonshotai.com"
+    },
+    "lovart-arti": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "2.0发布",
+      "last_update": "2026-10-26",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架",
+      "url": "https://www.lovart.ai"
+    },
+    "freellmapi": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "39.4k",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/tashfeenahmed/freellmapi"
+    },
+    "text-to-cad": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "22.5k",
+      "last_update": "2026-10-26",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/earthtojake/text-to-cad"
+    },
+    "ruvnet/ruflo": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "78.2k",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/ruvnet/ruflo"
+    },
+    "anomalyco/opencode": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "218k",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://github.com/anomalyco/opencode"
+    },
+    "voxcpm": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "40.4k",
+      "last_update": "2026-10-26",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/OpenBMB/VoxCPM"
+    },
+    "tradingagents": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "113.5k",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/TauricResearch/TradingAgents"
+    },
+    "athena-shoplazza": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-10-26",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://www.shoplazza.com"
+    },
+    "cross-border-agent-toolkit": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "507",
+      "last_update": "2026-10-26",
+      "category": "🛒 跨境电商",
+      "level": "🔧 小而美",
+      "url": "https://github.com/heqiangdiao-wq/AI-Cross-Border-Ecommerce-Agent-Toolkit"
+    },
+    "sealeap-skills": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "新开源",
+      "last_update": "2026-10-26",
+      "category": "🛒 跨境电商",
+      "level": "🔧 小而美",
+      "url": "https://github.com/xjli360/sealeap-ecommerce-skills"
+    },
+    "verity-score": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-10-26",
+      "category": "📤 发行",
+      "level": "🔧 小而美",
+      "url": "https://www.producthunt.com/products/verity-score"
+    },
+    "frink": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "Show HN",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧 小而美",
+      "url": "https://github.com/benord-labs/frink"
+    },
+    "anthropics/knowledge-work-plugins": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "31.4k",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/anthropics/knowledge-work-plugins"
+    },
+    "muse-realreal-reservation": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "实测报道",
+      "last_update": "2026-10-26",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://www.theverge.com"
+    },
+    "pingdotgg/t3code": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "29.4k",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/pingdotgg/t3code"
+    },
+    "coucou": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "6.4k",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧 小而美",
+      "url": "https://github.com/Louis-CFM/coucou"
+    },
+    "esp32-iphone-agent": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "3.8k",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧 小而美",
+      "url": "https://github.com/onehumanbeing/esp32-iphone-agent"
+    },
+    "vibe-seller": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "101",
+      "last_update": "2026-10-26",
+      "category": "🛒 跨境电商",
+      "level": "🔧 小而美",
+      "url": "https://github.com/zpoint/vibe-seller"
+    },
+    "harvard-ai-code-study": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "研究热议",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://www.infoq.com"
+    },
+    "dhs-deepseek-ban": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "政策指令",
+      "last_update": "2026-10-26",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://teckdeck.io"
+    },
+    "zeroclick": {
+      "first_seen": "2026-10-26",
+      "stars_at_first": "PH新品",
+      "last_update": "2026-10-26",
+      "category": "📤 发行",
+      "level": "🔧 小而美",
+      "url": "https://www.producthunt.com/products/zeroclick"
     }
   },
   "meta": {
     "created": "2026-06-02",
     "description": "已收录项目追踪清单，用于去重和更新检测",
-    "total_projects": 294,
-    "last_updated": "2026-10-19 weekly"
+    "total_projects": 323,
+    "last_updated": "2026-10-26 weekly"
   },
-  "last_updated": "2026-10-19 weekly"
+  "last_updated": "2026-10-26 weekly"
 }
