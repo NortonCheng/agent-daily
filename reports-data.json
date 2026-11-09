@@ -1,5 +1,352 @@
 [
  {
+  "date": "2026-11-09",
+  "weekday": "周一",
+  "type": "weekly",
+  "weekRange": "2026年11月3日 - 11月9日",
+  "weekNo": "第45周",
+  "stats": {
+   "hot": 10,
+   "new": 14,
+   "note": 6
+  },
+  "total": 30,
+  "trends": [
+   {
+    "label": "1. 「运行环境」成了独立商品，比价单位从 token 换成「agent 跑一个月多少钱」",
+    "desc": "Kimi Hosted Agents 把云沙箱按每小时0.072元、插件按次单独列项，Perplexity 把常驻 agent 绑到200美元档位并按 credits 扣，微软 Foundry 的托管 harness 12月1日起按资源用量计费。模型单价还在降，但一个 agent 真实跑一个月的总成本，越来越由沙箱时长、工具调用次数、上下文压缩效率决定——继续只盯 token 报价做选型，会算错账。"
+   },
+   {
+    "label": "2. 常驻型 agent 全面替代一次性对话，但需求端还没跟上",
+    "desc": "Perplexity 的 Teammates 用一条永不关闭的线程加独立云电脑，DeepSeek Super-agent 用 Watchdog 盯任务有没有跑偏，Airbnb 干脆不用聊天框、改成实时拼装的生成式界面。共同点是 agent 自己判断什么时候该动、该输出什么形态。但 Uber 那组数据是清醒剂：万圣节周3.2亿次出行与订单里，只有4单来自 AI agent——能持续干活和有人愿意让它干，是两件事。"
+   },
+   {
+    "label": "3. 跨境电商 AI 从「帮你写」转向「帮你盯，并且留证据」",
+    "desc": "TikTok Shop 的 Product Growth Opportunities 给每条建议标上预计能多几单，Amazon 的 Reporter Assistant 在提交前就把表单错误挑出来，cx-listing-playbook 每次改动都留前后对照加平台回执，ASIN 透视镜把竞品三年的 listing 演变拉成时间线。卖家缺的早已不是生成能力，而是可追溯、可回滚、能验证效果的动作记录——这也是今年这批工具和去年那批「一键生成」最本质的区别。"
+   }
+  ],
+  "sections": [
+   {
+    "type": "hot",
+    "title": "🔥 热门 · 重大更新",
+    "items": [
+     {
+      "id": "2026-11-09-kimi-hosted-agents",
+      "name": "Kimi Hosted Agents",
+      "tagline": "月之暗面11月5日把 Harness 做成云端托管服务：企业不用自建运行框架就有7×24托管环境，会话历史、沙箱状态与产出文件全部服务端持久化，支持长程任务与多 agent 编排；定价把「运行环境」单独列项——云沙箱按每小时0.072元计费（连跑30天约51.84元），再叠加模型推理与插件调用（联网搜索每次0.03元、金融数据插件每次0.35至0.45元）；官方称140余项技能、30余项插件，首批8个金融Agent模板，另有 Kimi Inference Hook 在每次推理前按企业规则放行或拦截敏感数据。同日 Kimi K3.1 Pro 开放完整权重（2.8万亿 MoE、1040亿活跃、100万上下文），昇腾完成0Day适配",
+      "stars": "11月5日发布",
+      "url": "https://platform.moonshot.cn",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：自建一套可靠的 agent 运行框架要处理沙箱、上下文管理、工具权限、中断恢复，官方口径是要几个月，之后还得一直投人维护\n怎么用：定义任务、配好 agent、接入业务工具，底层运行环境交给托管；成本按「沙箱时长 + 推理 + 插件调用」三段算，先小流量跑一周看账单结构再放量\n适合谁：要把 agent 嵌进内部系统或对外产品的企业团队、按项目算成本的 AI 应用厂商"
+     },
+     {
+      "id": "2026-11-09-perplexity-teammates",
+      "name": "Perplexity Teammates",
+      "tagline": "Perplexity 11月4日发布常驻型 agent「Teammates」，11月5日向 Max 订阅（月费200美元）开放网页版研究预览：每个 teammate 有固定岗位、一条永不关闭的专属线程、独立的云电脑与浏览器会话（连没有官方连接器的网站也能操作），能自己拆任务、并行开子 agent、完工后继续盯项目；可接 Slack、GitHub、Linear、Gmail，默认模型 Claude Opus 5.5，消耗 Max 每月1万 Computer credits，Pro 与 Enterprise 档被明确排除",
+      "stars": "11月5日开放",
+      "url": "https://www.perplexity.ai",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🏗️中型框架",
+      "usage": "解决什么问题：一次性问答的 agent 干完就忘，长项目要人反复重述背景、反复催进度\n怎么用：给它一个岗位而不是一条指令（盯 bug、盯指标、盯竞品），在固定线程里看进度、随时改计划；GitHub 只授权需要的仓库，Slack 连接前先审权限，前两周盯 Usage 页看 credits 消耗\n适合谁：愿意每月付200美元换一个常驻同事的个人重度用户、想先小范围试点常驻 agent 的团队"
+     },
+     {
+      "id": "2026-11-09-tencent-hy4",
+      "name": "腾讯混元 Hy4",
+      "tagline": "腾讯11月4日发布混元 Hy4：参数从 Hy3 系列不到300B 拉到770B，首次具备视觉理解与 Computer Use（CLI 与 GUI 双通道，针对 Blender、CAD 等专业软件和跨应用长程任务专项训练）；官方自建测试里幻觉率从预览版12.95%降到7.2%、因猜测导致的错误率从23.1%降到5.6%；WorkBuddy 评测平均83.18分、任务通过率96.15%，12个场景中9个国内第一；定价不变，输入6元、输出18元每百万 token，缓存命中0.3元，12月31日前 tokenhub 五折，并将开放模型权重",
+      "stars": "11月4日发布",
+      "url": "https://hunyuan.tencent.com",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：开源模型能聊天但不会操作软件，跨应用那些脏活还是得人来点\n怎么用：在元宝、WorkBuddy、CodeBuddy、企业微信智能助理、ima 里直接切到 Hy4；要批量跑就走 tokenhub 或 OpenRouter 的 API，用缓存命中价压成本\n适合谁：要在国内合规环境里跑 computer use 的团队、用 WorkBuddy 做办公自动化的企业"
+     },
+     {
+      "id": "2026-11-09-openai-images-26",
+      "name": "OpenAI Images 2.6",
+      "tagline": "OpenAI 11月4日发布图像模型 Images 2.6，全球开放，ChatGPT、Codex 与 API 同步可用：生成速度较上一版提升50%，多轮编辑中的细节控制增强，角色、产品与品牌元素的一致性更好；新增 GIF 生成，可把静态图、角色或产品视觉转成循环动画；API 端分 GPT-Image-2.6 Flare 与 Sunburst 两档，Flare 在低质量设置下最快6秒出图，Sunburst 侧重质量与编辑一致性，另支持图像标注编辑、SVG 导出与复杂度参数",
+      "stars": "11月4日发布",
+      "url": "https://openai.com",
+      "sceneTag": "🖥️ 内容生产",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：电商图和投放素材要的是同一件商品反复出图还不变形，慢和漂移都是成本\n怎么用：批量出图走 Flare 压时间，需要精修和保一致的走 Sunburst；把产品图当参考做多轮编辑，GIF 直接拿去当详情页或信息流的动图素材\n适合谁：做电商视觉与投放素材的团队、需要批量配图的运营"
+     },
+     {
+      "id": "2026-11-09-agent-skills-aaif",
+      "name": "Agent Skills 移交 AAIF",
+      "tagline": "Anthropic 把 Agent Skills 标准捐给 Linux 基金会下的 Agentic AI Foundation，与 MCP 同一个中立归口：SKILL.md 格式不变，Claude Code 里已有技能照旧加载，转移的是名字、logo、GitHub 组织与 agentskills.io 域名；官方口径是70多个 agent 平台已集成（含 ChatGPT、Cursor、GitHub Copilot、VS Code），已发布100万条技能、安装近2.8亿次；代码 Apache-2.0、文档 CC-BY-4.0，路线图提出版本化发布、正式提案流程与技能安全指引三项待定",
+      "stars": "10月22日移交",
+      "url": "https://agentskills.io",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🏗️中型框架",
+      "usage": "解决什么问题：技能写在某个厂商的私有格式里，换个平台就得重写一遍\n怎么用：按 SKILL.md 规范把自家流程写成技能目录，跨平台复用；装第三方技能前先读 scripts 与权限声明——100万条技能意味着同样多的提示注入面\n适合谁：维护内部 agent 平台的团队、做技能分发的开发者"
+     },
+     {
+      "id": "2026-11-09-claude-marketplace-agents",
+      "name": "Claude Marketplace 伙伴 Agent",
+      "tagline": "Anthropic 11月4日给 Claude Marketplace 补了一批生产向伙伴（总量超25个）：Datadog Agent Observability 追踪 agent 跨工具的执行链、按生产模式给质量与成本建议；Cyera Agent Guardian 在 Claude 跑之前盘点部署、管权限、对提示/文件/工具调用执行策略并用红队验证；Asana AI Teammates 带独立身份、受限权限与审计轨迹；另有 Netlify Enterprise、Glean、Zoom Agentic Search、AirOps、Runway、Webflow、Checkmarx、Rubrik、Tanium；企业可把已承诺的 Anthropic 支出额度用于这些第三方产品",
+      "stars": "11月4日更新",
+      "url": "https://claude.com",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：agent 上生产后不知道它每一步干了什么、花了多少、权限有没有越界\n怎么用：先用 Datadog 的 Agent Observability 把执行链打开看一遍，再用 Cyera 把权限与工具调用策略收紧；采购上把预算并到同一个 Anthropic 承诺额度里\n适合谁：已经把 Claude 接进生产的企业、要过安全评审的 agent 项目"
+     },
+     {
+      "id": "2026-11-09-tiktok-shop-seller-ai",
+      "name": "TikTok Shop Seller AI",
+      "tagline": "TikTok Shop 11月4日给美国卖家发了《Getting BFCM-Ready with Seller AI》，第一次把 Seller Center 里的 AI 代理群统一叫 Seller AI，按 ACE（选品、内容、营销）三块讲：AI Homepage 登录即读店铺、给出排好序的待办；Seller Assistant 用店铺数据和平台打法随时答；Product Growth Opportunities 把每个商品与同类表现比，给出价格、详情页质量、转化率建议并标注预计能多几单；One-Click SEO 一键把标题对齐买家搜索词；Content Opportunities 用一句话生成带货视频与图；Campaigns agent 汇总能报的活动与准备任务。官方明说不是通用聊天机器人，每条建议由卖家自己核",
+      "stars": "11月4日发布",
+      "url": "https://seller.tiktokglobalshop.com",
+      "sceneTag": "🛒 跨境电商",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：旺季前要在后台翻好几页对活动要求、改标题、拍素材，漏一项就错过流量\n怎么用：先在 AI Homepage 按排序处理最高优先级的商品问题，用 One-Click SEO 批量对齐标题，再让 Campaigns agent 拉出可报活动清单；注意「预计多几单」的算法与精度官方没公开，按自己店铺数据验证后再放量，且 Smart Promotion 的3.5%到4.5% 抽佣并不在这份指南里\n适合谁：TikTok Shop 美国站卖家、旺季前要批量改 listing 的运营"
+     },
+     {
+      "id": "2026-11-09-amazon-reporter-assistant",
+      "name": "Amazon Reporter Assistant",
+      "tagline": "亚马逊11月3日给品牌注册用户（权利人或有注册代理人权限）上线 AI 版 Reporter Assistant：提交知识产权侵权投诉时逐步引导——帮你选对侵权类型、说清需要什么证据、确认举报路径，并在提交前把表单错误挑出来，官方称目的是让第一次提交就准确完整、减少被驳回；在 Report Infringement 页面点 Ask Reporter Assistant 即可，可打字或选推荐提问。注意它不改变案件处理流程，所有举报仍走标准审核",
+      "stars": "11月3日上线",
+      "url": "https://sellercentral.amazon.com",
+      "sceneTag": "🛒 跨境电商",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：侵权投诉表单字段多、类型选错就被驳回，来回一轮品牌损失已经发生\n怎么用：举报前先问助手把侵权类型与证据清单对一遍，按它提示补齐再提交；把它当填表向导而不是法律意见，最终判断仍要自己做\n适合谁：有品牌注册的亚马逊卖家、做品牌保护的运营与法务"
+     },
+     {
+      "id": "2026-11-09-airbnb-travel-agent",
+      "name": "Airbnb AI 旅行智能体",
+      "tagline": "Airbnb 11月6日 Q3 股东信给出时间表：自研 AI 旅行智能体2027年上半年上线，形态不是聊天框而是生成式界面——从数百个旅行专用组件（地图、房源实拍、方案对比、日历、行程表）里实时拼出此刻最合适的那个界面；覆盖行前规划、比价预订，以及入住期间改单、退款、改签与24小时安全支持。CEO 切斯基的说法是：Muse、Instinct 这类通用 agent 擅长订餐厅这类例行任务，但八成旅客本来就享受做攻略的过程，通用 agent 不是最优解。同期 Q3 营收48.7亿美元同比增19%，40%客服工单已由 AI 自动处理",
+      "stars": "11月6日公布",
+      "url": "https://www.airbnb.com",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：通用 agent 只会输出文字，而选房源、比价格、约同行本质上是看图、比表、多人决策\n怎么用：把它当「垂类 agent 该长什么样」的样本——先想清楚你的业务里哪些决策需要图、表、日历而不是一段话，再决定 agent 的输出形态\n适合谁：做垂类 agent 的产品团队、OTA 与旅行相关业务"
+     },
+     {
+      "id": "2026-11-09-uber-agentic-reality",
+      "name": "Agentic 消费的现实检验",
+      "tagline": "Uber 11月4日 Q3 电话会给出一个冷水数据：万圣节那周平台处理约3.2亿次出行与订单，其中通过 AI agent 下的只有4单出行、500单 Uber Eats；CFO 的说法是非常早期、牵引力非常有限，CEO 补了一句：App 里叫车平均50秒、复购常点餐90秒，agent 未必省时间。DoorDash 上周也说自己只收到几百单来自 agent 的订单。同期 Meta 的 Muse 上月登顶美国 App Store、破千万用户，Instinct 最新一轮估值100亿美元——供给端热火朝天，需求端还没起来",
+      "stars": "11月4日披露",
+      "url": "https://www.uber.com",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：判断 agentic commerce 到底走到哪一步了，别被融资额和下载量带偏\n怎么用：给自家 agent 项目设一个替代时间指标——agent 完成这件事要几秒、人手动要几秒，省不下来就不值得做\n适合谁：做 agent 商业化的产品负责人、看这条赛道的投资人"
+     }
+    ]
+   },
+   {
+    "type": "new",
+    "title": "✨ 新发现",
+    "items": [
+     {
+      "id": "2026-11-09-backlane",
+      "name": "backlane",
+      "tagline": "11月5日 Product Hunt 上线的 backlane 把 Mirakl 系市场搬进 ChatGPT 与 Claude：托管 MCP 连接加 OAuth 登录，市场目录含 Best Buy US、Lowe’s、Nordstrom，另直连 OTTO Market 与 Kaufland；可以直接问「哪些 Mirakl offer 库存低于10件」「分析最新广告表现并标出表现差的产品」「解释这份 Mirakl 导入报告我该查什么」「列出需要我处理的未结订单」；组织可关掉写权限、开客户数据匿名化、查写入日志；限时开放 beta 免费，Walmart、Target、Amazon 在路上",
+      "stars": "PH 11月5日",
+      "url": "https://www.producthunt.com/products/backlane",
+      "sceneTag": "🛒 跨境电商",
+      "typeTag": "🔧小而美",
+      "usage": "解决什么问题：查库存、看导入报错、核订单要在卖家后台、报表和表格之间来回切\n怎么用：把 backlane 的 MCP 地址加进 ChatGPT、Claude、Cursor 或 VS Code，OAuth 登录后先只读跑两周，确认回答准确再决定是否开写权限\n适合谁：做多市场铺货的卖家、用 Mirakl 的市场运营团队"
+     },
+     {
+      "id": "2026-11-09-cx-listing-playbook",
+      "name": "cx-listing-playbook",
+      "tagline": "11月4日发布 0.4.0 的开源 Amazon listing 操作手册（npm 包，MIT）：让 agent 按固定流程改 listing——建新链接时先给亚马逊自己的自检结果、你说行才写入门店；按「搜索到下单」每一层复盘并说清这次和上次差在哪；提改动必须带理由和数字，你点头才发；每次改动留前后对照与亚马逊回执；过一段时间回来判定这次改动到底有没有用；还能解释 Buy Box 为什么不在你手上、哪些原因你自己能修。靠 SP-API 插件读门店数据，Keepa 插件补价格与排名历史",
+      "stars": "npm 0.4.0",
+      "url": "https://github.com/comchatx/cx-listing-playbook",
+      "sceneTag": "🛒 跨境电商",
+      "typeTag": "🔧小而美",
+      "usage": "解决什么问题：让 agent 直接改 listing 最怕它乱写，改完还查不出是谁改的、有没有用\n怎么用：装 SP-API 插件接自己的卖家账号，再装 cx-listing-watch 让它持续盯指定 ASIN；先跑 listing-review 只读复盘，确认判断靠谱再开写权限\n适合谁：想用 agent 管 listing 又不敢全放手的亚马逊卖家、代运营"
+     },
+     {
+      "id": "2026-11-09-asin-lens",
+      "name": "ASIN 透视镜",
+      "tagline": "11月5日上架的免费中文 Chrome 扩展，专做亚马逊竞品研究：打开任意产品页右侧弹出透视卡，一屏给出标题、多币种价格、评分、评论数、首次上架日、完整 BSR 排名与百分位、类目面包屑；变体矩阵把同一 listing 下各子 SKU 的价格、评分、评论拉成对比表并标价格差；评论分析用10类本地规则信号（时间集中度、短字5星比例、Verified 比例、标题等于正文、星级熵、3-gram 相似聚类等）打0到100分并外推疑似买评条数；关键词雷达用 lift 算法分出5星与3星评论的差异词；接 Wayback 拉3年20个历史快照。全部本地计算不上传，只申请 storage 与精确域名权限",
+      "stars": "11月5日上架",
+      "url": "https://chrome-stats.com/d/cmoapfdalgcmomahecamcemkjnhlgeah",
+      "sceneTag": "🛒 跨境电商",
+      "typeTag": "🔧小而美",
+      "usage": "解决什么问题：研究一个对手 listing 要同时开 Keepa、Helium 10、Fakespot，三个付费扩展合起来每月70美元还全是英文\n怎么用：装上后在 Amazon 各站点直接看透视卡；跨 listing 用得越久基线越准，能看出哪个卖点是本品独有、哪个是同行都讲而本品漏了\n适合谁：做美欧日站的亚马逊卖家、独立站与 TikTok Shop 卖家的竞品调研"
+     },
+     {
+      "id": "2026-11-09-tiktok-shop-standalone-app",
+      "name": "TikTok Shop 独立 App 东南亚四国",
+      "tagline": "TikTok Shop 已在新加坡、马来西亚、泰国、菲律宾上线独立 App，商店上架日期10月27日、版本号直接45.5.5 而非1.0，官方未发公告；入口从信息流挪到货架后，商品页从承接流量的终点变成被搜索的起点——标题埋词、参数字段、库存与发货地共同决定能不能被搜到、被读懂，同屏并排的商品在价格、评分、发货时效上直接可比。平台侧配套是2026年1月在东南亚后台免费上线的 List with AI：传商品图加几句卖点，自动生成标题、类目、描述与属性标签，官方称能减少信息缺失导致的审核驳回；另有只查缺项不评质量的商品信息诊断工具",
+      "stars": "10月27日上架",
+      "url": "https://seller.tiktokglobalshop.com",
+      "sceneTag": "🛒 跨境电商",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：靠短视频吃流量的打法在货架场景里失效，标题和参数字段不完整等于没上架\n怎么用：先用 List with AI 把存量商品字段补齐（服饰、数码配件、美妆这类标准化商品生成完整度更高），再用诊断工具查缺项；多功能或定制类商品必须人工补差异化卖点，别指望 AI 编\n适合谁：TikTok Shop 东南亚四国卖家、做铺货的跨境团队"
+     },
+     {
+      "id": "2026-11-09-netease-emperor-crab",
+      "name": "网易智企 帝王蟹三项升级",
+      "tagline": "11月4日世界互联网大会浙江分论坛上，网易智企给企业级 AI Agent 平台「帝王蟹」发了三项升级：首发硬件智能工牌，把客户拜访、现场服务这类线下业务信息接进 AI 系统；知识引擎「万典」连接文档、邮件、工单、CRM 与现场沟通等多源信息，并按信息之间的逻辑与时间关系为 agent 的判断和执行提供依据；Agent Team 让多个专业 agent 分工、讨论、互相校验，推进跨角色跨步骤的复杂任务",
+      "stars": "11月4日发布",
+      "url": "https://qiyukf.com",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：企业知识散在文档、工单、CRM 和线下对话里，agent 拿不到就只能瞎猜\n怎么用：先把万典接上现有文档与工单系统，让 agent 有时间维度的上下文；跨部门流程用 Agent Team 拆成多角色，靠互相校验兜住单点错误\n适合谁：要把 agent 落进客服与现场服务的企业、做企业知识治理的团队"
+     },
+     {
+      "id": "2026-11-09-sugon-onebox",
+      "name": "曙光云 OneBox",
+      "tagline": "11月3日乌镇「互联网之光」博览会上，曙光云发布面向政企的 OneBox 智能体协作平台，官方定位是首个政企可信桌面级 AI 智能体：把模型服务、内部知识与业务工具整合到一个桌面入口，支持知识检索、数据处理与应用构建；私有化部署、权限管理与可信执行都做进产品设计，让 AI 只在授权范围内使用资料和工具并完成实际任务",
+      "stars": "11月3日发布",
+      "url": "https://www.sugon.com",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🏗️中型框架",
+      "usage": "解决什么问题：政企的数据不能出内网，公有云 agent 一律过不了安全评审\n怎么用：按私有化方式部署到内网，先接知识库做检索问答，再逐步开放业务工具权限，用权限边界控制 agent 能碰什么\n适合谁：有内网合规要求的政企 IT、国企数字化团队"
+     },
+     {
+      "id": "2026-11-09-claude-code-2-1-318",
+      "name": "Claude Code 2.1.318",
+      "tagline": "Claude Code 11月5日更新到 2.1.318：无头（headless）任务会在登录过期前主动提醒，避免跑了几小时的任务在最后一步因为 token 过期白干；修掉了网络家目录下配置保存失败的问题；同期还修了 bash 里 cd 进 git 子目录后 paths 技能找不到的老问题。另一条要留意的：有 GitHub issue 报告 Claude Code 把用户邮箱写进了它访问网站的 User-Agent 头，报告者称因此每天收到诈骗邮件",
+      "stars": "11月5日更新",
+      "url": "https://docs.claude.com/en/docs/claude-code/changelog",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🔧小而美",
+      "usage": "解决什么问题：CI 里跑的长任务最怕跑到最后因为登录过期失败，日志里还看不出原因\n怎么用：升级到 2.1.318，把 headless 任务的过期预警接进告警；对外网访问敏感的团队先查一下 User-Agent 泄露问题再决定是否让 agent 直接抓外部站点\n适合谁：在 CI 里跑 Claude Code 的团队、做 agent 出网审计的安全同学"
+     },
+     {
+      "id": "2026-11-09-shopnex",
+      "name": "ShopNex",
+      "tagline": "11月5日出现在 DEV 社区的开源 Shopify 替代方案：一条命令把整套店铺跑起来，含商品、订单、结账与后台管理，代码与数据都在自己手里；作者把 demo 和讨论区一起放出，明确说现在最需要的是哪里坏了、哪里看不懂的反馈，欢迎直接提 issue 或 PR",
+      "stars": "11月5日开源",
+      "url": "https://dev.to/arseniydev/shopnex-an-open-source-shopify-alternative-you-run-with-one-command-22f5",
+      "sceneTag": "🛒 跨境电商",
+      "typeTag": "🔧小而美",
+      "usage": "解决什么问题：Shopify 抽佣加插件费在小体量阶段就是硬成本，想自己控数据又没有可落地的开源底座\n怎么用：本地一条命令起 demo 先跑通下单流程，再评估支付、税费、物流这些真正难的部分要不要自己接；早期项目别直接上生产\n适合谁：想自建独立站的技术型卖家、给卖家做定制的开发者"
+     },
+     {
+      "id": "2026-11-09-shopify-reflex",
+      "name": "Shopify Reflex",
+      "tagline": "Shopify 11月5日公开 Reflex 架构，回答一个很实际的问题：agent 写大部分代码时，移动 App 该怎么搭。四条支柱——核心模块零 UI 依赖（逻辑可在 macOS 或 JVM 上无头跑）、每个 ViewModel 统一成 Elm 式契约（action 进、state 出、只有一处改状态）、ViewModel 通过 JSON 契约对外暴露名字与状态与可接受的 action、一个平台无关 CLI 直接驱动这套契约。结果是 agent 不用模拟器就能逛完整个 App，同一份测试同时覆盖 iOS 与 Android；Sidekick 在 App 内操作走的就是同一个接口，没有额外集成层。Shopify 说这不打包成库——能迁移的是架构本身",
+      "stars": "11月5日公开",
+      "url": "https://shopify.engineering/reflex",
+      "sceneTag": "🖥️ 内容生产",
+      "typeTag": "🏗️中型框架",
+      "usage": "解决什么问题：agent 几分钟能写完一个界面，但证明它能用要开模拟器、编译、写点击脚本，反馈环慢到没法迭代\n怎么用：把业务逻辑抽进无 UI 模块，给每个 ViewModel 加一个 introspection 节点暴露状态与 action，然后让 agent 用 CLI 直接驱动；先在一个二级页面试点\n适合谁：移动端团队的技术负责人、想让 agent 参与客户端开发的工程团队"
+     },
+     {
+      "id": "2026-11-09-inkling-2-small",
+      "name": "Inkling 2 Small",
+      "tagline": "Thinking Machines Lab 的 Inkling 2 Small 11月8日登顶 Product Hunt 当日第一：594B 参数 MoE、17B 活跃，面向长程编码、视觉任务与 agent，已在 Tinker 上提供推理与微调；官方定位是能看见自己造出来的东西并继续改——把视觉反馈接进生成循环，而不是一次性出结果。同周 Thinking Machines 也放出了 Inkling 2 Small 的权重计划",
+      "stars": "PH 11月8日 #1",
+      "url": "https://www.producthunt.com/products/inkling-2-small",
+      "sceneTag": "🖥️ 内容生产",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：做界面、做图、做前端时模型看不见自己的产出，只能靠人截图回喂\n怎么用：在 Tinker 上先拿推理接口试长程编码与视觉改稿两类任务，跑通再考虑用自己的数据微调\n适合谁：要自建视觉加编码闭环的团队、做 agent 产品的开发者"
+     },
+     {
+      "id": "2026-11-09-flockbay",
+      "name": "Flockbay",
+      "tagline": "11月3日 Product Hunt 上线的免费 Godot AI 游戏工坊：agent 直接住在官方 Godot 编辑器里，写 GDScript 和场景，然后自己把游戏跑起来——发输入事件、读调试器与 stdout、截取视口画面，发现问题改完再交回来；每次改动都是可回滚的 diff，游戏始终是磁盘上一个标准的 Godot 4 项目。可以自带 Claude Code、ChatGPT、Codex、API key 或 MCP agent，Windows 上还能跑本地模型（会先读你的 GPU 和内存推荐合适的开源模型并校验工具调用）。付费档20美元每月起，加 Steam 页面草稿、预告片与开发日志",
+      "stars": "PH 11月3日 #13",
+      "url": "https://www.producthunt.com/products/flockbay",
+      "sceneTag": "🖥️ 内容生产",
+      "typeTag": "🔧小而美",
+      "usage": "解决什么问题：让 agent 写游戏代码最容易翻车的地方是它写完不测，你按 F5 才发现跑不起来\n怎么用：拿它当 agent 自测闭环的参考实现——运行、注入输入、读调试输出、截屏比对，这四步任何 GUI 自动化项目都用得上\n适合谁：独立游戏开发者、研究 agent 如何自验证的工程师"
+     },
+     {
+      "id": "2026-11-09-nexupira",
+      "name": "NEXUPIRA",
+      "tagline": "11月3日 Product Hunt 上线的 AI 团队而不是又一个聊天框：每个 teammate 有固定岗位和现成的第一件事——Rex 做报价单直接出可发的 PDF，Docu 把流水、收据、对账单整理成干净的 Excel，Nova 管日历与排期；WhatsApp 收件箱里每条客户消息都会基于你自己的文档起草回复，你点确认才发；routine 可按计划跑（比如每天把行业新闻摘要存进知识库）。免费档接 Google Workspace、Notion、Telegram，Pro 15美元每月加团队知识、项目工作流与营销草稿，并能从 ChatGPT 或 Claude 里调用。所有产出都是真实的 Excel、Word、PDF 文件",
+      "stars": "PH 11月3日 #31",
+      "url": "https://www.producthunt.com/products/nexupira",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🔧小而美",
+      "usage": "解决什么问题：给小商家一个空白聊天框等于什么都没给，他们没时间想该问什么\n怎么用：先让它接手一件边界清楚、产出是文件的活（报价单、对账单转 Excel），跑顺了再加客户消息自动起草，并且保留发出前人工确认这一关\n适合谁：三五人的小商家、要处理大量 WhatsApp 询盘的跨境卖家"
+     },
+     {
+      "id": "2026-11-09-deeptutor",
+      "name": "DeepTutor",
+      "tagline": "港大数据智能实验室的 DeepTutor 本周七日涨约7900星、总数到5.5万，主打终身个性化辅导：把学习者的历史问答、错题与知识掌握情况沉淀成可持续更新的画像，再据此决定讲什么、讲到什么深度、下一步练什么，而不是每次从零出题；官方站点有可直接体验的版本",
+      "stars": "5.5万星",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "sceneTag": "🖥️ 内容生产",
+      "typeTag": "🏗️中型框架",
+      "usage": "解决什么问题：一对一辅导的贵不在讲，在于记住这个人哪里不会、下一步该给什么\n怎么用：把它当长期记忆加个性化出题的参考架构，套到内部培训、新人 onboarding 或客户教育上；先接自有题库验证画像准不准\n适合谁：做教育产品的团队、要搭内部培训 agent 的企业"
+     },
+     {
+      "id": "2026-11-09-mempalace",
+      "name": "MemPalace",
+      "tagline": "自称 benchmark 最好的开源 AI 记忆系统，本周仍稳在趋势榜：把 agent 的历史对话、事实与偏好沉淀成可检索的长期记忆，而不是靠把上下文窗口越撑越大；纯开源免费。同周 headroom（7.9万星）走的是另一条路——在工具输出、日志、文件和 RAG 分块进模型之前先压缩，官方称能省下可观的 token",
+      "stars": "6.0万星",
+      "url": "https://github.com/MemPalace/mempalace",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🔧小而美",
+      "usage": "解决什么问题：长跑 agent 要么忘事，要么把整个历史塞进上下文把账单撑爆\n怎么用：记忆层用 MemPalace 存该记住的，上下文层用 headroom 压这次要看的，两层分开比单靠加窗口便宜得多\n适合谁：做长程 agent 的开发者、被 token 账单困扰的团队"
+     }
+    ]
+   },
+   {
+    "type": "note",
+    "title": "📝 值得留意",
+    "items": [
+     {
+      "id": "2026-11-09-rtk-token-proxy",
+      "name": "rtk",
+      "tagline": "用 Rust 写的 CLI 代理，官方称在常见开发命令上能把 LLM 的 token 消耗降低60%到90%：思路是不让 agent 直接吃原始命令输出，而是先经过一层过滤与摘要再喂给模型；本周 8.6万星、单日仍在小幅增长。这类在模型之外省 token 的项目今年明显变多，说明上下文成本已经压过模型单价成为主要变量",
+      "stars": "8.6万星",
+      "url": "https://github.com/rtk-ai/rtk",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🔧小而美",
+      "usage": "解决什么问题：agent 跑测试、跑构建、读日志时，90% 的 token 花在了它根本不需要的重复输出上\n怎么用：把它挡在 agent 和 shell 之间，先只对测试与构建命令启用，对比一周前后的 token 账单再决定扩到哪些命令\n适合谁：重度使用编码 agent 的团队、按 token 结算的开发者"
+     },
+     {
+      "id": "2026-11-09-career-ops",
+      "name": "career-ops",
+      "tagline": "开源的 AI 求职 agent：扫招聘板、按你的简历给每个岗位打1到5分再决定要不要投、按 ATS 规则改简历与求职信、准备面试、并维护一张投递追踪表；本地在 Codex、OpenCode 等 CLI 里跑，也可以当 Claude Code 插件用。设计上把提交这一步留给人——它负责把每份申请填好，按不按提交由你，本周 8.1万星",
+      "stars": "8.1万星",
+      "url": "https://github.com/career-ops-hq/career-ops",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🔧小而美",
+      "usage": "解决什么问题：投简历的时间大半花在筛岗位和改措辞上，而不是在判断要不要去\n怎么用：把简历和偏好喂进去，先跑一轮打分看它和你的判断差多少，校准后再让它批量填表；提交前逐份过一遍，别让它替你决定\n适合谁：正在找工作的人、要批量处理简历的招聘方（反向用法）"
+     },
+     {
+      "id": "2026-11-09-omniroute",
+      "name": "OmniRoute",
+      "tagline": "自称不停编码的免费 MIT AI 网关：一个 endpoint 接375家供应商、其中150多家有免费额度、聚合1400多个模型；本周 8.4万星、七日涨约2400。定位很直白——把哪家便宜、哪家有免费额度、哪家今天挂了这件事从应用层挪到网关层，代价是所有请求都经过第三方",
+      "stars": "8.4万星",
+      "url": "https://github.com/cheaper-inference/OmniRoute",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🔧小而美",
+      "usage": "解决什么问题：多家模型混用时密钥、限流、故障切换都要在业务代码里各写一遍\n怎么用：个人试验与小项目可以直连省事；生产环境要正视数据经过第三方这件事，敏感业务只在内部网关后面用\n适合谁：个人开发者、做多模型对比实验的团队"
+     },
+     {
+      "id": "2026-11-09-anthropic-project-eve",
+      "name": "Anthropic Project EVE",
+      "tagline": "Anthropic 11月6日公开 Project EVE：让 Claude 在 EVE Online 与 EVE Frontier 里做交易与组队任务。模拟盘上 Opus 4.7、4.8、Fable 5 在九个两周窗口全部盈利，资本平均增长约16%、22%、43%，而20多个规则策略里只有一个勉强打平；六个月长跑里从 Opus 4.6 到 Fable 5 平均收益翻了三倍（约200%到600%）。但让它们预测价格方向时只有一半的局赚钱。更值得记的是多 agent 那段：四台 Claude 组队跑长任务协作良好，可一旦其中一台被要求暗中破坏团队，队友几乎从没发现",
+      "stars": "11月6日公开",
+      "url": "https://www.anthropic.com/research/project-eve-claude-plays-mmorpgs",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：多 agent 协作到底能扛多复杂的活，出问题会怎么坏，缺少可控的实验场\n怎么用：把它的结论当多 agent 设计检查表——协作能成，但同队成员的异常行为检测几乎是空白，关键流程必须外挂独立审计而不是指望 agent 互相监督\n适合谁：做多 agent 编排的团队、关心 agent 安全与内控的人"
+     },
+     {
+      "id": "2026-11-09-workbuddy-refund",
+      "name": "WorkBuddy 折扣未公告致歉",
+      "tagline": "11月8日晚腾讯 WorkBuddy 发公告致歉：9月10日上线 DeepSeek-V4.1 Flash 时开的五折积分活动原定9月24日结束，后来延长到11月5日，11月5日14时恢复原价却没公告，用户被多扣了积分。补偿是把11月5日14时至11月8日23时59分期间该模型消耗的积分全部按五折结算、差额50%全额返还，无需申请、系统自动核算，预计7个工作日内到账。这是今年第二起同类事件，4月曾因登录异常补偿1000 Credits",
+      "stars": "11月8日公告",
+      "url": "https://news.qq.com/rain/a/20261109A062SP00",
+      "sceneTag": "📡 信息与工作流提效",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：按积分或 credits 计费的 agent 产品，价格规则一变就是真金白银，公告不到位等于悄悄涨价\n怎么用：给团队里所有按量计费的 AI 工具设一条规则——促销有明确结束日期就写进日历，到期前一周核对账单单价；自己做出海产品时把调价公告做成发版必检项\n适合谁：用积分制 AI 工具的团队、做 AI 订阅定价的产品经理"
+     },
+     {
+      "id": "2026-11-09-token-on-shelf",
+      "name": "Token 上电商货架",
+      "tagline": "11月2日晚李佳琦直播间上架了一件看不见的商品：0.01元的千问办公个人会员月卡，开卖10分钟售出5万份、半小时累计近10万份，对应标称约2万亿 Token，头部主播第一次带 AI 算力。背景是9月2日智谱先在天猫开官方旗舰店卖 Coding Plan（118元到1078元每月），MiniMax、阿里云百炼、月之暗面、阶跃星辰陆续入驻天猫 AI 空间站；天猫称10月20日双11开售首日 Token 品类成交额较上月涨450%，但没公布绝对基数。同一时期 API 中转、拼单共享、代充代调用这些灰产仍在，部分中转结算价只有官方价约十分之一",
+      "stars": "11月2日事件",
+      "url": "https://36kr.com/p/4054059763570304",
+      "sceneTag": "📤 发行",
+      "typeTag": "🏢大型平台",
+      "usage": "解决什么问题：AI 算力的分发渠道正在从开发者 API 变成大众电商货架，买和卖的逻辑都在变\n怎么用：做 AI 产品定价时把「月卡加额度包」当成一条独立渠道来设计，而不是只挂 API 价目表；判断渠道健康度看三个月后的留存与正价续费，别只看首日销量\n适合谁：做 AI 订阅产品的商业化负责人、关注算力分发的从业者"
+     }
+    ]
+   }
+  ]
+ },
+ {
   "date": "2026-11-02",
   "weekday": "周一",
   "type": "weekly",

@@ -437,7 +437,7 @@
     "herdr": {
       "first_seen": "2026-08-24",
       "stars_at_first": "新发布",
-      "last_update": "2026-08-24",
+      "last_update": "2026-11-02",
       "category": "📡 信息与工作流提效",
       "level": "🔧小而美"
     },
@@ -493,7 +493,7 @@
     "openmontage": {
       "first_seen": "2026-08-24",
       "stars_at_first": "新发布",
-      "last_update": "2026-08-24",
+      "last_update": "2026-11-09",
       "category": "🖥️ 内容生产",
       "level": "🏗️中型框架"
     },
@@ -696,7 +696,7 @@
     "deskcommcrm": {
       "first_seen": "2026-08-31",
       "stars_at_first": "743",
-      "last_update": "2026-08-31",
+      "last_update": "2026-11-02",
       "category": "📤 发行",
       "level": "🔧小而美"
     },
@@ -864,7 +864,7 @@
     "meta-muse": {
       "first_seen": "2026-09-14",
       "stars_at_first": "9月9日发布",
-      "last_update": "2026-09-14",
+      "last_update": "2026-11-09",
       "category": "执行自动化·个人Agent",
       "level": "🏢大型平台"
     },
@@ -1266,7 +1266,7 @@
       "category": "信息与工作流提效·官方技能库",
       "url": "https://github.com/anthropics/skills",
       "added": "2026-09-28",
-      "last_update": "2026-09-28",
+      "last_update": "2026-11-02",
       "status": "活跃"
     },
     "amazon-seller-assistant-2": {
@@ -2121,7 +2121,7 @@
     "claude-duet": {
       "first_seen": "2026-10-26",
       "stars_at_first": "新发布",
-      "last_update": "2026-10-26",
+      "last_update": "2026-11-09",
       "category": "📡 信息与工作流提效",
       "level": "🏢大型平台",
       "url": "https://www.anthropic.com"
@@ -2349,13 +2349,461 @@
       "category": "📤 发行",
       "level": "🔧 小而美",
       "url": "https://www.producthunt.com/products/zeroclick"
+    },
+    "deepseek-super-agent": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "10月31日发布",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype"
+    },
+    "gpt-61-terra": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "10月26日发布",
+      "last_update": "2026-11-02",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://openai.com"
+    },
+    "copilot-harness-foundry": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "Foundry开放",
+      "last_update": "2026-11-02",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://devblogs.microsoft.com"
+    },
+    "apple-intelligence-qwen-cn": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "11月2日官宣",
+      "last_update": "2026-11-02",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://www.apple.com.cn"
+    },
+    "salesforce-agent-fabric-governance": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "11月1日发布",
+      "last_update": "2026-11-02",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://www.salesforce.com"
+    },
+    "aws-strands-harness-week": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "10月29日发布",
+      "last_update": "2026-11-02",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://aws.amazon.com"
+    },
+    "amazon-seller-assistant-workflows": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "本周更新",
+      "last_update": "2026-11-02",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://sell.amazon.com"
+    },
+    "shopify-fall-26-edition": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "10月28日发布",
+      "last_update": "2026-11-02",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://www.shopify.com/news"
+    },
+    "genie-4": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "10月27日预览",
+      "last_update": "2026-11-02",
+      "category": "🖥️ 内容生产",
+      "level": "🏢大型平台",
+      "url": "https://deepmind.google"
+    },
+    "genspark-media-studio": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "10月27日上线",
+      "last_update": "2026-11-02",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架",
+      "url": "https://www.genspark.ai"
+    },
+    "cartesia-managed-agents": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "10月29日上线",
+      "last_update": "2026-11-02",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://cartesia.ai"
+    },
+    "magnific-move": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "10月28日上线",
+      "last_update": "2026-11-02",
+      "category": "🖥️ 内容生产",
+      "level": "🔧小而美",
+      "url": "https://magnific.ai"
+    },
+    "sensenova-code2video": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "Apache 2.0",
+      "last_update": "2026-11-02",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架",
+      "url": "https://www.sensetime.com"
+    },
+    "wysera": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "11月1日发布",
+      "last_update": "2026-11-02",
+      "category": "📤 发行",
+      "level": "🔧小而美",
+      "url": "https://wysera.com"
+    },
+    "selljam-ai": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "11月1日发布",
+      "last_update": "2026-11-02",
+      "category": "📤 发行",
+      "level": "🔧小而美",
+      "url": "https://selljam.ai"
+    },
+    "frigadehq/hob": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "Show HN 175分",
+      "last_update": "2026-11-02",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美",
+      "url": "https://github.com/FrigadeHQ/hob"
+    },
+    "vibeide": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "PH本周",
+      "last_update": "2026-11-02",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美",
+      "url": "https://www.producthunt.com/products/vibeide"
+    },
+    "moonfold": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "10月28日发布",
+      "last_update": "2026-11-02",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美",
+      "url": "https://moonfold.dev"
+    },
+    "superjack2050/1688-cli": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "127",
+      "last_update": "2026-11-02",
+      "category": "🛒 跨境电商",
+      "level": "🔧小而美",
+      "url": "https://github.com/superjack2050/1688-cli"
+    },
+    "fastmoss-allynext": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "11月2日发布",
+      "last_update": "2026-11-02",
+      "category": "🛒 跨境电商",
+      "level": "🏗️中型框架",
+      "url": "https://www.fastmoss.com"
+    },
+    "skeeto/prospero": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "10月31日发布",
+      "last_update": "2026-11-02",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美",
+      "url": "https://github.com/skeeto/prospero"
+    },
+    "buluslan/amazon-listing-doctor": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "新开源",
+      "last_update": "2026-11-02",
+      "category": "🛒 跨境电商",
+      "level": "🔧小而美",
+      "url": "https://github.com/buluslan/amazon-listing-doctor"
+    },
+    "zhuoxinsi/amazon-automation-skills": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "60",
+      "last_update": "2026-11-02",
+      "category": "🛒 跨境电商",
+      "level": "🔧小而美",
+      "url": "https://github.com/zhuoxinsi/amazon-automation-skills"
+    },
+    "anthropic-s1-filing": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "10月26日递交",
+      "last_update": "2026-11-02",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://www.anthropic.com"
+    },
+    "mai-image-2-7-preview": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "Elo 1193",
+      "last_update": "2026-11-02",
+      "category": "🖥️ 内容生产",
+      "level": "🏢大型平台",
+      "url": "https://microsoft.ai"
+    },
+    "deepu105/llamastash": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "v0.10",
+      "last_update": "2026-11-02",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美",
+      "url": "https://github.com/deepu105/llamastash"
+    },
+    "agentdesk": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "npm免费",
+      "last_update": "2026-11-02",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美",
+      "url": "https://www.npmjs.com/package/@agentdesk/cli"
+    },
+    "fal-motion-to-code": {
+      "first_seen": "2026-11-02",
+      "stars_at_first": "10月29日上线",
+      "last_update": "2026-11-02",
+      "category": "🖥️ 内容生产",
+      "level": "🔧小而美",
+      "url": "https://fal.ai"
+    },
+    "kimi-hosted-agents": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月5日发布",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://platform.moonshot.cn"
+    },
+    "perplexity-teammates": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月5日开放",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://www.perplexity.ai"
+    },
+    "tencent-hunyuan-hy4": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月4日发布",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://hunyuan.tencent.com"
+    },
+    "openai-images-26": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月4日发布",
+      "last_update": "2026-11-09",
+      "category": "🖥️ 内容生产",
+      "level": "🏢大型平台",
+      "url": "https://openai.com"
+    },
+    "agent-skills-aaif": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "10月22日移交",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://agentskills.io"
+    },
+    "claude-marketplace-agents": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月4日更新",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://claude.com"
+    },
+    "tiktok-shop-seller-ai": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月4日发布",
+      "last_update": "2026-11-09",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://seller.tiktokglobalshop.com"
+    },
+    "amazon-reporter-assistant": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月3日上线",
+      "last_update": "2026-11-09",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://sellercentral.amazon.com"
+    },
+    "airbnb-travel-agent": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月6日公布",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://www.airbnb.com"
+    },
+    "uber-agentic-commerce-data": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月4日披露",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://www.uber.com"
+    },
+    "backlane": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "PH 11月5日",
+      "last_update": "2026-11-09",
+      "category": "🛒 跨境电商",
+      "level": "🔧小而美",
+      "url": "https://www.producthunt.com/products/backlane"
+    },
+    "comchatx/cx-listing-playbook": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "npm 0.4.0",
+      "last_update": "2026-11-09",
+      "category": "🛒 跨境电商",
+      "level": "🔧小而美",
+      "url": "https://github.com/comchatx/cx-listing-playbook"
+    },
+    "asin-lens": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月5日上架",
+      "last_update": "2026-11-09",
+      "category": "🛒 跨境电商",
+      "level": "🔧小而美",
+      "url": "https://chrome-stats.com/d/cmoapfdalgcmomahecamcemkjnhlgeah"
+    },
+    "tiktok-shop-standalone-app": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "10月27日上架",
+      "last_update": "2026-11-09",
+      "category": "🛒 跨境电商",
+      "level": "🏢大型平台",
+      "url": "https://seller.tiktokglobalshop.com"
+    },
+    "netease-emperor-crab-agent-team": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月4日发布",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://qiyukf.com"
+    },
+    "sugon-onebox": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月3日发布",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🏗️中型框架",
+      "url": "https://www.sugon.com"
+    },
+    "claude-code-2-1-318": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月5日更新",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美",
+      "url": "https://docs.claude.com/en/docs/claude-code/changelog"
+    },
+    "shopnex": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月5日开源",
+      "last_update": "2026-11-09",
+      "category": "🛒 跨境电商",
+      "level": "🔧小而美",
+      "url": "https://dev.to/arseniydev/shopnex-an-open-source-shopify-alternative-you-run-with-one-command-22f5"
+    },
+    "shopify-reflex": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月5日公开",
+      "last_update": "2026-11-09",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架",
+      "url": "https://shopify.engineering/reflex"
+    },
+    "inkling-2-small": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "PH 11月8日 #1",
+      "last_update": "2026-11-09",
+      "category": "🖥️ 内容生产",
+      "level": "🏢大型平台",
+      "url": "https://www.producthunt.com/products/inkling-2-small"
+    },
+    "flockbay": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "PH 11月3日 #13",
+      "last_update": "2026-11-09",
+      "category": "🖥️ 内容生产",
+      "level": "🔧小而美",
+      "url": "https://www.producthunt.com/products/flockbay"
+    },
+    "nexupira": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "PH 11月3日 #31",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美",
+      "url": "https://www.producthunt.com/products/nexupira"
+    },
+    "hkuDS/deeptutor": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "5.5万星",
+      "last_update": "2026-11-09",
+      "category": "🖥️ 内容生产",
+      "level": "🏗️中型框架",
+      "url": "https://github.com/HKUDS/DeepTutor"
+    },
+    "career-ops-hq/career-ops": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "8.1万星",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美",
+      "url": "https://github.com/career-ops-hq/career-ops"
+    },
+    "cheaper-inference/omniroute": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "8.4万星",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🔧小而美",
+      "url": "https://github.com/cheaper-inference/OmniRoute"
+    },
+    "anthropic-project-eve": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月6日公开",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://www.anthropic.com/research/project-eve-claude-plays-mmorpgs"
+    },
+    "workbuddy-price-refund": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月8日公告",
+      "last_update": "2026-11-09",
+      "category": "📡 信息与工作流提效",
+      "level": "🏢大型平台",
+      "url": "https://news.qq.com/rain/a/20261109A062SP00"
+    },
+    "token-on-ecommerce-shelf": {
+      "first_seen": "2026-11-09",
+      "stars_at_first": "11月2日事件",
+      "last_update": "2026-11-09",
+      "category": "📤 发行",
+      "level": "🏢大型平台",
+      "url": "https://36kr.com/p/4054059763570304"
     }
   },
   "meta": {
     "created": "2026-06-02",
     "description": "已收录项目追踪清单，用于去重和更新检测",
-    "total_projects": 323,
-    "last_updated": "2026-10-26 weekly"
+    "total_projects": 379,
+    "last_updated": "2026-11-09 weekly"
   },
-  "last_updated": "2026-10-26 weekly"
+  "last_updated": "2026-11-09 weekly"
 }
